@@ -1,0 +1,20 @@
+Note All Problem & Solutions:
+-----------------------------
+Problem 1 : 
+------------
+The dropdown menu becomes visible when hovering over the parent container, including the space below the dropdown trigger element. To fix this, you need to adjust the hover area so that the dropdown menu only appears when hovering over the actual menu item, not the area below it.
+
+Here's how you can fix it:
+
+1. Adjust the padding on the menu items.
+Ensure that the padding on the dropdown trigger (<a> tag) is sufficient to cover the clickable area without extending too much below it.
+
+2. Add pointer-events: none; to the dropdown container when it's hidden.
+This ensures that when the dropdown menu is not visible, hovering over the area it would occupy won't trigger the hover state.
+
+Solution:
+----------
+Key Changes:
+1. Pointer Events: Added pointer-events: none; to the dropdown when it's hidden and enabled it only on hover with pointer-events: auto;
+2. Hover Areas: The hover area is limited to the menu item itself, preventing the dropdown from appearing when hovering below the item.
+This should solve the issue of the dropdown appearing when hovering below the menu items.

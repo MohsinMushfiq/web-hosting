@@ -4,7 +4,7 @@
 <b>LxRoot Web Design</b> is a modern, responsive website focused on providing sleek, user-friendly interfaces with intuitive navigation. Designed to meet the needs of diverse users, this site showcases best practices in web design, emphasizing aesthetics and functionality.
 
 <h3>Technology</h3>
-<b>HTML5 & CSS3:</b> Structuring and styling the site with modern standards.
+<b>HTML5 & CSS3:</b> Structuring and styling the site with modern standards. </br>
 <b>Tailwind CSS:</b> Leveraging Tailwind's utility-first approach for responsiveness and consistency across devices.
 <b>JavaScript:</b> Enhancing user interaction and dynamic content loading.
 <b>External CSS:</b> Used selectively to augment Tailwind's capabilities.

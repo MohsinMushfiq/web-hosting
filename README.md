@@ -22,7 +22,9 @@
 <b>No Unauthorized Distribution:</b> Do not distribute this project or any derivatives without proper permissions. </br>
 <b>Contribution Guidelines:</b> All contributions must adhere to the project’s standards and be compatible with the existing codebase. </br>
 
-Thanks
+</br>
+</br>
+Thanks & Regards
 
 
 <h4>Author</h4>

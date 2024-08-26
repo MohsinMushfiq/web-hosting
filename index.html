@@ -16,26 +16,40 @@
 
 <body class="bg-[#0B1120] font-inter">
 
+
+    <!-- Navbar Start -->
     <nav class="bg-[#0B1120] text-white py-3 sticky top-0 z-50 border-b border-gray-600 font-inter">
         <div class="container mx-auto flex items-center justify-between">
             <!-- Logo -->
             <div class="flex items-center">
                 <a href=""><img src="./images/logo.png" alt="LxRoot Logo" class="h-12 max-w-13 mr-2"></a>
             </div>
-    
+
+            <!-- Hamburger Menu Icon -->
+            <div class="lg:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+
             <!-- Middle Navigation -->
-            <div class="flex space-x-7 items-center">
+            <div id="menu"
+                class="hidden lg:flex lg:space-x-7 items-center lg:static absolute top-16 left-0 w-full bg-[#0B1120] lg:bg-transparent lg:w-auto lg:shadow-none shadow-lg">
                 <div class="relative group">
-                    <a href="#" class="flex items-center hover:bg-gray-700 px-2 py-2 rounded-md">
+                    <a href="#" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">
                         Product
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
+                            fill="currentColor">
                             <path fill-rule="evenodd"
                                 d="M6.293 8.707a1 1 0 011.414 0L10 11.086l2.293-2.379a1 1 0 011.414 1.415l-3 3.12a1 1 0 01-1.414 0l-3-3.12a1 1 0 010-1.415z"
                                 clip-rule="evenodd" />
                         </svg>
                     </a>
                     <div
-                        class="absolute left-0 mt-1 w-64 bg-[#1b2338] text-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none group-hover:pointer-events-auto">
+                        class="absolute left-0 mt-1 w-64 bg-[#1b2338] text-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
                         <div class="p-4">
                             <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -68,9 +82,10 @@
                 <a href="#" class="hover:bg-gray-700 px-4 py-2 rounded">Roadmap</a>
                 <a href="#" class="hover:bg-gray-700 px-4 py-2 rounded">Pricing</a>
                 <div class="relative group">
-                    <a href="#" class="flex items-center hover:bg-gray-700 px-2 py-2 rounded-md">
+                    <a href="#" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">
                         Resources
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
+                            fill="currentColor">
                             <path fill-rule="evenodd"
                                 d="M6.293 8.707a1 1 0 011.414 0L10 11.086l2.293-2.379a1 1 0 011.414 1.415l-3 3.12a1 1 0 01-1.414 0l-3-3.12a1 1 0 010-1.415z"
                                 clip-rule="evenodd" />
@@ -108,9 +123,9 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Right Side -->
-            <div class="flex items-center space-x-4">
+            <div class="hidden lg:flex items-center space-x-4">
                 <button class="text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" stroke-width="2">
@@ -126,7 +141,7 @@
             </div>
         </div>
     </nav>
-    
+
     <!-- Navbar End -->
 
 
@@ -730,8 +745,20 @@
     <!-- Footer End -->
 
 
-
+    <!-- JavaScript -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- JavaScript to toggle mobile menu -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    <!-- JavaScript -->
+
 
 
 </body>

@@ -8,31 +8,43 @@
     <link rel="stylesheet" href="./output/tailwind.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/7.13.0/simple-icons.min.css">
-
 </head>
 
 <body class="bg-[#0B1120] font-inter">
 
 
     <!-- Navbar Start -->
-    <nav class="bg-[#0B1120] text-white py-2 sticky top-0 z-50 border-b border-gray-600 font-inter">
-        <div class="container mx-auto flex items-center justify-between">
+    <nav class="bg-[#0B1120] text-white py-1 sticky top-0 z-50 border-b border-gray-600 font-inter">
+        <div class="container max-w-7xl mx-auto flex items-center justify-between">
             <!-- Logo -->
             <div class="flex items-center">
                 <a href="/" aria-label="lxroot-logo" class="logo-item">
-                    <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="75" height="75" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.11206 59V42.2H13.1921V55.4H20.6801V59H9.11206Z" fill="#fff"></path>
-                        <path d="M31.1771 59L28.4651 54.896L27.2171 53.144L22.1771 46.256H26.7851L29.4011 50.168L30.7691 52.04L35.7371 59H31.1771ZM22.0571 59L27.1931 51.848L29.2571 54.32L26.5931 59H22.0571ZM30.4811 53.456L28.4411 51.008L30.9611 46.256H35.4971L30.4811 53.456Z" fill="#fff"></path>
-                        <path d="M38.2917 59V42.2H45.8517C46.9237 42.2 47.8917 42.432 48.7557 42.896C49.6357 43.36 50.3237 44 50.8197 44.816C51.3157 45.616 51.5637 46.528 51.5637 47.552C51.5637 48.608 51.3157 49.56 50.8197 50.408C50.3237 51.24 49.6437 51.896 48.7797 52.376C47.9157 52.856 46.9397 53.096 45.8517 53.096H42.1797V59H38.2917ZM47.6037 59L43.3317 51.416L47.5077 50.816L52.2597 59H47.6037ZM42.1797 49.976H45.4917C45.9077 49.976 46.2677 49.888 46.5717 49.712C46.8917 49.52 47.1317 49.256 47.2917 48.92C47.4677 48.584 47.5557 48.2 47.5557 47.768C47.5557 47.336 47.4598 46.96 47.2677 46.64C47.0757 46.304 46.7957 46.048 46.4277 45.872C46.0757 45.696 45.6437 45.608 45.1317 45.608H42.1797V49.976Z" fill="#fff"></path>
-                        <path d="M60.2666 59.24C58.9386 59.24 57.7546 58.952 56.7146 58.376C55.6906 57.8 54.8746 57.016 54.2666 56.024C53.6746 55.032 53.3786 53.896 53.3786 52.616C53.3786 51.336 53.6746 50.2 54.2666 49.208C54.8746 48.216 55.6906 47.432 56.7146 46.856C57.7546 46.28 58.9386 45.992 60.2666 45.992C61.5946 45.992 62.7706 46.28 63.7946 46.856C64.8346 47.432 65.6506 48.216 66.2426 49.208C66.8346 50.2 67.1306 51.336 67.1306 52.616C67.1306 53.896 66.8346 55.032 66.2426 56.024C65.6506 57.016 64.8346 57.8 63.7946 58.376C62.7706 58.952 61.5946 59.24 60.2666 59.24ZM60.2666 55.928C60.8426 55.928 61.3546 55.784 61.8026 55.496C62.2506 55.208 62.6026 54.816 62.8586 54.32C63.1146 53.824 63.2346 53.256 63.2186 52.616C63.2346 51.976 63.1146 51.408 62.8586 50.912C62.6026 50.4 62.2506 50 61.8026 49.712C61.3546 49.424 60.8426 49.28 60.2666 49.28C59.6906 49.28 59.1706 49.424 58.7066 49.712C58.2586 50 57.9066 50.4 57.6506 50.912C57.3946 51.408 57.2746 51.976 57.2906 52.616C57.2746 53.256 57.3946 53.824 57.6506 54.32C57.9066 54.816 58.2586 55.208 58.7066 55.496C59.1706 55.784 59.6906 55.928 60.2666 55.928Z" fill="#fff"></path>
-                        <path d="M75.6416 59.24C74.3136 59.24 73.1296 58.952 72.0896 58.376C71.0656 57.8 70.2496 57.016 69.6416 56.024C69.0496 55.032 68.7536 53.896 68.7536 52.616C68.7536 51.336 69.0496 50.2 69.6416 49.208C70.2496 48.216 71.0656 47.432 72.0896 46.856C73.1296 46.28 74.3136 45.992 75.6416 45.992C76.9696 45.992 78.1456 46.28 79.1696 46.856C80.2096 47.432 81.0256 48.216 81.6176 49.208C82.2096 50.2 82.5056 51.336 82.5056 52.616C82.5056 53.896 82.2096 55.032 81.6176 56.024C81.0256 57.016 80.2096 57.8 79.1696 58.376C78.1456 58.952 76.9696 59.24 75.6416 59.24ZM75.6416 55.928C76.2176 55.928 76.7296 55.784 77.1776 55.496C77.6256 55.208 77.9776 54.816 78.2336 54.32C78.4896 53.824 78.6096 53.256 78.5936 52.616C78.6096 51.976 78.4896 51.408 78.2336 50.912C77.9776 50.4 77.6256 50 77.1776 49.712C76.7296 49.424 76.2176 49.28 75.6416 49.28C75.0656 49.28 74.5456 49.424 74.0816 49.712C73.6336 50 73.2816 50.4 73.0256 50.912C72.7696 51.408 72.6496 51.976 72.6656 52.616C72.6496 53.256 72.7696 53.824 73.0256 54.32C73.2816 54.816 73.6336 55.208 74.0816 55.496C74.5456 55.784 75.0656 55.928 75.6416 55.928Z" fill="#fff"></path>
-                        <path d="M86.0726 59V43.04H89.9126V59H86.0726ZM83.8166 49.616V46.256H92.3846V49.616H83.8166Z" fill="#fff"></path>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M76.5399 64C71.5099 73.5156 61.5123 80 50.0001 80C38.4879 80 28.4902 73.5156 23.4603 64H12.5185C18.1935 79.1867 32.834 90 50.0001 90C67.1662 90 81.8067 79.1867 87.4817 64H76.5399ZM22.4964 38C27.1257 27.4046 37.6982 20 50.0001 20C62.302 20 72.8745 27.4046 77.5038 38H88.1689C83.0718 21.7716 67.9107 10 50.0001 10C32.0895 10 16.9284 21.7716 11.8313 38H22.4964Z" fill="#fff"></path>
+                        <path
+                            d="M31.1771 59L28.4651 54.896L27.2171 53.144L22.1771 46.256H26.7851L29.4011 50.168L30.7691 52.04L35.7371 59H31.1771ZM22.0571 59L27.1931 51.848L29.2571 54.32L26.5931 59H22.0571ZM30.4811 53.456L28.4411 51.008L30.9611 46.256H35.4971L30.4811 53.456Z"
+                            fill="#fff"></path>
+                        <path
+                            d="M38.2917 59V42.2H45.8517C46.9237 42.2 47.8917 42.432 48.7557 42.896C49.6357 43.36 50.3237 44 50.8197 44.816C51.3157 45.616 51.5637 46.528 51.5637 47.552C51.5637 48.608 51.3157 49.56 50.8197 50.408C50.3237 51.24 49.6437 51.896 48.7797 52.376C47.9157 52.856 46.9397 53.096 45.8517 53.096H42.1797V59H38.2917ZM47.6037 59L43.3317 51.416L47.5077 50.816L52.2597 59H47.6037ZM42.1797 49.976H45.4917C45.9077 49.976 46.2677 49.888 46.5717 49.712C46.8917 49.52 47.1317 49.256 47.2917 48.92C47.4677 48.584 47.5557 48.2 47.5557 47.768C47.5557 47.336 47.4598 46.96 47.2677 46.64C47.0757 46.304 46.7957 46.048 46.4277 45.872C46.0757 45.696 45.6437 45.608 45.1317 45.608H42.1797V49.976Z"
+                            fill="#fff"></path>
+                        <path
+                            d="M60.2666 59.24C58.9386 59.24 57.7546 58.952 56.7146 58.376C55.6906 57.8 54.8746 57.016 54.2666 56.024C53.6746 55.032 53.3786 53.896 53.3786 52.616C53.3786 51.336 53.6746 50.2 54.2666 49.208C54.8746 48.216 55.6906 47.432 56.7146 46.856C57.7546 46.28 58.9386 45.992 60.2666 45.992C61.5946 45.992 62.7706 46.28 63.7946 46.856C64.8346 47.432 65.6506 48.216 66.2426 49.208C66.8346 50.2 67.1306 51.336 67.1306 52.616C67.1306 53.896 66.8346 55.032 66.2426 56.024C65.6506 57.016 64.8346 57.8 63.7946 58.376C62.7706 58.952 61.5946 59.24 60.2666 59.24ZM60.2666 55.928C60.8426 55.928 61.3546 55.784 61.8026 55.496C62.2506 55.208 62.6026 54.816 62.8586 54.32C63.1146 53.824 63.2346 53.256 63.2186 52.616C63.2346 51.976 63.1146 51.408 62.8586 50.912C62.6026 50.4 62.2506 50 61.8026 49.712C61.3546 49.424 60.8426 49.28 60.2666 49.28C59.6906 49.28 59.1706 49.424 58.7066 49.712C58.2586 50 57.9066 50.4 57.6506 50.912C57.3946 51.408 57.2746 51.976 57.2906 52.616C57.2746 53.256 57.3946 53.824 57.6506 54.32C57.9066 54.816 58.2586 55.208 58.7066 55.496C59.1706 55.784 59.6906 55.928 60.2666 55.928Z"
+                            fill="#fff"></path>
+                        <path
+                            d="M75.6416 59.24C74.3136 59.24 73.1296 58.952 72.0896 58.376C71.0656 57.8 70.2496 57.016 69.6416 56.024C69.0496 55.032 68.7536 53.896 68.7536 52.616C68.7536 51.336 69.0496 50.2 69.6416 49.208C70.2496 48.216 71.0656 47.432 72.0896 46.856C73.1296 46.28 74.3136 45.992 75.6416 45.992C76.9696 45.992 78.1456 46.28 79.1696 46.856C80.2096 47.432 81.0256 48.216 81.6176 49.208C82.2096 50.2 82.5056 51.336 82.5056 52.616C82.5056 53.896 82.2096 55.032 81.6176 56.024C81.0256 57.016 80.2096 57.8 79.1696 58.376C78.1456 58.952 76.9696 59.24 75.6416 59.24ZM75.6416 55.928C76.2176 55.928 76.7296 55.784 77.1776 55.496C77.6256 55.208 77.9776 54.816 78.2336 54.32C78.4896 53.824 78.6096 53.256 78.5936 52.616C78.6096 51.976 78.4896 51.408 78.2336 50.912C77.9776 50.4 77.6256 50 77.1776 49.712C76.7296 49.424 76.2176 49.28 75.6416 49.28C75.0656 49.28 74.5456 49.424 74.0816 49.712C73.6336 50 73.2816 50.4 73.0256 50.912C72.7696 51.408 72.6496 51.976 72.6656 52.616C72.6496 53.256 72.7696 53.824 73.0256 54.32C73.2816 54.816 73.6336 55.208 74.0816 55.496C74.5456 55.784 75.0656 55.928 75.6416 55.928Z"
+                            fill="#fff"></path>
+                        <path d="M86.0726 59V43.04H89.9126V59H86.0726ZM83.8166 49.616V46.256H92.3846V49.616H83.8166Z"
+                            fill="#fff"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M76.5399 64C71.5099 73.5156 61.5123 80 50.0001 80C38.4879 80 28.4902 73.5156 23.4603 64H12.5185C18.1935 79.1867 32.834 90 50.0001 90C67.1662 90 81.8067 79.1867 87.4817 64H76.5399ZM22.4964 38C27.1257 27.4046 37.6982 20 50.0001 20C62.302 20 72.8745 27.4046 77.5038 38H88.1689C83.0718 21.7716 67.9107 10 50.0001 10C32.0895 10 16.9284 21.7716 11.8313 38H22.4964Z"
+                            fill="#fff"></path>
                     </svg>
-                    </a>
+                </a>
             </div>
 
             <!-- Hamburger Menu Icon -->
@@ -183,11 +195,11 @@
                         user-friendly as you expect.</p>
                     <div class="mt-10 flex items-center justify-center gap-x-6">
                         <a href="#"
-                            class="border border-cyan-800 text-gray-300 px-5 pt-2 pb-2 text-lg rounded hover:bg-white hover:text-black duration-300">Live
-                            Demo<span class="ml-2" aria-hidden="true">&rarr;</span></a>
+                            class="border border-cyan-800 text-cyan-300 font-normal px-5 pt-2 pb-2 text-lg rounded hover:bg-white hover:text-black duration-300">Live
+                            Demo</a>
                         <a href="#"
                             class="rounded-md bg-indigo-500 px-5 py-2.5 text-lg text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 duration-300">Get
-                            started<span class="ml-2" aria-hidden="true">&rarr;</span></a>
+                            started</a>
                     </div>
                 </div>
             </div>
@@ -197,18 +209,42 @@
                     style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
                 </div>
             </div>
-            <div class="max-w-4xl mx-auto grid grid-cols-1 gap-x-24 lg:grid-cols-11 text-gray-300">
-                <i class="devicon-go-original-wordmark col-span-1 max-h-12 w-full text-4xl"></i>
-                <i class="devicon-rust-plain col-span-1 max-h-12 w-full text-4xl"></i>
-                <i class="devicon-php-plain col-span-1 max-h-12 w-full text-4xl"></i>
-                <i class="devicon-python-plain col-span-1 max-h-12 w-full text-4xl"></i>
-                <i class="devicon-nodejs-plain col-span-1 max-h-12 w-full text-4xl"></i>
-                <i class="devicon-wordpress-plain col-span-1 max-h-12 w-full text-4xl"></i>
-                <i class="devicon-java-plain col-span-1 max-h-12 w-full text-4xl"></i>
-                <i class="devicon-mysql-plain col-span-1 max-h-12 w-full text-4xl"></i>
-                <i class="devicon-postgresql-plain col-span-1 max-h-12 w-full text-4xl"></i>
-                <i class="devicon-docker-plain col-span-1 max-h-12 w-full text-4xl"></i>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 gap-x-24 lg:grid-cols-11 text-gray-400">
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-python-plain text-4xl rounded-full p-3 border border-gray-400"></i>
+                </div>
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-go-original-wordmark text-4xl rounded-full p-3 border border-gray-400"></i>
+                </div>
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-rust-plain text-4xl rounded-full p-3 border border-gray-400"></i>
+                </div>
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-php-plain text-4xl rounded-full p-3 border border-gray-400"></i>
+                </div>
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-nodejs-plain text-4xl rounded-full p-3 border border-gray-400"></i>
+                </div>
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-wordpress-plain text-4xl rounded-full p-3 border border-gray-400"></i>
+                </div>
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-java-plain text-4xl rounded-full p-3 border border-gray-400"></i>
+                </div>
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-mysql-plain text-4xl rounded-full p-3 border border-gray-400"></i>
+                </div>
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-postgresql-plain text-4xl rounded-full p-3 border border-gray-400"></i>
+                </div>
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-docker-plain text-4xl rounded-full p-3 border border-gray-400"></i>
+                </div>
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-swift-plain text-4xl rounded-full p-3 border border-gray-400"></i>
+                </div>
             </div>
+
 
         </div>
     </div>
@@ -220,7 +256,7 @@
     <section class="py-16">
         <!-- Application Tools -->
         <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-5">
-            <div class="max-w-7xl mx-auto text-left">
+            <div class="text-left">
                 <h2 class="text-4xl font-semibold mb-5 text-white">Ready to get started?</h2>
                 <p class="mb-8 text-gray-200 font-extralight text-base">Explore products, or create an account instantly
                     and start accepting payments. You
@@ -233,8 +269,9 @@
             <div
                 class="border border-cyan-800 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300">
                 <div class="float-left mb-4 mr-4">
-                    <img src="https://via.placeholder.com/50" alt="Tool Icon" class="float-left rounded">
+                    <i class="fas fa-running float-left rounded text-3xl text-cyan-300 border border-cyan-600 pl-3 pt-3 pr-3 pb-2.5"></i>
                 </div>
+                
                 <h3 class="text-xl font-semibold mb-2 mt-4 float-left text-white">Runtimes</h3>
                 <p class="float-left mb-4 text-gray-200 text-sm font-extralight">Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an unknown printer
@@ -247,7 +284,7 @@
             <div
                 class="border border-cyan-800 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300">
                 <div class="float-left mb-4 mr-4">
-                    <img src="https://via.placeholder.com/50" alt="Tool Icon" class="float-left rounded">
+                    <i class="fa-solid fa-sliders float-left rounded text-3xl text-cyan-300 border border-cyan-600 pl-3 pt-3 pr-3 pb-2.5"></i>
                 </div>
                 <h3 class="text-xl font-semibold mb-2 mt-4 float-left text-white">Control Panel</h3>
                 <p class="float-left mb-4 text-gray-200 text-sm font-extralight">Lorem Ipsum has been the industry's
@@ -261,7 +298,7 @@
             <div
                 class="border border-cyan-800 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300">
                 <div class="float-left mb-4 mr-4">
-                    <img src="https://via.placeholder.com/50" alt="Tool Icon" class="float-left rounded">
+                    <i class="fa-solid fa-cloud-arrow-up float-left rounded text-3xl text-cyan-300 border border-cyan-600 pl-2.5 pt-3 pr-2.5 pb-3"></i>
                 </div>
                 <h3 class="text-xl font-semibold mb-2 mt-4 float-left text-white">Backup/Restore</h3>
                 <p class="float-left mb-4 text-gray-200 text-sm font-extralight">Lorem Ipsum has been the industry's
@@ -277,7 +314,7 @@
 
 
     <!-- Features Section Start  -->
-    <section class="max-w-7xl mx-auto pt-9 pb-28">
+    <section class="max-w-7xl mx-auto pt-9 pb-24">
         <div class="text-left mb-10">
             <h2 class="text-lg font-semibold text-cyan-500">WHY LXROOT?</h2>
             <h1 class="text-3xl font-semibold text-white">Creativity is nothing but the way to solve new problems.</h1>
@@ -287,10 +324,10 @@
             <!-- Feature 1 -->
             <div
                 class="border border-[#19243F] bg-[#141f3a] p-9 rounded-lg hover:bg-[#0B1120] duration-300 drop-shadow-md hover:drop-shadow-xl hover:shadow-2xl hover:border-indigo-900">
-                <div class="float-left mr-4">
-                    <img src="https://via.placeholder.com/50" alt="Feature Icon" class="mx-auto rounded">
+                <div class="float-left mb-4 mr-4">
+                    <i class="fas fa-shield float-left rounded text-3xl bg-cyan-300 pl-3 pt-3 pr-3 pb-2.5"></i>
                 </div>
-                <h3 class="text-lg font-semibold mt- mb-2 text-gray-50">Security Essentials</h3>
+                <h3 class="text-lg font-semibold mt-1 mb-2 text-gray-50">Security Essentials</h3>
                 <p class="mb-6 text-gray-400 font-normal text-sm">Lorem Ipsum has been the industry's standard dummy
                     text ever since the 1500s, when an unknown printer
                     took a galley of type and scrambled it to make a type.</p>
@@ -302,10 +339,10 @@
             <!-- Feature 2 -->
             <div
                 class="border border-[#12192e] bg-[#141f3a] p-9 rounded-lg hover:bg-[#0B1120] duration-300 drop-shadow-md hover:drop-shadow-xl hover:shadow-2xl hover:border-indigo-900">
-                <div class="float-left mr-4">
-                    <img src="https://via.placeholder.com/50" alt="Feature Icon" class="mx-auto rounded">
+                <div class="float-left mb-4 mr-4">
+                    <i class="fas fa-server float-left rounded text-3xl bg-cyan-300 pl-3 pt-3 pr-3 pb-2.5"></i>
                 </div>
-                <h3 class="text-lg font-semibold mb-2 text-gray-50">Server Management</h3>
+                <h3 class="text-lg font-semibold mt-1 mb-2 text-gray-50">Server Management</h3>
                 <p class="mb-6 text-gray-400 font-normal text-sm">Lorem Ipsum has been the industry's standard dummy
                     text ever since the 1500s, when an unknown printer
                     took a galley of type and scrambled it to make a type.</p>
@@ -317,10 +354,10 @@
             <!-- Feature 3 -->
             <div
                 class="border border-[#19243F] bg-[#141f3a] p-9 rounded-lg hover:bg-[#0B1120] duration-300 drop-shadow-md hover:drop-shadow-xl hover:shadow-2xl hover:border-indigo-900">
-                <div class="float-left mr-4">
-                    <img src="https://via.placeholder.com/50" alt="Feature Icon" class="mx-auto rounded">
+                <div class="float-left mb-4 mr-4">
+                    <i class="fa-solid fa-globe float-left rounded text-3xl bg-cyan-300 pl-3 pt-3 pr-3 pb-2.5"></i>
                 </div>
-                <h3 class="text-lg font-semibold mb-2 text-gray-50">Website Management</h3>
+                <h3 class="text-lg font-semibold mt-1 mb-2 text-gray-50">Website Management</h3>
                 <p class="mb-6 text-gray-400 font-normal text-sm">Lorem Ipsum has been the industry's standard dummy
                     text ever since the 1500s, when an unknown printer
                     took a galley of type and scrambled it to make a type.</p>
@@ -332,10 +369,10 @@
             <!-- Feature 4 -->
             <div
                 class="border border-[#19243F] bg-[#141f3a] p-9 rounded-lg hover:bg-[#0B1120] duration-300 drop-shadow-md hover:drop-shadow-xl hover:shadow-2xl hover:border-indigo-900">
-                <div class="float-left mr-4">
-                    <img src="https://via.placeholder.com/50" alt="Feature Icon" class="mx-auto rounded">
+                <div class="float-left mb-4 mr-4">
+                    <i class="fa-solid fa-code float-left rounded text-3xl bg-cyan-300 pl-2.5 pt-3 pr-2.5 pb-3"></i>
                 </div>
-                <h3 class="text-lg font-semibold mb-2 text-gray-50">Developer <br> Tools</h3>
+                <h3 class="text-lg font-semibold mt-1 mb-2 text-gray-50">Developer <br> Tools</h3>
                 <p class="mb-6 text-gray-400 font-normal text-sm">Lorem Ipsum has been the industry's standard dummy
                     text ever since the 1500s, when an unknown printer
                     took a galley of type and scrambled it to make a type.</p>
@@ -351,7 +388,7 @@
     <!-- Pricing Section Start -->
     <div class="bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120]">
         <section class=" max-w-7xl mx-auto text-white pt-24 pb-12">
-            <div class="container mx-auto px-4">
+            <div class="container mx-auto">
                 <!-- Pricing Header -->
                 <div class="flex justify-between items-center mb-8">
                     <div>
@@ -371,7 +408,7 @@
 
                 <!-- Features List -->
                 <div class="border-t border-gray-800 pt-8">
-                    <div class="grid grid-cols-3 gap-12">
+                    <div class="grid grid-cols-3 gap-15">
                         <div class="">
                             <h2 class="text-cyan-500 text-sm font-normal uppercase mb-2">Everything you need</h2>
                             <h3 class="text-2xl font-bold mb-4">All in one platform</h3>
@@ -423,7 +460,7 @@
 
         <!-- Support Section Start -->
         <section class="max-w-7xl mx-auto text-white pb-24 pt-12">
-            <div class="container mx-auto px-4">
+            <div class="container mx-auto">
                 <div class="flex flex-col lg:flex-row lg:justify-between">
                     <!-- Support & Knowledgebase Text -->
                     <div
@@ -443,9 +480,8 @@
                     <div class="pl-5 grid grid-cols-1 lg:grid-cols-2 gap-6">
                         <div class="p-6 rounded-lg">
                             <div class="flex items-center mb-4">
-                                <img src="https://via.placeholder.com/50" alt="Documentation Icon"
-                                    class="w-10 h-10 mr-4 rounded">
-                                <h4 class="text-xl font-bold">Documentation</h4>
+                                <i class="fa-solid fa-book float-left rounded text-3xl text-[#0B1120] bg-cyan-300 pl-3 pt-3 pr-3 pb-2.5"></i>
+                                <h4 class="text-xl font-bold pl-5">Documentation</h4>
                             </div>
                             <p class="text-gray-400 mb-4">
                                 Leverages globally distributed edge caches to accelerate content delivery lipsum.
@@ -455,9 +491,8 @@
 
                         <div class="p-6 rounded-lg">
                             <div class="flex items-center mb-4">
-                                <img src="https://via.placeholder.com/50" alt="Documentation Icon"
-                                    class="w-10 h-10 mr-4 rounded">
-                                <h4 class="text-xl font-bold">Community</h4>
+                                <i class="fa-solid fa-users float-left rounded text-3xl text-[#0B1120] bg-cyan-300 pl-2.5 pt-3 pr-2.5 pb-3"></i>
+                                <h4 class="text-xl font-bold pl-5">Community</h4>
                             </div>
                             <p class="text-gray-400 mb-4">
                                 Leverages globally distributed edge caches to accelerate content delivery lipsum.
@@ -467,9 +502,8 @@
 
                         <div class="p-6 rounded-lg">
                             <div class="flex items-center mb-4">
-                                <img src="https://via.placeholder.com/50" alt="API Doc Icon"
-                                    class="w-10 h-10 mr-4 rounded">
-                                <h4 class="text-xl font-bold">API Doc</h4>
+                                <i class="fa-solid fa-anchor float-left rounded text-3xl text-[#0B1120] bg-cyan-300 pl-2.5 pt-3 pr-2.5 pb-3"></i>
+                                <h4 class="text-xl font-bold pl-5">API Doc</h4>
                             </div>
                             <p class="text-gray-400 mb-4">
                                 Leverages globally distributed edge caches to accelerate content delivery lipsum.
@@ -479,9 +513,8 @@
 
                         <div class="p-6 rounded-lg">
                             <div class="flex items-center mb-4">
-                                <img src="https://via.placeholder.com/50" alt="API Doc Icon"
-                                    class="w-10 h-10 mr-4 rounded">
-                                <h4 class="text-xl font-bold">Changelog</h4>
+                                <i class="fa-solid fa-clock-rotate-left float-left rounded text-3xl text-[#0B1120] bg-cyan-300 pl-3 pt-3 pr-3 pb-3"></i>
+                                <h4 class="text-xl font-bold pl-5">Changelog</h4>
                             </div>
                             <p class="text-gray-400 mb-4">
                                 Leverages globally distributed edge caches to accelerate content delivery lipsum.
@@ -499,7 +532,7 @@
 
     <!-- FAQ Section Start -->
     <div class="max-w-7xl mx-auto text-white pt-24 pb-12">
-        <div class="max-w-7xl mx-auto px-4">
+        <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl text-center font-bold mb-4">Frequently asked questions</h2>
             <p class="text-lg text-center text-gray-400 mb-14">Get the best services at the lowest price</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -566,7 +599,7 @@
     <!-- Clients Reviews Section Start -->
     <div class=" text-white pt-6 pb-24">
         <div class="pb-8">
-            <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
                 <div>
                     <h3 class="text-cyan-500 text-sm mb-1">WHAT CUSTOMERS SAY</h3>
                     <h2 class="text-4xl font-bold text-white">Recent Reviews</h2>
@@ -589,14 +622,13 @@
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4">
+        <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-gray-800 p-6 rounded-lg">
                     <p class="text-gray-400 mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
                         sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
                     <div class="flex items-center">
-                        <img class="w-10 h-10 rounded-full mr-4" src="https://via.placeholder.com/40"
-                            alt="Kristin Watson">
+                        <i class="fa-solid fa-user float-left text-2xl text-[#0B1120] rounded-full bg-cyan-400 pl-3 pt-2.5 pr-2.5 pb-2.5 mr-4"></i>
                         <div>
                             <p class="font-semibold">Kristin Watson</p>
                             <p class="text-sm text-gray-400 font-light mt-1">Jun 27, 2020 • 6 min read</p>
@@ -610,8 +642,7 @@
                     <p class="text-gray-400 mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
                         sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
                     <div class="flex items-center">
-                        <img class="w-10 h-10 rounded-full mr-4" src="https://via.placeholder.com/40"
-                            alt="Kristin Watson">
+                        <i class="fa-solid fa-user float-left text-2xl text-[#0B1120] rounded-full bg-cyan-400 pl-3 pt-2.5 pr-2.5 pb-2.5 mr-4"></i>
                         <div>
                             <p class="font-semibold">Kristin Watson</p>
                             <p class="text-sm text-gray-400 font-light mt-1">Jun 27, 2020 • 6 min read</p>
@@ -625,8 +656,7 @@
                     <p class="text-gray-400 mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
                         sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
                     <div class="flex items-center">
-                        <img class="w-10 h-10 rounded-full mr-4" src="https://via.placeholder.com/40"
-                            alt="Kristin Watson">
+                        <i class="fa-solid fa-user float-left text-2xl text-[#0B1120] rounded-full bg-cyan-400 pl-3 pt-2.5 pr-2.5 pb-2.5 mr-4"></i>
                         <div>
                             <p class="font-semibold">Kristin Watson</p>
                             <p class="text-sm text-gray-400 font-light mt-1">Jun 27, 2020 • 6 min read</p>
@@ -645,7 +675,7 @@
 
     <!-- Call to Action Section Start -->
     <div class="bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120] py-12">
-        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
             <div>
                 <h2 class="text-3xl font-bold text-white">Ready to dive in?</h2>
                 <h3 class="text-4xl font-bold text-cyan-400 mt-2">Start your free trial today.</h3>

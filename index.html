@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LxRoot - Application Hosting Platform.</title>
     <link rel="stylesheet" href="./output/tailwind.css">
+    <link rel="stylesheet" href="/src/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -59,8 +60,8 @@
 
             <!-- Middle Navigation -->
             <div id="menu"
-                class="hidden lg:flex lg:space-x-7 items-center rounded text-center lg:static absolute top-20 w-full bg-[#0B1120] lg:bg-transparent lg:w-auto sm:px-24 lg:shadow-none shadow-lg">
-                <div class="relative group">
+                class="hidden lg:flex lg:space-x-3 items-center rounded text-center lg:static absolute top-20 w-full bg-[#0B1120] lg:bg-transparent lg:w-auto sm:px-24 lg:shadow-none shadow-lg">
+                <div class="relative group menu-spacing">
                     <a href="#" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">
                         Product
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
@@ -71,7 +72,7 @@
                         </svg>
                     </a>
                     <div
-                        class="absolute z-50 left-0 mt-1 w-64 bg-[#1b2338] text-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
+                        class="absolute z-50 left-0 mt-1 w-64 bg-[#1b2338] text-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto dropdown1-spacing">
                         <div class="p-4">
                             <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -114,7 +115,7 @@
                         </svg>
                     </a>
                     <div
-                        class="absolute left-0 mt-1 w-64 bg-[#1b2338] text-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
+                        class="absolute left-0 mt-1 w-64 bg-[#1b2338] text-white rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto dropdown2-spacing">
                         <div class="p-4">
                             <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
@@ -163,100 +164,88 @@
             </div>
         </div>
     </nav>
-
     <!-- Navbar End -->
 
 
 
-    <!-- Hero Start -->
+  <!-- Hero Start -->
+<div>
     <div>
-        <div>
-            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-                aria-hidden="true">
-                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        <!-- Gradient Background Section -->
+        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+            <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+            </div>
+        </div>
+        
+        <!-- Hero Content Section -->
+        <div class="mx-auto max-w-7xl py-3 sm:py-24">
+            <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-100 ring-1 ring-cyan-800 hover:ring-indigo-500">
+                    Announcing our next features. <a href="#" class="font-semibold text-cyan-500 hover:text-indigo-500"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
                 </div>
             </div>
-            <div class="mx-auto max-w-7xl py-3 sm:py-24">
-                <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-                    <div
-                        class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-100 ring-1 ring-cyan-800 hover:ring-indigo-500">
-                        Announcing our next features. <a href="#"
-                            class="font-semibold text-cyan-500 hover:text-indigo-500"><span class="absolute inset-0"
-                                aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <h1 class="mb-4 text-xl font-bold text-white sm:text-6xl">Multi-server <span
-                            class="text-indigo-400">Application</span></h1>
-                    <h1 class="text-xl font-bold text-white sm:text-6xl"><span class="text-indigo-400">Hosting</span>
-                        Platform</h1>
-                    <p class="mt-6 text-base  leading-8 text-gray-400">More secure, flexible, language agnostic and
-                        user-friendly as you expect.</p>
-                    <div class="mt-10 flex items-center justify-center gap-x-6">
-                        <a href="#"
-                            class="border border-cyan-800 text-cyan-300 font-normal px-5 pt-2 pb-2 text-lg rounded hover:bg-white hover:text-black duration-300">Live
-                            Demo</a>
-                        <a href="#"
-                            class="rounded-md bg-indigo-500 px-5 py-2.5 text-lg text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 duration-300">Get
-                            started</a>
-                    </div>
+            <div class="text-center hero-spacing">
+                <h1 class="mb-4 text-xl font-bold text-white sm:text-6xl header-title">Multi-server <span class="text-indigo-400 header-title">Application</span></h1>
+                <h1 class="text-xl font-bold text-white sm:text-6xl header-title"><span class="text-indigo-400 header-title">Hosting</span> Platform</h1>
+                <p class="mt-6 text-base leading-8 text-gray-400 ">More secure, flexible, language agnostic and user-friendly as you expect.</p>
+                <div class="mt-10 flex items-center justify-center gap-x-6">
+                    <a href="#" class="border border-cyan-800 text-cyan-300 font-normal px-5 pt-2 pb-2 text-lg rounded hover:bg-white hover:text-black duration-300">Live Demo</a>
+                    <a href="#" class="rounded-md bg-indigo-500 px-5 py-2.5 text-lg text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 duration-300">Get started</a>
                 </div>
             </div>
-            <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-                aria-hidden="true">
-                <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
-                </div>
-            </div>
-            <div
-                class="max-w-6xl mx-auto grid grid-cols-1 gap-x-24 lg:grid-cols-11 text-gray-400 sm:grid-cols-6 sm:gap-x-3 sm:gap-y-4 sm:px-5">
-                <div class="flex justify-center items-center col-span-1">
-                    <i class="devicon-python-plain text-4xl rounded-full p-3 border border-gray-400 sm:text-3xl"></i>
-                </div>
-                <div class="flex justify-center items-center col-span-1">
-                    <i
-                        class="devicon-go-original-wordmark text-4xl rounded-full p-3 border border-gray-400 sm:text-3xl"></i>
-                </div>
-                <div class="flex justify-center items-center col-span-1">
-                    <i class="devicon-rust-plain text-4xl rounded-full p-3 border border-gray-400 sm:text-3xl"></i>
-                </div>
-                <div class="flex justify-center items-center col-span-1">
-                    <i class="devicon-php-plain text-4xl rounded-full p-3 border border-gray-400 sm:text-3xl"></i>
-                </div>
-                <div class="flex justify-center items-center col-span-1">
-                    <i class="devicon-nodejs-plain text-4xl rounded-full p-3 border border-gray-400 sm:text-3xl"></i>
-                </div>
-                <div class="flex justify-center items-center col-span-1">
-                    <i class="devicon-wordpress-plain text-4xl rounded-full p-3 border border-gray-400 sm:text-3xl"></i>
-                </div>
-                <div class="flex justify-center items-center col-span-1">
-                    <i class="devicon-java-plain text-4xl rounded-full p-3 border border-gray-400 sm:text-3xl"></i>
-                </div>
-                <div class="flex justify-center items-center col-span-1">
-                    <i class="devicon-mysql-plain text-4xl rounded-full p-3 border border-gray-400 sm:text-3xl"></i>
-                </div>
-                <div class="flex justify-center items-center col-span-1">
-                    <i
-                        class="devicon-postgresql-plain text-4xl rounded-full p-3 border border-gray-400 sm:text-3xl"></i>
-                </div>
-                <div class="flex justify-center items-center col-span-1">
-                    <i class="devicon-docker-plain text-4xl rounded-full p-3 border border-gray-400 sm:text-3xl"></i>
-                </div>
-                <div class="flex justify-center items-center col-span-1">
-                    <i class="devicon-swift-plain text-4xl rounded-full p-3 border border-gray-400 sm:text-3xl"></i>
-                </div>
-            </div>
+        </div>
 
+        <!-- Second Gradient Background Section -->
+        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+            <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+            </div>
+        </div>
 
+        <!-- Icons Section -->
+        <div class="max-w-6xl mx-auto grid grid-cols-4 gap-4 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-11 xl:grid-cols-11 text-gray-400 sm:gap-6 sm:px-5 hero-spacing">
+            <div class="flex justify-center items-center col-span-1">
+                <i class="devicon-python-plain text-3xl rounded-full p-3 border border-gray-400"></i>
+            </div>
+            <div class="flex justify-center items-center col-span-1">
+                <i class="devicon-go-original-wordmark text-3xl rounded-full p-3 border border-gray-400"></i>
+            </div>
+            <div class="flex justify-center items-center col-span-1">
+                <i class="devicon-rust-plain text-3xl rounded-full p-3 border border-gray-400"></i>
+            </div>
+            <div class="flex justify-center items-center col-span-1">
+                <i class="devicon-php-plain text-3xl rounded-full p-3 border border-gray-400"></i>
+            </div>
+            <div class="flex justify-center items-center col-span-1">
+                <i class="devicon-nodejs-plain text-3xl rounded-full p-3 border border-gray-400"></i>
+            </div>
+            <div class="flex justify-center items-center col-span-1">
+                <i class="devicon-wordpress-plain text-3xl rounded-full p-3 border border-gray-400"></i>
+            </div>
+            <div class="flex justify-center items-center col-span-1">
+                <i class="devicon-java-plain text-3xl rounded-full p-3 border border-gray-400"></i>
+            </div>
+            <div class="flex justify-center items-center col-span-1">
+                <i class="devicon-mysql-plain text-3xl rounded-full p-3 border border-gray-400"></i>
+            </div>
+            <div class="flex justify-center items-center col-span-1">
+                <i class="devicon-postgresql-plain text-3xl rounded-full p-3 border border-gray-400"></i>
+            </div>
+            <div class="flex justify-center items-center col-span-1">
+                <i class="devicon-docker-plain text-3xl rounded-full p-3 border border-gray-400"></i>
+            </div>
+            <div class="flex justify-center items-center col-span-1">
+                <i class="devicon-swift-plain text-3xl rounded-full p-3 border border-gray-400"></i>
+            </div>
         </div>
     </div>
-    <!-- Hero End -->
+</div>
+<!-- Hero End -->
+
 
 
 
     <!-- Application Hosting Section Start -->
-<section class="py-16">
+<section class="py-16 custom-padding">
     <!-- Application Tools -->
     <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-5 sm:px-6 lg:px-1">
         <div class="text-left">
@@ -320,7 +309,7 @@
 
 
     <!-- Features Section Start  -->
-    <section class="max-w-7xl mx-auto pt-9 pb-24 sm:px-6 lg:px-1">
+    <section class="max-w-7xl mx-auto pt-9 pb-24 sm:px-6 lg:px-1 custom-padding">
         <div class="text-left mb-10">
             <h2 class="text-lg font-semibold text-cyan-500">WHY LXROOT?</h2>
             <h1 class="text-3xl font-semibold text-white">Creativity is nothing but the way to solve new problems.</h1>
@@ -392,14 +381,14 @@
 
 
     <!-- Pricing Section Start -->
-    <div class="bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120]">
+    <div class="bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120] custom-padding">
         <section class="max-w-7xl mx-auto text-white pt-20 pb-12 sm:px-6 lg:px-1">
             <div class="container mx-auto">
                 <!-- Pricing Header -->
                 <div class="flex flex-col lg:flex-row justify-between items-center mb-8">
                     <div class="text-left lg:text-left mb-6 lg:mb-0">
-                        <h1 class="text-3xl font-bold lg:text-4xl">
-                            Everything you need for <span class="text-cyan-500">$20 a month</span>
+                        <h1 class="text-3xl font-bold lg:text-4xl pricing-title">
+                            Everything you need for <span class="text-cyan-500 pricing-title">$20 a month</span>
                         </h1>
                         <p class="text-gray-400 pt-3 text-sm lg:text-xl">
                             Includes every feature we offer plus unlimited projects and unlimited users
@@ -415,7 +404,7 @@
                 
 
                 <!-- Features List -->
-                <div class="border-t border-gray-800 pt-8">
+                <div class="border-t border-gray-800 pt-8 hidden-section">
                     <div class="grid grid-cols-3 gap-16 max-w-7xl">
                         <div class="">
                             <h2 class="text-cyan-500 text-sm font-normal uppercase mb-2">Everything you need</h2>
@@ -465,14 +454,13 @@
         <!-- Pricing Section End -->
 
 
-
         <!-- Support Section Start -->
         <section class="max-w-7xl mx-auto text-white pb-24 pt-12 sm:px-6 lg:px-1">
             <div class="container mx-auto">
                 <div class="flex flex-col lg:flex-row lg:justify-between">
                     <!-- Support & Knowledgebase Text -->
                     <div
-                        class="lg:mb-0 lg:w-1/2 px-4">
+                        class="lg:mb-0 lg:w-1/2 px-4 custom-spacing">
                         <h2 class="text-cyan-500 text-sm font-normal uppercase mt-12 mb-3">All in One Platform</h2>
                         <h3 class="text-3xl font-bold mb-5">Support & Knowledgebase</h3>
                         <p class="text-gray-300 text-sm sm:mb-8">
@@ -542,7 +530,7 @@
 
 
     <!-- FAQ Section Start -->
-    <div class="max-w-7xl mx-auto text-white pt-24 pb-12 sm:px-6 lg:px-1">
+    <div class="max-w-7xl mx-auto text-white pt-24 pb-12 sm:px-6 lg:px-1 custom-padding">
         <div>
             <h2 class="text-3xl text-center font-bold mb-4">Frequently asked questions</h2>
             <p class="text-lg text-center text-gray-400 mb-14">Get the best services at the lowest price</p>
@@ -614,7 +602,7 @@
 
 
     <!-- Clients Reviews Section Start -->
-    <div class=" text-white pt-6 pb-24">
+    <div class=" text-white pt-6 pb-24 custom-padding">
         <div class="pb-8">
             <div class="max-w-7xl mx-auto flex items-center justify-between  sm:px-6 lg:px-1">
                 <div>
@@ -698,8 +686,8 @@
     <div class="bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120] pt-12 pb-12">
         <div class="mx-auto max-w-7xl py-52 sm:px-6 sm:py-32 lg:px-8">
             <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-              <h2 class="text-5xl font-bold tracking-tight text-white sm:text-4xl">Ready to dive in?</h2>
-              <p class="mt-2 text-lg leading-8 text-cyan-300">Get Start to your free trial today.</p>
+              <h2 class="text-5xl font-bold tracking-tight text-white sm:text-4xl cta-title">Ready to dive in?</h2>
+              <p class="mt-2 text-lg leading-8 text-cyan-300 cta-tagline">Get Start to your free trial today.</p>
               <div class="mt-5 flex items-center justify-center gap-x-4 lg:justify-start">
                 <a href="#"
                 class="border border-cyan-800 text-gray-300 px-4 pt-1.5 pb-1.5 rounded hover:bg-white hover:text-black duration-300">Live Demo -></a>
@@ -752,38 +740,42 @@
                 <li><a href="#" class="hover:text-white">Changelogs</a></li>
             </ul>
         </div>
-        <div>
-            <h4 class="text-gray-500">SUBSCRIBE TO OUR NEWSLETTER</h4>
-            <form class="flex flex-col sm:flex-row mt-4 space-y-4 sm:space-y-0 sm:space-x-2">
-                <input type="email" placeholder="Enter your email"
-                    class="px-4 py-2 w-full bg-gray-800 text-white border-none focus:outline-none rounded sm:space-y-0 sm:space-x-2">
-                <button
-                    class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded duration-300">Subscribe</button>
-            </form>
-
+        <div class="text-center">
+            <h4 class="text-gray-500">CONTACT US</h4>
+            <div class="mt-4 space-y-4">
+                <div class="flex justify-center items-center space-x-2">
+                    <i class="fas fa-phone text-gray-400"></i>
+                    <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
+                </div>
+                <div class="flex justify-center items-center space-x-2">
+                    <i class="fas fa-envelope text-gray-400"></i>
+                    <a href="mailto:contact@yourdomain.com" class="text-gray-400 hover:text-white">contact@lxroot.com</a>
+                </div>
+                <div class="flex justify-center items-center space-x-2">
+                    <i class="fas fa-map-marker-alt text-gray-300"></i>
+                    <p class="text-gray-300">Carmel, Indiana, USA</p>
+                </div>
+            </div>
+        
             <!-- Social Media Icons -->
-            <div class="flex justify-center lg:justify-start mt-4 space-x-4">
-                <a href="https://facebook.com/yourprofile" target="_blank"
-                    class="text-gray-500 hover:text-blue-600">
+            <div class="flex justify-center mt-4 space-x-4">
+                <a href="https://facebook.com/yourprofile" target="_blank" class="text-gray-500 hover:text-blue-600">
                     <i class="fab fa-facebook-f fa-lg"></i>
                 </a>
                 <a href="https://twitter.com/yourprofile" target="_blank" class="text-gray-500 hover:text-blue-400">
                     <i class="fab fa-twitter fa-lg"></i>
                 </a>
-                <a href="https://instagram.com/yourprofile" target="_blank"
-                    class="text-gray-500 hover:text-pink-500">
+                <a href="https://instagram.com/yourprofile" target="_blank" class="text-gray-500 hover:text-pink-500">
                     <i class="fab fa-instagram fa-lg"></i>
                 </a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank"
-                    class="text-gray-500 hover:text-blue-700">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-gray-500 hover:text-blue-700">
                     <i class="fab fa-linkedin-in fa-lg"></i>
                 </a>
-                <a href="https://youtube.com/in/yourprofile" target="_blank"
-                    class="text-gray-500 hover:text-red-700">
+                <a href="https://youtube.com/in/yourprofile" target="_blank" class="text-gray-500 hover:text-red-700">
                     <i class="fab fa-youtube fa-lg"></i>
                 </a>
             </div>
-        </div>
+        </div>          
     </div>
     <div class="container mx-auto flex flex-col items-center lg:items-start mt-12 border-t border-gray-700 pt-4 pb-5">
         <p class="text-base text-center pt-2">&copy; 2024 <a href="#"

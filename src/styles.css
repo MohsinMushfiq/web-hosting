@@ -1,0 +1,55 @@
+/* Custom CSS */
+.menu-spacing{
+    margin-left: 190px;
+}
+
+@media (min-width: 380px) and (max-width: 640px) {
+    nav {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .hero-spacing{
+        padding-top: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .header-title{
+        font-size: 40px;
+        line-height: normal;
+    }
+    .menu-spacing{
+        margin-left: 0px;
+    }
+    .custom-padding {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .hidden-section{
+        display: none;
+    }
+    .custom-spacing{
+        margin-top: -20px;
+        margin-bottom: 20px;
+    }
+    .cta-title{
+        font-size: 30px;
+    }
+    .pricing-titl{
+        font-size: 25px;
+    }
+    .cta-tagline{
+        font-size: 22px;
+    }
+
+}
+
+@media (min-width: 380px) and (max-width: 1024px) {
+    .dropdown1-spacing{
+        margin-left: 125px;
+        margin-top: -40px
+    }
+    .dropdown2-spacing{
+        margin-left: 125px;
+        margin-top: -150px;
+    }
+}

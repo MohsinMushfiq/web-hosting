@@ -6,8 +6,8 @@
     }
 
     .custom-menu-spacing {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .menu-spacing {
@@ -17,8 +17,8 @@
     .mobile-menu-spacing {
         margin-top: 4px;
         padding-top: 30px;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
         padding-bottom: 30px;
         border-top: 1px solid rgb(75 85 99);
     }
@@ -62,4 +62,61 @@
         font-size: 20px;
     }
 
+}
+
+@media (min-width: 380px) and (max-width: 780px) {
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .footer-col {
+        width: 48%; /* Two columns per row */
+        margin-bottom: 40px; /* Add some margin at the bottom for spacing */
+    }
+    .footer-col:nth-child(5) {
+        width: 100%; /* Take up the full width */
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center align the items */
+        justify-content: center; /* Center the content vertically */
+        text-align: center; /* Center the text */
+    }
+
+    .footer-col:nth-child(5) .flex {
+        justify-content: center; /* Ensure inner flex items are centered */
+    }
+    .footer-bottom{
+        margin-top: -5px;
+    }
+    .footer-text{
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 781px) and (max-width: 1023px) {
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .footer-col {
+        width: 30%; /* Three columns per row */
+        margin-bottom: 20px;
+        
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .footer-col {
+        width: 18%; /* Five columns per row */
+    }
 }

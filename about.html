@@ -18,10 +18,8 @@
 
 <body class="bg-[#0B1120] font-inter">
 
-
-    <div class="bg-[#0B1120] text-white py-1 sticky top-0 z-50 border-b border-gray-600 font-inter">
-        <!-- Logo, Menu, and Button -->
-        <div class="flex justify-between items-center bg-[#0B1120] container max-w-7xl mx-auto sm:px-6 lg:px-1 custom-menu-spacing">
+    <div
+            class="flex justify-between items-center bg-[#0B1120] container max-w-7xl mx-auto sm:px-6 lg:px-1 custom-menu-spacing">
             <!-- Logo -->
             <div class="text-xl font-bold text-white">
                 <a href="/" aria-label="lxroot-logo" class="logo-item">
@@ -49,7 +47,7 @@
             </div>
 
             <!-- Menu (Visible on larger screens) -->
-            <nav class="hidden md:flex md:space-x-3 text-white ml-40">
+            <nav class="hidden md:flex md:space-x-3 text-white ml-40 duration-300">
                 <div class="relative group ">
                     <a href="#" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">
                         Product
@@ -128,7 +126,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M8 9h4m0 0h4m-4 0v4m0-4l3 3m1 1v4m-4-1h1m-8-2h6m-6 4h6m-6 4h4m-4-8h8m4 0h1m-2 0v4m0-4h2" />
                                 </svg>
-                                <span>API Docoumentation</span>
+                                <span>FAQs</span>
                             </a>
                             <!-- Add more items here -->
                         </div>
@@ -138,7 +136,7 @@
 
             <!-- Hamburger Button (Visible on smaller screens) -->
             <button id="menu-btn" class="text-white focus:outline-none md:hidden">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
                     </path>
@@ -157,9 +155,10 @@
 
         <!-- Dropdown Menu (Visible on smaller screens) -->
         <nav id="menu" class="md:hidden hidden mt-4 mobile-menu-spacing">
-            <ul class="space-y-2 text-white">
+            <ul class="space-y-4 text-white">
                 <li>
-                    <div class="flex justify-between items-center">
+                    <div
+                        class="bg-gray-900 flex justify-between items-center border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
                         <span>Products</span>
                         <button class="dropdown-btn focus:outline-none">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -169,38 +168,47 @@
                             </svg>
                         </button>
                     </div>
-                    <ul class="dropdown-menu hidden pl-4 mt-2 space-y-1 bg-[#1b2338] py-6 rounded">
-                        <li class="flex items-center ">
-                            <svg class="w-4 h-4 mr-2 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    <ul class="dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
+                        <li
+                            class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
+                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Features</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
                                 </path>
                             </svg>
-                            <a href="#" class="block hover:text-indigo-400">Features</a>
+
                         </li>
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        <li
+                            class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700 duration-300">
+                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Technology Stack</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
                                 </path>
                             </svg>
-                            <a href="#" class="block hover:text-indigo-400">Technology Stack</a>
+
                         </li>
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        <li class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700">
+                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Application Hosting</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
                                 </path>
                             </svg>
-                            <a href="#" class="block hover:text-indigo-400">Application Hosting</a>
+
                         </li>
                     </ul>
 
+
                 </li>
-                <li><a href="#" class="block hover:text-indigo-400">Roadmap</a></li>
-                <li><a href="#" class="block hover:text-indigo-400">Pricing</a></li>
+                <li class="bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300"><a
+                        href="#" class="block hover:text-indigo-400">Roadmap </a></li>
+                <li class="bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300"><a
+                        href="#" class="block hover:text-indigo-400">Pricing</a></li>
                 <li>
-                    <div class="flex justify-between items-center">
+                    <div
+                        class="flex justify-between items-center border bg-gray-900 border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
                         <span>Resources</span>
                         <button class="dropdown-btn focus:outline-none">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -210,48 +218,184 @@
                             </svg>
                         </button>
                     </div>
-                    <ul class="dropdown-menu hidden pl-4 mt-2 space-y-1 bg-[#1b2338] py-6 rounded">
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    <ul class="dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
+                        <li
+                            class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
+                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Community</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
                                 </path>
                             </svg>
-                            <a href="#" class="block hover:text-indigo-400">Docoumentation</a>
+
                         </li>
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        <li
+                            class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700 duration-300">
+                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Documentation</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
                                 </path>
                             </svg>
-                            <a href="#" class="block hover:text-indigo-400">Community</a>
+
                         </li>
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        <li class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700">
+                            <a href="#" class="block text-gray-300 hover:text-indigo-400">API Documentation</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
                                 </path>
                             </svg>
-                            <a href="#" class="block hover:text-indigo-400">API Docoumentation</a>
+
                         </li>
                     </ul>
 
                 </li>
-                <li class="py-4 space-x-3">
+                <!-- <li class="py-4 flex justify-between items-center">
                     <a href="#"
-                        class="border border-cyan-800 text-gray-300 px-8 pt-1.5 pb-1.5 rounded hover:bg-white hover:text-[#0B1120] duration-300">Sign
-                        in</a>
-                    <a href="#" class="bg-indigo-600 text-white px-8 py-2 rounded hover:bg-indigo-700 duration-300">Get
-                        Started</a>
+                        class="border border-indigo-600 text-gray-300 px-12 pt-2 pb-2 rounded hover:bg-white hover:text-indigo-600 duration-300">
+                        Sign in
+                    </a>
+                    <a href="#"
+                        class="bg-indigo-600 text-white px-12 py-2.5 rounded hover:bg-indigo-700 duration-300">
+                        Get Started
+                    </a>
+                </li> -->
+                <li class="py-4">
+                    <a href="#"
+                        class="text-white border border-indigo-600 px-8 py-3 rounded w-full hover:text-indigo-700 hover:bg-white duration-300 block text-center">
+                        Sign In
+                    </a>
+                    <a href="#"
+                        class="bg-indigo-600 text-white px-8 py-3 rounded w-full hover:bg-indigo-800 duration-300 block text-center mt-4">
+                        Get Started
+                    </a>
+                    
                 </li>
+                
+                
             </ul>
         </nav>
     </div>
 
+    <!-- Navigation End -->
 
 
 
+
+    <!-- Hero Section Start -->
+    <section class="max-w-7xl mx-auto text-white py-28">
+        <div class="px-2 lg:flex lg:items-center lg:space-x-12">
+            <!-- Text Content -->
+            <div class="">
+                <div class="text-sm font-normal text-cyan-300 mb-2">
+                    Who is LxRoot?
+                </div>
+                <h2 class="text-5xl font-extrabold mb-6 line-height:2">
+                    Best Solutions <br> for Your Business
+                </h2>
+                <p class="text-lg mb-8 text-gray-200">
+                    Handcrafted Tailwind CSS template for your next - Startup, Business,
+                    Agency or SaaS Website. Comes with refreshing design and everything you
+                    need to kickstart your next web project.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#"
+                        class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg inline-block">
+                        Get Started
+                    </a>
+                    <a href="#" class="flex items-center text-indigo-300 font-bold hover:underline">
+                        <span>How it Works</span>
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Image Content -->
+            <div class="mt-12 lg:mt-0 relative">
+                <div class="relative z-10">
+                    <img class="rounded-lg shadow-lg object-cover object-center max-w-2xl max-h-2xl"
+                        src="https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Image 1">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section End -->
+
+
+
+    <section class="py-24 ">
+        <div class="mx-auto max-w-7xl sm:px-6 lg:px-2">
+              <div class="mb-10 lg:mb-16 flex justify-center items-center flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto">
+                  <div class="relative w-full text-center lg:text-left lg:w-2/4">
+                      <h2 class="text-4xl font-bold text-white leading-[3.25rem] lg:mb-6 mx-auto max-w-max lg:max-w-md lg:mx-0">Enjoy the finest features with our products</h2>
+                  </div>
+                  <div class="relative w-full text-center  lg:text-left lg:w-2/4">
+                      <p class="text-lg font-normal text-gray-400 mb-5">We provide all the advantages that can simplify all your financial transactions without any further requirements</p> 
+                      <a href="#" class="flex flex-row items-center justify-center gap-2 text-base font-semibold text-indigo-400 lg:justify-start hover:text-indigo-700 ">Let's Get Started <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.5 15L11.0858 11.4142C11.7525 10.7475 12.0858 10.4142 12.0858 10C12.0858 9.58579 11.7525 9.25245 11.0858 8.58579L7.5 5" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                          </a> 
+                  </div>
+              </div>
+              <div class="flex justify-center items-center  gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
+                  <div class="group relative w-full hover:bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 bg-indigo-600">
+                      <div class="bg-white border border-indigo-900 rounded-full flex justify-center items-center mb-5 w-14 h-14 ">
+                          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M24.7222 11.6667V7.22225C24.7222 5.99495 23.7273 5 22.5 5H4.72222C3.49492 5 2.5 5.99492 2.5 7.22222V22.7778C2.5 24.0051 3.49492 25 4.72222 25H22.5C23.7273 25 24.7222 24.005 24.7222 22.7777V17.7778M20.8333 17.7778H25.2778C26.5051 17.7778 27.5 16.7829 27.5 15.5556V13.8889C27.5 12.6616 26.5051 11.6667 25.2778 11.6667H20.8333C19.606 11.6667 18.6111 12.6616 18.6111 13.8889V15.5556C18.6111 16.7829 19.606 17.7778 20.8333 17.7778Z" stroke="#4F46E5" stroke-width="2"></path>
+                              </svg>
+                              
+                      </div>
+                      <h4 class="text-xl font-semibold text-white mb-3 capitalize transition-all duration-500 group-hover:text-gray-900">Easy Payment</h4>
+                      <p class="text-sm font-normal text-white transition-all duration-500 leading-5 group-hover:text-gray-900">
+                          We Provide Various Methods For You To Carry Out All Transactions Related To Your Finances 
+                      </p>
+                  </div>
+                  <div class="group relative w-full hover:bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 bg-indigo-600">
+                      <div class="bg-white border border-indigo-900 rounded-full flex justify-center items-center mb-5 w-14 h-14 ">
+                          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.375 15.8571C16.1009 15.8571 17.5 14.458 17.5 12.7321C17.5 11.0062 16.1009 9.6071 14.375 9.6071C12.6491 9.6071 11.25 11.0062 11.25 12.7321C11.25 14.458 12.6491 15.8571 14.375 15.8571ZM14.375 15.8571V20.8571M3.75 13.2264V15.2343C3.75 17.6868 3.75 18.9131 4.27747 19.9685C4.80493 21.0239 5.78567 21.76 7.74715 23.2322L8.57248 23.8516C11.4626 26.0208 12.9077 27.1054 14.5753 27.1054C16.243 27.1054 17.688 26.0208 20.5782 23.8516L21.4035 23.2322C23.365 21.76 24.3457 21.0239 24.8732 19.9685C25.4006 18.9131 25.4006 17.6868 25.4006 15.2343V13.2264C25.4006 9.95932 25.4006 8.32576 24.546 7.05852C23.6913 5.79128 22.1768 5.17918 19.1477 3.95499L18.3223 3.62144C16.4724 2.87381 15.5475 2.5 14.5753 2.5C13.6032 2.5 12.6782 2.87381 10.8283 3.62144L10.003 3.95499C6.97389 5.17919 5.45934 5.79128 4.60467 7.05852C3.75 8.32576 3.75 9.95932 3.75 13.2264Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                              
+                      </div>
+                      <h4 class="text-xl font-semibold text-white mb-3 capitalize transition-all duration-500 group-hover:text-gray-900">100% Secure</h4>
+                      <p class="text-sm font-normal text-white transition-all duration-500 leading-5 group-hover:text-gray-900">
+                          We have the most up-to-date security to support the security of all our customers in carrying out all transactions.  
+                      </p>
+                  </div>
+                  <div class="group relative w-full hover:bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 bg-indigo-600">
+                      <div class="bg-white border border-indigo-900 rounded-full flex justify-center items-center mb-5 w-14 h-14 ">
+                          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15.0067 10V15.6652C15.0067 16.0358 15.1712 16.3873 15.4556 16.6248L18.75 19.375M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                              
+                      </div>
+                      <h4 class="text-xl font-semibold text-white mb-3 capitalize transition-all duration-500 group-hover:text-gray-900">Fast Customer Service </h4>
+                      <p class="text-sm font-normal text-white transition-all duration-500 leading-5 group-hover:text-gray-900">
+                          Provide Customer Service For Those Of You Who Have Problems 24 Hours A Week  
+                      </p>
+                  </div>
+                  <div class="group relative w-full hover:bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 bg-indigo-600">
+                      <div class="bg-white border border-indigo-900 rounded-full flex justify-center items-center mb-5 w-14 h-14 ">
+                          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                              
+                      </div>
+                      <h4 class="text-xl font-semibold text-white mb-3 capitalize transition-all duration-500 group-hover:text-gray-900">Upgrade System</h4>
+                      <p class="text-sm font-normal text-white transition-all duration-500 leading-5 group-hover:text-gray-900">
+                          We provide faster transaction speeds than competitors, so money arrives and is received faster. 
+                      </p>
+                  </div>
+              </div>
+        </div>
+      </section>
+                                            
 
 
 
@@ -264,7 +408,7 @@
                 <p class="mt-2 text-lg leading-8 text-cyan-300 cta-tagline">Get Started with your free trial today.</p>
                 <div class="mt-5 flex justify-center gap-x-4">
                     <a href="#"
-                        class="border border-cyan-800 text-gray-300 px-4 pt-1.5 pb-1.5 rounded hover:bg-white hover:text-[#0B1120] duration-300">Live
+                        class="border border-cyan-800 text-gray-300 px-4 pt-1.5 pb-1.5 rounded hover:bg-white hover:text-black duration-300">Live
                         Demo -></a>
                     <a href="#"
                         class="bg-indigo-600 text-white text-sm font-normal px-4 py-2.5 rounded hover:bg-indigo-700 duration-300">Get
@@ -277,11 +421,11 @@
 
 
 
+   
     <!-- Footer Start -->
     <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1">
-        <div
-            class="container mx-auto flex flex-col md:flex-row sm:flex-col justify-between space-y-10 md:space-y-0 text-center lg:text-left">
-            <div class="space-y-4">
+        <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
+            <div class="footer-col space-y-4">
                 <h4 class="text-gray-500">COMPANY</h4>
                 <ul class="space-y-2">
                     <li><a href="#" class="hover:text-white">About</a></li>
@@ -290,7 +434,7 @@
                     <li><a href="#" class="hover:text-white">Contact</a></li>
                 </ul>
             </div>
-            <div class="space-y-4">
+            <div class="footer-col space-y-4">
                 <h4 class="text-gray-500">SOLUTIONS</h4>
                 <ul class="space-y-2">
                     <li><a href="#" class="hover:text-white">Features</a></li>
@@ -299,7 +443,7 @@
                     <li><a href="#" class="hover:text-white">Pricing</a></li>
                 </ul>
             </div>
-            <div class="space-y-4">
+            <div class="footer-col space-y-4">
                 <h4 class="text-gray-500">SUPPORT</h4>
                 <ul class="space-y-2">
                     <li><a href="#" class="hover:text-white">Documentation</a></li>
@@ -308,8 +452,7 @@
                     <li><a href="#" class="hover:text-white">API Docs</a></li>
                 </ul>
             </div>
-
-            <div class="space-y-4">
+            <div class="footer-col space-y-4">
                 <h4 class="text-gray-500">LEGAL</h4>
                 <ul class="space-y-2">
                     <li><a href="#" class="hover:text-white">Security</a></li>
@@ -318,32 +461,31 @@
                     <li><a href="#" class="hover:text-white">Changelogs</a></li>
                 </ul>
             </div>
-            <div class="text-center">
+            <div class="footer-col footer-col-5 space-y-4">
                 <h4 class="text-gray-500">CONTACT US</h4>
                 <div class="mt-4 space-y-4">
-                    <div class="flex justify-center items-center space-x-2">
+                    <div class="flex justify-center lg:justify-start items-center space-x-2">
                         <i class="fas fa-phone text-gray-400"></i>
                         <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
                     </div>
-                    <div class="flex justify-center items-center space-x-2">
+                    <div class="flex justify-center lg:justify-start items-center space-x-2">
                         <i class="fas fa-envelope text-gray-400"></i>
                         <a href="mailto:contact@yourdomain.com"
                             class="text-gray-400 hover:text-white">contact@lxroot.com</a>
                     </div>
-                    <div class="flex justify-center items-center space-x-2">
+                    <div class="flex justify-center lg:justify-start items-center space-x-2">
                         <i class="fas fa-map-marker-alt text-gray-300"></i>
                         <p class="text-gray-300">Carmel, Indiana, USA</p>
                     </div>
                 </div>
 
                 <!-- Social Media Icons -->
-                <div class="flex justify-center mt-4 space-x-4">
+                <div class="flex justify-center lg:justify-start mt-4 space-x-4">
                     <a href="https://facebook.com/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-indigo-600">
+                        class="text-gray-500 hover:text-blue-600">
                         <i class="fab fa-facebook-f fa-lg"></i>
                     </a>
-                    <a href="https://twitter.com/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-indigo-400">
+                    <a href="https://twitter.com/yourprofile" target="_blank" class="text-gray-500 hover:text-blue-400">
                         <i class="fab fa-twitter fa-lg"></i>
                     </a>
                     <a href="https://instagram.com/yourprofile" target="_blank"
@@ -351,7 +493,7 @@
                         <i class="fab fa-instagram fa-lg"></i>
                     </a>
                     <a href="https://linkedin.com/in/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-indigo-700">
+                        class="text-gray-500 hover:text-blue-700">
                         <i class="fab fa-linkedin-in fa-lg"></i>
                     </a>
                     <a href="https://youtube.com/in/yourprofile" target="_blank"
@@ -361,16 +503,18 @@
                 </div>
             </div>
         </div>
-        <div
-            class="container mx-auto flex flex-col items-center lg:items-center mt-12 border-t border-gray-700 pt-4 pb-5">
-            <p class="text-base text-center pt-2">&copy; 2024 <a href="#"
-                    class="text-indigo-400 hover:text-indigo-500 duration-300">LxRoot LLC</a>.
-                All rights reserved</p>
+        <div class="container items-center lg:items-center mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
+            <p class="footer-text text-base text-center pt-2">Copyright &copy; <a href="#"
+                    class=" text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC</a> - 2024.
+            </p>
         </div>
     </footer>
+
     <!-- Footer End -->
 
-    <!-- JavaScript -->
+
+
+    <!-- JavaScript Start -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <!-- JavaScript to toggle mobile menu -->
@@ -392,6 +536,7 @@
         });
     </script>
 
+    <!-- JavaScript End -->
 
 
 </body>

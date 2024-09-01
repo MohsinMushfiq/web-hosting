@@ -18,8 +18,12 @@
   }
 
   .mobile-menu-spacing {
+    margin-top: 4px;
+    padding-top: 30px;
     padding-left: 40px;
     padding-right: 40px;
+    padding-bottom: 30px;
+    border-top: 1px solid rgb(75 85 99);
   }
 
   .hero-spacing {
@@ -842,6 +846,10 @@ video {
   height: 1.5rem;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -856,6 +864,10 @@ video {
 
 .w-64 {
   width: 16rem;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .w-\[36\.125rem\] {
@@ -1024,6 +1036,10 @@ video {
   border-bottom-width: 1px;
 }
 
+.border-b-\[1px\] {
+  border-bottom-width: 1px;
+}
+
 .border-t {
   border-top-width: 1px;
 }
@@ -1096,6 +1112,11 @@ video {
 .bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
 .bg-indigo-500 {

@@ -22,7 +22,8 @@
     <!-- Navbar Start -->
     <div class="bg-[#0B1120] text-white py-1 sticky top-0 z-50 border-b border-gray-600 font-inter">
         <!-- Logo, Menu, and Button -->
-        <div class="flex justify-between items-center bg-[#0B1120] container max-w-7xl mx-auto sm:px-6 lg:px-1 custom-menu-spacing">
+        <div
+            class="flex justify-between items-center bg-[#0B1120] container max-w-7xl mx-auto sm:px-6 lg:px-1 custom-menu-spacing">
             <!-- Logo -->
             <div class="text-xl font-bold text-white">
                 <a href="/" aria-label="lxroot-logo" class="logo-item">
@@ -50,7 +51,7 @@
             </div>
 
             <!-- Menu (Visible on larger screens) -->
-            <nav class="hidden md:flex md:space-x-3 text-white ml-40">
+            <nav class="hidden md:flex md:space-x-3 text-white ml-40 duration-300">
                 <div class="relative group ">
                     <a href="#" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">
                         Product
@@ -139,7 +140,7 @@
 
             <!-- Hamburger Button (Visible on smaller screens) -->
             <button id="menu-btn" class="text-white focus:outline-none md:hidden">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
                     </path>
@@ -160,7 +161,8 @@
         <nav id="menu" class="md:hidden hidden mt-4 mobile-menu-spacing">
             <ul class="space-y-4 text-white">
                 <li>
-                    <div class="flex justify-between items-center border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
+                    <div
+                        class="bg-gray-900 flex justify-between items-center border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
                         <span>Products</span>
                         <button class="dropdown-btn focus:outline-none">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -170,38 +172,47 @@
                             </svg>
                         </button>
                     </div>
-                    <ul class="dropdown-menu hidden pl-4 mt-2 space-y-1 bg-[#1b2338] py-6 rounded">
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    <ul class="dropdown-menu hidden pl-4 space-y-1 bg-[#0B1120] py-6">
+                        <li
+                            class="flex justify-between items-center pb-3 mr-4 border-b-[1px] border-gray-700 duration-300">
+                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Features</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
                                 </path>
                             </svg>
-                            <a href="#" class="block hover:text-indigo-400">Features</a>
+
                         </li>
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        <li
+                            class="flex justify-between items-center py-3 mr-4 border-b-[1px] border-gray-700 duration-300">
+                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Technology Stack</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
                                 </path>
                             </svg>
-                            <a href="#" class="block hover:text-indigo-400">Technology Stack</a>
+
                         </li>
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        <li class="flex justify-between items-center py-3 mr-4 border-b-[1px] border-gray-700">
+                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Application Hosting</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
                                 </path>
                             </svg>
-                            <a href="#" class="block hover:text-indigo-400">Application Hosting</a>
+
                         </li>
                     </ul>
 
+
                 </li>
-                <li class="border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300"><a href="#" class="block hover:text-indigo-400">Roadmap </a></li>
-                <li class="border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300"><a href="#" class="block hover:text-indigo-400">Pricing</a></li>
+                <li class="bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300"><a href="#"
+                        class="block hover:text-indigo-400">Roadmap </a></li>
+                <li class="bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300"><a href="#"
+                        class="block hover:text-indigo-400">Pricing</a></li>
                 <li>
-                    <div class="flex justify-between items-center border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
+                    <div
+                        class="flex justify-between items-center border bg-gray-900 border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
                         <span>Resources</span>
                         <button class="dropdown-btn focus:outline-none">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -211,39 +222,44 @@
                             </svg>
                         </button>
                     </div>
-                    <ul class="dropdown-menu hidden pl-4 mt-2 space-y-1 bg-[#1b2338] py-6 rounded">
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    <ul class="dropdown-menu hidden pl-4 space-y-1 bg-[#0B1120] py-6">
+                        <li
+                            class="flex justify-between items-center pb-3 mr-4 border-b-[1px] border-gray-700 duration-300">
+                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Community</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
                                 </path>
                             </svg>
-                            <a href="#" class="block hover:text-indigo-400">Features</a>
+
                         </li>
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        <li
+                            class="flex justify-between items-center py-3 mr-4 border-b-[1px] border-gray-700 duration-300">
+                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Documentation</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
                                 </path>
                             </svg>
-                            <a href="#" class="block hover:text-indigo-400">Technology Stack</a>
+
                         </li>
-                        <li class="flex items-center">
-                            <svg class="w-4 h-4 mr-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        <li class="flex justify-between items-center py-3 mr-4 border-b-[1px] border-gray-700">
+                            <a href="#" class="block text-gray-300 hover:text-indigo-400">API Documentation</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
                                 </path>
                             </svg>
-                            <a href="#" class="block hover:text-indigo-400">Application Hosting</a>
+
                         </li>
                     </ul>
 
                 </li>
                 <li class="py-4 space-x-3">
                     <a href="#"
-                        class="border border-cyan-800 text-gray-300 px-8 pt-1.5 pb-1.5 rounded hover:bg-white hover:text-[#0B1120] duration-300">Sign
+                        class="border border-cyan-800 text-gray-300 px-8 pt-2 pb-2 rounded hover:bg-white hover:text-[#0B1120] duration-300">Sign
                         in</a>
-                    <a href="#" class="bg-indigo-600 text-white px-8 py-2 rounded hover:bg-indigo-700 duration-300">Get
+                    <a href="#" class="bg-indigo-600 text-white px-8 py-2.5 rounded hover:bg-indigo-700 duration-300">Get
                         Started</a>
                 </li>
             </ul>
@@ -900,27 +916,27 @@
     <!-- Footer End -->
 
     <!-- JavaScript -->
-  <!-- JavaScript -->
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- JavaScript -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-  <!-- JavaScript to toggle mobile menu -->
+    <!-- JavaScript to toggle mobile menu -->
 
-  <script>
-      const menuBtn = document.getElementById('menu-btn');
-      const menu = document.getElementById('menu');
-      const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+        const dropdownBtns = document.querySelectorAll('.dropdown-btn');
 
-      menuBtn.addEventListener('click', () => {
-          menu.classList.toggle('hidden');
-      });
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
 
-      dropdownBtns.forEach((btn) => {
-          btn.addEventListener('click', () => {
-              const dropdownMenu = btn.parentElement.nextElementSibling;
-              dropdownMenu.classList.toggle('hidden');
-          });
-      });
-  </script>
+        dropdownBtns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const dropdownMenu = btn.parentElement.nextElementSibling;
+                dropdownMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
 
 
     <!-- JavaScript -->

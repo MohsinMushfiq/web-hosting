@@ -1,55 +1,61 @@
 /* Custom CSS */
-.menu-spacing{
-    margin-left: 190px;
-}
-
-@media (min-width: 380px) and (max-width: 640px) {
+@media (min-width: 380px) and (max-width: 768px) {
     nav {
         padding-left: 10px;
         padding-right: 10px;
     }
-    .hero-spacing{
+
+    .custom-menu-spacing {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .menu-spacing {
+        margin-left: 140px;
+    }
+
+    .mobile-menu-spacing {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .hero-spacing {
         padding-top: 40px;
         padding-left: 20px;
         padding-right: 20px;
     }
-    .header-title{
+
+    .header-title {
         font-size: 40px;
         line-height: normal;
     }
-    .menu-spacing{
-        margin-left: 0px;
-    }
+
     .custom-padding {
         padding-left: 20px;
         padding-right: 20px;
     }
-    .hidden-section{
+
+    .hidden-section {
         display: none;
     }
-    .custom-spacing{
+
+    .custom-spacing {
         margin-top: -20px;
         margin-bottom: 20px;
     }
-    .cta-title, .reviews-title{
+
+    .cta-title,
+    .reviews-title {
         font-size: 30px;
     }
-    .pricing-title, .features-title{
+
+    .pricing-title,
+    .features-title {
         font-size: 25px;
     }
-    .cta-tagline{
+
+    .cta-tagline {
         font-size: 20px;
     }
 
-}
-
-@media (min-width: 380px) and (max-width: 1024px) {
-    .dropdown1-spacing{
-        margin-left: 125px;
-        margin-top: -40px
-    }
-    .dropdown2-spacing{
-        margin-left: 125px;
-        margin-top: -150px;
-    }
 }

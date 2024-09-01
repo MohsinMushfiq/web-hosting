@@ -31,14 +31,14 @@
         margin-top: -20px;
         margin-bottom: 20px;
     }
-    .cta-title{
+    .cta-title, .reviews-title{
         font-size: 30px;
     }
-    .pricing-titl{
+    .pricing-title, .features-title{
         font-size: 25px;
     }
     .cta-tagline{
-        font-size: 22px;
+        font-size: 20px;
     }
 
 }

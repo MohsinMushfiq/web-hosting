@@ -18,7 +18,11 @@
 
 <body class="bg-[#0B1120] font-inter">
 
-    <div
+
+    <!-- Navbar Start -->
+    <div class="bg-[#0B1120] text-white py-1 sticky top-0 z-50 border-b border-gray-600 font-inter">
+        <!-- Logo, Menu, and Button -->
+        <div
             class="flex justify-between items-center bg-[#0B1120] container max-w-7xl mx-auto sm:px-6 lg:px-1 custom-menu-spacing">
             <!-- Logo -->
             <div class="text-xl font-bold text-white">
@@ -48,8 +52,9 @@
 
             <!-- Menu (Visible on larger screens) -->
             <nav class="hidden md:flex md:space-x-3 text-white ml-40 duration-300">
-                <div class="relative group ">
-                    <a href="#" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">
+                <div class="relative group">
+                    <a id="productDropdownLink" href="#"
+                        class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">
                         Product
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
                             fill="currentColor">
@@ -58,10 +63,11 @@
                                 clip-rule="evenodd" />
                         </svg>
                     </a>
-                    <ul
-                        class="dropdown-menu rounded absolute hidden group-hover:block bg-[#1b2338] mt-2 space-y-1 text-white">
+                    <ul id="productDropdownMenu"
+                        class="dropdown-menu rounded absolute hidden bg-[#1b2338] mt-2 space-y-1 text-white">
                         <div class="p-4 w-64">
-                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                            <a href="features.html"
+                                class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -69,7 +75,8 @@
                                 </svg>
                                 <span>Features</span>
                             </a>
-                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                            <a href="technology.html"
+                                class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -77,7 +84,8 @@
                                 </svg>
                                 <span>Technology Stack</span>
                             </a>
-                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                            <a href="app-hosting.html"
+                                class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
@@ -89,10 +97,11 @@
                         </div>
                     </ul>
                 </div>
-                <a href="#" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">Roadmap</a>
-                <a href="#" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">Pricing</a>
+
+                <a href="roadmap.html" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">Roadmap</a>
+                <a href="pricing.html" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">Pricing</a>
                 <div class="relative group">
-                    <a href="#" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">
+                    <a id="dropdownLink" href="#" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">
                         Resources
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
                             fill="currentColor">
@@ -101,10 +110,21 @@
                                 clip-rule="evenodd" />
                         </svg>
                     </a>
-                    <ul
-                        class="dropdown-menu absolute hidden group-hover:block rounded bg-[#1b2338] mt-2 space-y-1 text-white ">
+                    <ul id="dropdownMenu"
+                        class="dropdown-menu absolute hidden rounded bg-[#1b2338] mt-2 space-y-1 text-white">
                         <div class="p-4 w-64">
-                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                            <a href="community.html"
+                                class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5V8m-5 12a2 2 0 01-2-2V8a2 2 0 012-2h5M12 20v-6m0 0V8a2 2 0 00-2-2h-5M9 20H4a2 2 0 01-2-2v-5a2 2 0 012-2h5m5-4a2 2 0 00-2-2H7a2 2 0 00-2 2v5M9 4a2 2 0 11-4 0 2 2 0 014 0zm6 4a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                                <span>Community</span>
+                            </a>
+
+                            <a href="documentation.html"
+                                class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
@@ -112,21 +132,14 @@
                                 </svg>
                                 <span>Documentation</span>
                             </a>
-                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
-                                    fill="currentColor">
-                                    <path
-                                        d="M12 14c-3.86 0-7 3.14-7 7 0 .55.45 1 1 1h12c.55 0 1-.45 1-1 0-3.86-3.14-7-7-7zM12 12c1.66 0 3-1.34 3-3S13.66 6 12 6 9 7.34 9 9s1.34 3 3 3zM19 8c0-1.11-.89-2-2-2s-2 .89-2 2 .89 2 2 2 2-.89 2-2zM15.22 12c.21.36.38.76.5 1.18.95.42 1.84 1.01 2.61 1.74.18-.29.29-.63.29-1 0-1.65-1.35-3-3-3-.29 0-.57.04-.84.11-.39.52-.85 1-.45 1.97zM6 10c-1.11 0-2 .89-2 2s.89 2 2 2 2-.89 2-2-.89-2-2-2zm.5 3.92c.16-.07.34-.1.5-.1.66 0 1.29.26 1.76.72.01.01.02.02.03.03-.04.41-.11.82-.23 1.2-.8-.62-1.69-1.13-2.64-1.53-.08-.42-.14-.84-.16-1.27-.09-.08-.18-.16-.27-.23zm2.55 2.55c-.42.95-1.01 1.84-1.74 2.61-.29-.18-.63-.29-1-.29-.37 0-.71.11-1 .29-.77-.77-1.36-1.66-1.74-2.61.36-.21.76-.38 1.18-.5.45-.95 1.04-1.84 1.74-2.61.42.36.76.77 1.02 1.23z" />
-                                </svg>
-                                <span>Community</span>
-                            </a>
-                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+
+                            <a href="api.html" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M8 9h4m0 0h4m-4 0v4m0-4l3 3m1 1v4m-4-1h1m-8-2h6m-6 4h6m-6 4h4m-4-8h8m4 0h1m-2 0v4m0-4h2" />
                                 </svg>
-                                <span>FAQs</span>
+                                <span>API Documentation</span>
                             </a>
                             <!-- Add more items here -->
                         </div>
@@ -145,10 +158,11 @@
 
             <!-- Get Started Button -->
             <div class="hidden md:block space-x-1">
-                <a href="#"
-                    class="border border-cyan-800 text-gray-300 px-4 pt-2 pb-2 rounded hover:bg-white hover:text-[#0B1120] duration-300">Sign
+                <a href="signin.html"
+                    class="border border-cyan-800 text-gray-300 px-4 py-2.5 rounded hover:bg-white hover:text-[#0B1120] duration-300">Sign
                     in</a>
-                <a href="#" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 duration-300">Get
+                <a href="getstarted.html"
+                    class="bg-indigo-600 text-white px-4 py-2.5 rounded hover:bg-indigo-700 duration-300">Get
                     Started</a>
             </div>
         </div>
@@ -171,7 +185,7 @@
                     <ul class="dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
                         <li
                             class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
-                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Features</a>
+                            <a href="features.html" class="block text-gray-300 hover:text-indigo-400">Features</a>
                             <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
@@ -181,7 +195,8 @@
                         </li>
                         <li
                             class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700 duration-300">
-                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Technology Stack</a>
+                            <a href="technology.html" class="block text-gray-300 hover:text-indigo-400">Technology
+                                Stack</a>
                             <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
@@ -190,7 +205,8 @@
 
                         </li>
                         <li class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700">
-                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Application Hosting</a>
+                            <a href="app-hosting.html" class="block text-gray-300 hover:text-indigo-400">Application
+                                Hosting</a>
                             <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
@@ -203,9 +219,9 @@
 
                 </li>
                 <li class="bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300"><a
-                        href="#" class="block hover:text-indigo-400">Roadmap </a></li>
+                        href="roadmap.html" class="block hover:text-indigo-400">Roadmap </a></li>
                 <li class="bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300"><a
-                        href="#" class="block hover:text-indigo-400">Pricing</a></li>
+                        href="pricing.html" class="block hover:text-indigo-400">Pricing</a></li>
                 <li>
                     <div
                         class="flex justify-between items-center border bg-gray-900 border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
@@ -221,7 +237,7 @@
                     <ul class="dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
                         <li
                             class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
-                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Community</a>
+                            <a href="community.html" class="block text-gray-300 hover:text-indigo-400">Community</a>
                             <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
@@ -231,7 +247,8 @@
                         </li>
                         <li
                             class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700 duration-300">
-                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Documentation</a>
+                            <a href="documentation.html"
+                                class="block text-gray-300 hover:text-indigo-400">Documentation</a>
                             <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
@@ -240,7 +257,7 @@
 
                         </li>
                         <li class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700">
-                            <a href="#" class="block text-gray-300 hover:text-indigo-400">API Documentation</a>
+                            <a href="api.html" class="block text-gray-300 hover:text-indigo-400">API Documentation</a>
                             <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
@@ -251,33 +268,22 @@
                     </ul>
 
                 </li>
-                <!-- <li class="py-4 flex justify-between items-center">
-                    <a href="#"
-                        class="border border-indigo-600 text-gray-300 px-12 pt-2 pb-2 rounded hover:bg-white hover:text-indigo-600 duration-300">
-                        Sign in
-                    </a>
-                    <a href="#"
-                        class="bg-indigo-600 text-white px-12 py-2.5 rounded hover:bg-indigo-700 duration-300">
-                        Get Started
-                    </a>
-                </li> -->
                 <li class="py-4">
-                    <a href="#"
+                    <a href="signin.html"
                         class="text-white border border-indigo-600 px-8 py-3 rounded w-full hover:text-indigo-700 hover:bg-white duration-300 block text-center">
                         Sign In
                     </a>
-                    <a href="#"
+                    <a href="getstarted.html"
                         class="bg-indigo-600 text-white px-8 py-3 rounded w-full hover:bg-indigo-800 duration-300 block text-center mt-4">
                         Get Started
                     </a>
-                    
+
                 </li>
-                
-                
+
+
             </ul>
         </nav>
     </div>
-
     <!-- Navigation End -->
 
 
@@ -295,8 +301,8 @@
                     Best Solutions <br> for Your Business
                 </h2>
                 <p class="text-lg mb-8 text-gray-200">
-                    Handcrafted Tailwind CSS template for your next - Startup, Business,
-                    Agency or SaaS Website. Comes with refreshing design and everything you
+                    Best web hosting control panel for your next - Startup, Business,
+                    Agency or SaaS Website. Comes with refreshing features and everything you
                     need to kickstart your next web project.
                 </p>
                 <div class="flex space-x-4">
@@ -318,138 +324,291 @@
             <div class="mt-12 lg:mt-0 relative">
                 <div class="relative z-10">
                     <img class="rounded-lg shadow-lg object-cover object-center max-w-2xl max-h-2xl"
-                        src="https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        src="https://img.freepik.com/free-vector/big-data-processing-concept-server-room-blockchain-technology-token-access_39422-812.jpg?t=st=1725247741~exp=1725251341~hmac=8d00b2ac551e6f8f117fcb8ec47e19c3d5ec074471d4c6ac132606b94361052b&w=740"
                         alt="Image 1">
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Hero Section End -->
 
 
-
-    <section class="py-24 ">
+    <!-- Features Section Start -->
+    <section class="py-24 bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120] custom-padding">
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-2">
-              <div class="mb-10 lg:mb-16 flex justify-center items-center flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto">
-                  <div class="relative w-full text-center lg:text-left lg:w-2/4">
-                      <h2 class="text-4xl font-bold text-white leading-[3.25rem] lg:mb-6 mx-auto max-w-max lg:max-w-md lg:mx-0">Enjoy the finest features with our products</h2>
-                  </div>
-                  <div class="relative w-full text-center  lg:text-left lg:w-2/4">
-                      <p class="text-lg font-normal text-gray-400 mb-5">We provide all the advantages that can simplify all your financial transactions without any further requirements</p> 
-                      <a href="#" class="flex flex-row items-center justify-center gap-2 text-base font-semibold text-indigo-400 lg:justify-start hover:text-indigo-700 ">Let's Get Started <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M7.5 15L11.0858 11.4142C11.7525 10.7475 12.0858 10.4142 12.0858 10C12.0858 9.58579 11.7525 9.25245 11.0858 8.58579L7.5 5" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                          </svg>
-                          </a> 
-                  </div>
-              </div>
-              <div class="flex justify-center items-center  gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
-                  <div class="group relative w-full hover:bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 bg-indigo-600">
-                      <div class="bg-white border border-indigo-900 rounded-full flex justify-center items-center mb-5 w-14 h-14 ">
-                          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M24.7222 11.6667V7.22225C24.7222 5.99495 23.7273 5 22.5 5H4.72222C3.49492 5 2.5 5.99492 2.5 7.22222V22.7778C2.5 24.0051 3.49492 25 4.72222 25H22.5C23.7273 25 24.7222 24.005 24.7222 22.7777V17.7778M20.8333 17.7778H25.2778C26.5051 17.7778 27.5 16.7829 27.5 15.5556V13.8889C27.5 12.6616 26.5051 11.6667 25.2778 11.6667H20.8333C19.606 11.6667 18.6111 12.6616 18.6111 13.8889V15.5556C18.6111 16.7829 19.606 17.7778 20.8333 17.7778Z" stroke="#4F46E5" stroke-width="2"></path>
-                              </svg>
-                              
-                      </div>
-                      <h4 class="text-xl font-semibold text-white mb-3 capitalize transition-all duration-500 group-hover:text-gray-900">Easy Payment</h4>
-                      <p class="text-sm font-normal text-white transition-all duration-500 leading-5 group-hover:text-gray-900">
-                          We Provide Various Methods For You To Carry Out All Transactions Related To Your Finances 
-                      </p>
-                  </div>
-                  <div class="group relative w-full hover:bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 bg-indigo-600">
-                      <div class="bg-white border border-indigo-900 rounded-full flex justify-center items-center mb-5 w-14 h-14 ">
-                          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M14.375 15.8571C16.1009 15.8571 17.5 14.458 17.5 12.7321C17.5 11.0062 16.1009 9.6071 14.375 9.6071C12.6491 9.6071 11.25 11.0062 11.25 12.7321C11.25 14.458 12.6491 15.8571 14.375 15.8571ZM14.375 15.8571V20.8571M3.75 13.2264V15.2343C3.75 17.6868 3.75 18.9131 4.27747 19.9685C4.80493 21.0239 5.78567 21.76 7.74715 23.2322L8.57248 23.8516C11.4626 26.0208 12.9077 27.1054 14.5753 27.1054C16.243 27.1054 17.688 26.0208 20.5782 23.8516L21.4035 23.2322C23.365 21.76 24.3457 21.0239 24.8732 19.9685C25.4006 18.9131 25.4006 17.6868 25.4006 15.2343V13.2264C25.4006 9.95932 25.4006 8.32576 24.546 7.05852C23.6913 5.79128 22.1768 5.17918 19.1477 3.95499L18.3223 3.62144C16.4724 2.87381 15.5475 2.5 14.5753 2.5C13.6032 2.5 12.6782 2.87381 10.8283 3.62144L10.003 3.95499C6.97389 5.17919 5.45934 5.79128 4.60467 7.05852C3.75 8.32576 3.75 9.95932 3.75 13.2264Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                              </svg>
-                              
-                      </div>
-                      <h4 class="text-xl font-semibold text-white mb-3 capitalize transition-all duration-500 group-hover:text-gray-900">100% Secure</h4>
-                      <p class="text-sm font-normal text-white transition-all duration-500 leading-5 group-hover:text-gray-900">
-                          We have the most up-to-date security to support the security of all our customers in carrying out all transactions.  
-                      </p>
-                  </div>
-                  <div class="group relative w-full hover:bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 bg-indigo-600">
-                      <div class="bg-white border border-indigo-900 rounded-full flex justify-center items-center mb-5 w-14 h-14 ">
-                          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M15.0067 10V15.6652C15.0067 16.0358 15.1712 16.3873 15.4556 16.6248L18.75 19.375M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                              </svg>
-                              
-                      </div>
-                      <h4 class="text-xl font-semibold text-white mb-3 capitalize transition-all duration-500 group-hover:text-gray-900">Fast Customer Service </h4>
-                      <p class="text-sm font-normal text-white transition-all duration-500 leading-5 group-hover:text-gray-900">
-                          Provide Customer Service For Those Of You Who Have Problems 24 Hours A Week  
-                      </p>
-                  </div>
-                  <div class="group relative w-full hover:bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 bg-indigo-600">
-                      <div class="bg-white border border-indigo-900 rounded-full flex justify-center items-center mb-5 w-14 h-14 ">
-                          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                              </svg>
-                              
-                      </div>
-                      <h4 class="text-xl font-semibold text-white mb-3 capitalize transition-all duration-500 group-hover:text-gray-900">Upgrade System</h4>
-                      <p class="text-sm font-normal text-white transition-all duration-500 leading-5 group-hover:text-gray-900">
-                          We provide faster transaction speeds than competitors, so money arrives and is received faster. 
-                      </p>
-                  </div>
-              </div>
+            <div
+                class="mb-10 lg:mb-16 flex justify-center items-center flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto">
+                <div class="relative w-full text-center lg:text-left lg:w-2/4">
+                    <h2
+                        class="text-4xl font-bold text-white leading-[3.25rem] lg:mb-6 mx-auto max-w-max lg:max-w-md lg:mx-0">
+                        Enjoy the finest features with our <span class="text-indigo-400">Control Panel.</span></h2>
+                </div>
+                <div class="relative w-full text-center  lg:text-left lg:w-2/4">
+                    <p class="text-lg font-normal text-gray-400 mb-5">We provide all the advantages that can simplify
+                        all your application hosting without any further requirements</p>
+                    <a href="#"
+                        class="flex flex-row items-center justify-center gap-2 text-base font-semibold text-indigo-400 lg:justify-start hover:text-indigo-600 ">Let's
+                        Get Started <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 15L11.0858 11.4142C11.7525 10.7475 12.0858 10.4142 12.0858 10C12.0858 9.58579 11.7525 9.25245 11.0858 8.58579L7.5 5"
+                                stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="flex justify-center items-center  gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
+                <div
+                    class="group relative w-full hover:bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 bg-indigo-600">
+                    <div
+                        class="bg-white border border-indigo-900 rounded-full flex justify-center items-center mb-5 w-14 h-14 ">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24.7222 11.6667V7.22225C24.7222 5.99495 23.7273 5 22.5 5H4.72222C3.49492 5 2.5 5.99492 2.5 7.22222V22.7778C2.5 24.0051 3.49492 25 4.72222 25H22.5C23.7273 25 24.7222 24.005 24.7222 22.7777V17.7778M20.8333 17.7778H25.2778C26.5051 17.7778 27.5 16.7829 27.5 15.5556V13.8889C27.5 12.6616 26.5051 11.6667 25.2778 11.6667H20.8333C19.606 11.6667 18.6111 12.6616 18.6111 13.8889V15.5556C18.6111 16.7829 19.606 17.7778 20.8333 17.7778Z"
+                                stroke="#4F46E5" stroke-width="2"></path>
+                        </svg>
+
+                    </div>
+                    <h4
+                        class="text-xl font-semibold text-white mb-3 capitalize transition-all duration-500 group-hover:text-gray-900">
+                        Easy Payment</h4>
+                    <p
+                        class="text-sm font-normal text-white transition-all duration-500 leading-5 group-hover:text-gray-900">
+                        We Provide Various Methods For You To Carry Out All Transactions Related To Your Products.
+                    </p>
+                </div>
+                <div
+                    class="group relative w-full hover:bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 bg-indigo-600">
+                    <div
+                        class="bg-white border border-indigo-900 rounded-full flex justify-center items-center mb-5 w-14 h-14 ">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.375 15.8571C16.1009 15.8571 17.5 14.458 17.5 12.7321C17.5 11.0062 16.1009 9.6071 14.375 9.6071C12.6491 9.6071 11.25 11.0062 11.25 12.7321C11.25 14.458 12.6491 15.8571 14.375 15.8571ZM14.375 15.8571V20.8571M3.75 13.2264V15.2343C3.75 17.6868 3.75 18.9131 4.27747 19.9685C4.80493 21.0239 5.78567 21.76 7.74715 23.2322L8.57248 23.8516C11.4626 26.0208 12.9077 27.1054 14.5753 27.1054C16.243 27.1054 17.688 26.0208 20.5782 23.8516L21.4035 23.2322C23.365 21.76 24.3457 21.0239 24.8732 19.9685C25.4006 18.9131 25.4006 17.6868 25.4006 15.2343V13.2264C25.4006 9.95932 25.4006 8.32576 24.546 7.05852C23.6913 5.79128 22.1768 5.17918 19.1477 3.95499L18.3223 3.62144C16.4724 2.87381 15.5475 2.5 14.5753 2.5C13.6032 2.5 12.6782 2.87381 10.8283 3.62144L10.003 3.95499C6.97389 5.17919 5.45934 5.79128 4.60467 7.05852C3.75 8.32576 3.75 9.95932 3.75 13.2264Z"
+                                stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+
+                    </div>
+                    <h4
+                        class="text-xl font-semibold text-white mb-3 capitalize transition-all duration-500 group-hover:text-gray-900">
+                        100% Secure</h4>
+                    <p
+                        class="text-sm font-normal text-white transition-all duration-500 leading-5 group-hover:text-gray-900">
+                        We have the most up-to-date security to support the security of all our customers in carrying
+                        out all Features.
+                    </p>
+                </div>
+                <div
+                    class="group relative w-full hover:bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 bg-indigo-600">
+                    <div
+                        class="bg-white border border-indigo-900 rounded-full flex justify-center items-center mb-5 w-14 h-14 ">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.0067 10V15.6652C15.0067 16.0358 15.1712 16.3873 15.4556 16.6248L18.75 19.375M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+
+                    </div>
+                    <h4
+                        class="text-xl font-semibold text-white mb-3 capitalize transition-all duration-500 group-hover:text-gray-900">
+                        Fast Customer Service </h4>
+                    <p
+                        class="text-sm font-normal text-white transition-all duration-500 leading-5 group-hover:text-gray-900">
+                        Provide Customer Service For Those Of You Who Have Problems 24 Hours A Week.
+                    </p>
+                </div>
+                <div
+                    class="group relative w-full hover:bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 bg-indigo-600">
+                    <div
+                        class="bg-white border border-indigo-900 rounded-full flex justify-center items-center mb-5 w-14 h-14 ">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 14.7875L13.0959 17.8834C13.3399 18.1274 13.7353 18.1275 13.9794 17.8838L20.625 11.25M15 27.5C8.09644 27.5 2.5 21.9036 2.5 15C2.5 8.09644 8.09644 2.5 15 2.5C21.9036 2.5 27.5 8.09644 27.5 15C27.5 21.9036 21.9036 27.5 15 27.5Z"
+                                stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+
+                    </div>
+                    <h4
+                        class="text-xl font-semibold text-white mb-3 capitalize transition-all duration-500 group-hover:text-gray-900">
+                        Upgrade System</h4>
+                    <p
+                        class="text-sm font-normal text-white transition-all duration-500 leading-5 group-hover:text-gray-900">
+                        We provide most latest features than competitors, so update arrives and is received faster.
+                    </p>
+                </div>
+            </div>
         </div>
-      </section>
-                                            
+    </section>
+    <!-- Features Section End -->
+
+
+    <!-- About Section Start -->
+    <div class="bg-gray-50 py-16">
+        <!-- Content Section -->
+        <div class="mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-2">
+            <h2 class="text-4xl font-bold text-white text-center">About <span class="text-indigo-400">LxRoot</span></>
+                <p class="text-sm font-normal text-gray-200 mt-2">Democratize the hosting engine irrespective of
+                    programming language.</p>
+                <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="border border-indigo-600 hover:bg-indigo-600 rounded shadow-lg text-center card-styling duration-300">
+                        <img class="card-img mx-auto mt-4"
+                            src="https://monst-nextjs.vercel.app/assets/imgs/illustrations/eating.svg" alt="">
+                        <h3 class="mt-6 text-xl font-bold text-white">OUR VALUE</h3>
+                        <p class="mt-2 mb-2 text-gray-200 text-sm font-normal">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam reprehenderit
+                            necessitatibus cumque distinctio atque quidem.
+                        </p>
+                    </div>
+
+
+                    <!-- Card 2 -->
+                    <div
+                        class="border border-indigo-600 hover:bg-indigo-600 rounded shadow-lg text-center card-styling duration-300">
+                        <img class="card-img mx-auto mt-4"
+                            src="https://monst-nextjs.vercel.app/assets/imgs/illustrations/space.svg" alt="">
+                        <h3 class="mt-6 text-xl font-bold text-white">OUR MISSION</h3>
+                        <p class="mt-2 mb-2 text-gray-200 text-sm font-normal">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam reprehenderit
+                            necessitatibus cumque distinctio atque quidem.
+                        </p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="border border-indigo-600 hover:bg-indigo-600 rounded shadow-lg text-center card-styling duration-300">
+                        <img class="card-img mx-auto mt-4"
+                            src="https://monst-nextjs.vercel.app/assets/imgs/illustrations/tasks.svg" alt="">
+                        <h3 class="mt-6 text-xl font-bold text-white">OUR VISION</h3>
+                        <p class="mt-2 mb-2 text-gray-200 text-sm font-normal">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam reprehenderit
+                            necessitatibus cumque distinctio atque quidem.
+                        </p>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- About Section End -->
 
 
 
+    <!-- Team Section Start -->
+    <section class="max-w-7xl mx-auto pt-12 pb-24">
+        <div class="mx-auto px-2 text-center">
+            <!-- Header Section -->
+            <h2 class="text-sm text-cyan-300 font-normal tracking-wide uppercase mb-2">Our Team Members</h2>
+            <h1 class="text-4xl font-bold text-white leading-tight mb-4">Our Creative Team</h1>
+            <p class="text-gray-400 max-w-xl mx-auto mb-12">There are many variations of passages of Lorem Ipsum
+                available but the majority have suffered alteration in some form.</p>
 
-    <!-- Call to Action Section Start -->
-    <div class="bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120] pt-12 pb-12">
-        <div class="mx-auto max-w-7xl cta-spacing">
-            <div class="text-center">
-                <h2 class="text-5xl font-bold tracking-tight text-white sm:text-4xl cta-title">Ready to dive in?</h2>
-                <p class="mt-2 text-lg leading-8 text-cyan-300 cta-tagline">Get Started with your free trial today.</p>
-                <div class="mt-5 flex justify-center gap-x-4">
-                    <a href="#"
-                        class="border border-cyan-800 text-gray-300 px-4 pt-1.5 pb-1.5 rounded hover:bg-white hover:text-black duration-300">Live
-                        Demo -></a>
-                    <a href="#"
-                        class="bg-indigo-600 text-white text-sm font-normal px-4 py-2.5 rounded hover:bg-indigo-700 duration-300">Get
-                        Started -></a>
+            <!-- Team Member Cards -->
+            <div class="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                <!-- Team Member 1 -->
+                <div class="team-member shadow-lg rounded-lg p-6">
+                    <img class="rounded-full mx-auto w-24 h-24 mb-4" src="/images/team.png" alt="Founder & CEO">
+                    <h3 class="text-xl font-semibold text-gray-100">Founder Name</h3>
+                    <p class="text-cyan-300 font-normal">Founder & CEO</p>
+                    <div class="mt-4 flex justify-center space-x-4">
+                        <a href="#" class="text-gray-200 hover:text-indigo-600"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-200 hover:text-indigo-600"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-200 hover:text-indigo-600"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-member shadow-lg rounded-lg p-6">
+                    <img class="rounded-full mx-auto w-24 h-24 mb-4" src="/images/team.png" alt="Founder & CTO">
+                    <h3 class="text-xl font-semibold text-gray-100">Co-Founder Name</h3>
+                    <p class="text-cyan-300">Co-Founder & CTO</p>
+                    <div class="mt-4 flex justify-center space-x-4">
+                        <a href="#" class="text-gray-200 hover:text-indigo-600"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-200 hover:text-indigo-600"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-200 hover:text-indigo-600"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-member shadow-lg rounded-lg p-6">
+                    <img class="rounded-full mx-auto w-24 h-24 mb-4" src="/images/team.png" alt="Web Developer">
+                    <h3 class="text-xl font-semibold text-gray-100">Developer Name</h3>
+                    <p class="text-cyan-300">Web Developer</p>
+                    <div class="mt-4 flex justify-center space-x-4">
+                        <a href="#" class="text-gray-200 hover:text-indigo-600"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-200 hover:text-indigo-600"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-200 hover:text-indigo-600"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="team-member shadow-lg rounded-lg p-6 borde">
+                    <img class="rounded-full mx-auto w-24 h-24 mb-4" src="/images/team.png" alt="Security Specialist">
+                    <h3 class="text-xl font-semibold text-gray-100">Specialist Name</h3>
+                    <p class="text-cyan-300">Security Specialist</p>
+                    <div class="mt-4 flex justify-center space-x-4">
+                        <a href="#" class="text-gray-200 hover:text-indigo-600"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-200 hover:text-indigo-600"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-200 hover:text-indigo-600"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section End -->
+
+
+    <!-- Call to Action Start -->
+    <div class="py-16 bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120">
+        <div class="max-w-7xl mx-auto px-2">
+            <h2 class="text-3xl font-semibold text-center mb-10 text-white"><span class="text-indigo-300">Let’s get started. </span>Choose an option.</h2>
+            <div class="flex flex-col lg:flex-row justify-center items-center gap-12 about-cta rounded">
+                <!-- Card 1 -->
+                <div class="rounded-lg shadow-lg text-center cta-card hover:bg-indigo-800">
+                    <h3 class="text-lg font-semibold mb-4">I have a query</h3>
+                    <p class="text-gray-600 mb-6">Start asking your questions to us.</p>
+                    <a href="#" class="inline-block bg-indigo-600 text-white py-3 px-8 rounded hover:bg-[#0B1120]">Contact Us<span class="ml-2" aria-hidden="true">&rarr;</span></a>
+                </div>
+                <!-- Card 2 -->
+                <div class="rounded-lg shadow-lg text-center cta-card hover:bg-indigo-800">
+                    <h3 class="text-lg font-semibold mb-4">I have to buy</h3>
+                    <p class="text-gray-600 mb-6">Checkout your product to get started.</p>
+                    <a href="#" class="inline-block bg-indigo-600 text-white py-3 px-8 rounded hover:bg-[#0B1120]">Get Started<span class="ml-2" aria-hidden="true">&rarr;</span></a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Call to Action Section End -->
+    <!-- Call to Action Start -->
 
 
-
-   
     <!-- Footer Start -->
     <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1">
         <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
             <div class="footer-col space-y-4">
                 <h4 class="text-gray-500">COMPANY</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-white">About</a></li>
-                    <li><a href="#" class="hover:text-white">Articles</a></li>
-                    <li><a href="#" class="hover:text-white">Career</a></li>
-                    <li><a href="#" class="hover:text-white">Contact</a></li>
+                    <li><a href="about.html" class="hover:text-white">About</a></li>
+                    <li><a href="articles.html" class="hover:text-white">Articles</a></li>
+                    <li><a href="career.html" class="hover:text-white">Career</a></li>
+                    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-col space-y-4">
                 <h4 class="text-gray-500">SOLUTIONS</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-white">Features</a></li>
-                    <li><a href="#" class="hover:text-white">Tech Stack</a></li>
-                    <li><a href="#" class="hover:text-white">Roadmap</a></li>
-                    <li><a href="#" class="hover:text-white">Pricing</a></li>
+                    <li><a href="features.htlm" class="hover:text-white">Features</a></li>
+                    <li><a href="technology.html" class="hover:text-white">Technology</a></li>
+                    <li><a href="roadmap.html" class="hover:text-white">Roadmap</a></li>
+                    <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
                 </ul>
             </div>
             <div class="footer-col space-y-4">
                 <h4 class="text-gray-500">SUPPORT</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-white">Documentation</a></li>
-                    <li><a href="#" class="hover:text-white">Community</a></li>
-                    <li><a href="#" class="hover:text-white">Support Docs</a></li>
-                    <li><a href="#" class="hover:text-white">API Docs</a></li>
+                    <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
+                    <li><a href="community.html" class="hover:text-white">Community</a></li>
+                    <li><a href="support.html" class="hover:text-white">Support Docs</a></li>
+                    <li><a href="api.html" class="hover:text-white">API Docs</a></li>
                 </ul>
             </div>
             <div class="footer-col space-y-4">
@@ -475,17 +634,18 @@
                     </div>
                     <div class="flex justify-center lg:justify-start items-center space-x-2">
                         <i class="fas fa-map-marker-alt text-gray-300"></i>
-                        <p class="text-gray-300">Carmel, Indiana, USA</p>
+                        <p class="text-gray-400">Carmel, Indiana, USA</p>
                     </div>
                 </div>
 
                 <!-- Social Media Icons -->
                 <div class="flex justify-center lg:justify-start mt-4 space-x-4">
                     <a href="https://facebook.com/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-blue-600">
+                        class="text-gray-500 hover:text-indigo-600">
                         <i class="fab fa-facebook-f fa-lg"></i>
                     </a>
-                    <a href="https://twitter.com/yourprofile" target="_blank" class="text-gray-500 hover:text-blue-400">
+                    <a href="https://twitter.com/yourprofile" target="_blank"
+                        class="text-gray-500 hover:text-indigo-400">
                         <i class="fab fa-twitter fa-lg"></i>
                     </a>
                     <a href="https://instagram.com/yourprofile" target="_blank"
@@ -493,7 +653,7 @@
                         <i class="fab fa-instagram fa-lg"></i>
                     </a>
                     <a href="https://linkedin.com/in/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-blue-700">
+                        class="text-gray-500 hover:text-indigo-700">
                         <i class="fab fa-linkedin-in fa-lg"></i>
                     </a>
                     <a href="https://youtube.com/in/yourprofile" target="_blank"
@@ -504,7 +664,7 @@
             </div>
         </div>
         <div class="container items-center lg:items-center mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
-            <p class="footer-text text-base text-center pt-2">Copyright &copy; <a href="#"
+            <p class="footer-text text-base text-center pt-2">Copyright &copy; <a href="index.html"
                     class=" text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC</a> - 2024.
             </p>
         </div>
@@ -514,11 +674,10 @@
 
 
 
-    <!-- JavaScript Start -->
+    <!-- JavaScript -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <!-- JavaScript to toggle mobile menu -->
-
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const menu = document.getElementById('menu');
@@ -536,7 +695,48 @@
         });
     </script>
 
-    <!-- JavaScript End -->
+    <!-- JavaScript for Drowpdown Menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownLink = document.getElementById("dropdownLink");
+            const dropdownMenu = document.getElementById("dropdownMenu");
+
+            dropdownLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                dropdownMenu.classList.toggle("hidden");
+            });
+
+            document.addEventListener("click", function (event) {
+                const isClickInside = dropdownLink.contains(event.target) || dropdownMenu.contains(event.target);
+
+                if (!isClickInside) {
+                    dropdownMenu.classList.add("hidden");
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const productDropdownLink = document.getElementById("productDropdownLink");
+            const productDropdownMenu = document.getElementById("productDropdownMenu");
+
+            productDropdownLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                productDropdownMenu.classList.toggle("hidden");
+            });
+
+            document.addEventListener("click", function (event) {
+                const isClickInside = productDropdownLink.contains(event.target) || productDropdownMenu.contains(event.target);
+
+                if (!isClickInside) {
+                    productDropdownMenu.classList.add("hidden");
+                }
+            });
+        });
+
+
+    </script>
+
+    <!-- JavaScript -->
 
 
 </body>

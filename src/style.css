@@ -1,4 +1,40 @@
 /* Custom CSS */
+.team-member{
+    background: #192441;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: white;
+    border: solid 1px #2e3e6b;
+}
+
+.team-member img{
+    height: 80px;
+}
+
+.card-styling{
+    padding: 30px;
+}
+
+.card-img{
+    height: 200px;
+
+}
+
+.about-cta{
+    background-color: #0B1120;
+    padding: 90px;
+}
+
+.cta-card{
+    padding-top: 40px;
+    padding-right: 80px;
+    padding-left: 80px;
+    padding-bottom: 40px;
+    background-color: #0f1527;
+    border: 1px solid #4f46e5;
+    color: white;
+}
+
 @media (min-width: 380px) and (max-width: 768px) {
     nav {
         padding-left: 10px;

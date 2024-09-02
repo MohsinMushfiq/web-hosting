@@ -7,7 +7,8 @@
     <title>LxRoot - Application Hosting Platform.</title>
     <link rel="stylesheet" href="./output/tailwind.css">
     <link rel="stylesheet" href="./src/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -51,8 +52,9 @@
 
             <!-- Menu (Visible on larger screens) -->
             <nav class="hidden md:flex md:space-x-3 text-white ml-40 duration-300">
-                <div class="relative group ">
-                    <a href="#" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">
+                <div class="relative group">
+                    <a id="productDropdownLink" href="#"
+                        class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">
                         Product
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
                             fill="currentColor">
@@ -61,10 +63,11 @@
                                 clip-rule="evenodd" />
                         </svg>
                     </a>
-                    <ul
-                        class="dropdown-menu rounded absolute hidden group-hover:block bg-[#1b2338] mt-2 space-y-1 text-white">
+                    <ul id="productDropdownMenu"
+                        class="dropdown-menu rounded absolute hidden bg-[#1b2338] mt-2 space-y-1 text-white">
                         <div class="p-4 w-64">
-                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                            <a href="features.html"
+                                class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -72,7 +75,8 @@
                                 </svg>
                                 <span>Features</span>
                             </a>
-                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                            <a href="technology.html"
+                                class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -80,7 +84,8 @@
                                 </svg>
                                 <span>Technology Stack</span>
                             </a>
-                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                            <a href="app-hosting.html"
+                                class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
@@ -92,10 +97,11 @@
                         </div>
                     </ul>
                 </div>
-                <a href="#" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">Roadmap</a>
-                <a href="#" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">Pricing</a>
+
+                <a href="roadmap.html" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">Roadmap</a>
+                <a href="pricing.html" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">Pricing</a>
                 <div class="relative group">
-                    <a href="#" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">
+                    <a id="dropdownLink" href="#" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">
                         Resources
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
                             fill="currentColor">
@@ -104,10 +110,21 @@
                                 clip-rule="evenodd" />
                         </svg>
                     </a>
-                    <ul
-                        class="dropdown-menu absolute hidden group-hover:block rounded bg-[#1b2338] mt-2 space-y-1 text-white ">
+                    <ul id="dropdownMenu"
+                        class="dropdown-menu absolute hidden rounded bg-[#1b2338] mt-2 space-y-1 text-white">
                         <div class="p-4 w-64">
-                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                            <a href="community.html"
+                                class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5V8m-5 12a2 2 0 01-2-2V8a2 2 0 012-2h5M12 20v-6m0 0V8a2 2 0 00-2-2h-5M9 20H4a2 2 0 01-2-2v-5a2 2 0 012-2h5m5-4a2 2 0 00-2-2H7a2 2 0 00-2 2v5M9 4a2 2 0 11-4 0 2 2 0 014 0zm6 4a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                                <span>Community</span>
+                            </a>
+
+                            <a href="documentation.html"
+                                class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
@@ -115,21 +132,14 @@
                                 </svg>
                                 <span>Documentation</span>
                             </a>
-                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
-                                    fill="currentColor">
-                                    <path
-                                        d="M12 14c-3.86 0-7 3.14-7 7 0 .55.45 1 1 1h12c.55 0 1-.45 1-1 0-3.86-3.14-7-7-7zM12 12c1.66 0 3-1.34 3-3S13.66 6 12 6 9 7.34 9 9s1.34 3 3 3zM19 8c0-1.11-.89-2-2-2s-2 .89-2 2 .89 2 2 2 2-.89 2-2zM15.22 12c.21.36.38.76.5 1.18.95.42 1.84 1.01 2.61 1.74.18-.29.29-.63.29-1 0-1.65-1.35-3-3-3-.29 0-.57.04-.84.11-.39.52-.85 1-.45 1.97zM6 10c-1.11 0-2 .89-2 2s.89 2 2 2 2-.89 2-2-.89-2-2-2zm.5 3.92c.16-.07.34-.1.5-.1.66 0 1.29.26 1.76.72.01.01.02.02.03.03-.04.41-.11.82-.23 1.2-.8-.62-1.69-1.13-2.64-1.53-.08-.42-.14-.84-.16-1.27-.09-.08-.18-.16-.27-.23zm2.55 2.55c-.42.95-1.01 1.84-1.74 2.61-.29-.18-.63-.29-1-.29-.37 0-.71.11-1 .29-.77-.77-1.36-1.66-1.74-2.61.36-.21.76-.38 1.18-.5.45-.95 1.04-1.84 1.74-2.61.42.36.76.77 1.02 1.23z" />
-                                </svg>
-                                <span>Community</span>
-                            </a>
-                            <a href="#" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+
+                            <a href="api.html" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M8 9h4m0 0h4m-4 0v4m0-4l3 3m1 1v4m-4-1h1m-8-2h6m-6 4h6m-6 4h4m-4-8h8m4 0h1m-2 0v4m0-4h2" />
                                 </svg>
-                                <span>FAQs</span>
+                                <span>API Documentation</span>
                             </a>
                             <!-- Add more items here -->
                         </div>
@@ -148,10 +158,11 @@
 
             <!-- Get Started Button -->
             <div class="hidden md:block space-x-1">
-                <a href="#"
-                    class="border border-cyan-800 text-gray-300 px-4 pt-2 pb-2 rounded hover:bg-white hover:text-[#0B1120] duration-300">Sign
+                <a href="signin.html"
+                    class="border border-cyan-800 text-gray-300 px-4 py-2.5 rounded hover:bg-white hover:text-[#0B1120] duration-300">Sign
                     in</a>
-                <a href="#" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 duration-300">Get
+                <a href="getstarted.html"
+                    class="bg-indigo-600 text-white px-4 py-2.5 rounded hover:bg-indigo-700 duration-300">Get
                     Started</a>
             </div>
         </div>
@@ -174,7 +185,7 @@
                     <ul class="dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
                         <li
                             class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
-                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Features</a>
+                            <a href="features.html" class="block text-gray-300 hover:text-indigo-400">Features</a>
                             <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
@@ -184,7 +195,8 @@
                         </li>
                         <li
                             class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700 duration-300">
-                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Technology Stack</a>
+                            <a href="technology.html" class="block text-gray-300 hover:text-indigo-400">Technology
+                                Stack</a>
                             <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
@@ -193,7 +205,8 @@
 
                         </li>
                         <li class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700">
-                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Application Hosting</a>
+                            <a href="app-hosting.html" class="block text-gray-300 hover:text-indigo-400">Application
+                                Hosting</a>
                             <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
@@ -206,9 +219,9 @@
 
                 </li>
                 <li class="bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300"><a
-                        href="#" class="block hover:text-indigo-400">Roadmap </a></li>
+                        href="roadmap.html" class="block hover:text-indigo-400">Roadmap </a></li>
                 <li class="bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300"><a
-                        href="#" class="block hover:text-indigo-400">Pricing</a></li>
+                        href="pricing.html" class="block hover:text-indigo-400">Pricing</a></li>
                 <li>
                     <div
                         class="flex justify-between items-center border bg-gray-900 border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
@@ -224,7 +237,7 @@
                     <ul class="dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
                         <li
                             class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
-                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Community</a>
+                            <a href="community.html" class="block text-gray-300 hover:text-indigo-400">Community</a>
                             <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
@@ -234,7 +247,8 @@
                         </li>
                         <li
                             class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700 duration-300">
-                            <a href="#" class="block text-gray-300 hover:text-indigo-400">Documentation</a>
+                            <a href="documentation.html"
+                                class="block text-gray-300 hover:text-indigo-400">Documentation</a>
                             <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
@@ -243,7 +257,7 @@
 
                         </li>
                         <li class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700">
-                            <a href="#" class="block text-gray-300 hover:text-indigo-400">API Documentation</a>
+                            <a href="api.html" class="block text-gray-300 hover:text-indigo-400">API Documentation</a>
                             <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
@@ -254,33 +268,22 @@
                     </ul>
 
                 </li>
-                <!-- <li class="py-4 flex justify-between items-center">
-                    <a href="#"
-                        class="border border-indigo-600 text-gray-300 px-12 pt-2 pb-2 rounded hover:bg-white hover:text-indigo-600 duration-300">
-                        Sign in
-                    </a>
-                    <a href="#"
-                        class="bg-indigo-600 text-white px-12 py-2.5 rounded hover:bg-indigo-700 duration-300">
-                        Get Started
-                    </a>
-                </li> -->
                 <li class="py-4">
-                    <a href="#"
+                    <a href="signin.html"
                         class="text-white border border-indigo-600 px-8 py-3 rounded w-full hover:text-indigo-700 hover:bg-white duration-300 block text-center">
                         Sign In
                     </a>
-                    <a href="#"
+                    <a href="getstarted.html"
                         class="bg-indigo-600 text-white px-8 py-3 rounded w-full hover:bg-indigo-800 duration-300 block text-center mt-4">
                         Get Started
                     </a>
-                    
+
                 </li>
-                
-                
+
+
             </ul>
         </nav>
     </div>
-
     <!-- Navigation End -->
 
 
@@ -844,28 +847,28 @@
             <div class="footer-col space-y-4">
                 <h4 class="text-gray-500">COMPANY</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-white">About</a></li>
-                    <li><a href="#" class="hover:text-white">Articles</a></li>
-                    <li><a href="#" class="hover:text-white">Career</a></li>
-                    <li><a href="#" class="hover:text-white">Contact</a></li>
+                    <li><a href="about.html" class="hover:text-white">About</a></li>
+                    <li><a href="articles.html" class="hover:text-white">Articles</a></li>
+                    <li><a href="career.html" class="hover:text-white">Career</a></li>
+                    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-col space-y-4">
                 <h4 class="text-gray-500">SOLUTIONS</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-white">Features</a></li>
-                    <li><a href="#" class="hover:text-white">Tech Stack</a></li>
-                    <li><a href="#" class="hover:text-white">Roadmap</a></li>
-                    <li><a href="#" class="hover:text-white">Pricing</a></li>
+                    <li><a href="features.htlm" class="hover:text-white">Features</a></li>
+                    <li><a href="technology.html" class="hover:text-white">Technology</a></li>
+                    <li><a href="roadmap.html" class="hover:text-white">Roadmap</a></li>
+                    <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
                 </ul>
             </div>
             <div class="footer-col space-y-4">
                 <h4 class="text-gray-500">SUPPORT</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-white">Documentation</a></li>
-                    <li><a href="#" class="hover:text-white">Community</a></li>
-                    <li><a href="#" class="hover:text-white">Support Docs</a></li>
-                    <li><a href="#" class="hover:text-white">API Docs</a></li>
+                    <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
+                    <li><a href="community.html" class="hover:text-white">Community</a></li>
+                    <li><a href="support.html" class="hover:text-white">Support Docs</a></li>
+                    <li><a href="api.html" class="hover:text-white">API Docs</a></li>
                 </ul>
             </div>
             <div class="footer-col space-y-4">
@@ -891,7 +894,7 @@
                     </div>
                     <div class="flex justify-center lg:justify-start items-center space-x-2">
                         <i class="fas fa-map-marker-alt text-gray-300"></i>
-                        <p class="text-gray-300">Carmel, Indiana, USA</p>
+                        <p class="text-gray-400">Carmel, Indiana, USA</p>
                     </div>
                 </div>
 
@@ -920,7 +923,7 @@
             </div>
         </div>
         <div class="container items-center lg:items-center mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
-            <p class="footer-text text-base text-center pt-2">Copyright &copy; <a href="#"
+            <p class="footer-text text-base text-center pt-2">Copyright &copy; <a href="index.html"
                     class=" text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC</a> - 2024.
             </p>
         </div>
@@ -934,7 +937,6 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <!-- JavaScript to toggle mobile menu -->
-
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const menu = document.getElementById('menu');
@@ -951,6 +953,48 @@
             });
         });
     </script>
+
+    <!-- JavaScript for Drowpdown Menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownLink = document.getElementById("dropdownLink");
+            const dropdownMenu = document.getElementById("dropdownMenu");
+
+            dropdownLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                dropdownMenu.classList.toggle("hidden");
+            });
+
+            document.addEventListener("click", function (event) {
+                const isClickInside = dropdownLink.contains(event.target) || dropdownMenu.contains(event.target);
+
+                if (!isClickInside) {
+                    dropdownMenu.classList.add("hidden");
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const productDropdownLink = document.getElementById("productDropdownLink");
+            const productDropdownMenu = document.getElementById("productDropdownMenu");
+
+            productDropdownLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                productDropdownMenu.classList.toggle("hidden");
+            });
+
+            document.addEventListener("click", function (event) {
+                const isClickInside = productDropdownLink.contains(event.target) || productDropdownMenu.contains(event.target);
+
+                if (!isClickInside) {
+                    productDropdownMenu.classList.add("hidden");
+                }
+            });
+        });
+
+
+    </script>
+
 
     <!-- JavaScript -->
 

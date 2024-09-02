@@ -37,7 +37,7 @@
   color: white;
 }
 
-@media (min-width: 380px) and (max-width: 768px) {
+@media (min-width: 350px) and (max-width: 768px) {
   nav {
     padding-left: 10px;
     padding-right: 10px;
@@ -73,7 +73,7 @@
     line-height: normal;
   }
 
-  .custom-padding {
+  .about-feature {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -100,9 +100,70 @@
   .cta-tagline {
     font-size: 20px;
   }
+
+  /* About Page responsive */
+
+  .about-hero {
+    margin-top: -50px;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: -20px;
+  }
+
+  .about-hero p{
+    font-size: 15px;
+  }
+
+  .about-hero img{
+    display: none;
+  }
+
+  .about-hero-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-hero-button a {
+    text-align: center;
+  }
+
+  .about-h2{
+    font-size: 35px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .about-team{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .about-cta-cont{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .about-cta{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .cta-card{
+    width: 350px;
+    padding: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .about-feature{
+    padding-top: 30px;
+  }
 }
 
-@media (min-width: 380px) and (max-width: 780px) {
+@media (min-width: 350px) and (max-width: 780px) {
   .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -2029,6 +2090,10 @@ video {
 
   .sm\:grid-cols-6{
     grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .sm\:flex-col{
+    flex-direction: column;
   }
 
   .sm\:justify-center{

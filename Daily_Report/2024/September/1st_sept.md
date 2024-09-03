@@ -9,10 +9,10 @@ GitHub - https://github.com/MohsinMushfiq/LxRoot/blob/main/Daily_Report/2024/Sep
 <h3>Work Start: at 8.00 AM</h3>
 
 <h3>To-do</h3>
-- Fix Responsive, Build, and run Application
-- Have some problems with the configuration in package.json and tailwind configuration. Also, I forgot to build the project before uploading it to the server.  So I have to solve the problem
-- If all is good, upload it to the server
-- Responsive Done and work on the server also
+- Fix Responsive, Build, and run Application </br>
+- Have some problems with the configuration in package.json and tailwind configuration. Also, I forgot to build the project before uploading it to the server.  So I have to solve the problem </br>
+- If all is good, upload it to the server </br>
+- Responsive Done and work on the server also </br>
 
 <h3>Revision</h3>
 - Update Mobile navigation as like lxroot.com </br>
@@ -31,20 +31,19 @@ GitHub - https://github.com/MohsinMushfiq/LxRoot/blob/main/Daily_Report/2024/Sep
 <h3>Break: at 4:50 PM</h3>
 
 <h3>Back to Work: at 5:15 PM</h3>
-- create about page
+- create about page </br>
 - Planning for page design
 
 <h3>Break: at 6:25 PM</h3>
 
 <h3>Back to Work: at 7:00 PM</h3>
-
-- Start About Page Design
-- Design hero & Features section 70%
-- Revision in Mobile Navigation
-- Set the full height to the mobile nav
-- Align 2 button start and end
-- Remove sign in button
-- Get started button width 100%
+- Start About Page Design </br>
+- Design hero & Features section 70% </br>
+- Revision in Mobile Navigation </br>
+- Set the full height to the mobile nav </br>
+- Align 2 button start and end </br>
+- Remove sign in button </br>
+- Get started button width 100% </br>
 - Add a sign-in button before get started and use the previous style
 
 

@@ -2,9 +2,10 @@
 
 Video - https://www.loom.com/share/e7998c5f681248a5928383edaca4f151?sid=60e44579-8417-443d-bf54-b9bf0d89d48a </br>
 Live URL - https://mohsin.lxroot.net/day5/ </br>
-GitHub - https://github.com/MohsinMushfiq/LxRoot/blob/main/Daily_Report/2024/September/1st_sep.md
+GitHub - https://github.com/MohsinMushfiq/LxRoot/blob/main/Daily_Report/2024/September/1st_sept.md
 
 
+<h2>Total Hour: 11</h2>
 <h3>Work Start: at 8.00 AM</h3>
 
 <h3>To-do</h3>

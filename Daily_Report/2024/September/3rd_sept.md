@@ -1,4 +1,4 @@
-<h2>Updates - 2nd September, 2024</h2>
+<h2>Updates - 3rd September, 2024</h2>
 
 Video - https://www.loom.com/share/a12c8ae7305642f4a1f7c71b85e1f091?sid=b0a1f62d-c400-4869-b4c5-a0bd44725a8d </br>
 Live URL - https://mohsin.lxroot.net/day6/ </br>

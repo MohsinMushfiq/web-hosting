@@ -1,8 +1,8 @@
 <h2>Updates - 2nd September, 2024</h2>
 
-Video - https://www.loom.com/share/5fd7b71d0de947bcbf25b6bae76a9409?sid=3f8dca43-6c96-4cd8-9f0c-d375e40888b0 </br>
+Video - https://www.loom.com/share/a12c8ae7305642f4a1f7c71b85e1f091?sid=b0a1f62d-c400-4869-b4c5-a0bd44725a8d </br>
 Live URL - https://mohsin.lxroot.net/day6/ </br>
-GitHub - https://github.com/MohsinMushfiq/LxRoot/blob/main/Daily_Report/2024/September/2nd_sept.md
+GitHub - https://github.com/MohsinMushfiq/LxRoot/blob/main/Daily_Report/2024/September/3rd_sept.md
 
 <h2>Total Hour: 10</h2>
 <h3>Work Start: at 8.15 AM</h3>

@@ -7,25 +7,25 @@ GitHub -
 
 <h3>Work Start: at 8.00 AM</h3>
 
-<b>To-do</b>
+<h3>To-do</h3>
 - Fix Responsive, Build, and run Application
 - Have some problems with the configuration in package.json and tailwind configuration. Also, I forgot to build the project before uploading it to the server.  So I have to solve the problem
 - If all is good, upload it to the server
 - Responsive Done and work on the server also
 
 <h3>Revision</h3>
-- Update Mobile navigation as like lxroot.com
-- Has been updated and checked in localhost, working well
-- Share video update to Mostain Vai 
+- Update Mobile navigation as like lxroot.com </br>
+- Has been updated and checked in localhost, working well </br>
+- Share video update to Mostain Vai </br>
 - Uploading to server 
 
 <h3>Break: Start at 12:45 PM</h3>
 
-<h3>Back to Work: at 2:00 PM<h3>
-- Remove padding
-- Align the footer column to justify the space between
-- 5 in lg, 3 in md, 2 in sm
-- Remove the second half text from the footer bottom text
+<h3>Back to Work: at 2:00 PM</h3>
+- Remove padding </br>
+- Align the footer column to justify the space between </br>
+- 5 in lg, 3 in md, 2 in sm </br>
+- Remove the second half text from the footer bottom text </br>
 
 <h3>Break: at 4:50 PM</h3>
 
@@ -35,7 +35,7 @@ GitHub -
 
 <h3>Break: at 6:25 PM</h3>
 
-<h3>Back to Work: at 7:00 PM</h4>
+<h3>Back to Work: at 7:00 PM</h3>
 
 - Start About Page Design
 - Design hero & Features section 70%
@@ -47,10 +47,10 @@ GitHub -
 - Add a sign-in button before get started and use the previous style
 
 
-<h3>Break: at 8:20 PM</h4>
+<h3>Break: at 8:20 PM</h3>
 
 
-<h3>Back to Work: at 8:45 PM</h4>
+<h3>Back to Work: at 8:45 PM</h3>
 - Revision about page</br>
 - Upload to server</br>
 - Push to GitHub

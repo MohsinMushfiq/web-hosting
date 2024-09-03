@@ -10,12 +10,21 @@
   border: solid 1px #2e3e6b;
 }
 
+.team-member:hover{
+  background-color: #17203a;
+}
+
 .team-member img{
   height: 80px;
 }
 
 .card-styling{
   padding: 30px;
+}
+
+.card-styling:hover{
+  background-color: #17203a;
+  border: 1px solid #212e50;
 }
 
 .card-img{
@@ -27,14 +36,28 @@
   padding: 90px;
 }
 
+.about-feature-card{
+  background-color: #2e3e6b;
+}
+
+.about-feature-card:hover{
+  background-color: #192441;
+  color: white;
+}
+
 .cta-card{
   padding-top: 40px;
   padding-right: 80px;
   padding-left: 80px;
   padding-bottom: 40px;
-  background-color: #0f1527;
-  border: 1px solid #4f46e5;
+  background-color: #17203a;
+  border: 1px solid #212e50;
   color: white;
+}
+
+.cta-card:hover{
+  background-color: #0f1527;
+  border: 1px solid #212e50;
 }
 
 @media (min-width: 350px) and (max-width: 768px) {
@@ -1330,11 +1353,6 @@ video {
   border-color: rgb(79 70 229 / var(--tw-border-opacity));
 }
 
-.border-indigo-900{
-  --tw-border-opacity: 1;
-  border-color: rgb(49 46 129 / var(--tw-border-opacity));
-}
-
 .bg-\[\#0B1120\]{
   --tw-bg-opacity: 1;
   background-color: rgb(11 17 32 / var(--tw-bg-opacity));
@@ -1895,11 +1913,6 @@ video {
   background-color: rgb(27 35 56 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-gray-100:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-gray-700:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
@@ -2031,9 +2044,9 @@ video {
   outline-color: #4f46e5;
 }
 
-.group:hover .group-hover\:text-gray-900{
+.group:hover .group-hover\:text-white{
   --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media not all and (min-width: 768px){

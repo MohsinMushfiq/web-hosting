@@ -7,12 +7,20 @@
     border: solid 1px #2e3e6b;
 }
 
+.team-member:hover{
+    background-color: #17203a;
+}
+
 .team-member img{
     height: 80px;
 }
 
 .card-styling{
     padding: 30px;
+}
+.card-styling:hover{
+    background-color: #17203a;
+    border: 1px solid #212e50;
 }
 
 .card-img{
@@ -25,14 +33,27 @@
     padding: 90px;
 }
 
+.about-feature-card{
+    background-color: #2e3e6b;
+}
+
+.about-feature-card:hover{
+    background-color: #192441;
+    color: white;
+}
+
 .cta-card{
     padding-top: 40px;
     padding-right: 80px;
     padding-left: 80px;
     padding-bottom: 40px;
-    background-color: #0f1527;
-    border: 1px solid #4f46e5;
+    background-color: #17203a;
+    border: 1px solid #212e50;
     color: white;
+}
+.cta-card:hover{
+    background-color: #0f1527;
+    border: 1px solid #212e50;
 }
 
 @media (min-width: 350px) and (max-width: 768px) {

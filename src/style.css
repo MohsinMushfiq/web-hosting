@@ -18,6 +18,9 @@
 .about-about-card{
     padding: 30px;
 }
+.about-about-card:hover{
+    background-color: #17203a;
+}
 .card-styling:hover{
     background-color: #17203a;
     border: 1px solid #212e50;

@@ -10,9 +10,6 @@ module.exports = {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
       },
-      width: {
-        'custom-sm': '380px', // Adding custom width
-      },
     },
   },
   plugins: [],

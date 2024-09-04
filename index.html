@@ -27,7 +27,7 @@
             <!-- Logo -->
             <div class="text-xl font-bold text-white">
                 <a href="/" aria-label="lxroot-logo" class="logo-item">
-                    <svg width="72" height="72" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="75" height="75" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.11206 59V42.2H13.1921V55.4H20.6801V59H9.11206Z" fill="#fff"></path>
                         <path
                             d="M31.1771 59L28.4651 54.896L27.2171 53.144L22.1771 46.256H26.7851L29.4011 50.168L30.7691 52.04L35.7371 59H31.1771ZM22.0571 59L27.1931 51.848L29.2571 54.32L26.5931 59H22.0571ZM30.4811 53.456L28.4411 51.008L30.9611 46.256H35.4971L30.4811 53.456Z"
@@ -52,7 +52,7 @@
 
             <!-- Menu (Visible on larger screens) -->
             <nav class="hidden md:flex md:space-x-3 text-white ml-40 duration-300">
-                <div class="relative group">
+                <div class="relative group desktop-nav-menu">
                     <a id="productDropdownLink" href="#"
                         class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">
                         Product
@@ -98,10 +98,10 @@
                     </ul>
                 </div>
 
-                <a href="roadmap.html" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">Roadmap</a>
-                <a href="pricing.html" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">Pricing</a>
+                <a href="roadmap.html" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">Roadmap</a>
+                <a href="pricing.html" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">Pricing</a>
                 <div class="relative group">
-                    <a id="dropdownLink" href="#" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">
+                    <a id="dropdownLink" href="#" class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">
                         Resources
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
                             fill="currentColor">
@@ -148,7 +148,7 @@
             </nav>
 
             <!-- Hamburger Button (Visible on smaller screens) -->
-            <button id="menu-btn" class="text-white focus:outline-none md:hidden">
+            <button id="menu-btn" class="text-white focus:outline-none md:hidden mobile-menu-nav">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
@@ -157,7 +157,7 @@
             </button>
 
             <!-- Get Started Button -->
-            <div class="hidden md:block space-x-1">
+            <div class="hidden md:block space-x-1 desktop-nav-btn">
                 <a href="signin.html"
                     class="border border-cyan-800 text-gray-300 px-4 py-2.5 rounded hover:bg-white hover:text-[#0B1120] duration-300">Sign
                     in</a>
@@ -168,7 +168,7 @@
         </div>
 
         <!-- Dropdown Menu (Visible on smaller screens) -->
-        <nav id="menu" class="md:hidden hidden mt-4 mobile-menu-spacing">
+        <nav id="menu" class="hidden mt-4 mobile-menu-spacing">
             <ul class="space-y-4 text-white">
                 <li>
                     <div
@@ -395,7 +395,7 @@
             </div>
             <!-- Application Tool 1 -->
             <div
-                class="border border-cyan-800 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300">
+                class="border border-cyan-800 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300 homepage-card">
                 <div class="float-left mb-4 mr-4">
                     <i
                         class="fas fa-running float-left rounded text-3xl text-cyan-300 border border-cyan-600 pl-3 pt-3 pr-3 pb-2.5"></i>
@@ -411,7 +411,7 @@
 
             <!-- Application Tool 2 -->
             <div
-                class="border border-cyan-800 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300">
+                class="border border-cyan-800 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300 homepage-card">
                 <div class="float-left mb-4 mr-4">
                     <i
                         class="fa-solid fa-sliders float-left rounded text-3xl text-cyan-300 border border-cyan-600 pl-3 pt-3 pr-3 pb-2.5"></i>
@@ -427,7 +427,7 @@
 
             <!-- Application Tool 3 -->
             <div
-                class="border border-cyan-800 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300">
+                class="border border-cyan-800 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300 homepage-card">
                 <div class="float-left mb-4 mr-4">
                     <i
                         class="fa-solid fa-cloud-arrow-up float-left rounded text-3xl text-cyan-300 border border-cyan-600 pl-2.5 pt-3 pr-2.5 pb-3"></i>
@@ -457,11 +457,11 @@
         <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Feature 1 -->
             <div
-                class="border border-[#19243F] bg-[#141f3a] p-9 rounded-lg hover:bg-[#0B1120] duration-300 drop-shadow-md hover:drop-shadow-xl hover:shadow-2xl hover:border-indigo-900">
+                class="border border-[#19243F] bg-[#141f3a] p-9 rounded-lg hover:bg-[#0B1120] duration-300 drop-shadow-md hover:drop-shadow-xl hover:shadow-2xl hover:border-indigo-900 homepage-card">
                 <div class="float-left mr-4">
                     <i class="fas fa-shield float-left rounded text-3xl bg-cyan-300 pl-3 pt-3 pr-3 pb-2.5"></i>
                 </div>
-                <h3 class="text-lg font-semibold mt- mb-2 text-gray-50">Security Essentials</h3>
+                <h3 class="text-lg font-semibold mt- mb-2 text-gray-50">Security <br> Essentials</h3>
                 <p class="mb-6 text-gray-400 font-normal text-sm">Lorem Ipsum has been the industry's standard dummy
                     text ever since the 1500s, when an unknown printer
                     took a galley of type and scrambled it to make a type.</p>
@@ -472,11 +472,11 @@
 
             <!-- Feature 2 -->
             <div
-                class="border border-[#12192e] bg-[#141f3a] p-9 rounded-lg hover:bg-[#0B1120] duration-300 drop-shadow-md hover:drop-shadow-xl hover:shadow-2xl hover:border-indigo-900">
+                class="border border-[#12192e] bg-[#141f3a] p-9 rounded-lg hover:bg-[#0B1120] duration-300 drop-shadow-md hover:drop-shadow-xl hover:shadow-2xl hover:border-indigo-900 homepage-card">
                 <div class="float-left mr-4">
                     <i class="fas fa-server float-left rounded text-3xl bg-cyan-300 pl-3 pt-3 pr-3 pb-2.5"></i>
                 </div>
-                <h3 class="text-lg font-semibold mb-2 text-gray-50">Server Management</h3>
+                <h3 class="text-lg font-semibold mb-2 text-gray-50">Server <br> Management</h3>
                 <p class="mb-6 text-gray-400 font-normal text-sm">Lorem Ipsum has been the industry's standard dummy
                     text ever since the 1500s, when an unknown printer
                     took a galley of type and scrambled it to make a type.</p>
@@ -487,11 +487,11 @@
 
             <!-- Feature 3 -->
             <div
-                class="border border-[#19243F] bg-[#141f3a] p-9 rounded-lg hover:bg-[#0B1120] duration-300 drop-shadow-md hover:drop-shadow-xl hover:shadow-2xl hover:border-indigo-900">
+                class="border border-[#19243F] bg-[#141f3a] p-9 rounded-lg hover:bg-[#0B1120] duration-300 drop-shadow-md hover:drop-shadow-xl hover:shadow-2xl hover:border-indigo-900 homepage-card">
                 <div class="float-left mr-4">
                     <i class="fa-solid fa-globe float-left rounded text-3xl bg-cyan-300 pl-3 pt-3 pr-3 pb-2.5"></i>
                 </div>
-                <h3 class="text-lg font-semibold mb-2 text-gray-50">Website Management</h3>
+                <h3 class="text-lg font-semibold mb-2 text-gray-50">Website <br> Management</h3>
                 <p class="mb-6 text-gray-400 font-normal text-sm">Lorem Ipsum has been the industry's standard dummy
                     text ever since the 1500s, when an unknown printer
                     took a galley of type and scrambled it to make a type.</p>
@@ -502,7 +502,7 @@
 
             <!-- Feature 4 -->
             <div
-                class="border border-[#19243F] bg-[#141f3a] p-9 rounded-lg hover:bg-[#0B1120] duration-300 drop-shadow-md hover:drop-shadow-xl hover:shadow-2xl hover:border-indigo-900">
+                class="border border-[#19243F] bg-[#141f3a] p-9 rounded-lg hover:bg-[#0B1120] duration-300 drop-shadow-md hover:drop-shadow-xl hover:shadow-2xl hover:border-indigo-900 homepage-card">
                 <div class="float-left mr-4">
                     <i class="fa-solid fa-code float-left rounded text-3xl bg-cyan-300 pl-2.5 pt-3 pr-2.5 pb-3"></i>
                 </div>
@@ -521,10 +521,10 @@
 
     <!-- Pricing Section Start -->
     <div class="bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120] custom-padding">
-        <section class="max-w-7xl mx-auto text-white pt-20 pb-12 sm:px-6 lg:px-1">
-            <div class="container mx-auto">
+        <section class="max-w-7xl mx-auto text-white pt-20 pb-12 sm:px-6 lg:px-1 homepage-pricing">
+            <div class="mx-auto">
                 <!-- Pricing Header -->
-                <div class="flex flex-col lg:flex-row justify-between items-center mb-8">
+                <div class="flex flex-col lg:flex-row justify-between items-center mb-8 ">
                     <div class="text-left lg:text-left mb-6 lg:mb-0">
                         <h1 class="text-3xl font-bold lg:text-4xl pricing-title">
                             Everything you need for <span class="text-cyan-500 pricing-title">$20 a month</span>
@@ -535,7 +535,7 @@
                     </div>
                     <div class="text-center lg:text-right">
                         <a href="#"
-                            class="rounded-md bg-indigo-500 px-5 py-2.5 text-md text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 duration-300">
+                            class="rounded-md bg-indigo-600 px-5 py-2.5 text-md text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 duration-300">
                             Get started<span class="ml-2" aria-hidden="true">&rarr;</span>
                         </a>
                     </div>
@@ -594,14 +594,14 @@
 
 
         <!-- Support Section Start -->
-        <section class="max-w-7xl mx-auto text-white pb-24 pt-12 sm:px-6 lg:px-1">
-            <div class="container mx-auto">
+        <section class="max-w-7xl mx-auto text-white pb-24 pt-12 sm:px-6 lg:px-1 homepage-support">
+            <div class="mx-auto">
                 <div class="flex flex-col lg:flex-row lg:justify-between">
                     <!-- Support & Knowledgebase Text -->
-                    <div class="lg:mb-0 lg:w-1/2 px-4 custom-spacing">
+                    <div class="lg:mb-0 lg:w-1/2 px-4 homepage-support-top">
                         <h2 class="text-cyan-500 text-sm font-normal uppercase mt-12 mb-3">All in One Platform</h2>
                         <h3 class="text-3xl font-bold mb-5">Support & Knowledgebase</h3>
-                        <p class="text-gray-300 text-sm sm:mb-8">
+                        <p class="text-gray-300 text-sm">
                             Lorem ipsum dolor sit amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
                             sint
                             velit officia consequat duis enim velit mollit. Lorem ipsum dolor sit amet minim mollit non
@@ -612,7 +612,7 @@
 
                     <!-- Documentation and API Cards -->
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:grid-cols-2">
-                        <div class="p-6 rounded-lg">
+                        <div class="p-6 rounded-lg homepage-support-card">
                             <div class="flex items-center mb-4">
                                 <i
                                     class="fa-solid fa-book float-left rounded text-3xl text-[#0B1120] bg-cyan-300 pl-3 pt-3 pr-3 pb-2.5"></i>
@@ -624,7 +624,7 @@
                             <a href="#" class="text-cyan-500 hover:text-indigo-400 duration-300">Learn more →</a>
                         </div>
 
-                        <div class="p-6 rounded-lg">
+                        <div class="p-6 rounded-lg homepage-support-card">
                             <div class="flex items-center mb-4">
                                 <i
                                     class="fa-solid fa-users float-left rounded text-3xl text-[#0B1120] bg-cyan-300 pl-2.5 pt-3 pr-2.5 pb-3"></i>
@@ -636,7 +636,7 @@
                             <a href="#" class="text-cyan-500 hover:text-indigo-400 duration-300">Learn more →</a>
                         </div>
 
-                        <div class="p-6 rounded-lg">
+                        <div class="p-6 rounded-lg homepage-support-card">
                             <div class="flex items-center mb-4">
                                 <i
                                     class="fa-solid fa-anchor float-left rounded text-3xl text-[#0B1120] bg-cyan-300 pl-2.5 pt-3 pr-2.5 pb-3"></i>
@@ -648,7 +648,7 @@
                             <a href="#" class="text-cyan-500 hover:text-indigo-400 duration-300">Learn more →</a>
                         </div>
 
-                        <div class="p-6 rounded-lg">
+                        <div class="p-6 rounded-lg homepage-support-card">
                             <div class="flex items-center mb-4">
                                 <i
                                     class="fa-solid fa-clock-rotate-left float-left rounded text-3xl text-[#0B1120] bg-cyan-300 pl-3 pt-3 pr-3 pb-3"></i>
@@ -841,162 +841,170 @@
 
 
 
-    <!-- Footer Start -->
-    <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1">
-        <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
-            <div class="footer-col space-y-4">
-                <h4 class="text-gray-500">COMPANY</h4>
-                <ul class="space-y-2">
-                    <li><a href="about.html" class="hover:text-white">About</a></li>
-                    <li><a href="articles.html" class="hover:text-white">Articles</a></li>
-                    <li><a href="career.html" class="hover:text-white">Career</a></li>
-                    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col space-y-4">
-                <h4 class="text-gray-500">SOLUTIONS</h4>
-                <ul class="space-y-2">
-                    <li><a href="features.htlm" class="hover:text-white">Features</a></li>
-                    <li><a href="technology.html" class="hover:text-white">Technology</a></li>
-                    <li><a href="roadmap.html" class="hover:text-white">Roadmap</a></li>
-                    <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
-                </ul>
-            </div>
-            <div class="footer-col space-y-4">
-                <h4 class="text-gray-500">SUPPORT</h4>
-                <ul class="space-y-2">
-                    <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
-                    <li><a href="community.html" class="hover:text-white">Community</a></li>
-                    <li><a href="support.html" class="hover:text-white">Support Docs</a></li>
-                    <li><a href="api.html" class="hover:text-white">API Docs</a></li>
-                </ul>
-            </div>
-            <div class="footer-col space-y-4">
-                <h4 class="text-gray-500">LEGAL</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-white">Security</a></li>
-                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-white">Terms of Use</a></li>
-                    <li><a href="#" class="hover:text-white">Changelogs</a></li>
-                </ul>
-            </div>
-            <div class="footer-col footer-col-5 space-y-4">
-                <h4 class="text-gray-500">CONTACT US</h4>
-                <div class="mt-4 space-y-4">
-                    <div class="flex justify-center lg:justify-start items-center space-x-2">
-                        <i class="fas fa-phone text-gray-400"></i>
-                        <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
-                    </div>
-                    <div class="flex justify-center lg:justify-start items-center space-x-2">
-                        <i class="fas fa-envelope text-gray-400"></i>
-                        <a href="mailto:contact@yourdomain.com"
-                            class="text-gray-400 hover:text-white">contact@lxroot.com</a>
-                    </div>
-                    <div class="flex justify-center lg:justify-start items-center space-x-2">
-                        <i class="fas fa-map-marker-alt text-gray-300"></i>
-                        <p class="text-gray-400">Carmel, Indiana, USA</p>
-                    </div>
+   <!-- Footer Start -->
+   <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1 custom-padding">
+    <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
+        <div class="footer-col space-y-4">
+            <h4 class="text-gray-500 border-b border-gray-600 pb-2">COMPANY</h4>
+            <ul class="space-y-2">
+                <li><a href="about.html" class="hover:text-white">About</a></li>
+                <li><a href="articles.html" class="hover:text-white">Articles</a></li>
+                <li><a href="career.html" class="hover:text-white">Career</a></li>
+                <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col space-y-4">
+            <h4 class="text-gray-500 border-b border-gray-600 pb-2">SOLUTIONS</h4>
+            <ul class="space-y-2">
+                <li><a href="features.htlm" class="hover:text-white">Features</a></li>
+                <li><a href="technology.html" class="hover:text-white">Technology</a></li>
+                <li><a href="roadmap.html" class="hover:text-white">Roadmap</a></li>
+                <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+            </ul>
+        </div>
+        <div class="footer-col space-y-4">
+            <h4 class="text-gray-500 border-b border-gray-600 pb-2">SUPPORT</h4>
+            <ul class="space-y-2">
+                <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
+                <li><a href="community.html" class="hover:text-white">Community</a></li>
+                <li><a href="support.html" class="hover:text-white">Support Docs</a></li>
+                <li><a href="api.html" class="hover:text-white">API Docs</a></li>
+            </ul>
+        </div>
+        <div class="footer-col space-y-4">
+            <h4 class="text-gray-500 border-b border-gray-600 pb-2">LEGAL</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-white">Security</a></li>
+                <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-white">Terms of Use</a></li>
+                <li><a href="#" class="hover:text-white">Changelogs</a></li>
+            </ul>
+        </div>
+        <div class="footer-col footer-col-5 space-y-4">
+            <h4 class="text-gray-500 border-b border-gray-600 pb-2">CONTACT US</h4>
+            <div class="mt-4 space-y-4">
+                <div class="flex justify-center lg:justify-start items-center space-x-2">
+                    <i class="fas fa-phone text-gray-400"></i>
+                    <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
                 </div>
-
-                <!-- Social Media Icons -->
-                <div class="flex justify-center lg:justify-start mt-4 space-x-4">
-                    <a href="https://facebook.com/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-blue-600">
-                        <i class="fab fa-facebook-f fa-lg"></i>
-                    </a>
-                    <a href="https://twitter.com/yourprofile" target="_blank" class="text-gray-500 hover:text-blue-400">
-                        <i class="fab fa-twitter fa-lg"></i>
-                    </a>
-                    <a href="https://instagram.com/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-pink-500">
-                        <i class="fab fa-instagram fa-lg"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-blue-700">
-                        <i class="fab fa-linkedin-in fa-lg"></i>
-                    </a>
-                    <a href="https://youtube.com/in/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-red-700">
-                        <i class="fab fa-youtube fa-lg"></i>
-                    </a>
+                <div class="flex justify-center lg:justify-start items-center space-x-2">
+                    <i class="fas fa-envelope text-gray-400"></i>
+                    <a href="mailto:contact@yourdomain.com"
+                        class="text-gray-400 hover:text-white">contact@lxroot.com</a>
+                </div>
+                <div class="flex justify-center lg:justify-start items-center space-x-2">
+                    <i class="fas fa-map-marker-alt text-gray-300"></i>
+                    <p class="text-gray-400">Carmel, Indiana, USA</p>
                 </div>
             </div>
+
+            <!-- Social Media Icons -->
+            <div class="flex justify-center lg:justify-start mt-4 space-x-4">
+                <a href="https://facebook.com/yourprofile" target="_blank"
+                    class="text-gray-500 hover:text-blue-600">
+                    <i class="fab fa-facebook-f fa-lg"></i>
+                </a>
+                <a href="https://twitter.com/yourprofile" target="_blank" class="text-gray-500 hover:text-blue-400">
+                    <i class="fab fa-twitter fa-lg"></i>
+                </a>
+                <a href="https://instagram.com/yourprofile" target="_blank"
+                    class="text-gray-500 hover:text-pink-500">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank"
+                    class="text-gray-500 hover:text-blue-700">
+                    <i class="fab fa-linkedin-in fa-lg"></i>
+                </a>
+                <a href="https://youtube.com/in/yourprofile" target="_blank"
+                    class="text-gray-500 hover:text-red-700">
+                    <i class="fab fa-youtube fa-lg"></i>
+                </a>
+            </div>
         </div>
-        <div class="container items-center lg:items-center mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
-            <p class="footer-text text-base text-center pt-2">Copyright &copy; <a href="index.html"
-                    class=" text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC</a> - 2024.
-            </p>
-        </div>
-    </footer>
+    </div>
+    <div class="max-w-7xl mx-auto container mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
+<div class="flex justify-between items-center about-footer-bottom">
+    <div class="footer-text text-base text-left">
+        Copyright &copy; 2024 | <a href="index.html" class="text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC </a> - All Right Reserved.
+    </div>
+    <div class="footer-text text-base text-right space-x-4">
+        <a href="#privacy" class="text-indigo-400 hover:text-indigo-500 duration-300">Privacy Policy</a>
+        <a href="#terms" class="text-indigo-400 hover:text-indigo-500 duration-300">Terms & Conditions</a>
+    </div>
+</div>
+</div>
 
-    <!-- Footer End -->
+    
+</footer>
+
+<!-- Footer End -->
 
 
 
-    <!-- JavaScript -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<!-- JavaScript -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-    <!-- JavaScript to toggle mobile menu -->
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const menu = document.getElementById('menu');
-        const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+<!-- JavaScript to toggle mobile menu -->
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    const dropdownBtns = document.querySelectorAll('.dropdown-btn');
 
-        menuBtn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+    menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+
+    dropdownBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const dropdownMenu = btn.parentElement.nextElementSibling;
+            dropdownMenu.classList.toggle('hidden');
+        });
+    });
+</script>
+
+<!-- JavaScript for Drowpdown Menu -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const dropdownLink = document.getElementById("dropdownLink");
+        const dropdownMenu = document.getElementById("dropdownMenu");
+
+        dropdownLink.addEventListener("click", function (event) {
+            event.preventDefault();
+            dropdownMenu.classList.toggle("hidden");
         });
 
-        dropdownBtns.forEach((btn) => {
-            btn.addEventListener('click', () => {
-                const dropdownMenu = btn.parentElement.nextElementSibling;
-                dropdownMenu.classList.toggle('hidden');
-            });
+        document.addEventListener("click", function (event) {
+            const isClickInside = dropdownLink.contains(event.target) || dropdownMenu.contains(event.target);
+
+            if (!isClickInside) {
+                dropdownMenu.classList.add("hidden");
+            }
         });
-    </script>
+    });
 
-    <!-- JavaScript for Drowpdown Menu -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const dropdownLink = document.getElementById("dropdownLink");
-            const dropdownMenu = document.getElementById("dropdownMenu");
+    document.addEventListener("DOMContentLoaded", function () {
+        const productDropdownLink = document.getElementById("productDropdownLink");
+        const productDropdownMenu = document.getElementById("productDropdownMenu");
 
-            dropdownLink.addEventListener("click", function (event) {
-                event.preventDefault();
-                dropdownMenu.classList.toggle("hidden");
-            });
-
-            document.addEventListener("click", function (event) {
-                const isClickInside = dropdownLink.contains(event.target) || dropdownMenu.contains(event.target);
-
-                if (!isClickInside) {
-                    dropdownMenu.classList.add("hidden");
-                }
-            });
+        productDropdownLink.addEventListener("click", function (event) {
+            event.preventDefault();
+            productDropdownMenu.classList.toggle("hidden");
         });
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const productDropdownLink = document.getElementById("productDropdownLink");
-            const productDropdownMenu = document.getElementById("productDropdownMenu");
+        document.addEventListener("click", function (event) {
+            const isClickInside = productDropdownLink.contains(event.target) || productDropdownMenu.contains(event.target);
 
-            productDropdownLink.addEventListener("click", function (event) {
-                event.preventDefault();
-                productDropdownMenu.classList.toggle("hidden");
-            });
-
-            document.addEventListener("click", function (event) {
-                const isClickInside = productDropdownLink.contains(event.target) || productDropdownMenu.contains(event.target);
-
-                if (!isClickInside) {
-                    productDropdownMenu.classList.add("hidden");
-                }
-            });
+            if (!isClickInside) {
+                productDropdownMenu.classList.add("hidden");
+            }
         });
+    });
 
 
-    </script>
+</script>
 
 
-    <!-- JavaScript -->
+<!-- JavaScript -->
 
 
 </body>

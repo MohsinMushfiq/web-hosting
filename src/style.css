@@ -15,7 +15,7 @@
     height: 80px;
 }
 
-.card-styling{
+.about-about-card{
     padding: 30px;
 }
 .card-styling:hover{
@@ -56,15 +56,25 @@
     border: 1px solid #212e50;
 }
 
-@media (min-width: 350px) and (max-width: 768px) {
+
+@media (min-width: 375px) and (max-width: 1023px) {
+
+    /* Navigation Menu*/
+    .mobile-menu-nav{
+        display: block;
+    }
+    .desktop-nav-btn{
+        display: none;
+    }
+
+    nav .desktop-nav-menu {
+        display: none;
+    }
+
+
     nav {
         padding-left: 10px;
         padding-right: 10px;
-    }
-
-    .custom-menu-spacing {
-        padding-left: 20px;
-        padding-right: 20px;
     }
 
     .menu-spacing {
@@ -79,6 +89,28 @@
         padding-right: 10px;
         padding-bottom: 30px;
         border-top: 1px solid rgb(75 85 99);
+    }
+    .custom-menu-spacing{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Homepage */
+    .custom-padding{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .homepage-pricing, .homepage-support{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .homepage-support-card{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .homepage-support-top{
+        padding: 0px;
+        margin-bottom: 30px;
     }
 
     .hero-spacing {
@@ -175,11 +207,89 @@
         padding-top: 30px;
     }
 
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+    /* Navigation Menu*/
+    .mobile-menu-nav{
+        display: none;
+    }
+    nav {
+        display: block;
+    }
+    .custom-menu-spacing{
+        padding-left: 10px;
+        padding-right: 20px;
+    }
+    .mobile-menu-spacing{
+        display: none;
+    }
+
+    /* Homepage */
+    .custom-padding{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .homepage-card{
+        padding: 20px;
+    }
+    .homepage-card h3{
+        font-size: 15px;
+    }
+
+    /* About Page */
+    .about-hero{
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+    .about-hero h2{
+        font-size: 40px;
+    }
+    .about-hero img{
+        height: 400px;
+        padding-right: 0px;
+    }
+    .about-feature{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .about-feture-column{
+        column-gap: 15px;
+    }
+    .about-about{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .about-about img{
+        height: 120px;
+    }
+    .about-about-column{
+        column-gap: 20px;
+    }
+    .about-about-card{
+        padding: 15px;
+    }
 
 
 }
 
-@media (min-width: 350px) and (max-width: 780px) {
+@media (min-width: 1280px) {
+    /* Navigation Menu*/
+    .mobile-menu-nav{
+        display: none;
+    }
+    nav {
+        display: block;
+    }
+    .mobile-menu-spacing{
+        display: none;
+    }
+    
+}
+
+@media (min-width: 375px) and (max-width: 780px) {
     .footer-container {
         display: flex;
         flex-wrap: wrap;
@@ -207,6 +317,10 @@
     }
     .footer-text{
         font-size: 15px;
+    }
+    .about-footer-bottom{
+        display: flex;
+        flex-direction: column;
     }
 }
 

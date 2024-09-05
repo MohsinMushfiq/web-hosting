@@ -1,4 +1,262 @@
 /* Custom CSS */
+
+ /* General Light Mode Styles */
+ body.light-mode {
+    background-color: #ffffff;
+    color: #0B1120;
+}
+
+/* Light Mode for Specific Elements */
+body.light-mode .bg-[#0B1120] {
+    background-color: #ffffff;
+    color: #0B1120;
+}
+
+body.light-mode .bg-[#1b2338] {
+    background-color: #f1f5f9;
+}
+
+body.light-mode .text-white {
+    color: #0B1120;
+}
+
+body.light-mode .border-gray-600 {
+    border-color: #e2e8f0;
+}
+
+body.light-mode .text-gray-400 {
+    color: #4b5563;
+}
+
+body.light-mode .bg-gray-700 {
+    background-color: #e2e8f0;
+}
+
+body.light-mode .text-gray-300 {
+    color: #6b7280;
+}
+
+/* Icon Colors */
+body.light-mode .fa-moon {
+    display: none;
+}
+
+body:not(.light-mode) .fa-sun {
+    display: none;
+}
+
+/* Additional Adjustments */
+body.light-mode svg {
+    fill: #0B1120;
+}
+
+/* Header and Footer */
+
+body.light-mode .main-menu{
+    background-color: white;
+}
+
+body.light-mode .full-menu{
+    background-color: white;
+}
+
+body.light-mode .logo-fill{
+    color: #433bdb;
+}
+
+body.light-mode .signin-btn:hover{
+    background-color: #0B1120;
+    color: white;
+    border: 1px solid #0B1120;
+}
+
+body.light-mode .get-start-btn{
+    color: white;
+}
+
+body.light-mode .desktop-nav-menu:hover{
+    background-color: #eee9ff;
+    border-radius: 5px;
+}
+
+body.light-mode .dropdown-menu{
+    background-color: white;
+    border: 1px solid #beacff;
+}
+
+body.light-mode .dropdown-item:hover{
+    background-color: #eee9ff;
+}
+
+
+/* Footer White Mode */
+body.light-mode .full-footer a:hover{
+    color: #433bdb;
+}
+
+/* Mobile Menu White Mode */
+body.light-mode .mobile-dropdown{
+    background-color: white;
+
+}
+
+body.light-mode .mobile-signin-btn:hover{
+    background-color: #4c44e7;
+    color: white;
+}
+
+body.light-mode .mobile-getstart-btn{
+    color: white;
+}
+
+body.light-mode .mobile-dropdown-menu{
+    background-color: white;
+
+}
+
+/* Home Page White Mode */
+body.light-mode .hero-tooltip{
+    color: #0B1120;
+}
+
+body.light-mode .hero-live-btn{
+    color: #0B1120;
+}
+
+body.light-mode .hero-live-btn:hover{
+    color: white;
+    background-color: #0B1120;
+}
+
+body.light-mode .hero-start-btn{
+    color: white;
+}
+
+body.light-mode .app-text-des{
+    color: #0B1120;
+    font-weight: 300;
+}
+
+body.light-mode .app-btn{
+    color: white;
+}
+
+body.light-mode .app-card:hover{
+    background-color: #f6f4ff;
+    border: 1px solid #4c44e7;
+    color: white;
+}
+
+body.light-mode i{
+    color: #433bdb;
+}
+
+body.light-mode .app-card a{
+    color: #483fec;
+}
+
+body.light-mode .app-card a:hover{
+    color: #433bdb;
+}
+
+body.light-mode .feature-card{
+    background-color: #f6f4ff;
+}
+
+body.light-mode .feature-card h3{
+    color: #0B1120;
+}
+
+body.light-mode .feature-card i{
+    background-color: #e2e8f0;
+}
+
+body.light-mode .feature-card a{
+    color: #0B1120;
+    font-weight: 400;
+    border: 1px solid #6b7280;   
+}
+
+body.light-mode .feature-card a:hover{
+    color: white;
+}
+
+body.light-mode #home-price-sec{
+    background: white;
+}
+
+body.light-mode .homepage-pricing{
+    background: white;
+}
+
+body.light-mode .pricing-btn{
+    color: white;
+}
+
+body.light-mode .pricing-btn:hover{
+    background-color: #433bdb;
+}
+
+
+body.light-mode .homepage-support-card i{
+    background-color: #e2e8f0;
+}
+
+body.light-mode .homepage-support-card a{
+    color: #4c44e7;
+}
+
+body.light-mode .home-review{
+    background-color: #f6f4ff;
+}
+
+body.light-mode .home-review i{
+    background-color: #e2e8f0;
+}
+
+body.light-mode .review-left-btn{
+    background-color: #e2e8f0;
+}
+
+body.light-mode .review-right-btn{
+    background-color: #4c44e7;
+}
+
+body.light-mode .review-icon{
+    color: #0B1120;
+}
+
+body.light-mode .home-cta{
+    background: white;
+    border-bottom: 1px solid #eee9ff;
+    border-top: 1px solid #eee9ff;
+}
+
+body.light-mode .home-cta p{
+    color: #0f1527;
+}
+
+body.light-mode .cta-live-btn{
+    color: #0B1120;
+}
+
+body.light-mode .cta-live-btn:hover{
+    background-color: #0B1120;
+    color: white;
+}
+
+body.light-mode .cta-start-btn{
+    color: white;
+}
+
+body.light-mode .footer-text{
+    color: #4c44e7;
+}
+
+
+
+/* Theme Mode Changer End */
+
 .team-member{
     background: #192441;
     padding-top: 50px;
@@ -93,7 +351,10 @@
     margin-bottom: 50px;
 }
 
-
+.full-footer{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 @media (min-width: 375px) and (max-width: 1023px) {
 
@@ -128,7 +389,7 @@
         padding-bottom: 30px;
         border-top: 1px solid rgb(75 85 99);
     }
-    .custom-menu-spacing{
+    .full-menu{
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -244,7 +505,9 @@
     .about-feature{
         padding-top: 30px;
     }
-
+    .desktop-toggler{
+        display: none;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
@@ -256,7 +519,7 @@
     nav {
         display: block;
     }
-    .custom-menu-spacing{
+    .full-menu{
         padding-left: 10px;
         padding-right: 20px;
     }
@@ -270,10 +533,10 @@
         padding-right: 20px;
     }
 
-    .homepage-card{
+    .app-card, .feature-card{
         padding: 20px;
     }
-    .homepage-card h3{
+    .app-card, .feature-card h3{
         font-size: 15px;
     }
 
@@ -314,8 +577,9 @@
     #contact-form{
         width: 1023px;
     }
-
-
+    .mobile-toggler{
+        display: none;
+    }
 }
 
 @media (min-width: 1280px) {
@@ -332,6 +596,9 @@
      /* Contact Page */
     #contact-form{
         width: 1023px;
+    }
+    .mobile-toggler{
+        display: none;
     }
 
     

@@ -1,32 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Theme Color Changer</title>
-  <link href="/dist/output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LxRoot - Application Hosting Platform</title>
+    <link rel="stylesheet" href="./output/tailwind.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/7.13.0/simple-icons.min.css">
+
+    <!-- Internal CSS for Theme Toggle -->
+    <style>
+        /* General Light Mode Styles */
+        body.light-mode {
+            background-color: #ffffff;
+            color: #0B1120;
+        }
+
+        /* Light Mode for Specific Elements */
+        body.light-mode .bg-[#0B1120] {
+            background-color: #ffffff;
+            color: #0B1120;
+        }
+
+        body.light-mode .bg-[#1b2338] {
+            background-color: #f1f5f9;
+        }
+
+        body.light-mode .text-white {
+            color: #0B1120;
+        }
+
+        body.light-mode .border-gray-600 {
+            border-color: #e2e8f0;
+        }
+
+        body.light-mode .text-gray-400 {
+            color: #4b5563;
+        }
+
+        body.light-mode .bg-gray-700 {
+            background-color: #e2e8f0;
+        }
+
+        body.light-mode .text-gray-300 {
+            color: #6b7280;
+        }
+
+        /* Icon Colors */
+        body.light-mode .fa-moon {
+            display: none;
+        }
+
+        body:not(.light-mode) .fa-sun {
+            display: none;
+        }
+
+        /* Additional Adjustments */
+        body.light-mode svg {
+            fill: #0B1120;
+        }
+    </style>
 </head>
-<body class="bg-light-primary text-light-text dark:bg-dark-primary dark:text-dark-text">
-  <div class="container mx-auto p-6">
-    <h1 class="text-2xl font-bold">Theme Color Changer</h1>
-    <button id="theme-toggle" class="mt-4 p-2 bg-light-secondary dark:bg-dark-secondary rounded">
-      Toggle Theme
-    </button>
-  </div>
 
-  <script>
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme') || 'light';
+<body class="bg-[#0B1120] font-inter">
+    <!-- Navbar Start -->
+    <div class="bg-[#0B1120] text-white py-1 sticky top-0 z-50 border-b border-gray-600 font-inter">
+        <div
+            class="flex justify-between items-center bg-[#0B1120] container max-w-7xl mx-auto sm:px-6 lg:px-1 custom-menu-spacing">
+            <!-- Logo and Menu -->
+            <div class="flex items-center space-x-6">
+                <div class="text-xl font-bold text-white">
+                    <a href="/" aria-label="lxroot-logo" class="logo-item">
+                        <!-- SVG Logo -->
+                        <span>LxRoot</span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" class="text-white hover:text-gray-400">Home</a>
+                    <a href="#" class="text-white hover:text-gray-400">Features</a>
+                    <a href="#" class="text-white hover:text-gray-400">Pricing</a>
+                    <a href="#" class="text-white hover:text-gray-400">Contact</a>
+                </nav>
+            </div>
 
-    if (currentTheme === 'dark') {
-      document.documentElement.classList.add('dark');
-    }
+            <!-- Theme Toggle Button -->
+            <div class="flex items-center">
+                <button id="theme-toggle" class="text-white focus:outline-none mr-4">
+                    <i id="moon-icon" class="fas fa-moon"></i>
+                    <i id="sun-icon" class="fas fa-sun"></i>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button id="menu-toggle" class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-white"></i>
+                </button>
+            </div>
+        </div>
 
-    themeToggleBtn.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-      const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-      localStorage.setItem('theme', theme);
-    });
-  </script>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-[#0B1120] text-white border-t border-gray-600">
+            <a href="#" class="block px-4 py-2">Home</a>
+            <a href="#" class="block px-4 py-2">Features</a>
+            <a href="#" class="block px-4 py-2">Pricing</a>
+            <a href="#" class="block px-4 py-2">Contact</a>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Content Start -->
+    <main class="container max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl font-extrabold text-white light-mode:text-[#0B1120] mb-6">Welcome to LxRoot</h1>
+        <p class="text-lg text-gray-300 mb-4">
+            LxRoot is your ultimate application hosting platform. Whether you're building complex web applications or simple
+            websites, we provide the best solutions to host and scale your projects efficiently.
+        </p>
+        <p class="text-lg text-gray-300 mb-4">
+            Explore our features and pricing plans to find the best option for your needs. Get started today and take your
+            applications to the next level with LxRoot.
+        </p>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Get Started
+        </button>
+    </main>
+    <!-- Content End -->
+
+    <!-- Footer Start -->
+    <footer class="bg-[#0B1120] text-white py-6">
+        <div class="container max-w-7xl mx-auto text-center">
+            <p>&copy; 2024 LxRoot. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-white hover:text-gray-400">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-white hover:text-gray-400">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-white hover:text-gray-400">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script>
+        // JavaScript for Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const moonIcon = document.getElementById('moon-icon');
+        const sunIcon = document.getElementById('sun-icon');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.body.classList.add(currentTheme);
+            if (currentTheme === 'light-mode') {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+            }
+        } else {
+            sunIcon.style.display = 'none'; // Default to dark mode, show moon icon
+        }
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            if (document.body.classList.contains('light-mode')) {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+                localStorage.setItem('theme', 'light-mode');
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+                localStorage.setItem('theme', 'dark-mode');
+            }
+        });
+
+        // JavaScript for Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
+
 </html>

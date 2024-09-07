@@ -335,6 +335,10 @@ body.light-mode .review-icon{
     color: #0B1120;
 }
 
+body.light-mode .review-user{
+    color: #0f1527;
+}
+
 body.light-mode .home-cta{
     background: #2d26ad; 
 }

@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LxRoot - Application Hosting Platform.</title>
+    <link rel="stylesheet" href="./output/tailwind.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/7.13.0/simple-icons.min.css">
+</head>
+
+<body class="bg-[#0B1120] font-inter">
+
+
+    <!-- Navbar Start -->
+    <div class="bg-[#0B1120] text-white py-1 sticky top-0 z-50 border-b border-gray-600 font-inter main-menu">
+        <!-- Logo, Menu, and Button -->
+        <div
+            class="flex justify-between items-center bg-[#0B1120] container max-w-7xl mx-auto sm:px-6 lg:px-1 full-menu">
+            <!-- Logo -->
+            <div class="text-xl font-bold text-white">
+                <a href="/" aria-label="lxroot-logo" class="logo-item">
+                    <svg width="75" height="75" viewBox="0 0 100 100" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.11206 59V42.2H13.1921V55.4H20.6801V59H9.11206Z"></path>
+                        <path
+                            d="M31.1771 59L28.4651 54.896L27.2171 53.144L22.1771 46.256H26.7851L29.4011 50.168L30.7691 52.04L35.7371 59H31.1771ZM22.0571 59L27.1931 51.848L29.2571 54.32L26.5931 59H22.0571ZM30.4811 53.456L28.4411 51.008L30.9611 46.256H35.4971L30.4811 53.456Z">
+                        </path>
+                        <path
+                            d="M38.2917 59V42.2H45.8517C46.9237 42.2 47.8917 42.432 48.7557 42.896C49.6357 43.36 50.3237 44 50.8197 44.816C51.3157 45.616 51.5637 46.528 51.5637 47.552C51.5637 48.608 51.3157 49.56 50.8197 50.408C50.3237 51.24 49.6437 51.896 48.7797 52.376C47.9157 52.856 46.9397 53.096 45.8517 53.096H42.1797V59H38.2917ZM47.6037 59L43.3317 51.416L47.5077 50.816L52.2597 59H47.6037ZM42.1797 49.976H45.4917C45.9077 49.976 46.2677 49.888 46.5717 49.712C46.8917 49.52 47.1317 49.256 47.2917 48.92C47.4677 48.584 47.5557 48.2 47.5557 47.768C47.5557 47.336 47.4598 46.96 47.2677 46.64C47.0757 46.304 46.7957 46.048 46.4277 45.872C46.0757 45.696 45.6437 45.608 45.1317 45.608H42.1797V49.976Z">
+                        </path>
+                        <path
+                            d="M60.2666 59.24C58.9386 59.24 57.7546 58.952 56.7146 58.376C55.6906 57.8 54.8746 57.016 54.2666 56.024C53.6746 55.032 53.3786 53.896 53.3786 52.616C53.3786 51.336 53.6746 50.2 54.2666 49.208C54.8746 48.216 55.6906 47.432 56.7146 46.856C57.7546 46.28 58.9386 45.992 60.2666 45.992C61.5946 45.992 62.7706 46.28 63.7946 46.856C64.8346 47.432 65.6506 48.216 66.2426 49.208C66.8346 50.2 67.1306 51.336 67.1306 52.616C67.1306 53.896 66.8346 55.032 66.2426 56.024C65.6506 57.016 64.8346 57.8 63.7946 58.376C62.7706 58.952 61.5946 59.24 60.2666 59.24ZM60.2666 55.928C60.8426 55.928 61.3546 55.784 61.8026 55.496C62.2506 55.208 62.6026 54.816 62.8586 54.32C63.1146 53.824 63.2346 53.256 63.2186 52.616C63.2346 51.976 63.1146 51.408 62.8586 50.912C62.6026 50.4 62.2506 50 61.8026 49.712C61.3546 49.424 60.8426 49.28 60.2666 49.28C59.6906 49.28 59.1706 49.424 58.7066 49.712C58.2586 50 57.9066 50.4 57.6506 50.912C57.3946 51.408 57.2746 51.976 57.2906 52.616C57.2746 53.256 57.3946 53.824 57.6506 54.32C57.9066 54.816 58.2586 55.208 58.7066 55.496C59.1706 55.784 59.6906 55.928 60.2666 55.928Z">
+                        </path>
+                        <path
+                            d="M75.6416 59.24C74.3136 59.24 73.1296 58.952 72.0896 58.376C71.0656 57.8 70.2496 57.016 69.6416 56.024C69.0496 55.032 68.7536 53.896 68.7536 52.616C68.7536 51.336 69.0496 50.2 69.6416 49.208C70.2496 48.216 71.0656 47.432 72.0896 46.856C73.1296 46.28 74.3136 45.992 75.6416 45.992C76.9696 45.992 78.1456 46.28 79.1696 46.856C80.2096 47.432 81.0256 48.216 81.6176 49.208C82.2096 50.2 82.5056 51.336 82.5056 52.616C82.5056 53.896 82.2096 55.032 81.6176 56.024C81.0256 57.016 80.2096 57.8 79.1696 58.376C78.1456 58.952 76.9696 59.24 75.6416 59.24ZM75.6416 55.928C76.2176 55.928 76.7296 55.784 77.1776 55.496C77.6256 55.208 77.9776 54.816 78.2336 54.32C78.4896 53.824 78.6096 53.256 78.5936 52.616C78.6096 51.976 78.4896 51.408 78.2336 50.912C77.9776 50.4 77.6256 50 77.1776 49.712C76.7296 49.424 76.2176 49.28 75.6416 49.28C75.0656 49.28 74.5456 49.424 74.0816 49.712C73.6336 50 73.2816 50.4 73.0256 50.912C72.7696 51.408 72.6496 51.976 72.6656 52.616C72.6496 53.256 72.7696 53.824 73.0256 54.32C73.2816 54.816 73.6336 55.208 74.0816 55.496C74.5456 55.784 75.0656 55.928 75.6416 55.928Z">
+                        </path>
+                        <path d="M86.0726 59V43.04H89.9126V59H86.0726ZM83.8166 49.616V46.256H92.3846V49.616H83.8166Z">
+                        </path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M76.5399 64C71.5099 73.5156 61.5123 80 50.0001 80C38.4879 80 28.4902 73.5156 23.4603 64H12.5185C18.1935 79.1867 32.834 90 50.0001 90C67.1662 90 81.8067 79.1867 87.4817 64H76.5399ZM22.4964 38C27.1257 27.4046 37.6982 20 50.0001 20C62.302 20 72.8745 27.4046 77.5038 38H88.1689C83.0718 21.7716 67.9107 10 50.0001 10C32.0895 10 16.9284 21.7716 11.8313 38H22.4964Z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Menu (Visible on larger screens) -->
+            <nav class="hidden md:flex md:space-x-3 text-white ml-40 duration-300">
+                <div class="relative group desktop-nav-menu">
+                    <a id="productDropdownLink" href="#"
+                        class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">
+                        Product
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M6.293 8.707a1 1 0 011.414 0L10 11.086l2.293-2.379a1 1 0 011.414 1.415l-3 3.12a1 1 0 01-1.414 0l-3-3.12a1 1 0 010-1.415z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <ul id="productDropdownMenu"
+                        class="dropdown-menu rounded absolute hidden bg-[#1b2338] mt-2 space-y-1 text-white">
+                        <div class="p-4 w-64">
+                            <a href="features.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11 19v-6M6 19v-4M16 19v-8M21 19V7M1 19h22M5 10h0M10 14h0M15 11h0M20 8h0" />
+                                </svg>
+                                <span>Features</span>
+                            </a>
+                            <a href="technology.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 3L2 9l10 6 10-6-10-6zm0 0v12m10-6l-10 6-10-6" />
+                                </svg>
+                                <span>Technology Stack</span>
+                            </a>
+                            <a href="app-hosting.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm2 0v14h14V5H5zm2 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h10v2H7v-2z" />
+                                </svg>
+                                <span>Application Hosting</span>
+                            </a>
+                            <!-- Add more items here -->
+                        </div>
+                    </ul>
+                </div>
+
+                <a href="roadmap.html"
+                    class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">Roadmap</a>
+                <a href="pricing.html"
+                    class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">Pricing</a>
+                <div class="relative group">
+                    <a id="dropdownLink" href="#"
+                        class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">
+                        Resources
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M6.293 8.707a1 1 0 011.414 0L10 11.086l2.293-2.379a1 1 0 011.414 1.415l-3 3.12a1 1 0 01-1.414 0l-3-3.12a1 1 0 010-1.415z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <ul id="dropdownMenu"
+                        class="dropdown-menu absolute hidden rounded bg-[#1b2338] mt-2 space-y-1 text-white">
+                        <div class="p-4 w-64">
+                            <a href="community.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5V8m-5 12a2 2 0 01-2-2V8a2 2 0 012-2h5M12 20v-6m0 0V8a2 2 0 00-2-2h-5M9 20H4a2 2 0 01-2-2v-5a2 2 0 012-2h5m5-4a2 2 0 00-2-2H7a2 2 0 00-2 2v5M9 4a2 2 0 11-4 0 2 2 0 014 0zm6 4a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                                <span>Community</span>
+                            </a>
+
+                            <a href="documentation.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M6 2a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8.414a2 2 0 00-.586-1.414l-4.414-4.414A2 2 0 0014.586 2H6zm7 7h-4v2h4v-2zm-4 4h6v2h-6v-2zm0 4h4v2h-4v-2zM8 9V4h6v4h4v12H6V4h2v5z" />
+                                </svg>
+                                <span>Documentation</span>
+                            </a>
+
+                            <a href="api.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8 9h4m0 0h4m-4 0v4m0-4l3 3m1 1v4m-4-1h1m-8-2h6m-6 4h6m-6 4h4m-4-8h8m4 0h1m-2 0v4m0-4h2" />
+                                </svg>
+                                <span>API Documentation</span>
+                            </a>
+                            <!-- Add more items here -->
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Hamburger Button (Visible on smaller screens) -->
+            <div class="flex items-center">
+                <button id="mobile-theme-toggle" class="text-white focus:outline-none mr-4 mobile-toggler">
+                    <i id="moon-icon" class="fas fa-moon"></i>
+                    <i id="sun-icon" class="fas fa-sun"></i>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="text-white focus:outline-none md:hidden mobile-menu-nav">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Get Started Button -->
+            <div class="hidden md:block space-x-1 desktop-nav-btn">
+                <button id="theme-toggle" class="desktop-toggler text-white focus:outline-none mr-4">
+                    <i id="moon-icon" class="fas fa-moon"></i>
+                    <i id="sun-icon" class="fas fa-sun"></i>
+                </button>
+                <a href="signin.html"
+                    class="border border-cyan-800 text-gray-300 px-4 py-2 rounded hover:bg-white hover:text-[#0B1120] duration-300 signin-btn">Sign
+                    in</a>
+                <a href="getstarted.html"
+                    class="bg-indigo-600 text-white px-4 py-2.5 rounded hover:bg-indigo-700 duration-300 get-start-btn">Get
+                    Started</a>
+            </div>
+        </div>
+
+        <!-- Dropdown Menu (Visible on smaller screens) -->
+        <nav id="menu" class="hidden mt-4 mobile-menu-spacing">
+            <ul class="space-y-4 text-white">
+                <li>
+                    <div
+                        class="bg-gray-900 flex justify-between items-center border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300 mobile-dropdown">
+                        <span>Products</span>
+                        <button class="dropdown-btn focus:outline-none">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
+                        <li
+                            class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
+                            <a href="features.html" class="block text-gray-300 hover:text-indigo-400">Features</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                        <li
+                            class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700 duration-300">
+                            <a href="technology.html" class="block text-gray-300 hover:text-indigo-400">Technology
+                                Stack</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                        <li class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700">
+                            <a href="app-hosting.html" class="block text-gray-300 hover:text-indigo-400">Application
+                                Hosting</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                    </ul>
+
+
+                </li>
+                <li
+                    class="mobile-dropdown bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
+                    <a href="roadmap.html" class="block hover:text-indigo-400">Roadmap </a>
+                </li>
+                <li
+                    class="mobile-dropdown bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
+                    <a href="pricing.html" class="block hover:text-indigo-400">Pricing</a>
+                </li>
+                <li>
+                    <div
+                        class="mobile-dropdown flex justify-between items-center border bg-gray-900 border-gray-800 px-4 py-2 rounded  duration-300">
+                        <span>Resources</span>
+                        <button class="dropdown-btn focus:outline-none">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
+                        <li
+                            class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
+                            <a href="community.html" class="block text-gray-300 hover:text-indigo-400">Community</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                        <li
+                            class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700 duration-300">
+                            <a href="documentation.html"
+                                class="block text-gray-300 hover:text-indigo-400">Documentation</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                        <li class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700">
+                            <a href="api.html" class="block text-gray-300 hover:text-indigo-400">API Documentation</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="py-4">
+                    <a href="signin.html"
+                        class="text-white border border-indigo-600 px-8 py-3 rounded w-full hover:text-indigo-700 hover:bg-white duration-300 block text-center mobile-signin-btn">
+                        Sign In
+                    </a>
+                    <a href="getstarted.html"
+                        class="bg-indigo-600 text-white px-8 py-3 rounded w-full hover:bg-indigo-800 duration-300 block text-center mt-4 mobile-getstart-btn">
+                        Get Started
+                    </a>
+
+                </li>
+
+
+            </ul>
+        </nav>
+    </div>
+    <!-- Navigation End -->
+
+
+    <!-- Hero Section Start -->
+    <section class="max-w-7xl mx-auto text-white py-24">
+        <div class="px-2 lg:flex lg:items-center lg:space-x-12 tech-hero">
+            <!-- Text Content -->
+            <div class="">
+                <div class="text-normal font-normal text-cyan-300 mb-2">
+                    LxRoot Product
+                </div>
+                <h2 class="text-5xl about-h2 font-extrabold mb-6 line-height:2">
+                    Technology stack
+                </h2>
+                <p class="text-lg mb-8 text-gray-200 font-extralight">
+                    The LxRoot technology stack is secure and flexible allowing you to configure a high performance
+                    multi-server platform to scale and grow your business.
+
+
+                </p>
+                <div class="flex space-x-4 about-hero-button">
+                    <a href="#"
+                        class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-10 rounded-lg inline-block">
+                        Get Started &darr;
+                    </a>
+                </div>
+            </div>
+            <!-- Image Content -->
+            <div class="mt-12 lg:mt-0 relative">
+                <div class="relative z-10">
+                    <img class="rounded-lg object-cover object-center"
+                        src="https://www.pngall.com/wp-content/uploads/13/Dedicated-Server-PNG-Photo.png" alt="Image 1">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Web servers Section Star -->
+    <section class="py-16 custom-padding">
+        <!-- Web Servers -->
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-5 sm:px-6 lg:px-1">
+            <div class="server-text">
+                <h2 class="text-4xl font-semibold mb-5 text-white cta-title">Web servers</h2>
+                <p class="app-text-des mb-8 text-gray-200 font-extralight text-base">Select your preferred web server.
+                    Run any combination of web server types and switch between kinds without any configuration changes
+                    to optimise the overall performance of your hosting cluster.</p>
+
+            </div>
+            <!-- Server 1 -->
+            <div
+                class="border border-gray-700 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300 app-card tech-hero-server">
+                <img class="server-icon" src="https://img.icons8.com/?size=100&id=t2x6DtCn5Zzx&format=png&color=000000"
+                    alt="">
+                <h3 class="text-xl font-semibold mb-2 mt-4 float-left text-white">NGINX</h3>
+                <p class="app-text-des float-left mb-4 text-gray-200 text-sm font-extralight">An open-source web server,
+                    providing high performance with low resource usage and configuration. Configure cache exclusions,
+                    utilise FastCGI, purge cache, set rewrites on a per domain basis.</p>
+            </div>
+
+            <!-- Server 2 -->
+            <div
+                class="border border-gray-700 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300 app-card tech-hero-server">
+                <img class="server-icon" src="https://img.icons8.com/?size=100&id=t2x6DtCn5Zzx&format=png&color=000000"
+                    alt="">
+                <h3 class="text-xl font-semibold mb-2 mt-4 float-left text-white">NGINX Unit</h3>
+                <p class="app-text-des float-left text-gray-200 text-sm font-extralight">NGINX Unit is a lightweight and
+                    versatile application runtime that provides the essential components for your web application as a
+                    single open-source server: running application code (including WebAssembly), serving static assets,
+                    handling TLS and request routing.</p>
+            </div>
+
+            <!-- Server 3 -->
+            <div
+                class="border border-gray-700 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300 app-card tech-hero-server">
+                <img class="server-icon"
+                    src="https://openlitespeed.org/wp-content/uploads/2022/11/openlitespeed-icon.png" alt="">
+                <h3 class="text-xl font-semibold mb-2 mt-4 float-left text-white">OpenLiteSpeed</h3>
+                <p class="app-text-des float-left mb-4 text-gray-200 text-sm font-extralight">An open source version of
+                    LiteSpeed without commercial support. OpenLiteSpeed has limited .htaccess support.</p>
+            </div>
+        </div>
+        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+            aria-hidden="true">
+            <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+            </div>
+        </div>
+    </section>
+    <!-- Web servers Section Star -->
+
+
+    <!-- Supported Programming Language Section Start -->
+    <div class="bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120] py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <h2 class="text-center text-4xl font-semibold leading-8 text-indigo-400">Supported Programming Language</h2>
+            <p class="text-center text-gray-200 mt-4">Officially supported programming language by LxRoot</p>
+            <div
+                class="tech-stack max-w-6xl mx-auto grid grid-cols-4 gap-4 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-8 text-indigo-800 sm:gap-6 sm:px-4 mt-10">
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-go-original-wordmark text-5xl rounded p-4 bg-white"></i>
+                </div>
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-python-plain text-5xl rounded p-4 bg-white"></i>
+                </div>
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-rust-plain text-5xl rounded p-4 bg-white"></i>
+                </div>
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-wordpress-plain text-5xl rounded p-4 bg-white"></i>
+                </div>
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-nodejs-plain text-5xl rounded p-4 bg-white"></i>
+                </div>
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-html5-plain text-5xl rounded p-4 bg-white"></i>
+                </div>
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-swift-plain text-5xl rounded p-4 bg-white"></i>
+                </div>
+                <div class="flex justify-center items-center col-span-1">
+                    <i class="devicon-php-plain text-5xl rounded p-4 bg-white"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Supported Programming Language Section End -->
+
+
+    <!-- Database Section Start -->
+    <div class="bg-gray-50">
+        <!-- Content Section -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2 tech-database">
+            <div class="text-4xl font-bold text-white text-center">Databases</span>
+                <p class="text-center text-base font-normal text-gray-200 mt-4">The most popular databases support on
+                    our LxRoot</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 database-sec">
+
+                    <!-- Card 1 -->
+                    <div class="border border-indigo-600 rounded shadow-lg text-center duration-300 database-item">
+                        <img class="card-img mx-auto mt-4"
+                            src="https://cdn.iconscout.com/icon/free/png-512/free-mysql-logo-icon-download-in-svg-png-gif-file-formats--wordmark-programming-language-pack-logos-icons-1174941.png?f=webp&w=256"
+                            alt="">
+                        <h3 class="mt-6 text-xl font-bold text-white">MySQL</h3>
+                        <p class="mt-2 mb-2 text-gray-200 text-sm font-light">
+                            MariaDB (10.x LTS) with the ability to run a combination of each within a cluster.
+                        </p>
+                    </div>
+
+
+                    <!-- Card 2 -->
+                    <div class="border border-indigo-600 rounded shadow-lg text-center database-item duration-300">
+                        <img class="card-img mx-auto mt-4"
+                            src="https://cdn.iconscout.com/icon/free/png-512/free-postgresql-logo-icon-download-in-svg-png-gif-file-formats--wordmark-programming-langugae-freebies-pack-logos-icons-1175122.png?f=webp&w=256"
+                            alt="">
+                        <h3 class="mt-6 text-xl font-bold text-white">PosgresSQL</h3>
+                        <p class="mt-2 mb-2 text-gray-200 text-sm font-light">
+                            PostgreSQL (16.x) with the ability to run a combination of each within a cluster.</p>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="border border-indigo-600  rounded shadow-lg text-center database-item duration-300">
+                        <img class="card-img mx-auto mt-4"
+                            src="https://cdn.iconscout.com/icon/free/png-512/free-couchbase-logo-icon-download-in-svg-png-gif-file-formats--company-brand-world-logos-vol-4-pack-icons-282632.png?f=webp&w=256"
+                            alt="">
+                        <h3 class="mt-6 text-xl font-bold text-white">Couchbase</h3>
+                        <p class="mt-2 mb-2 text-gray-200 text-sm font-light">
+                            Couchbase Server Community Edition (7.6.x) with the ability to run a combination of each
+                            within a cluster.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Database Section End -->
+
+
+        <!-- DNS Email and Backups sections Start -->
+        <section class="max-w-7xl mx-auto text-white pb-12 pt-12 sm:px-6 lg:px-1 homepage-support">
+            <div class="mx-auto">
+                <div class="flex flex-col lg:flex-row lg:justify-between">
+
+                    <div class="support-sec grid grid-cols-3 lg:grid-cols-3 gap-6">
+                        <div class="p-6 rounded-lg tech-other-feature">
+                            <div class="flex items-center mb-4">
+                                <i
+                                    class="fa-brands fa-cloudflare float-left rounded text-3xl text-white bg-indigo-600 p-3"></i>
+                                <h4 class="text-xl font-bold pl-5">DNS</h4>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                The DNS service provides DNS (PowerDNS) for all the domains on your LxRoot cluster.
+                            </p>
+                            <p class="text-gray-400">It is possible to run an LxRoot cluster without installing the DNS
+                                service. You can choose to use LxRoot's automatic CloudFlare synchronisation or an
+                                entirely separate DNS provider.</p>
+                        </div>
+
+                        <div class="p-6 rounded-lg tech-other-feature">
+                            <div class="flex items-center mb-4">
+                                <i
+                                    class="fa-solid fa-envelope float-left rounded text-3xl text-white bg-indigo-600 p-3"></i>
+                                <h4 class="text-xl font-bold pl-5">EMAIL</h4>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                The Email role provides the following services: <br>
+                                &checkmark; check POP/IMAP (maddy) <br>
+                                &checkmark; check MTA and SMTP (maddy) <br>
+                                &checkmark; check Spam filtering (rspamd)
+                            </p>
+                            <p class="text-gray-400">You can have an unlimited number of email servers in a single LxRoot cluster including dedicated email servers. If you do not provide email hosting, there is no requirement to install the email service.</p>
+                        </div>
+
+                        <div class="p-6 rounded-lg tech-other-feature">
+                            <div class="flex items-center mb-4">
+                                <i
+                                    class="fa-solid fa-anchor float-left rounded text-3xl text-white bg-indigo-600 p-3"></i>
+                                <h4 class="text-xl font-bold pl-5">Backups</h4>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                LxRoot Backup service creates incremental, de-duplicated "time machine" backups using the btrfs file system. These snapshots are fast to create and restore as well as being very disk space efficient.</p>   
+                                <p class="text-gray-400">In addition to the built-in LxRoot backups you can configure third party S3 compatible backups from providers like Backblaze, AWS and R2 to capture website backups. You can even run LxRoot's built-in backups system and S3 backups side by side.</p>
+                            </div>                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- DNS Email and Backups sections End -->
+
+
+    <!-- System Requirements Start -->
+    <section class="max-w-7xl mx-auto text-white pb-24 pt-12 sm:px-6 lg:px-1 homepage-support">
+            <h2 class="text-4xl font-bold text-white text-center">System requirements</h2>
+            <p class="text-center text-base font-normal text-gray-200 mt-4">Minimum system requirements for installing the LxRoot control panel</p>
+            <div class="flex flex-col lg:flex-row lg:justify-between mt-10">
+                <div class="max-w-7xl mx-auto support-sec grid grid-cols-2 lg:grid-cols-2 gap-6">
+                    <div class="p-6 rounded-lg tech-other-feature">
+                        <div class="flex items-center mb-4">
+                            <i
+                                class="fa-brands fa-1 float-left rounded text-3xl text-white bg-indigo-600 px-5 py-3"></i>
+                            <h4 class="text-xl font-bold pl-5">1+ physical server or VM</h4>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            4GB RAM, 20GB disk, 2CPU cores or vCPUs</p>
+                    </div>
+
+                    <div class="p-6 rounded-lg tech-other-feature">
+                        <div class="flex items-center mb-4">
+                            <i
+                                class="fa-solid fa-2 float-left rounded text-3xl text-white bg-indigo-600 px-5 py-3"></i>
+                            <h4 class="text-xl font-bold pl-5">Ubuntu</h4>
+                        </div>
+                        <p class="text-gray-300 mb-4">
+                            The server's base operation system should be Ubuntu 22.04 LTS.
+                        </p>
+                    </div>                     
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- System Requirements End -->
+
+
+
+    <!-- Call to Action Section Start -->
+    <div class="home-cta bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120] pt-12 pb-12">
+        <div class="mx-auto max-w-7xl cta-spacing">
+            <div class="text-center">
+                <h2 class="text-5xl font-bold tracking-tight text-white sm:text-4xl cta-title">Ready to dive in?</h2>
+                <p class="mt-2 text-lg leading-8 text-cyan-300 cta-tagline">Get Started with your free trial today.</p>
+                <div class="mt-5 flex justify-center gap-x-4">
+                    <a href="#"
+                        class="cta-live-btn border border-cyan-800 text-gray-300 px-4 pt-2 pb-2 rounded hover:bg-white hover:text-black duration-300">Live
+                        Demo -></a>
+                    <a href="#"
+                        class="cta-start-btn bg-indigo-600 text-white font-normal px-4 py-2.5 rounded hover:bg-indigo-700 duration-300">Get
+                        Started -></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Call to Action Section End -->
+
+
+    <!-- Footer Start -->
+    <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1 full-footer">
+        <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
+            <div class="footer-col space-y-4">
+                <h4 class="text-gray-500 border-b border-gray-600 pb-2">COMPANY</h4>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="hover:text-white">About</a></li>
+                    <li><a href="articles.html" class="hover:text-white">Articles</a></li>
+                    <li><a href="career.html" class="hover:text-white">Career</a></li>
+                    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col space-y-4">
+                <h4 class="text-gray-500 border-b border-gray-600 pb-2">SOLUTIONS</h4>
+                <ul class="space-y-2">
+                    <li><a href="features.htlm" class="hover:text-white">Features</a></li>
+                    <li><a href="technology.html" class="hover:text-white">Technology</a></li>
+                    <li><a href="roadmap.html" class="hover:text-white">Roadmap</a></li>
+                    <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col space-y-4">
+                <h4 class="text-gray-500 border-b border-gray-600 pb-2">SUPPORT</h4>
+                <ul class="space-y-2">
+                    <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
+                    <li><a href="community.html" class="hover:text-white">Community</a></li>
+                    <li><a href="support.html" class="hover:text-white">Support Docs</a></li>
+                    <li><a href="api.html" class="hover:text-white">API Docs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col space-y-4">
+                <h4 class="text-gray-500 border-b border-gray-600 pb-2">LEGAL</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Security</a></li>
+                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white">Terms of Use</a></li>
+                    <li><a href="#" class="hover:text-white">Changelogs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-col-5 space-y-4">
+                <h4 class="text-gray-500 border-b border-gray-600 pb-2">CONTACT US</h4>
+                <div class="mt-4 space-y-4">
+                    <div class="flex justify-center lg:justify-start items-center space-x-2">
+                        <i class="fas fa-phone text-gray-400"></i>
+                        <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
+                    </div>
+                    <div class="flex justify-center lg:justify-start items-center space-x-2">
+                        <i class="fas fa-envelope text-gray-400"></i>
+                        <a href="mailto:contact@yourdomain.com"
+                            class="text-gray-400 hover:text-white">contact@lxroot.com</a>
+                    </div>
+                    <div class="flex justify-center lg:justify-start items-center space-x-2">
+                        <i class="fas fa-map-marker-alt text-gray-300"></i>
+                        <p class="text-gray-400">Carmel, Indiana, USA</p>
+                    </div>
+                </div>
+
+                <!-- Social Media Icons -->
+                <div class="flex justify-center lg:justify-start mt-4 space-x-4">
+                    <a href="https://facebook.com/yourprofile" target="_blank"
+                        class="text-gray-500 hover:text-blue-600">
+                        <i class="fab fa-facebook-f fa-lg"></i>
+                    </a>
+                    <a href="https://twitter.com/yourprofile" target="_blank" class="text-gray-500 hover:text-blue-400">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </a>
+                    <a href="https://instagram.com/yourprofile" target="_blank"
+                        class="text-gray-500 hover:text-pink-500">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank"
+                        class="text-gray-500 hover:text-blue-700">
+                        <i class="fab fa-linkedin-in fa-lg"></i>
+                    </a>
+                    <a href="https://youtube.com/in/yourprofile" target="_blank"
+                        class="text-gray-500 hover:text-red-700">
+                        <i class="fab fa-youtube fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto container mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
+            <div class="flex justify-between items-center about-footer-bottom">
+                <div class="text-base text-left">
+                    Copyright &copy; 2024 | <a href="index.html"
+                        class="text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC </a> - All
+                    Right Reserved.
+                </div>
+                <div class="text-base text-right space-x-4">
+                    <a href="#privacy" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Privacy
+                        Policy</a>
+                    <a href="#terms" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Terms &
+                        Conditions</a>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+    <!-- Footer End -->
+
+
+
+    <!-- JavaScript -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- JavaScript to toggle mobile menu -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+        const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        dropdownBtns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const dropdownMenu = btn.parentElement.nextElementSibling;
+                dropdownMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+    <!-- JavaScript for Drowpdown Menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownLink = document.getElementById("dropdownLink");
+            const dropdownMenu = document.getElementById("dropdownMenu");
+
+            dropdownLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                dropdownMenu.classList.toggle("hidden");
+            });
+
+            document.addEventListener("click", function (event) {
+                const isClickInside = dropdownLink.contains(event.target) || dropdownMenu.contains(event.target);
+
+                if (!isClickInside) {
+                    dropdownMenu.classList.add("hidden");
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const productDropdownLink = document.getElementById("productDropdownLink");
+            const productDropdownMenu = document.getElementById("productDropdownMenu");
+
+            productDropdownLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                productDropdownMenu.classList.toggle("hidden");
+            });
+
+            document.addEventListener("click", function (event) {
+                const isClickInside = productDropdownLink.contains(event.target) || productDropdownMenu.contains(event.target);
+
+                if (!isClickInside) {
+                    productDropdownMenu.classList.add("hidden");
+                }
+            });
+        });
+    </script>
+
+    <script>
+
+        // JavaScript for Desktop Mode Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const moonIcon = document.getElementById('moon-icon');
+        const sunIcon = document.getElementById('sun-icon');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.body.classList.add(currentTheme);
+            if (currentTheme === 'light-mode') {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+            }
+        } else {
+            sunIcon.style.display = 'none'; // Default to dark mode, show moon icon
+        }
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            if (document.body.classList.contains('light-mode')) {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+                localStorage.setItem('theme', 'light-mode');
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+                localStorage.setItem('theme', 'dark-mode');
+            }
+        });
+
+        // JavaScript for Mobile Mode Theme Toggle
+        const mobthemeToggle = document.getElementById('mobile-theme-toggle');
+        const mobmoonIcon = document.getElementById('moon-icon');
+        const mobunIcon = document.getElementById('sun-icon');
+        const mobcurrentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.body.classList.add(currentTheme);
+            if (currentTheme === 'light-mode') {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+            }
+        } else {
+            sunIcon.style.display = 'none'; // Default to dark mode, show moon icon
+        }
+
+        mobthemeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            if (document.body.classList.contains('light-mode')) {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+                localStorage.setItem('theme', 'light-mode');
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+                localStorage.setItem('theme', 'dark-mode');
+            }
+        });
+
+    </script>
+    <!-- JavaScript End -->
+
+
+</body>
+
+</html>

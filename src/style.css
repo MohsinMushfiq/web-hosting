@@ -81,7 +81,9 @@ body.light-mode .desktop-nav-menu:hover{
 
 body.light-mode .dropdown-menu{
     background-color: white;
-    border: 1px solid #beacff;
+    border: 1px solid #2d26ad;
+    border-top: 3px solid #2d26ad;
+    animation-duration: 0.3s;
 }
 
 body.light-mode .dropdown-item:hover{
@@ -91,7 +93,7 @@ body.light-mode .dropdown-item:hover{
 
 /* Footer White Mode */
 body.light-mode .full-footer a:hover{
-    color: #433bdb;
+    color: #2d26ad;
 }
 
 /* Mobile Menu White Mode */
@@ -119,6 +121,15 @@ body.light-mode .hero-tooltip{
     color: #0B1120;
 }
 
+body.light-mode .header-title{
+    font-weight: 800;
+}
+
+body.light-mode .color-title{
+    color: #2d26ad;
+    font-weight: 800;
+}
+
 body.light-mode .hero-live-btn{
     color: #0B1120;
 }
@@ -132,6 +143,11 @@ body.light-mode .hero-start-btn{
     color: white;
 }
 
+body.light-mode .hero-icon{
+    color: #433bdb;
+    outline: #433bdb;
+}
+
 body.light-mode .app-text-des{
     color: #0B1120;
     font-weight: 300;
@@ -141,85 +157,178 @@ body.light-mode .app-btn{
     color: white;
 }
 
+body.light-mode .app-card{
+    background-color: white;
+    border: 1px solid #beacff;
+    box-shadow: inset;
+}
+
 body.light-mode .app-card:hover{
     background-color: #f6f4ff;
-    border: 1px solid #4c44e7;
+    border: 1px solid #6c64ff;
     color: white;
 }
 
-body.light-mode i{
+body.light-mode .app-card i{
     color: #433bdb;
+    background-color: white;
 }
 
 body.light-mode .app-card a{
     color: #483fec;
+    font-weight: 500;
 }
 
 body.light-mode .app-card a:hover{
     color: #433bdb;
+    font-weight: 500;
+}
+
+body.light-mode .home-feture{
+    background: linear-gradient(to right, rgba(188, 94, 255, 0.288), white, rgba(188, 94, 255, 0.288));
+
 }
 
 body.light-mode .feature-card{
-    background-color: #f6f4ff;
+    background-color: #4c44e7;
+    border: none;
+}
+
+body.light-mode .feature-card:hover{
+    background-color: #2d26ad;
 }
 
 body.light-mode .feature-card h3{
-    color: #0B1120;
+    color: white;
 }
 
 body.light-mode .feature-card i{
-    background-color: #e2e8f0;
+    color: #433bdb;
+    background-color: white;
+}
+
+body.light-mode .feature-card p{
+    color: #f6f4ff;
 }
 
 body.light-mode .feature-card a{
-    color: #0B1120;
+    color: white;
     font-weight: 400;
-    border: 1px solid #6b7280;   
+    border: 1px solid #beacff;   
 }
 
 body.light-mode .feature-card a:hover{
-    color: white;
+    color: #433bdb;
+    background-color: white;
+    border: 1px solid white;
 }
 
 body.light-mode #home-price-sec{
-    background: white;
+    background: #2d26ad;
+    color: white;
 }
 
-body.light-mode .homepage-pricing{
-    background: white;
+body.light-mode .pricing-title{
+    color: white;
+}
+
+body.light-mode .pricing-text{
+    color:#f6f4ff;
 }
 
 body.light-mode .pricing-btn{
-    color: white;
+    background-color: white;
+    color: #2d26ad;
 }
 
 body.light-mode .pricing-btn:hover{
     background-color: #433bdb;
+    color: white;
 }
 
+body.light-mode .hidden-section{
+    border-top: 1px solid white;
+}
+
+body.light-mode .feature-sec-title h2{
+    color: #f6f4ff;
+}
+
+body.light-mode .feature-sec-title h3{
+    color: white;
+}
+
+body.light-mode .feature-sec-title p{
+    color: #f6f4ff;
+}
+
+body.light-mode .feature-check{
+    color: white;
+}
+
+body.light-mode .feature-check span{
+    color: white;
+}
+
+body.light-mode .homepage-support-top{
+    color: white;
+}
+
+body.light-mode .homepage-support-top{
+    color: white;
+}
+
+body.light-mode .homepage-support-top h2{
+    color: #f6f4ff;
+}
+
+body.light-mode .homepage-support-top p{
+    color: #f6f4ff;
+}
 
 body.light-mode .homepage-support-card i{
-    background-color: #e2e8f0;
+    background-color: white;
+    color: #433bdb;
 }
 
 body.light-mode .homepage-support-card a{
-    color: #4c44e7;
+    color: white;
 }
+
+body.light-mode .homepage-support-card a:hover{
+    color: #e2e8f0;
+}
+
+body.light-mode .homepage-support-card h4{
+    color: white;
+}
+
+body.light-mode .homepage-support-card p{
+    color: #f6f4ff;
+}
+
 
 body.light-mode .home-review{
     background-color: #f6f4ff;
 }
 
 body.light-mode .home-review i{
-    background-color: #e2e8f0;
+    background-color: white;
+    color: #433bdb;
 }
 
 body.light-mode .review-left-btn{
     background-color: #e2e8f0;
+    color: #433bdb;
+}
+
+body.light-mode .review-left-btn svg{
+    background-color: #e2e8f0;
+    color: #433bdb;
 }
 
 body.light-mode .review-right-btn{
-    background-color: #4c44e7;
+    background-color: #6c64ff;
 }
 
 body.light-mode .review-icon{
@@ -227,36 +336,54 @@ body.light-mode .review-icon{
 }
 
 body.light-mode .home-cta{
-    background: white;
-    border-bottom: 1px solid #eee9ff;
-    border-top: 1px solid #eee9ff;
+    background: #6c64ff; 
+}
+
+body.light-mode .home-cta h2{
+    color: white;
+    font-weight: bold;
 }
 
 body.light-mode .home-cta p{
-    color: #0f1527;
+    color: #f6f4ff;
 }
 
 body.light-mode .cta-live-btn{
-    color: #0B1120;
+    color: white;
+    border: 1px solid white;
 }
 
 body.light-mode .cta-live-btn:hover{
-    background-color: #0B1120;
-    color: white;
+    background-color: white;
+    border: 1px solid white;
+    color: #433bdb;
 }
 
 body.light-mode .cta-start-btn{
+    background-color: white;
+    color: #2d26ad;
+}
+
+body.light-mode .cta-start-btn:hover{
+    background-color: #433bdb;
     color: white;
 }
 
 body.light-mode .footer-text{
-    color: #4c44e7;
+    color: #433bdb;
+}
+
+body.light-mode .footer-text:hover{
+    color: #2d26ad;
+}
+
+body.light-mode .footer-col a, p{
+    color: #0B1120;
 }
 
 
 
 /* Theme Mode Changer End */
-
 .team-member{
     background: #192441;
     padding-top: 50px;
@@ -276,9 +403,27 @@ body.light-mode .footer-text{
 .about-about-card{
     padding: 30px;
 }
+
+.review-left-btn{
+    background-color: #eee9ff;
+}
+
+.review-left-btn:hover{
+    background-color: #e2e8f0;
+}
+
+.review-right-btn{
+    background-color: #6c64ff;
+}
+
+.review-right-btn:hover{
+    background-color: #4c44e7;
+}
+
 .about-about-card:hover{
     background-color: #17203a;
 }
+
 .card-styling:hover{
     background-color: #17203a;
     border: 1px solid #212e50;
@@ -312,6 +457,7 @@ body.light-mode .footer-text{
     border: 1px solid #212e50;
     color: white;
 }
+
 .cta-card:hover{
     background-color: #0f1527;
     border: 1px solid #212e50;

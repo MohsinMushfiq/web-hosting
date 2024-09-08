@@ -1,6 +1,6 @@
 <h2>Updates - 8th September, 2024</h2>
 
-Video - </br>
+Video - https://www.loom.com/share/ede1fa9c25cb4adf95c2057b75a087ff?sid=0d7a8ed9-c72a-4763-958f-cbd43b06a4cf</br>
 Live URL - https://mohsin.lxroot.net/day10 </br>
 GitHub - https://github.com/MohsinMushfiq/LxRoot/blob/main/Daily_Report/2024/September/8th_sept.md
 

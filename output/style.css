@@ -58,410 +58,426 @@ body.light-mode svg {
 
 /* Header and Footer */
 
-body.light-mode .main-menu{
+body.light-mode .main-menu {
   background-color: white;
 }
 
-body.light-mode .full-menu{
+body.light-mode .full-menu {
   background-color: white;
 }
 
-body.light-mode .logo-fill{
+body.light-mode .logo-fill {
   color: #433bdb;
 }
 
-body.light-mode .signin-btn:hover{
+body.light-mode .signin-btn:hover {
   background-color: #0B1120;
   color: white;
   border: 1px solid #0B1120;
 }
 
-body.light-mode .get-start-btn{
+body.light-mode .get-start-btn {
   color: white;
 }
 
-body.light-mode .desktop-nav-menu:hover{
+body.light-mode .desktop-nav-menu:hover {
   background-color: #eee9ff;
   border-radius: 5px;
 }
 
-body.light-mode .dropdown-menu{
+body.light-mode .dropdown-menu {
   background-color: white;
   border: 1px solid #2d26ad;
   border-top: 3px solid #2d26ad;
   animation-duration: 0.3s;
 }
 
-body.light-mode .dropdown-item:hover{
+body.light-mode .dropdown-item:hover {
   background-color: #eee9ff;
 }
 
 /* Footer White Mode */
 
-body.light-mode .full-footer a:hover{
+body.light-mode .full-footer a:hover {
   color: #2d26ad;
 }
 
 /* Mobile Menu White Mode */
 
-body.light-mode .mobile-dropdown{
+body.light-mode .mobile-dropdown {
   background-color: white;
 }
 
-body.light-mode .mobile-signin-btn:hover{
+body.light-mode .mobile-signin-btn:hover {
   background-color: #4c44e7;
   color: white;
 }
 
-body.light-mode .mobile-getstart-btn{
+body.light-mode .mobile-getstart-btn {
   color: white;
 }
 
-body.light-mode .mobile-dropdown-menu{
+body.light-mode .mobile-dropdown-menu {
   background-color: white;
 }
 
 /* Home Page White Mode */
 
-body.light-mode .hero-tooltip{
+body.light-mode .hero-tooltip {
   color: #0B1120;
 }
 
-body.light-mode .header-title{
+body.light-mode .header-title {
   font-weight: 800;
 }
 
-body.light-mode .color-title{
+body.light-mode .color-title {
   color: #2d26ad;
   font-weight: 800;
 }
 
-body.light-mode .hero-live-btn{
+body.light-mode .hero-live-btn {
   color: #0B1120;
 }
 
-body.light-mode .hero-live-btn:hover{
+body.light-mode .hero-live-btn:hover {
   color: white;
   background-color: #0B1120;
 }
 
-body.light-mode .hero-start-btn{
+body.light-mode .hero-start-btn {
   color: white;
 }
 
-body.light-mode .hero-icon{
+body.light-mode .hero-icon {
   color: #433bdb;
   outline: #433bdb;
 }
 
-body.light-mode .app-text-des{
+body.light-mode .app-text-des {
   color: #0B1120;
   font-weight: 300;
 }
 
-body.light-mode .app-btn{
+body.light-mode .app-btn {
   color: white;
 }
 
-body.light-mode .app-card{
+body.light-mode .app-card {
   background-color: white;
   border: 1px solid #beacff;
   box-shadow: inset;
 }
 
-body.light-mode .app-card:hover{
+body.light-mode .app-card:hover {
   background-color: #f6f4ff;
   border: 1px solid #6c64ff;
   color: white;
 }
 
-body.light-mode .app-card i{
+body.light-mode .app-card i {
   color: #433bdb;
   background-color: white;
 }
 
-body.light-mode .app-card a{
+body.light-mode .app-card a {
   color: #483fec;
   font-weight: 500;
 }
 
-body.light-mode .app-card a:hover{
+body.light-mode .app-card a:hover {
   color: #433bdb;
   font-weight: 500;
 }
 
-body.light-mode .home-feture{
+body.light-mode .home-feture {
   background: linear-gradient(to right, rgba(188, 94, 255, 0.288), white, rgba(188, 94, 255, 0.288));
 }
 
-body.light-mode .feature-card{
+body.light-mode .feature-card {
   background-color: #4c44e7;
   border: none;
 }
 
-body.light-mode .feature-card:hover{
+body.light-mode .feature-card:hover {
   background-color: #2d26ad;
 }
 
-body.light-mode .feature-card h3{
+body.light-mode .feature-card h3 {
   color: white;
 }
 
-body.light-mode .feature-card i{
+body.light-mode .feature-card i {
   color: #433bdb;
   background-color: white;
 }
 
-body.light-mode .feature-card p{
+body.light-mode .feature-card p {
   color: #f6f4ff;
 }
 
-body.light-mode .feature-card a{
+body.light-mode .feature-card a {
   color: white;
   font-weight: 400;
   border: 1px solid #beacff;
 }
 
-body.light-mode .feature-card a:hover{
+body.light-mode .feature-card a:hover {
   color: #433bdb;
   background-color: white;
   border: 1px solid white;
 }
 
-body.light-mode #home-price-sec{
+body.light-mode #home-price-sec {
   background: #2d26ad;
   color: white;
 }
 
-body.light-mode .pricing-title{
+body.light-mode .pricing-title {
   color: white;
 }
 
-body.light-mode .pricing-text{
-  color:#f6f4ff;
+body.light-mode .pricing-text {
+  color: #f6f4ff;
 }
 
-body.light-mode .pricing-btn{
+body.light-mode .pricing-btn {
   background-color: white;
   color: #2d26ad;
 }
 
-body.light-mode .pricing-btn:hover{
+body.light-mode .pricing-btn:hover {
   background-color: #433bdb;
   color: white;
 }
 
-body.light-mode .hidden-section{
+body.light-mode .hidden-section {
   border-top: 1px solid white;
 }
 
-body.light-mode .feature-sec-title h2{
+body.light-mode .feature-sec-title h2 {
   color: #f6f4ff;
 }
 
-body.light-mode .feature-sec-title h3{
+body.light-mode .feature-sec-title h3 {
   color: white;
 }
 
-body.light-mode .feature-sec-title p{
+body.light-mode .feature-sec-title p {
   color: #f6f4ff;
 }
 
-body.light-mode .feature-check{
+body.light-mode .feature-check {
   color: white;
 }
 
-body.light-mode .feature-check span{
+body.light-mode .feature-check span {
   color: white;
 }
 
-body.light-mode .homepage-support-top{
+body.light-mode .homepage-support-top {
   color: white;
 }
 
-body.light-mode .homepage-support-top h2{
+body.light-mode .homepage-support-top h2 {
   color: #f6f4ff;
 }
 
-body.light-mode .homepage-support-top p{
+body.light-mode .homepage-support-top p {
   color: #f6f4ff;
 }
 
-body.light-mode .homepage-support-card i{
+body.light-mode .homepage-support-card i {
   background-color: white;
   color: #433bdb;
 }
 
-body.light-mode .homepage-support-card a{
+body.light-mode .homepage-support-card a {
   color: white;
 }
 
-body.light-mode .homepage-support-card a:hover{
+body.light-mode .homepage-support-card a:hover {
   color: #e2e8f0;
 }
 
-body.light-mode .homepage-support-card h4{
+body.light-mode .homepage-support-card h4 {
   color: white;
 }
 
-body.light-mode .homepage-support-card p{
+body.light-mode .homepage-support-card p {
   color: #f6f4ff;
 }
 
-body.light-mode .home-review{
+body.light-mode .home-review {
   background-color: #f6f4ff;
 }
 
-body.light-mode .home-review i{
+body.light-mode .home-review i {
   background-color: white;
   color: #433bdb;
 }
 
-body.light-mode .review-left-btn{
+body.light-mode .review-left-btn {
   background-color: #e2e8f0;
   color: #433bdb;
 }
 
-body.light-mode .review-left-btn svg{
+body.light-mode .review-left-btn svg {
   background-color: #e2e8f0;
   color: #433bdb;
 }
 
-body.light-mode .review-right-btn{
+body.light-mode .review-right-btn {
   background-color: #6c64ff;
 }
 
-body.light-mode .review-icon{
+body.light-mode .review-icon {
   color: #0B1120;
 }
 
-body.light-mode .review-user{
+body.light-mode .review-user {
   color: #0f1527;
 }
 
-body.light-mode .home-cta{
+body.light-mode .home-cta {
   background: #2d26ad;
 }
 
-body.light-mode .home-cta h2{
+body.light-mode .home-cta h2 {
   color: white;
   font-weight: bold;
 }
 
-body.light-mode .home-cta p{
+body.light-mode .home-cta p {
   color: #f6f4ff;
 }
 
-body.light-mode .cta-live-btn{
+body.light-mode .cta-live-btn {
   color: white;
   border: 1px solid white;
 }
 
-body.light-mode .cta-live-btn:hover{
+body.light-mode .cta-live-btn:hover {
   background-color: white;
   border: 1px solid white;
   color: #433bdb;
 }
 
-body.light-mode .cta-start-btn{
+body.light-mode .cta-start-btn {
   background-color: white;
   color: #2d26ad;
 }
 
-body.light-mode .cta-start-btn:hover{
+body.light-mode .cta-start-btn:hover {
   background-color: #4c44e7;
   color: white;
 }
 
-body.light-mode .footer-text{
+body.light-mode .footer-text {
   color: #433bdb;
 }
 
-body.light-mode .footer-text:hover{
+body.light-mode .footer-text:hover {
   color: #2d26ad;
 }
 
-body.light-mode .footer-col a, p{
+body.light-mode .footer-col a,
+p {
   color: #0B1120;
 }
 
 /* Technology Page White Mode */
 
-body.light-mode .tech-hero-tag{
+body.light-mode .tech-hero-tag {
   color: #433bdb;
 }
 
-body.light-mode .tech-hero-des{
+body.light-mode .tech-hero-des {
   color: #0f1527;
   font-weight: 500;
 }
 
-body.light-mode .about-hero-button a{
+body.light-mode .about-hero-button a {
   color: white;
 }
 
-body.light-mode .technology-text{
+body.light-mode .technology-text {
   color: #0f1527;
 }
 
-body.light-mode .database-text{
+body.light-mode .database-text {
   color: #0f1527;
 }
 
-body.light-mode .database-item{
+body.light-mode .database-item {
   background-color: #483fec;
   border: 1px solid #6c64ff;
 }
 
-body.light-mode .database-item:hover{
+body.light-mode .database-item:hover {
   background-color: #2d26ad;
   border: 1px solid #6c64ff;
 }
 
-body.light-mode .database-item h3{
+body.light-mode .database-item h3 {
   color: white;
 }
 
-body.light-mode .tech-other-feature{
+body.light-mode .tech-other-feature {
   background-color: white;
   border: 1px solid #e2e8f0;
 }
 
-body.light-mode .tech-other-feature:hover{
+body.light-mode .tech-other-feature:hover {
   background-color: white;
   border: 1px solid #483fec;
   transition-duration: 0.3s;
   box-shadow: #2d26ad;
 }
 
-body.light-mode .tech-other-feature i{
+body.light-mode .tech-other-feature i {
   color: white;
 }
 
-body.light-mode .homepage-support p{
+body.light-mode .homepage-support p {
   color: #0f1527;
 }
 
-body.light-mode .tech-stack i{
+body.light-mode .tech-stack i {
   color: white;
   background: #433bdb;
 }
 
-body.light-mode .tech-db{
+body.light-mode .tech-db {
   background: #171283;
 }
 
-body.light-mode .tech-database h2{
+body.light-mode .tech-database h2 {
   color: white;
 }
 
-body.light-mode .tech-database p{
+body.light-mode .tech-database p {
   color: #f6f4ff;
+}
+
+/* App Hosting Page */
+
+body.light-mode .app-hero-tag {
+  color: #171283;
+}
+
+body.light-mode .app-hero-des {
+  color: #0f1527;
+  font-weight: 500;
+}
+
+body.light-mode .app-hero-button a {
+  color: white;
 }
 
 /* Theme Mode Changer End */
 
-.team-member{
+.team-member {
   background: #192441;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -469,62 +485,62 @@ body.light-mode .tech-database p{
   border: solid 1px #2e3e6b;
 }
 
-.team-member:hover{
+.team-member:hover {
   background-color: #17203a;
 }
 
-.team-member img{
+.team-member img {
   height: 80px;
 }
 
-.about-about-card{
+.about-about-card {
   padding: 30px;
 }
 
-.review-left-btn{
+.review-left-btn {
   background-color: #eee9ff;
 }
 
-.review-left-btn:hover{
+.review-left-btn:hover {
   background-color: #e2e8f0;
 }
 
-.review-right-btn{
+.review-right-btn {
   background-color: #6c64ff;
 }
 
-.review-right-btn:hover{
+.review-right-btn:hover {
   background-color: #4c44e7;
 }
 
-.about-about-card:hover{
+.about-about-card:hover {
   background-color: #17203a;
 }
 
-.card-styling:hover{
+.card-styling:hover {
   background-color: #17203a;
   border: 1px solid #212e50;
 }
 
-.card-img{
+.card-img {
   height: 200px;
 }
 
-.about-cta{
+.about-cta {
   background-color: #0B1120;
   padding: 90px;
 }
 
-.about-feature-card{
+.about-feature-card {
   background-color: #2e3e6b;
 }
 
-.about-feature-card:hover{
+.about-feature-card:hover {
   background-color: #192441;
   color: white;
 }
 
-.cta-card{
+.cta-card {
   padding-top: 40px;
   padding-right: 80px;
   padding-left: 80px;
@@ -534,58 +550,58 @@ body.light-mode .tech-database p{
   color: white;
 }
 
-.cta-card:hover{
+.cta-card:hover {
   background-color: #0f1527;
   border: 1px solid #212e50;
 }
 
 /* Contact Page */
 
-.contact-main{
+.contact-main {
   padding-top: 20px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 100px;
 }
 
-.contact-cta{
+.contact-cta {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-.help-center{
+.help-center {
   background-color: #0f1527;
   border: 1px solid #192441;
   border-radius: 10px;
   color: white;
 }
 
-.help-center:hover{
+.help-center:hover {
   background-color: #212e50;
   border: 1px solid #2e3e6b;
 }
 
-#contact{
+#contact {
   padding-top: 50px;
 }
 
-#contact-form{
+#contact-form {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-.full-footer{
+.full-footer {
   padding-left: 10px;
   padding-right: 10px;
 }
 
 /* Technology Page */
 
-.tech-hero img{
+.tech-hero img {
   width: 1200px;
 }
 
-.tech-hero-text{
+.tech-hero-text {
   width: 40%;
   margin: 0 auto;
   padding-top: 15px;
@@ -596,75 +612,90 @@ body.light-mode .tech-database p{
   border-radius: 5px;
 }
 
-.tech-hero-server{
+.tech-hero-server {
   background-color: #0B1120;
   color: white;
 }
 
-.server-icon{
+.server-icon {
   width: 60px;
 }
 
-.server-text{
+.server-text {
   margin-top: 60px;
 }
 
-.tech-database{
+.tech-database {
   margin-top: 80px;
   margin-bottom: 80px;
 }
 
-.database-sec{
+.database-sec {
   margin-top: 40px;
 }
 
-.database-item{
+.database-item {
   padding: 20px;
   border: 1px solid #2e3e6b;
 }
 
-.database-item:hover{
+.database-item:hover {
   border: 1px solid #433bdb;
   background-color: #0f1527;
 }
 
-.database-item img{
+.database-item img {
   height: 150px;
   background-color: white;
   padding: 20px;
   border-radius: 10px;
 }
 
-.tech-other-feature{
+.tech-other-feature {
   padding: 30px;
   background-color: #0f1527;
   border: 1px solid #17203a;
 }
 
-.tech-other-feature:hover{
+.tech-other-feature:hover {
   background-color: #17203a;
   border: 1px solid #192441;
   transition-duration: 0.3s;
 }
 
-.technology-sec{
+.technology-sec {
   margin-top: 50px;
   margin-bottom: 80px;
 }
 
-.tech-db{
+.tech-db {
   padding-top: 10px;
   padding-bottom: 20px;
+}
+
+/* App Hosting page */
+
+.hero-text {
+  width: 50%;
+}
+
+.app-hero-image {
+  width: 50%;
+  width: 600px;
+}
+
+.app-hosting-card {
+  background: #0f1527;
 }
 
 @media (min-width: 375px) and (max-width: 1023px) {
   /* Navigation Menu*/
 
-  .mobile-menu-nav{
+  .mobile-menu-nav {
     display: block;
   }
 
-  .desktop-nav-btn{
+  .desktop-nav-btn {
     display: none;
   }
 
@@ -691,29 +722,30 @@ body.light-mode .tech-database p{
     border-top: 1px solid rgb(75 85 99);
   }
 
-  .full-menu{
+  .full-menu {
     padding-left: 20px;
     padding-right: 20px;
   }
 
   /* Homepage */
 
-  .custom-padding{
+  .custom-padding {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .homepage-pricing, .homepage-support{
+  .homepage-pricing,
+    .homepage-support {
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
-  .homepage-support-card{
+  .homepage-support-card {
     padding-left: 0px;
     padding-right: 0px;
   }
 
-  .homepage-support-top{
+  .homepage-support-top {
     padding: 0px;
     margin-bottom: 30px;
   }
@@ -764,11 +796,11 @@ body.light-mode .tech-database p{
     margin-bottom: -20px;
   }
 
-  .about-hero p{
+  .about-hero p {
     font-size: 15px;
   }
 
-  .about-hero img{
+  .about-hero img {
     display: none;
   }
 
@@ -782,78 +814,98 @@ body.light-mode .tech-database p{
     text-align: center;
   }
 
-  .about-h2{
+  .about-h2 {
     font-size: 35px;
     line-height: normal;
     text-align: center;
   }
 
-  .about-team{
+  .about-team {
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  .about-cta-cont{
+  .about-cta-cont {
     padding-left: 15px;
     padding-right: 15px;
   }
 
-  .about-cta{
+  .about-cta {
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
   }
 
-  .cta-card{
+  .cta-card {
     width: 350px;
     padding: 15px;
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
-  .about-feature{
+  .about-feature {
     padding-top: 30px;
   }
 
-  .desktop-toggler{
+  .desktop-toggler {
     display: none;
   }
 
   /* Technology Page */
 
-  .tech-hero{
+  .tech-hero {
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
     margin-top: -30px;
   }
 
-  .tech-db{
+  .tech-db {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .tech-database{
+  .tech-database {
     padding-left: 5px;
     padding-right: 5px;
   }
 
-  .tech-system{
+  .tech-system {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .other-tech{
+  .other-tech {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  /* App Hosting Page */
+
+  .app-hero-body {
+    margin-top: -20px;
+    margin-bottom: -10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .app-hero-sec {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  .app-hero-button {
+    justify-content: center;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   /* Navigation Menu*/
 
-  .mobile-menu-nav{
+  .mobile-menu-nav {
     display: none;
   }
 
@@ -861,111 +913,120 @@ body.light-mode .tech-database p{
     display: block;
   }
 
-  .full-menu{
+  .full-menu {
     padding-left: 10px;
     padding-right: 20px;
   }
 
-  .mobile-menu-spacing{
+  .mobile-menu-spacing {
     display: none;
   }
 
   /* Homepage */
 
-  .custom-padding{
+  .custom-padding {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .app-card, .feature-card{
+  .app-card,
+    .feature-card {
     padding: 20px;
   }
 
-  .app-card, .feature-card h3{
+  .app-card,
+    .feature-card h3 {
     font-size: 15px;
   }
 
   /* About Page */
 
-  .about-hero{
+  .about-hero {
     padding-left: 20px;
     padding-right: 10px;
   }
 
-  .about-hero h2{
+  .about-hero h2 {
     font-size: 40px;
   }
 
-  .about-hero img{
+  .about-hero img {
     height: 400px;
     padding-right: 0px;
   }
 
-  .about-feature{
+  .about-feature {
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  .about-feture-column{
+  .about-feture-column {
     -moz-column-gap: 15px;
          column-gap: 15px;
   }
 
-  .about-about{
+  .about-about {
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  .about-about img{
+  .about-about img {
     height: 120px;
   }
 
-  .about-about-column{
+  .about-about-column {
     -moz-column-gap: 20px;
          column-gap: 20px;
   }
 
-  .about-about-card{
+  .about-about-card {
     padding: 15px;
   }
 
   /* Contact Page */
 
-  #contact-form{
+  #contact-form {
     width: 1023px;
   }
 
-  .mobile-toggler{
+  .mobile-toggler {
     display: none;
   }
-}
 
-/* Technology page */
+  /* Technology page */
 
-.tech-hero{
-  padding-left: 25px;
-  padding-right: 25px;
-}
+  .tech-hero {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 
-.tech-db{
-  padding-left: 20px;
-  padding-right: 20px;
-}
+  .tech-db {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-.other-tech{
-  padding-left: 20px;
-  padding-right: 20px;
-}
+  .other-tech {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-.tech-system{
-  padding-left: 20px;
-  padding-right: 20px;
+  .tech-system {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Application Hosting Page */
+
+  .app-hero-body{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 @media (min-width: 1280px) {
   /* Navigation Menu*/
 
-  .mobile-menu-nav{
+  .mobile-menu-nav {
     display: none;
   }
 
@@ -973,17 +1034,17 @@ body.light-mode .tech-database p{
     display: block;
   }
 
-  .mobile-menu-spacing{
+  .mobile-menu-spacing {
     display: none;
   }
 
   /* Contact Page */
 
-  #contact-form{
+  #contact-form {
     width: 1023px;
   }
 
-  .mobile-toggler{
+  .mobile-toggler {
     display: none;
   }
 }
@@ -1021,15 +1082,15 @@ body.light-mode .tech-database p{
     /* Ensure inner flex items are centered */
   }
 
-  .footer-bottom{
+  .footer-bottom {
     margin-top: -5px;
   }
 
-  .footer-text{
+  .footer-text {
     font-size: 15px;
   }
 
-  .about-footer-bottom{
+  .about-footer-bottom {
     display: flex;
     flex-direction: column;
   }

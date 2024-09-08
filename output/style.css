@@ -385,6 +385,80 @@ body.light-mode .footer-col a, p{
   color: #0B1120;
 }
 
+/* Technology Page White Mode */
+
+body.light-mode .tech-hero-tag{
+  color: #433bdb;
+}
+
+body.light-mode .tech-hero-des{
+  color: #0f1527;
+  font-weight: 500;
+}
+
+body.light-mode .about-hero-button a{
+  color: white;
+}
+
+body.light-mode .technology-text{
+  color: #0f1527;
+}
+
+body.light-mode .database-text{
+  color: #0f1527;
+}
+
+body.light-mode .database-item{
+  background-color: #483fec;
+  border: 1px solid #6c64ff;
+}
+
+body.light-mode .database-item:hover{
+  background-color: #2d26ad;
+  border: 1px solid #6c64ff;
+}
+
+body.light-mode .database-item h3{
+  color: white;
+}
+
+body.light-mode .tech-other-feature{
+  background-color: white;
+  border: 1px solid #e2e8f0;
+}
+
+body.light-mode .tech-other-feature:hover{
+  background-color: white;
+  border: 1px solid #483fec;
+  transition-duration: 0.3s;
+  box-shadow: #2d26ad;
+}
+
+body.light-mode .tech-other-feature i{
+  color: white;
+}
+
+body.light-mode .homepage-support p{
+  color: #0f1527;
+}
+
+body.light-mode .tech-stack i{
+  color: white;
+  background: #433bdb;
+}
+
+body.light-mode .tech-db{
+  background: #171283;
+}
+
+body.light-mode .tech-database h2{
+  color: white;
+}
+
+body.light-mode .tech-database p{
+  color: #f6f4ff;
+}
+
 /* Theme Mode Changer End */
 
 .team-member{
@@ -535,13 +609,6 @@ body.light-mode .footer-col a, p{
   margin-top: 60px;
 }
 
-.tech-stack{
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  justify-content: center;
-}
-
 .tech-database{
   margin-top: 80px;
   margin-bottom: 80px;
@@ -578,6 +645,16 @@ body.light-mode .footer-col a, p{
   background-color: #17203a;
   border: 1px solid #192441;
   transition-duration: 0.3s;
+}
+
+.technology-sec{
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.tech-db{
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 @media (min-width: 375px) and (max-width: 1023px) {
@@ -643,8 +720,6 @@ body.light-mode .footer-col a, p{
 
   .hero-spacing {
     padding-top: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
   .header-title {
@@ -744,6 +819,35 @@ body.light-mode .footer-col a, p{
   .desktop-toggler{
     display: none;
   }
+
+  /* Technology Page */
+
+  .tech-hero{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -30px;
+  }
+
+  .tech-db{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .tech-database{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .tech-system{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .other-tech{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
@@ -834,6 +938,28 @@ body.light-mode .footer-col a, p{
   .mobile-toggler{
     display: none;
   }
+}
+
+/* Technology page */
+
+.tech-hero{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.tech-db{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.other-tech{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.tech-system{
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media (min-width: 1280px) {

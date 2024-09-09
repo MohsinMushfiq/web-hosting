@@ -1,6 +1,280 @@
-/* Custom CSS */
+/* Custom CSS Start*/
+.team-member {
+    background: #192441;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-shadow: white;
+    border: solid 1px #2e3e6b;
+}
 
-/* General Light Mode Styles */
+.team-member:hover {
+    background-color: #17203a;
+}
+
+.team-member img {
+    height: 80px;
+}
+
+.about-about-card {
+    padding: 30px;
+}
+
+.review-left-btn {
+    background-color: #eee9ff;
+}
+
+.review-left-btn:hover {
+    background-color: #e2e8f0;
+}
+
+.review-right-btn {
+    background-color: #6c64ff;
+}
+
+.review-right-btn:hover {
+    background-color: #4c44e7;
+}
+
+.about-about-card:hover {
+    background-color: #17203a;
+}
+
+.card-styling:hover {
+    background-color: #17203a;
+    border: 1px solid #212e50;
+}
+
+.card-img {
+    height: 200px;
+
+}
+
+.about-cta {
+    background-color: #0B1120;
+    padding: 90px;
+}
+
+.about-feature-card {
+    background-color: #2e3e6b;
+}
+
+.about-feature-card:hover {
+    background-color: #192441;
+    color: white;
+}
+
+.cta-card {
+    padding-top: 40px;
+    padding-right: 80px;
+    padding-left: 80px;
+    padding-bottom: 40px;
+    background-color: #17203a;
+    border: 1px solid #212e50;
+    color: white;
+}
+
+.cta-card:hover {
+    background-color: #0f1527;
+    border: 1px solid #212e50;
+}
+
+/* Contact Page */
+.contact-main {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 100px;
+}
+
+.contact-cta {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.help-center {
+    background-color: #0f1527;
+    border: 1px solid #192441;
+    border-radius: 10px;
+    color: white;
+}
+
+.help-center:hover {
+    background-color: #212e50;
+    border: 1px solid #2e3e6b;
+}
+
+#contact {
+    padding-top: 50px;
+}
+
+#contact-form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.full-footer {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/* Technology Page */
+
+
+.tech-hero img {
+    width: 1200px;
+}
+
+.tech-hero-text {
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #f6f4ff;
+    border: 1px solid #6c64ff;
+    border-style: dotted;
+    border-radius: 5px;
+}
+
+.tech-hero-server {
+    background-color: #0B1120;
+    color: white;
+}
+
+.server-icon {
+    width: 60px;
+}
+
+.server-text {
+    margin-top: 60px;
+}
+
+.tech-database {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.database-sec {
+    margin-top: 40px;
+}
+
+.database-item {
+    padding: 30px;
+    border: 1px solid #2e3e6b;
+}
+
+.database-item:hover {
+    border: 1px solid #433bdb;
+    background-color: #0f1527;
+}
+
+.database-item img {
+    height: 150px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tech-other-feature {
+    padding: 30px;
+    background-color: #0f1527;
+    border: 1px solid #17203a;
+}
+
+.tech-other-feature:hover {
+    background-color: #17203a;
+    border: 1px solid #192441;
+    transition-duration: 0.3s;
+}
+
+.technology-sec {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.tech-db {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.system-req {
+    
+    margin-bottom: 150px;
+}
+
+.server-req-text {
+    margin-left: 20px;
+}
+
+.physical-server {
+    background-color: #0f1527;
+    padding: 20px;
+    color: white;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #17203a;
+}
+
+.physical-server img {
+    width: 200px;
+    background-color: #212e50;
+}
+
+
+/* App Hosting page */
+.hero-text {
+    width: 50%;
+}
+
+.app-hero-image {
+    width: 50%;
+    width: 600px;
+}
+
+.app-hosting-card {
+    background: #0f1527;
+}
+
+
+/* Product Features Page */
+.product-features {
+    background-color: #0f1527;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #17203a;
+    border-radius: 5px;
+}
+
+.product-features:hover {
+    background-color: #17203a;
+    border: 1px solid #433bdb;
+    transition-duration: 0.3s;
+}
+
+.single-product-features {
+    background-color: #0f1527;
+    color: white;
+    padding: 25px;
+    border: 1px solid #17203a;
+    border-radius: 5px;
+}
+
+.single-product-features:hover {
+    background-color: #17203a;
+    border: 1px solid #433bdb;
+    transition-duration: 0.3s;
+}
+
+.single-product-features p {
+    margin-top: 10px;
+    color: #98a3b8;
+}
+
+
+/* Custom CSS End */
+
+
+/* White Mode Theme Start */
 body.light-mode {
     background-color: #ffffff;
     color: #0B1120;
@@ -224,21 +498,21 @@ body.light-mode .feature-card a:hover {
 }
 
 body.light-mode #home-price-sec {
-    background: #2d26ad;
-    color: white;
+    background: #f8f8f8;
+    color: #0B1120;
 }
 
 body.light-mode .pricing-title {
-    color: white;
+    color: #0B1120;
 }
 
 body.light-mode .pricing-text {
-    color: #f6f4ff;
+    color: #0B1120;
 }
 
 body.light-mode .pricing-btn {
-    background-color: white;
-    color: #2d26ad;
+    background-color: #433bdb;
+    color: white;
 }
 
 body.light-mode .pricing-btn:hover {
@@ -246,44 +520,41 @@ body.light-mode .pricing-btn:hover {
     color: white;
 }
 
-body.light-mode .hidden-section {
-    border-top: 1px solid white;
-}
 
 body.light-mode .feature-sec-title h2 {
-    color: #f6f4ff;
+    color: #0B1120;
 }
 
 body.light-mode .feature-sec-title h3 {
-    color: white;
+    color: #0B1120;
 }
 
 body.light-mode .feature-sec-title p {
-    color: #f6f4ff;
+    color: #0B1120;
 }
 
 body.light-mode .feature-check {
-    color: white;
+    color: #0B1120;
 }
 
 body.light-mode .feature-check span {
-    color: white;
+    color: #0B1120;
 }
 
 body.light-mode .homepage-support-top {
-    color: white;
+    color: #0B1120;
 }
 
 body.light-mode .homepage-support-top {
-    color: white;
+    color: #0B1120;
 }
 
 body.light-mode .homepage-support-top h2 {
-    color: #f6f4ff;
+    color: #0B1120;
 }
 
 body.light-mode .homepage-support-top p {
-    color: #f6f4ff;
+    color: #0B1120;
 }
 
 body.light-mode .homepage-support-card i {
@@ -292,15 +563,15 @@ body.light-mode .homepage-support-card i {
 }
 
 body.light-mode .homepage-support-card a {
-    color: white;
+    color: #433bdb;
 }
 
 body.light-mode .homepage-support-card a:hover {
-    color: #e2e8f0;
+    color: #171283;
 }
 
 body.light-mode .homepage-support-card h4 {
-    color: white;
+    color: #0B1120;
 }
 
 body.light-mode .homepage-support-card p {
@@ -410,17 +681,25 @@ body.light-mode .database-text {
 }
 
 body.light-mode .database-item {
-    background-color: #483fec;
-    border: 1px solid #6c64ff;
+    color: #0B1120;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+
+body.light-mode .database-item img {
+    background-color: #f6f4ff;
 }
 
 body.light-mode .database-item:hover {
-    background-color: #2d26ad;
     border: 1px solid #6c64ff;
 }
 
 body.light-mode .database-item h3 {
-    color: white;
+    color: #0B1120;
+}
+
+body.light-mode .database-item p {
+    color: #0f1527;
 }
 
 body.light-mode .tech-other-feature {
@@ -432,7 +711,7 @@ body.light-mode .tech-other-feature:hover {
     background-color: white;
     border: 1px solid #483fec;
     transition-duration: 0.3s;
-    box-shadow: #2d26ad;
+
 }
 
 body.light-mode .tech-other-feature i {
@@ -444,21 +723,26 @@ body.light-mode .homepage-support p {
 }
 
 body.light-mode .tech-stack i {
-    color: white;
-    background: #433bdb;
+    color: #0B1120;
+    background-color: #ffffff;
+    border: 1px solid #98a3b8;
 }
 
 body.light-mode .tech-db {
-    background: #171283;
+    background-color: #f8f8f8;
 }
 
-body.light-mode .tech-database h2 {
-    color: white;
+body.light-mode .physical-server {
+    background-color: #ffffff;
+    border: 1px solid #c9e0ff;
 }
 
-body.light-mode .tech-database p {
-    color: #f6f4ff;
+body.light-mode .physical-server h3{
+    color: #0B1120;
+    font-weight: ;
 }
+
+
 
 /* App Hosting Page */
 body.light-mode .app-hero-tag {
@@ -474,222 +758,46 @@ body.light-mode .app-hero-button a {
     color: white;
 }
 
-
-
-
-/* Theme Mode Changer End */
-.team-member {
-    background: #192441;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    box-shadow: white;
-    border: solid 1px #2e3e6b;
-}
-
-.team-member:hover {
-    background-color: #17203a;
-}
-
-.team-member img {
-    height: 80px;
-}
-
-.about-about-card {
-    padding: 30px;
-}
-
-.review-left-btn {
-    background-color: #eee9ff;
-}
-
-.review-left-btn:hover {
-    background-color: #e2e8f0;
-}
-
-.review-right-btn {
-    background-color: #6c64ff;
-}
-
-.review-right-btn:hover {
-    background-color: #4c44e7;
-}
-
-.about-about-card:hover {
-    background-color: #17203a;
-}
-
-.card-styling:hover {
-    background-color: #17203a;
-    border: 1px solid #212e50;
-}
-
-.card-img {
-    height: 200px;
-
-}
-
-.about-cta {
-    background-color: #0B1120;
-    padding: 90px;
-}
-
-.about-feature-card {
-    background-color: #2e3e6b;
-}
-
-.about-feature-card:hover {
-    background-color: #192441;
-    color: white;
-}
-
-.cta-card {
-    padding-top: 40px;
-    padding-right: 80px;
-    padding-left: 80px;
-    padding-bottom: 40px;
-    background-color: #17203a;
-    border: 1px solid #212e50;
-    color: white;
-}
-
-.cta-card:hover {
-    background-color: #0f1527;
-    border: 1px solid #212e50;
-}
-
-/* Contact Page */
-.contact-main {
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 100px;
-}
-
-.contact-cta {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.help-center {
-    background-color: #0f1527;
-    border: 1px solid #192441;
-    border-radius: 10px;
-    color: white;
-}
-
-.help-center:hover {
-    background-color: #212e50;
-    border: 1px solid #2e3e6b;
-}
-
-#contact {
-    padding-top: 50px;
-}
-
-#contact-form {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.full-footer {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-/* Technology Page */
-.tech-hero img {
-    width: 1200px;
-}
-
-.tech-hero-text {
-    width: 40%;
-    margin: 0 auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    color: #f6f4ff;
-    border: 1px solid #6c64ff;
-    border-style: dotted;
-    border-radius: 5px;
-}
-
-.tech-hero-server {
-    background-color: #0B1120;
-    color: white;
-}
-
-.server-icon {
-    width: 60px;
-}
-
-.server-text {
-    margin-top: 60px;
-}
-
-
-.tech-database {
-    margin-top: 80px;
-    margin-bottom: 80px;
-}
-
-.database-sec {
-    margin-top: 40px;
-
-}
-
-.database-item {
-    padding: 20px;
-    border: 1px solid #2e3e6b;
-}
-
-.database-item:hover {
-    border: 1px solid #433bdb;
-    background-color: #0f1527;
-}
-
-.database-item img {
-    height: 150px;
+/* Product Features Page */
+body.light-mode .product-features {
     background-color: white;
-    padding: 20px;
-    border-radius: 10px;
+    border: 1px solid #c9e0ff;
 }
 
-.tech-other-feature {
-    padding: 30px;
-    background-color: #0f1527;
-    border: 1px solid #17203a;
+body.light-mode .product-features:hover {
+    background-color: rgba(250, 250, 255, 0.5);
+    border: 1px solid #6c64ff;
+    box-shadow: #192441;
 }
 
-.tech-other-feature:hover {
-    background-color: #17203a;
-    border: 1px solid #192441;
-    transition-duration: 0.3s;
+body.light-mode .product-features i {
+    color: #433bdb;
 }
 
-.technology-sec {
-    margin-top: 50px;
-    margin-bottom: 80px;
+/* Individual Product Features Page */
+body.light-mode .single-product-features {
+    background-color: white;
+    border: 1px solid #c9e0ff;
+    color: #0B1120;
 }
 
-.tech-db {
-    padding-top: 10px;
-    padding-bottom: 20px;
+body.light-mode .single-product-features:hover {
+    background-color: rgba(250, 250, 255, 0.5);
+    border: 1px solid #6c64ff;
+    box-shadow: #192441;
+}
+
+body.light-mode .single-product-features p {
+    color: #2e3e6b;
 }
 
 
-/* App Hosting page */
-.hero-text {
-    width: 50%;
-}
+/* White Mode Theme End */
 
-.app-hero-image {
-    width: 50%;
-    width: 600px;
 
-}
 
-.app-hosting-card {
-    background: #0f1527;
-}
+
+/* Responsive Start */
 
 @media (min-width: 375px) and (max-width: 1023px) {
 
@@ -904,6 +1012,20 @@ body.light-mode .app-hero-button a {
     .app-hero-button {
         justify-content: center;
     }
+
+
+    /* Product Feature Page */
+    .feature-hero {
+        margin-top: -40px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .product-feature-sec {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
@@ -1014,12 +1136,25 @@ body.light-mode .app-hero-button a {
     }
 
     /* Application Hosting Page */
-    .app-hero-body{
+    .app-hero-body {
         padding-left: 20px;
         padding-right: 20px;
     }
 
-    
+    /* Product Feature Page */
+    .feature-hero {
+        margin-top: -40px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .product-feature-sec {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+
 }
 
 
@@ -1049,6 +1184,18 @@ body.light-mode .app-hero-button a {
 
     .mobile-toggler {
         display: none;
+    }
+
+    .technology-hero {
+        margin-top: 140px;
+        margin-bottom: 140px;
+    }
+
+    .other-tech {
+        margin-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 80px;
     }
 
 

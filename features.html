@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LxRoot - Application Hosting Platform.</title>
+    <title>Features | LxRoot</title>
     <link rel="stylesheet" href="./output/tailwind.css">
     <link rel="stylesheet" href="./src/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -18,42 +18,43 @@
 
 <body class="bg-[#0B1120] font-inter">
 
+
     <!-- Navbar Start -->
-    <div class="py-1 sticky top-0 z-50 border-b border-gray-600 font-inter ">
+    <div class="bg-[#0B1120] text-white py-1 sticky top-0 z-50 border-b border-gray-600 font-inter main-menu">
         <!-- Logo, Menu, and Button -->
         <div
-            class="flex justify-between items-center container max-w-7xl mx-auto sm:px-6 lg:px-1 custom-menu-spacing">
+            class="flex justify-between items-center bg-[#0B1120] container max-w-7xl mx-auto sm:px-6 lg:px-1 full-menu">
             <!-- Logo -->
-            <div class="text-xl font-bold">
+            <div class="text-xl font-bold text-white">
                 <a href="/" aria-label="lxroot-logo" class="logo-item">
-                    <svg width="75" height="75" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.11206 59V42.2H13.1921V55.4H20.6801V59H9.11206Z" fill="#fff"></path>
+                    <svg width="75" height="75" viewBox="0 0 100 100" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.11206 59V42.2H13.1921V55.4H20.6801V59H9.11206Z"></path>
                         <path
-                            d="M31.1771 59L28.4651 54.896L27.2171 53.144L22.1771 46.256H26.7851L29.4011 50.168L30.7691 52.04L35.7371 59H31.1771ZM22.0571 59L27.1931 51.848L29.2571 54.32L26.5931 59H22.0571ZM30.4811 53.456L28.4411 51.008L30.9611 46.256H35.4971L30.4811 53.456Z"
-                            fill="#fff"></path>
+                            d="M31.1771 59L28.4651 54.896L27.2171 53.144L22.1771 46.256H26.7851L29.4011 50.168L30.7691 52.04L35.7371 59H31.1771ZM22.0571 59L27.1931 51.848L29.2571 54.32L26.5931 59H22.0571ZM30.4811 53.456L28.4411 51.008L30.9611 46.256H35.4971L30.4811 53.456Z">
+                        </path>
                         <path
-                            d="M38.2917 59V42.2H45.8517C46.9237 42.2 47.8917 42.432 48.7557 42.896C49.6357 43.36 50.3237 44 50.8197 44.816C51.3157 45.616 51.5637 46.528 51.5637 47.552C51.5637 48.608 51.3157 49.56 50.8197 50.408C50.3237 51.24 49.6437 51.896 48.7797 52.376C47.9157 52.856 46.9397 53.096 45.8517 53.096H42.1797V59H38.2917ZM47.6037 59L43.3317 51.416L47.5077 50.816L52.2597 59H47.6037ZM42.1797 49.976H45.4917C45.9077 49.976 46.2677 49.888 46.5717 49.712C46.8917 49.52 47.1317 49.256 47.2917 48.92C47.4677 48.584 47.5557 48.2 47.5557 47.768C47.5557 47.336 47.4598 46.96 47.2677 46.64C47.0757 46.304 46.7957 46.048 46.4277 45.872C46.0757 45.696 45.6437 45.608 45.1317 45.608H42.1797V49.976Z"
-                            fill="#fff"></path>
+                            d="M38.2917 59V42.2H45.8517C46.9237 42.2 47.8917 42.432 48.7557 42.896C49.6357 43.36 50.3237 44 50.8197 44.816C51.3157 45.616 51.5637 46.528 51.5637 47.552C51.5637 48.608 51.3157 49.56 50.8197 50.408C50.3237 51.24 49.6437 51.896 48.7797 52.376C47.9157 52.856 46.9397 53.096 45.8517 53.096H42.1797V59H38.2917ZM47.6037 59L43.3317 51.416L47.5077 50.816L52.2597 59H47.6037ZM42.1797 49.976H45.4917C45.9077 49.976 46.2677 49.888 46.5717 49.712C46.8917 49.52 47.1317 49.256 47.2917 48.92C47.4677 48.584 47.5557 48.2 47.5557 47.768C47.5557 47.336 47.4598 46.96 47.2677 46.64C47.0757 46.304 46.7957 46.048 46.4277 45.872C46.0757 45.696 45.6437 45.608 45.1317 45.608H42.1797V49.976Z">
+                        </path>
                         <path
-                            d="M60.2666 59.24C58.9386 59.24 57.7546 58.952 56.7146 58.376C55.6906 57.8 54.8746 57.016 54.2666 56.024C53.6746 55.032 53.3786 53.896 53.3786 52.616C53.3786 51.336 53.6746 50.2 54.2666 49.208C54.8746 48.216 55.6906 47.432 56.7146 46.856C57.7546 46.28 58.9386 45.992 60.2666 45.992C61.5946 45.992 62.7706 46.28 63.7946 46.856C64.8346 47.432 65.6506 48.216 66.2426 49.208C66.8346 50.2 67.1306 51.336 67.1306 52.616C67.1306 53.896 66.8346 55.032 66.2426 56.024C65.6506 57.016 64.8346 57.8 63.7946 58.376C62.7706 58.952 61.5946 59.24 60.2666 59.24ZM60.2666 55.928C60.8426 55.928 61.3546 55.784 61.8026 55.496C62.2506 55.208 62.6026 54.816 62.8586 54.32C63.1146 53.824 63.2346 53.256 63.2186 52.616C63.2346 51.976 63.1146 51.408 62.8586 50.912C62.6026 50.4 62.2506 50 61.8026 49.712C61.3546 49.424 60.8426 49.28 60.2666 49.28C59.6906 49.28 59.1706 49.424 58.7066 49.712C58.2586 50 57.9066 50.4 57.6506 50.912C57.3946 51.408 57.2746 51.976 57.2906 52.616C57.2746 53.256 57.3946 53.824 57.6506 54.32C57.9066 54.816 58.2586 55.208 58.7066 55.496C59.1706 55.784 59.6906 55.928 60.2666 55.928Z"
-                            fill="#fff"></path>
+                            d="M60.2666 59.24C58.9386 59.24 57.7546 58.952 56.7146 58.376C55.6906 57.8 54.8746 57.016 54.2666 56.024C53.6746 55.032 53.3786 53.896 53.3786 52.616C53.3786 51.336 53.6746 50.2 54.2666 49.208C54.8746 48.216 55.6906 47.432 56.7146 46.856C57.7546 46.28 58.9386 45.992 60.2666 45.992C61.5946 45.992 62.7706 46.28 63.7946 46.856C64.8346 47.432 65.6506 48.216 66.2426 49.208C66.8346 50.2 67.1306 51.336 67.1306 52.616C67.1306 53.896 66.8346 55.032 66.2426 56.024C65.6506 57.016 64.8346 57.8 63.7946 58.376C62.7706 58.952 61.5946 59.24 60.2666 59.24ZM60.2666 55.928C60.8426 55.928 61.3546 55.784 61.8026 55.496C62.2506 55.208 62.6026 54.816 62.8586 54.32C63.1146 53.824 63.2346 53.256 63.2186 52.616C63.2346 51.976 63.1146 51.408 62.8586 50.912C62.6026 50.4 62.2506 50 61.8026 49.712C61.3546 49.424 60.8426 49.28 60.2666 49.28C59.6906 49.28 59.1706 49.424 58.7066 49.712C58.2586 50 57.9066 50.4 57.6506 50.912C57.3946 51.408 57.2746 51.976 57.2906 52.616C57.2746 53.256 57.3946 53.824 57.6506 54.32C57.9066 54.816 58.2586 55.208 58.7066 55.496C59.1706 55.784 59.6906 55.928 60.2666 55.928Z">
+                        </path>
                         <path
-                            d="M75.6416 59.24C74.3136 59.24 73.1296 58.952 72.0896 58.376C71.0656 57.8 70.2496 57.016 69.6416 56.024C69.0496 55.032 68.7536 53.896 68.7536 52.616C68.7536 51.336 69.0496 50.2 69.6416 49.208C70.2496 48.216 71.0656 47.432 72.0896 46.856C73.1296 46.28 74.3136 45.992 75.6416 45.992C76.9696 45.992 78.1456 46.28 79.1696 46.856C80.2096 47.432 81.0256 48.216 81.6176 49.208C82.2096 50.2 82.5056 51.336 82.5056 52.616C82.5056 53.896 82.2096 55.032 81.6176 56.024C81.0256 57.016 80.2096 57.8 79.1696 58.376C78.1456 58.952 76.9696 59.24 75.6416 59.24ZM75.6416 55.928C76.2176 55.928 76.7296 55.784 77.1776 55.496C77.6256 55.208 77.9776 54.816 78.2336 54.32C78.4896 53.824 78.6096 53.256 78.5936 52.616C78.6096 51.976 78.4896 51.408 78.2336 50.912C77.9776 50.4 77.6256 50 77.1776 49.712C76.7296 49.424 76.2176 49.28 75.6416 49.28C75.0656 49.28 74.5456 49.424 74.0816 49.712C73.6336 50 73.2816 50.4 73.0256 50.912C72.7696 51.408 72.6496 51.976 72.6656 52.616C72.6496 53.256 72.7696 53.824 73.0256 54.32C73.2816 54.816 73.6336 55.208 74.0816 55.496C74.5456 55.784 75.0656 55.928 75.6416 55.928Z"
-                            fill="#fff"></path>
-                        <path d="M86.0726 59V43.04H89.9126V59H86.0726ZM83.8166 49.616V46.256H92.3846V49.616H83.8166Z"
-                            fill="#fff"></path>
+                            d="M75.6416 59.24C74.3136 59.24 73.1296 58.952 72.0896 58.376C71.0656 57.8 70.2496 57.016 69.6416 56.024C69.0496 55.032 68.7536 53.896 68.7536 52.616C68.7536 51.336 69.0496 50.2 69.6416 49.208C70.2496 48.216 71.0656 47.432 72.0896 46.856C73.1296 46.28 74.3136 45.992 75.6416 45.992C76.9696 45.992 78.1456 46.28 79.1696 46.856C80.2096 47.432 81.0256 48.216 81.6176 49.208C82.2096 50.2 82.5056 51.336 82.5056 52.616C82.5056 53.896 82.2096 55.032 81.6176 56.024C81.0256 57.016 80.2096 57.8 79.1696 58.376C78.1456 58.952 76.9696 59.24 75.6416 59.24ZM75.6416 55.928C76.2176 55.928 76.7296 55.784 77.1776 55.496C77.6256 55.208 77.9776 54.816 78.2336 54.32C78.4896 53.824 78.6096 53.256 78.5936 52.616C78.6096 51.976 78.4896 51.408 78.2336 50.912C77.9776 50.4 77.6256 50 77.1776 49.712C76.7296 49.424 76.2176 49.28 75.6416 49.28C75.0656 49.28 74.5456 49.424 74.0816 49.712C73.6336 50 73.2816 50.4 73.0256 50.912C72.7696 51.408 72.6496 51.976 72.6656 52.616C72.6496 53.256 72.7696 53.824 73.0256 54.32C73.2816 54.816 73.6336 55.208 74.0816 55.496C74.5456 55.784 75.0656 55.928 75.6416 55.928Z">
+                        </path>
+                        <path d="M86.0726 59V43.04H89.9126V59H86.0726ZM83.8166 49.616V46.256H92.3846V49.616H83.8166Z">
+                        </path>
                         <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M76.5399 64C71.5099 73.5156 61.5123 80 50.0001 80C38.4879 80 28.4902 73.5156 23.4603 64H12.5185C18.1935 79.1867 32.834 90 50.0001 90C67.1662 90 81.8067 79.1867 87.4817 64H76.5399ZM22.4964 38C27.1257 27.4046 37.6982 20 50.0001 20C62.302 20 72.8745 27.4046 77.5038 38H88.1689C83.0718 21.7716 67.9107 10 50.0001 10C32.0895 10 16.9284 21.7716 11.8313 38H22.4964Z"
-                            fill="#fff"></path>
+                            d="M76.5399 64C71.5099 73.5156 61.5123 80 50.0001 80C38.4879 80 28.4902 73.5156 23.4603 64H12.5185C18.1935 79.1867 32.834 90 50.0001 90C67.1662 90 81.8067 79.1867 87.4817 64H76.5399ZM22.4964 38C27.1257 27.4046 37.6982 20 50.0001 20C62.302 20 72.8745 27.4046 77.5038 38H88.1689C83.0718 21.7716 67.9107 10 50.0001 10C32.0895 10 16.9284 21.7716 11.8313 38H22.4964Z">
+                        </path>
                     </svg>
                 </a>
             </div>
 
             <!-- Menu (Visible on larger screens) -->
-            <nav class=" hidden md:flex md:space-x-3 text-white ml-40 duration-300">
+            <nav class="hidden md:flex md:space-x-3 text-white ml-40 duration-300">
                 <div class="relative group desktop-nav-menu">
                     <a id="productDropdownLink" href="#"
-                        class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md">
+                        class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">
                         Product
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
                             fill="currentColor">
@@ -63,10 +64,10 @@
                         </svg>
                     </a>
                     <ul id="productDropdownMenu"
-                        class="dropdown-menu rounded absolute hidden bg-[#1b2338] mt-2 space-y-1 ">
+                        class="dropdown-menu rounded absolute hidden bg-[#1b2338] mt-2 space-y-1 text-white">
                         <div class="p-4 w-64">
                             <a href="features.html"
-                                class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -75,7 +76,7 @@
                                 <span>Features</span>
                             </a>
                             <a href="technology.html"
-                                class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -84,7 +85,7 @@
                                 <span>Technology Stack</span>
                             </a>
                             <a href="app-hosting.html"
-                                class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
@@ -116,8 +117,8 @@
                         class="dropdown-menu absolute hidden rounded bg-[#1b2338] mt-2 space-y-1 text-white">
                         <div class="p-4 w-64">
                             <a href="community.html"
-                                class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M17 20h5V8m-5 12a2 2 0 01-2-2V8a2 2 0 012-2h5M12 20v-6m0 0V8a2 2 0 00-2-2h-5M9 20H4a2 2 0 01-2-2v-5a2 2 0 012-2h5m5-4a2 2 0 00-2-2H7a2 2 0 00-2 2v5M9 4a2 2 0 11-4 0 2 2 0 014 0zm6 4a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -126,7 +127,7 @@
                             </a>
 
                             <a href="documentation.html"
-                                class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
@@ -135,7 +136,8 @@
                                 <span>Documentation</span>
                             </a>
 
-                            <a href="api.html" class="flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                            <a href="api.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -159,12 +161,12 @@
                 <button id="menu-btn" class="text-white focus:outline-none md:hidden mobile-menu-nav">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7">
                         </path>
                     </svg>
                 </button>
             </div>
-            
 
             <!-- Get Started Button -->
             <div class="hidden md:block space-x-1 desktop-nav-btn">
@@ -173,10 +175,10 @@
                     <i id="sun-icon" class="fas fa-sun"></i>
                 </button>
                 <a href="signin.html"
-                    class="border border-cyan-800 text-gray-300 px-4 py-2.5 rounded hover:bg-white hover:text-[#0B1120] duration-300">Sign
+                    class="border border-cyan-800 text-gray-300 px-4 py-2 rounded hover:bg-white hover:text-[#0B1120] duration-300 signin-btn">Sign
                     in</a>
                 <a href="getstarted.html"
-                    class="bg-indigo-600 text-white px-4 py-2.5 rounded hover:bg-indigo-700 duration-300">Get
+                    class="bg-indigo-600 text-white px-4 py-2.5 rounded hover:bg-indigo-700 duration-300 get-start-btn">Get
                     Started</a>
             </div>
         </div>
@@ -186,7 +188,7 @@
             <ul class="space-y-4 text-white">
                 <li>
                     <div
-                        class="bg-gray-900 flex justify-between items-center border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
+                        class="bg-gray-900 flex justify-between items-center border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300 mobile-dropdown">
                         <span>Products</span>
                         <button class="dropdown-btn focus:outline-none">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -196,7 +198,7 @@
                             </svg>
                         </button>
                     </div>
-                    <ul class="dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
+                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
                         <li
                             class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
                             <a href="features.html" class="block text-gray-300 hover:text-indigo-400">Features</a>
@@ -232,13 +234,17 @@
 
 
                 </li>
-                <li class="bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300"><a
-                        href="roadmap.html" class="block hover:text-indigo-400">Roadmap </a></li>
-                <li class="bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300"><a
-                        href="pricing.html" class="block hover:text-indigo-400">Pricing</a></li>
+                <li
+                    class="mobile-dropdown bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
+                    <a href="roadmap.html" class="block hover:text-indigo-400">Roadmap </a>
+                </li>
+                <li
+                    class="mobile-dropdown bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
+                    <a href="pricing.html" class="block hover:text-indigo-400">Pricing</a>
+                </li>
                 <li>
                     <div
-                        class="flex justify-between items-center border bg-gray-900 border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
+                        class="mobile-dropdown flex justify-between items-center border bg-gray-900 border-gray-800 px-4 py-2 rounded  duration-300">
                         <span>Resources</span>
                         <button class="dropdown-btn focus:outline-none">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -248,7 +254,7 @@
                             </svg>
                         </button>
                     </div>
-                    <ul class="dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
+                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
                         <li
                             class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
                             <a href="community.html" class="block text-gray-300 hover:text-indigo-400">Community</a>
@@ -284,11 +290,11 @@
                 </li>
                 <li class="py-4">
                     <a href="signin.html"
-                        class="text-white border border-indigo-600 px-8 py-3 rounded w-full hover:text-indigo-700 hover:bg-white duration-300 block text-center">
+                        class="text-white border border-indigo-600 px-8 py-3 rounded w-full hover:text-indigo-700 hover:bg-white duration-300 block text-center mobile-signin-btn">
                         Sign In
                     </a>
                     <a href="getstarted.html"
-                        class="bg-indigo-600 text-white px-8 py-3 rounded w-full hover:bg-indigo-800 duration-300 block text-center mt-4">
+                        class="bg-indigo-600 text-white px-8 py-3 rounded w-full hover:bg-indigo-800 duration-300 block text-center mt-4 mobile-getstart-btn">
                         Get Started
                     </a>
 
@@ -302,63 +308,184 @@
 
 
 
-     <!-- Web servers Section Star -->
-     <section id="web-server" class="py-16 custom-padding">
-        <!-- Web Servers -->
-        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-5 sm:px-6 lg:px-1">
-            <div class="server-text">
-                <h2 class="text-4xl font-semibold mb-5 text-white cta-title">Web servers</h2>
-                <p class="app-text-des mb-8 text-gray-200 font-extralight text-base">Select your preferred web server.
-                    Run any combination of web server types and switch between kinds without any configuration changes
-                    to optimise the overall performance of your hosting cluster.</p>
-
+    <!-- Hero Section Start -->
+    <section class="max-w-7xl mx-auto text-white py-24 feature-hero">
+        <div class="px-2 lg:flex lg:items-center lg:space-x-12 tech-hero pt-8">
+            <!-- Text Content -->
+            <div class="">
+                <div class="text-normal font-normal text-cyan-300 tech-hero-tag mb-2">
+                    LxRoot
+                </div>
+                <h2 class="text-5xl about-h2 font-extrabold mb-6 line-height:2">
+                    Product Features
+                </h2>
+                <p class="text-lg mb-8 text-gray-200 font-extralight tech-hero-des">
+                    Designed for the modern host, LxRoot has all the tools and features you need to build and scale a
+                    cluster to meet your needs.</p>
+                <div class="flex space-x-4 about-hero-button">
+                    <a href="#explore"
+                        class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-10 rounded-lg inline-block">
+                        Explore More &darr;
+                    </a>
+                </div>
             </div>
-            <!-- Server 1 -->
-            <div
-                class="border border-gray-700 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300 app-card tech-hero-server">
-                <img class="server-icon" src="https://img.icons8.com/?size=100&id=t2x6DtCn5Zzx&format=png&color=000000"
-                    alt="">
-                <h3 class="text-xl font-semibold mb-2 mt-4 float-left text-white">NGINX</h3>
-                <p class="app-text-des float-left mb-4 text-gray-200 text-sm font-extralight">An open-source web server,
-                    providing high performance with low resource usage and configuration. Configure cache exclusions,
-                    utilise FastCGI, purge cache, set rewrites on a per domain basis.</p>
-            </div>
-
-            <!-- Server 2 -->
-            <div
-                class="border border-gray-700 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300 app-card tech-hero-server">
-                <img class="server-icon" src="https://img.icons8.com/?size=100&id=t2x6DtCn5Zzx&format=png&color=000000"
-                    alt="">
-                <h3 class="text-xl font-semibold mb-2 mt-4 float-left text-white">NGINX Unit</h3>
-                <p class="app-text-des float-left text-gray-200 text-sm font-extralight">NGINX Unit is a lightweight and
-                    versatile application runtime that provides the essential components for your web application as a
-                    single open-source server: running application code (including WebAssembly), serving static assets,
-                    handling TLS and request routing.</p>
-            </div>
-
-            <!-- Server 3 -->
-            <div
-                class="border border-gray-700 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300 app-card tech-hero-server">
-                <img class="server-icon"
-                    src="https://openlitespeed.org/wp-content/uploads/2022/11/openlitespeed-icon.png" alt="">
-                <h3 class="text-xl font-semibold mb-2 mt-4 float-left text-white">OpenLiteSpeed</h3>
-                <p class="app-text-des float-left mb-4 text-gray-200 text-sm font-extralight">An open source version of
-                    LiteSpeed without commercial support. OpenLiteSpeed has limited .htaccess support.</p>
-            </div>
-        </div>
-        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-            aria-hidden="true">
-            <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+            <!-- Image Content -->
+            <div class="mt-12 lg:mt-0 relative">
+                <div class="relative z-10">
+                    <img class="rounded-lg object-cover object-center"
+                        src="https://www.transparentpng.com/download/web-hosting/tTExWZ-web-hosting-ssd-hdd-reseller-hosting-icon-clipart.png"
+                        alt="Image 1">
+                </div>
             </div>
         </div>
     </section>
-    <!-- Web servers Section Star -->
+    <!-- Hero Section End -->
 
+
+    <!-- Features Section Start -->
+    <div class="text-white py-16" id="explore">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-3 gap-8 mb-8 product-feature-sec">
+            <div class="text-center product-features">
+                <div class="text-3xl">
+                    <i class="fa-solid fa-server text-indigo-400"></i>
+                </div>
+                <h3 class="mt-4 font-semibold text-lg">Server Management</h3>
+                <a href="server-management.html" target="_blank" class="text-indigo-400 mt-4 inline-block hover:text-indigo-500">Learn more &rarr;</a>
+            </div>
+            <div class="text-center product-features">
+                <div class="text-3xl">
+                    <i class="fa-solid fa-shield text-indigo-400"></i>
+                </div>
+                <h3 class="mt-4 font-semibold text-lg">Security</h3>
+                <a href="security.html" target="_blank" class="text-indigo-400 mt-4 inline-block hover:text-indigo-500">Learn more &rarr;</a>
+            </div>
+            <div class="text-center product-features">
+                <div class="text-3xl">
+                    <i class="fa-solid fa-globe text-indigo-400"></i>
+                </div>
+                <h3 class="mt-4 font-semibold text-lg">Web Server</h3>
+                <a href="web-server.html" target="_blank" class="text-indigo-400 mt-4 inline-block hover:text-indigo-500">Learn more &rarr;</a>
+            </div>
+            <div class="text-center product-features">
+                <div class="text-3xl">
+                    <i class="fas fa-cloud-upload-alt text-indigo-400"></i>
+                </div>
+                <h3 class="mt-4 font-semibold text-lg">Backups</h3>
+                <a href="backups.html" target="_blank" class="text-indigo-400 mt-4 inline-block hover:text-indigo-500">Learn more &rarr;</a>
+            </div>
+            <div class="text-center product-features">
+                <div class="text-3xl">
+                    <i class="fa-solid fa-database text-indigo-400"></i>
+                </div>
+                <h3 class="mt-4 font-semibold text-lg">Database</h3>
+                <a href="database.html" target="_blank" class="text-indigo-400 mt-4 inline-block hover:text-indigo-500">Learn more &rarr;</a>
+            </div>
+            <div class="text-center product-features">
+                <div class="text-3xl">
+                    <i class="fa-brands fa-cloudflare text-indigo-400"></i>
+                </div>
+                <h3 class="mt-4 font-semibold text-lg">DNS Management</h3>
+                <a href="dns.html" target="_blank" class="text-indigo-400 mt-4 inline-block hover:text-indigo-500">Learn more &rarr;</a>
+            </div>
+            <div class="text-center product-features">
+                <div class="text-3xl">
+                    <i class="fa-solid fa-person-running text-indigo-400"></i>
+                </div>
+                <h3 class="mt-4 font-semibold text-lg">Runtimes</h3>
+                <a href="runtimes.html" target="_blank" class="text-indigo-400 mt-4 inline-block hover:text-indigo-500">Learn more &rarr;</a>
+            </div>
+            <div class="text-center product-features">
+                <div class="text-3xl">
+                    <i class="fa-brands fa-microsoft text-indigo-400"></i>
+                </div>
+                <h3 class="mt-4 font-semibold text-lg">Applicatoins</h3>
+                <a href="applications.html" target="_blank" class="text-indigo-400 mt-4 inline-block hover:text-indigo-500">Learn more &rarr;</a>
+            </div>
+            <div class="text-center product-features">
+                <div class="text-3xl">
+                    <i class="fa-solid fa-code text-indigo-400"></i>
+                </div>
+                <h3 class="mt-4 font-semibold text-lg">Developer Tools</h3>
+                <a href="developer-tools.html" target="_blank" class="text-indigo-400 mt-4 inline-block hover:text-indigo-500">Learn more &rarr;</a>
+            </div>
+            <div class="text-center product-features">
+                <div class="text-3xl">
+                    <i class="fa-solid fa-network-wired text-indigo-400"></i>
+                </div>
+                <h3 class="mt-4 font-semibold text-lg">Website Management</h3>
+                <a href="website-management.html" target="_blank" class="text-indigo-400 mt-4 inline-block hover:text-indigo-500">Learn more &rarr;</a>
+            </div>
+            <div class="text-center product-features">
+                <div class="text-3xl">
+                    <i class="fa-solid fa-envelope text-indigo-400"></i>
+                </div>
+                <h3 class="mt-4 font-semibold text-lg">Emails Management</h3>
+                <a href="email.html" target="_blank" class="text-indigo-400 mt-4 inline-block hover:text-indigo-500">Learn more &rarr;</a>
+            </div>
+            <div class="text-center product-features">
+                <div class="text-3xl">
+                    <i class="fa-solid fa-list-ul text-indigo-400"></i>
+                </div>
+                <h3 class="mt-4 font-semibold text-lg">Domains</h3>
+                <a href="domains.html" target="_blank" class="text-indigo-400 mt-4 inline-block hover:text-indigo-500">Learn more &rarr;</a>
+            </div>
+            <div class="text-center product-features">
+                <div class="text-3xl">
+                    <i class="fa-solid fa-users-gear text-indigo-400"></i>
+                </div>
+                <h3 class="mt-4 font-semibold text-lg">Clients Management</h3>
+                <a href="client-management.html" target="_blank" class="text-indigo-400 mt-4 inline-block hover:text-indigo-500">Learn more &rarr;</a>
+            </div>
+            <div class="text-center product-features">
+                <div class="text-3xl">
+                    <i class="fa-solid fa-tv text-indigo-400"></i>
+                </div>
+                <h3 class="mt-4 font-semibold text-lg">User Interface</h3>
+                <a href="user-interface.html" target="_blank" class="text-indigo-400 mt-4 inline-block hover:text-indigo-500">Learn more &rarr;</a>
+            </div>
+
+            <div class="text-center product-features">
+                <div class="text-3xl">
+                    <i class="fa-solid fa-link text-indigo-400"></i>
+                </div>
+                <h3 class="mt-4 font-semibold text-lg">Integrations</h3>
+                <a href="integrations.html" target="_blank" class="text-indigo-400 mt-4 inline-block hover:text-indigo-500">Learn more &rarr;</a>
+            </div>
+            <div class="text-center product-features">
+                <div class="text-3xl">
+                    <i class="fa-solid fa-shop text-indigo-400"></i>
+                </div>
+                <h3 class="mt-4 font-semibold text-lg">Resellers</h3>
+                <a href="resellers.html" target="_blank" class="text-indigo-400 mt-4 inline-block hover:text-indigo-500">Learn more &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <!-- Features Section End -->
+
+
+
+    <!-- Call to Action Section Start -->
+    <div class="home-cta bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120] pt-12 pb-12">
+        <div class="mx-auto max-w-7xl cta-spacing">
+            <div class="text-center">
+                <h2 class="text-5xl font-bold tracking-tight text-white sm:text-4xl cta-title">Ready to dive in?</h2>
+                <p class="mt-2 text-lg leading-8 text-cyan-300 cta-tagline">Get Started with your free trial today.</p>
+                <div class="mt-5 flex justify-center gap-x-4">
+                    <a href="#"
+                        class="cta-live-btn border border-cyan-800 text-gray-300 px-4 pt-2 pb-2 rounded hover:bg-white hover:text-black duration-300">Live
+                        Demo -></a>
+                    <a href="#"
+                        class="cta-start-btn bg-indigo-600 text-white font-normal px-4 py-2.5 rounded hover:bg-indigo-700 duration-300">Get
+                        Started -></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Call to Action Section End -->
 
 
     <!-- Footer Start -->
-    <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1 custom-padding">
+    <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1 full-footer">
         <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
             <div class="footer-col space-y-4">
                 <h4 class="text-gray-500 border-b border-gray-600 pb-2">COMPANY</h4>
@@ -417,10 +544,11 @@
                 <!-- Social Media Icons -->
                 <div class="flex justify-center lg:justify-start mt-4 space-x-4">
                     <a href="https://facebook.com/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-blue-600">
+                        class="text-gray-500 hover:text-indigo-600">
                         <i class="fab fa-facebook-f fa-lg"></i>
                     </a>
-                    <a href="https://twitter.com/yourprofile" target="_blank" class="text-gray-500 hover:text-blue-400">
+                    <a href="https://twitter.com/yourprofile" target="_blank"
+                        class="text-gray-500 hover:text-indigo-400">
                         <i class="fab fa-twitter fa-lg"></i>
                     </a>
                     <a href="https://instagram.com/yourprofile" target="_blank"
@@ -428,7 +556,7 @@
                         <i class="fab fa-instagram fa-lg"></i>
                     </a>
                     <a href="https://linkedin.com/in/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-blue-700">
+                        class="text-gray-500 hover:text-indigo-700">
                         <i class="fab fa-linkedin-in fa-lg"></i>
                     </a>
                     <a href="https://youtube.com/in/yourprofile" target="_blank"
@@ -440,21 +568,19 @@
         </div>
         <div class="max-w-7xl mx-auto container mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
             <div class="flex justify-between items-center about-footer-bottom">
-                <div class="footer-text text-base text-left">
+                <div class="text-base text-left">
                     Copyright &copy; 2024 | <a href="index.html"
-                        class="text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC </a> - All
-                    Right Reserved.
+                        class="text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC </a>
                 </div>
-                <div class="footer-text text-base text-right space-x-4">
-                    <a href="#privacy" class="text-indigo-400 hover:text-indigo-500 duration-300">Privacy Policy</a>
-                    <a href="#terms" class="text-indigo-400 hover:text-indigo-500 duration-300">Terms & Conditions</a>
+                <div class="text-base text-right space-x-4">
+                    <a href="#privacy" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Privacy
+                        Policy</a>
+                    <a href="#terms" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Terms &
+                        Conditions</a>
                 </div>
             </div>
         </div>
-
-
     </footer>
-
     <!-- Footer End -->
 
 
@@ -517,75 +643,73 @@
                 }
             });
         });
-
-
     </script>
 
     <script>
 
-     // JavaScript for Desktop Mode Theme Toggle
-     const themeToggle = document.getElementById('theme-toggle');
-     const moonIcon = document.getElementById('moon-icon');
-     const sunIcon = document.getElementById('sun-icon');
-     const currentTheme = localStorage.getItem('theme');
+        // JavaScript for Desktop Mode Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const moonIcon = document.getElementById('moon-icon');
+        const sunIcon = document.getElementById('sun-icon');
+        const currentTheme = localStorage.getItem('theme');
 
-     if (currentTheme) {
-         document.body.classList.add(currentTheme);
-         if (currentTheme === 'light-mode') {
-             moonIcon.style.display = 'none';
-             sunIcon.style.display = 'inline';
-         } else {
-             moonIcon.style.display = 'inline';
-             sunIcon.style.display = 'none';
-         }
-     } else {
-         sunIcon.style.display = 'none'; // Default to dark mode, show moon icon
-     }
+        if (currentTheme) {
+            document.body.classList.add(currentTheme);
+            if (currentTheme === 'light-mode') {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+            }
+        } else {
+            sunIcon.style.display = 'none'; // Default to dark mode, show moon icon
+        }
 
-     themeToggle.addEventListener('click', () => {
-         document.body.classList.toggle('light-mode');
-         if (document.body.classList.contains('light-mode')) {
-             moonIcon.style.display = 'none';
-             sunIcon.style.display = 'inline';
-             localStorage.setItem('theme', 'light-mode');
-         } else {
-             moonIcon.style.display = 'inline';
-             sunIcon.style.display = 'none';
-             localStorage.setItem('theme', 'dark-mode');
-         }
-     });
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            if (document.body.classList.contains('light-mode')) {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+                localStorage.setItem('theme', 'light-mode');
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+                localStorage.setItem('theme', 'dark-mode');
+            }
+        });
 
-     // JavaScript for Mobile Mode Theme Toggle
-     const mobthemeToggle = document.getElementById('mobile-theme-toggle');
-     const mobmoonIcon = document.getElementById('moon-icon');
-     const mobunIcon = document.getElementById('sun-icon');
-     const mobcurrentTheme = localStorage.getItem('theme');
+        // JavaScript for Mobile Mode Theme Toggle
+        const mobthemeToggle = document.getElementById('mobile-theme-toggle');
+        const mobmoonIcon = document.getElementById('moon-icon');
+        const mobunIcon = document.getElementById('sun-icon');
+        const mobcurrentTheme = localStorage.getItem('theme');
 
-     if (currentTheme) {
-         document.body.classList.add(currentTheme);
-         if (currentTheme === 'light-mode') {
-             moonIcon.style.display = 'none';
-             sunIcon.style.display = 'inline';
-         } else {
-             moonIcon.style.display = 'inline';
-             sunIcon.style.display = 'none';
-         }
-     } else {
-         sunIcon.style.display = 'none'; // Default to dark mode, show moon icon
-     }
+        if (currentTheme) {
+            document.body.classList.add(currentTheme);
+            if (currentTheme === 'light-mode') {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+            }
+        } else {
+            sunIcon.style.display = 'none'; // Default to dark mode, show moon icon
+        }
 
-     mobthemeToggle.addEventListener('click', () => {
-         document.body.classList.toggle('light-mode');
-         if (document.body.classList.contains('light-mode')) {
-             moonIcon.style.display = 'none';
-             sunIcon.style.display = 'inline';
-             localStorage.setItem('theme', 'light-mode');
-         } else {
-             moonIcon.style.display = 'inline';
-             sunIcon.style.display = 'none';
-             localStorage.setItem('theme', 'dark-mode');
-         }
-     });
+        mobthemeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            if (document.body.classList.contains('light-mode')) {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+                localStorage.setItem('theme', 'light-mode');
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+                localStorage.setItem('theme', 'dark-mode');
+            }
+        });
 
     </script>
     <!-- JavaScript End -->

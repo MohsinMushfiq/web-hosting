@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feature - Domains | LxRoot</title>
+    <title>Pricing | LxRoot</title>
     <link rel="stylesheet" href="./output/tailwind.css">
     <link rel="stylesheet" href="./src/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -307,325 +307,382 @@
     <!-- Navigation End -->
 
 
+    <!-- Pricing Section Start -->
+    <div class="max-w-7xl mx-auto flex flex-col items-center text-white py-16">
+        <h2 class="text-base font-semibold text-gray-300">LXROOT LICENCE</h2>
+        <h1 class="text-5xl font-bold mt-2 text-indigo-400">Scalable Pricing</h1>
+        <p class="text-gray-400 text-center max-w-2xl mt-2 mb-8">Pay only for the applications you host, not for the
+            number of servers you run.</p>
 
-    <!-- Hero Section Start -->
-    <section class="max-w-7xl mx-auto text-white py-24 feature-hero">
-        <div class="px-2 lg:flex lg:items-center lg:space-x-12 tech-hero pt-8">
-            <!-- Text Content -->
-            <div class="">
-                <div class="text-normal font-normal text-cyan-300 tech-hero-tag mb-2">
-                    LxRoot
+        <!-- Toggle Section -->
+        <!-- Toggle Section -->
+        <div class="flex space-x-4 bg-gray-700 p-2 rounded-lg mt-8 border border-gray-700 shadow-md toggle-button">
+            <button id="monthlyBtn"
+                class="py-2 px-6 bg-indigo-500 text-white rounded-lg focus:outline-none">Monthly</button>
+            <button id="yearlyBtn"
+                class="py-2 px-6 bg-gray-200 text-gray-700 rounded-lg focus:outline-none">Annually</button>
+        </div>
+
+
+        <!-- Pricing Cards -->
+        <div class="grid md:grid-cols-3 gap-8 mt-12 w-full max-w-5xl">
+
+            <!-- starter Plan -->
+            <div class="bg-gray-900 p-8 rounded-lg shadow-md text-left pricing-card">
+                <h3 class="text-lg font-semibold">Starter</h3>
+                <p class="mt-4 text-gray-400">Best for 1 - 5K Applications</p>
+                <div class="mt-6">
+                    <span class="text-4xl font-bold" id="starterPrice">$15</span><span>/Per Billing Cycle</span>
                 </div>
-                <h2 class="text-5xl about-h2 font-extrabold mb-6 line-height:2">
-                    Domain Features
-                </h2>
-                <p class="text-lg mb-8 text-gray-200 font-extralight tech-hero-des">
-                    Designed for the modern host, LxRoot has all the tools and features you need to build and scale a
-                    cluster to meet your needs.</p>
-                <div class="flex space-x-4 about-hero-button">
-                    <a href="#explore"
-                        class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-10 rounded-lg inline-block">
-                        Let's Explore &darr;
+                <button class="mt-6 py-2 px-6 bg-gray-700 text-white rounded-lg buy-plan">Buy plan</button>
+                <ul class="mt-6 space-y-2 text-gray-400">
+                    <li>&check; Application toolkit</li>
+                    <li>&check; Sub / addon / alias domain</li>
+                    <li>&check; Hard resource limits</li>
+                    <li>&check; Powerful incremental backups</li>
+                    <li>&cross; Unlimited servers within your cluster</li>
+                    <li>&cross; Runtimes and docker Implementation</li>
+                </ul>
+            </div>
+
+            <!-- Professional Plan -->
+            <div class="bg-gray-800 p-8 rounded-lg shadow-md text-left pricing-card active-pricing-card">
+                <h3 class="text-lg font-semibold">Professional</h3>
+                <p class="mt-4 text-gray-400">Best for 5,001 - 25K Applications</p>
+                <div class="mt-6">
+                    <span class="text-4xl font-bold" id="professionalPrice">$30</span><span>/Per Billing Cycle</span>
+                </div>
+                <button class="mt-6 py-2 px-6 bg-indigo-500 text-white rounded-lg active-buy-plan">Buy plan</button>
+                <ul class="mt-6 space-y-2 text-gray-400">
+                    <li>&check; Application toolkit</li>
+                    <li>&check; Sub / addon / alias domain</li>
+                    <li>&check; Hard resource limits</li>
+                    <li>&check; Powerful incremental backups</li>
+                    <li>&check; Runtimes and docker Implementation</li>
+                    <li>&cross; Unlimited servers within your cluster</li>
+                </ul>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="bg-gray-900 p-8 rounded-lg shadow-md text-left pricing-card">
+                <h3 class="text-lg font-semibold">Enterprise</h3>
+                <p class="mt-4 text-gray-400">Best for 25k - 100K Applications</p>
+                <div class="mt-6">
+                    <span class="text-4xl font-bold" id="enterprisePrice">$48</span><span>/Per Billing Cycle</span>
+                </div>
+                <button class="mt-6 py-2 px-6 bg-gray-700 text-white rounded-lg buy-plan">Buy plan</button>
+                <ul class="mt-6 space-y-2 text-gray-400">
+                    <li>&check; Application toolkit</li>
+                    <li>&check; Sub / addon / alias domain</li>
+                    <li>&check; Hard resource limits</li>
+                    <li>&check; Powerful incremental backups</li>
+                    <li>&check; Unlimited servers within your cluster</li>
+                    <li>&check; Runtimes and docker Implementation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing Section Start -->
+
+
+
+
+
+    <!-- Footer Start -->
+    <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1 full-footer">
+        <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
+            <div class="footer-col space-y-4">
+                <h4 class="text-gray-500 border-b border-gray-600 pb-2">COMPANY</h4>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="hover:text-white">About</a></li>
+                    <li><a href="articles.html" class="hover:text-white">Articles</a></li>
+                    <li><a href="career.html" class="hover:text-white">Career</a></li>
+                    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col space-y-4">
+                <h4 class="text-gray-500 border-b border-gray-600 pb-2">SOLUTIONS</h4>
+                <ul class="space-y-2">
+                    <li><a href="features.html" class="hover:text-white">Features</a></li>
+                    <li><a href="technology.html" class="hover:text-white">Technology</a></li>
+                    <li><a href="roadmap.html" class="hover:text-white">Roadmap</a></li>
+                    <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col space-y-4">
+                <h4 class="text-gray-500 border-b border-gray-600 pb-2">SUPPORT</h4>
+                <ul class="space-y-2">
+                    <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
+                    <li><a href="community.html" class="hover:text-white">Community</a></li>
+                    <li><a href="support.html" class="hover:text-white">Support Docs</a></li>
+                    <li><a href="api.html" class="hover:text-white">API Docs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col space-y-4">
+                <h4 class="text-gray-500 border-b border-gray-600 pb-2">LEGAL</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Security</a></li>
+                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white">Terms of Use</a></li>
+                    <li><a href="#" class="hover:text-white">Changelogs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-col-5 space-y-2">
+                <h4 class="text-gray-500 border-b border-gray-600 pb-2">CONTACT US</h4>
+                <div class="mt-4 space-y-2">
+                    <div class="flex justify-center lg:justify-start items-center space-x-2">
+                        <i class="fas fa-phone text-gray-400"></i>
+                        <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
+                    </div>
+                    <div class="flex justify-center lg:justify-start items-center space-x-2">
+                        <i class="fas fa-envelope text-gray-400"></i>
+                        <a href="mailto:contact@yourdomain.com"
+                            class="text-gray-400 hover:text-white">contact@lxroot.com</a>
+                    </div>
+                    <div class="flex justify-center lg:justify-start items-center space-x-2">
+                        <i class="fas fa-map-marker-alt text-gray-300"></i>
+                        <p class="text-gray-400">Carmel, Indiana, USA</p>
+                    </div>
+                </div>
+
+                <!-- Social Media Icons -->
+                <div class="flex justify-center lg:justify-start mt-4 space-x-4">
+                    <a href="https://facebook.com/yourprofile" target="_blank"
+                        class="text-gray-500 hover:text-indigo-600">
+                        <i class="fab fa-facebook-f fa-lg"></i>
+                    </a>
+                    <a href="https://twitter.com/yourprofile" target="_blank"
+                        class="text-gray-500 hover:text-indigo-400">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </a>
+                    <a href="https://instagram.com/yourprofile" target="_blank"
+                        class="text-gray-500 hover:text-pink-500">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank"
+                        class="text-gray-500 hover:text-indigo-700">
+                        <i class="fab fa-linkedin-in fa-lg"></i>
+                    </a>
+                    <a href="https://youtube.com/in/yourprofile" target="_blank"
+                        class="text-gray-500 hover:text-red-700">
+                        <i class="fab fa-youtube fa-lg"></i>
                     </a>
                 </div>
             </div>
-            <!-- Image Content -->
-            <div class="mt-12 lg:mt-0 relative">
-                <div class="relative z-10">
-                    <img class="rounded-lg object-cover object-center"
-                        src="https://www.transparentpng.com/download/web-hosting/tTExWZ-web-hosting-ssd-hdd-reseller-hosting-icon-clipart.png"
-                        alt="Image 1">
+        </div>
+        <div class="max-w-7xl mx-auto container mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
+            <div class="flex justify-between items-center about-footer-bottom">
+                <div class="text-base text-left">
+                    Copyright &copy; 2024 | <a href="index.html"
+                        class="text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC </a>
+                </div>
+                <div class="text-base text-right space-x-4">
+                    <a href="#privacy" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Privacy
+                        Policy</a>
+                    <a href="#terms" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Terms &
+                        Conditions</a>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Hero Section End -->
 
 
-    <!-- Features Section Start -->
-    <div class="text-white py-16" id="explore">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-3 gap-8 mb-8 product-feature-sec">
-            <div class="text-left single-product-features">
-                <h3 class="mt-4 font-semibold text-lg">DNS editor</h3>
-                <p>Create, edit, and delete Domain Name System (DNS) zone records.</p>
-            </div>
-            <div class="text-left single-product-features">
-                <h3 class="mt-4 font-semibold text-lg">Alias, addon and sub domains</h3>
-                <p>Add and manage alias, addon and subdomains.</p>
-            </div>
-            <div class="text-left single-product-features">
-                <h3 class="mt-4 font-semibold text-lg">301 / 302 Redirects</h3>
-                <p>Add, edit and manage 301 and 302 redirects.</p>
-            </div>
-            <div class="text-left single-product-features">
-                <h3 class="mt-4 font-semibold text-lg">Change primary domain</h3>
-                <p>Modify the primary domain name for an existing website in just a few clicks.</p>
-            </div>
-            <div class="text-left single-product-features">
-                <h3 class="mt-4 font-semibold text-lg">Cloudflare</h3>
-                <p>Synchronise your domain's DNS and set your proxy status with Cloudflare.</p>
-            </div>
-            <div class="text-left single-product-features">
-                <h3 class="mt-4 font-semibold text-lg">DNSSEC</h3>
-                <p>Enable/disable DNSSEC on a per domain basis to authenticate existing DNS records.</p>
-            </div>
-        </div>
-    </div>
-    <!-- Features Section End -->
+    </footer>
+    <!-- Footer End -->
 
 
 
-    <!-- Call to Action Section Start -->
-    <div class="home-cta bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120] pt-12 pb-12">
-        <div class="mx-auto max-w-7xl cta-spacing">
-            <div class="text-center">
-                <h2 class="text-5xl font-bold tracking-tight text-white sm:text-4xl cta-title">Ready to dive in?</h2>
-                <p class="mt-2 text-lg leading-8 text-cyan-300 cta-tagline">Get Started with your free trial today.</p>
-                <div class="mt-5 flex justify-center gap-x-4">
-                    <a href="#"
-                        class="cta-live-btn border border-cyan-800 text-gray-300 px-4 pt-2 pb-2 rounded hover:bg-white hover:text-black duration-300">Live
-                        Demo -></a>
-                    <a href="#"
-                        class="cta-start-btn bg-indigo-600 text-white font-normal px-4 py-2.5 rounded hover:bg-indigo-700 duration-300">Get
-                        Started -></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Call to Action Section End -->
 
+    <!-- JavaScript -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-  <!-- Footer Start -->
-  <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1 full-footer">
-    <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
-        <div class="footer-col space-y-4">
-            <h4 class="text-gray-500 border-b border-gray-600 pb-2">COMPANY</h4>
-            <ul class="space-y-2">
-                <li><a href="about.html" class="hover:text-white">About</a></li>
-                <li><a href="articles.html" class="hover:text-white">Articles</a></li>
-                <li><a href="career.html" class="hover:text-white">Career</a></li>
-                <li><a href="contact.html" class="hover:text-white">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-col space-y-4">
-            <h4 class="text-gray-500 border-b border-gray-600 pb-2">SOLUTIONS</h4>
-            <ul class="space-y-2">
-                <li><a href="features.html" class="hover:text-white">Features</a></li>
-                <li><a href="technology.html" class="hover:text-white">Technology</a></li>
-                <li><a href="roadmap.html" class="hover:text-white">Roadmap</a></li>
-                <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
-            </ul>
-        </div>
-        <div class="footer-col space-y-4">
-            <h4 class="text-gray-500 border-b border-gray-600 pb-2">SUPPORT</h4>
-            <ul class="space-y-2">
-                <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
-                <li><a href="community.html" class="hover:text-white">Community</a></li>
-                <li><a href="support.html" class="hover:text-white">Support Docs</a></li>
-                <li><a href="api.html" class="hover:text-white">API Docs</a></li>
-            </ul>
-        </div>
-        <div class="footer-col space-y-4">
-            <h4 class="text-gray-500 border-b border-gray-600 pb-2">LEGAL</h4>
-            <ul class="space-y-2">
-                <li><a href="#" class="hover:text-white">Security</a></li>
-                <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
-                <li><a href="#" class="hover:text-white">Terms of Use</a></li>
-                <li><a href="#" class="hover:text-white">Changelogs</a></li>
-            </ul>
-        </div>
-        <div class="footer-col footer-col-5 space-y-2">
-            <h4 class="text-gray-500 border-b border-gray-600 pb-2">CONTACT US</h4>
-            <div class="mt-4 space-y-2">
-                <div class="flex justify-center lg:justify-start items-center space-x-2">
-                    <i class="fas fa-phone text-gray-400"></i>
-                    <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
-                </div>
-                <div class="flex justify-center lg:justify-start items-center space-x-2">
-                    <i class="fas fa-envelope text-gray-400"></i>
-                    <a href="mailto:contact@yourdomain.com"
-                        class="text-gray-400 hover:text-white">contact@lxroot.com</a>
-                </div>
-                <div class="flex justify-center lg:justify-start items-center space-x-2">
-                    <i class="fas fa-map-marker-alt text-gray-300"></i>
-                    <p class="text-gray-400">Carmel, Indiana, USA</p>
-                </div>
-            </div>
+    <!-- JavaScript to toggle mobile menu -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+        const dropdownBtns = document.querySelectorAll('.dropdown-btn');
 
-            <!-- Social Media Icons -->
-            <div class="flex justify-center lg:justify-start mt-4 space-x-4">
-                <a href="https://facebook.com/yourprofile" target="_blank"
-                    class="text-gray-500 hover:text-blue-600">
-                    <i class="fab fa-facebook-f fa-lg"></i>
-                </a>
-                <a href="https://twitter.com/yourprofile" target="_blank" class="text-gray-500 hover:text-blue-400">
-                    <i class="fab fa-twitter fa-lg"></i>
-                </a>
-                <a href="https://instagram.com/yourprofile" target="_blank"
-                    class="text-gray-500 hover:text-pink-500">
-                    <i class="fab fa-instagram fa-lg"></i>
-                </a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank"
-                    class="text-gray-500 hover:text-blue-700">
-                    <i class="fab fa-linkedin-in fa-lg"></i>
-                </a>
-                <a href="https://youtube.com/in/yourprofile" target="_blank"
-                    class="text-gray-500 hover:text-red-700">
-                    <i class="fab fa-youtube fa-lg"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="max-w-7xl mx-auto container mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
-        <div class="flex justify-between items-center about-footer-bottom">
-            <div class="text-base text-left">
-                Copyright &copy; 2024 | <a href="index.html"
-                    class="text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC </a>
-            </div>
-            <div class="text-base text-right space-x-4">
-                <a href="#privacy" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Privacy Policy</a>
-                <a href="#terms" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Terms & Conditions</a>
-            </div>
-        </div>
-    </div>
-
-
-</footer>
-
-<!-- Footer End -->
-
-
-
-<!-- JavaScript -->
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-<!-- JavaScript to toggle mobile menu -->
-<script>
-    const menuBtn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
-    const dropdownBtns = document.querySelectorAll('.dropdown-btn');
-
-    menuBtn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-    });
-
-    dropdownBtns.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            const dropdownMenu = btn.parentElement.nextElementSibling;
-            dropdownMenu.classList.toggle('hidden');
-        });
-    });
-</script>
-
-<!-- JavaScript for Drowpdown Menu -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const dropdownLink = document.getElementById("dropdownLink");
-        const dropdownMenu = document.getElementById("dropdownMenu");
-
-        dropdownLink.addEventListener("click", function (event) {
-            event.preventDefault();
-            dropdownMenu.classList.toggle("hidden");
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
         });
 
-        document.addEventListener("click", function (event) {
-            const isClickInside = dropdownLink.contains(event.target) || dropdownMenu.contains(event.target);
+        dropdownBtns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const dropdownMenu = btn.parentElement.nextElementSibling;
+                dropdownMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
 
-            if (!isClickInside) {
-                dropdownMenu.classList.add("hidden");
+    <!-- JavaScript for Drowpdown Menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownLink = document.getElementById("dropdownLink");
+            const dropdownMenu = document.getElementById("dropdownMenu");
+
+            dropdownLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                dropdownMenu.classList.toggle("hidden");
+            });
+
+            document.addEventListener("click", function (event) {
+                const isClickInside = dropdownLink.contains(event.target) || dropdownMenu.contains(event.target);
+
+                if (!isClickInside) {
+                    dropdownMenu.classList.add("hidden");
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const productDropdownLink = document.getElementById("productDropdownLink");
+            const productDropdownMenu = document.getElementById("productDropdownMenu");
+
+            productDropdownLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                productDropdownMenu.classList.toggle("hidden");
+            });
+
+            document.addEventListener("click", function (event) {
+                const isClickInside = productDropdownLink.contains(event.target) || productDropdownMenu.contains(event.target);
+
+                if (!isClickInside) {
+                    productDropdownMenu.classList.add("hidden");
+                }
+            });
+        });
+
+
+    </script>
+
+    <script>
+
+        // JavaScript for Desktop Mode Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const moonIcon = document.getElementById('moon-icon');
+        const sunIcon = document.getElementById('sun-icon');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.body.classList.add(currentTheme);
+            if (currentTheme === 'light-mode') {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+            }
+        } else {
+            sunIcon.style.display = 'none'; // Default to dark mode, show moon icon
+        }
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            if (document.body.classList.contains('light-mode')) {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+                localStorage.setItem('theme', 'light-mode');
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+                localStorage.setItem('theme', 'dark-mode');
             }
         });
-    });
 
-    document.addEventListener("DOMContentLoaded", function () {
-        const productDropdownLink = document.getElementById("productDropdownLink");
-        const productDropdownMenu = document.getElementById("productDropdownMenu");
+        // JavaScript for Mobile Mode Theme Toggle
+        const mobthemeToggle = document.getElementById('mobile-theme-toggle');
+        const mobmoonIcon = document.getElementById('moon-icon');
+        const mobunIcon = document.getElementById('sun-icon');
+        const mobcurrentTheme = localStorage.getItem('theme');
 
-        productDropdownLink.addEventListener("click", function (event) {
-            event.preventDefault();
-            productDropdownMenu.classList.toggle("hidden");
-        });
+        if (currentTheme) {
+            document.body.classList.add(currentTheme);
+            if (currentTheme === 'light-mode') {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
 
-        document.addEventListener("click", function (event) {
-            const isClickInside = productDropdownLink.contains(event.target) || productDropdownMenu.contains(event.target);
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+            }
+        } else {
+            sunIcon.style.display = 'none'; // Default to dark mode, show moon icon
+        }
 
-            if (!isClickInside) {
-                productDropdownMenu.classList.add("hidden");
+        mobthemeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            if (document.body.classList.contains('light-mode')) {
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'inline';
+                localStorage.setItem('theme', 'light-mode');
+            } else {
+                moonIcon.style.display = 'inline';
+                sunIcon.style.display = 'none';
+                localStorage.setItem('theme', 'dark-mode');
             }
         });
-    });
 
 
-</script>
+        // Start Pricing Toggle 
 
-<script>
+        const monthlyBtn = document.getElementById("monthlyBtn");
+        const yearlyBtn = document.getElementById("yearlyBtn");
 
-    // JavaScript for Desktop Mode Theme Toggle
-    const themeToggle = document.getElementById('theme-toggle');
-    const moonIcon = document.getElementById('moon-icon');
-    const sunIcon = document.getElementById('sun-icon');
-    const currentTheme = localStorage.getItem('theme');
+        const starterPrice = document.getElementById("starterPrice");
+        const professionalPrice = document.getElementById("professionalPrice");
+        const enterprisePrice = document.getElementById("enterprisePrice");
 
-    if (currentTheme) {
-        document.body.classList.add(currentTheme);
-        if (currentTheme === 'light-mode') {
-            moonIcon.style.display = 'none';
-            sunIcon.style.display = 'inline';
-        } else {
-            moonIcon.style.display = 'inline';
-            sunIcon.style.display = 'none';
-        }
-    } else {
-        sunIcon.style.display = 'none'; // Default to dark mode, show moon icon
-    }
+        // Initial prices (monthly)
+        let monthlyPrices = {
+            starter: 15,
+            professional: 30,
+            enterprise: 48,
+        };
 
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        if (document.body.classList.contains('light-mode')) {
-            moonIcon.style.display = 'none';
-            sunIcon.style.display = 'inline';
-            localStorage.setItem('theme', 'light-mode');
-        } else {
-            moonIcon.style.display = 'inline';
-            sunIcon.style.display = 'none';
-            localStorage.setItem('theme', 'dark-mode');
-        }
-    });
+        let yearlyPrices = {
+            starter: 12 * 12, // $12/month when billed annually
+            professional: 25 * 12, // $25/month when billed annually
+            enterprise: 40 * 12, // $40/month when billed annually
+        };
 
-    // JavaScript for Mobile Mode Theme Toggle
-    const mobthemeToggle = document.getElementById('mobile-theme-toggle');
-    const mobmoonIcon = document.getElementById('moon-icon');
-    const mobunIcon = document.getElementById('sun-icon');
-    const mobcurrentTheme = localStorage.getItem('theme');
+        // Event listener for monthly prices
+        monthlyBtn.addEventListener("click", () => {
+            starterPrice.textContent = `$${monthlyPrices.starter}`;
+            professionalPrice.textContent = `$${monthlyPrices.professional}`;
+            enterprisePrice.textContent = `$${monthlyPrices.enterprise}`;
 
-    if (currentTheme) {
-        document.body.classList.add(currentTheme);
-        if (currentTheme === 'light-mode') {
-            moonIcon.style.display = 'none';
-            sunIcon.style.display = 'inline';
-        } else {
-            moonIcon.style.display = 'inline';
-            sunIcon.style.display = 'none';
-        }
-    } else {
-        sunIcon.style.display = 'none'; // Default to dark mode, show moon icon
-    }
+            // Toggle active button styles
+            monthlyBtn.classList.add('bg-indigo-500', 'text-white');
+            monthlyBtn.classList.remove('bg-gray-200', 'text-gray-700');
 
-    mobthemeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        if (document.body.classList.contains('light-mode')) {
-            moonIcon.style.display = 'none';
-            sunIcon.style.display = 'inline';
-            localStorage.setItem('theme', 'light-mode');
-        } else {
-            moonIcon.style.display = 'inline';
-            sunIcon.style.display = 'none';
-            localStorage.setItem('theme', 'dark-mode');
-        }
-    });
+            yearlyBtn.classList.add('bg-gray-200', 'text-gray-700');
+            yearlyBtn.classList.remove('bg-indigo-500', 'text-white');
+        });
 
-</script>
-<!-- JavaScript End -->
+        // Event listener for yearly prices
+        yearlyBtn.addEventListener("click", () => {
+            starterPrice.textContent = `$${yearlyPrices.starter}`;
+            professionalPrice.textContent = `$${yearlyPrices.professional}`;
+            enterprisePrice.textContent = `$${yearlyPrices.enterprise}`;
+
+            // Toggle active button styles
+            yearlyBtn.classList.add('bg-indigo-500', 'text-white');
+            yearlyBtn.classList.remove('bg-gray-200', 'text-gray-700');
+
+            monthlyBtn.classList.add('bg-gray-200', 'text-gray-700');
+            monthlyBtn.classList.remove('bg-indigo-500', 'text-white');
+        });
+
+        // End Pricing Toggle 
+
+
+
+
+
+    </script>
+
+
+    <!-- JavaScript End -->
 
 
 </body>

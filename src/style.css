@@ -73,6 +73,10 @@
     color: white;
 }
 
+.cta-card p{
+    color: white;
+}
+
 .cta-card:hover {
     background-color: #0f1527;
     border: 1px solid #212e50;
@@ -116,6 +120,12 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+.help-center i{
+    color: white;
+    font-size: 40px;
+}
+
 
 
 /* Technology Page */
@@ -268,6 +278,43 @@
 .single-product-features p {
     margin-top: 10px;
     color: #98a3b8;
+}
+
+/* Pricing Page */
+.pricing-card{
+    border-radius: 20px;
+    padding: 50px;
+    border: 1px solid #4b5563;
+}
+
+.buy-plan{
+    width: 100%;
+    text-align: center;
+    background-color: #4b5563;
+}
+
+.buy-plan:hover{
+    width: 100%;
+    text-align: center;
+    background-color: #433bdb;
+    transition-duration: 0.3s;
+}
+
+.active-buy-plan{
+    width: 100%;
+    text-align: center;
+    background-color: #433bdb;
+}
+
+.active-buy-plan:hover{
+    width: 100%;
+    text-align: center;
+    background-color: #483fec;
+    transition-duration: 0.3s;
+}
+
+.active-pricing-card{
+    border: 2px solid #433bdb;
 }
 
 
@@ -792,6 +839,187 @@ body.light-mode .single-product-features p {
 }
 
 
+/* Contact Page */
+body.light-mode .help-center{
+    background-color: #ffffff;
+    color: #0B1120;
+    border: 1px solid #beacff;
+}
+
+body.light-mode .help-center:hover{
+    background-color: #f8f8f8;
+    color: #0B1120;
+    border: 1px solid #433bdb;
+}
+
+body.light-mode .help-center button{
+    background-color: #ffffff;
+    color: #0B1120;
+    border: 1px solid #beacff;
+}
+
+body.light-mode .help-center button:hover{
+    background-color: #433bdb;
+    color: white;
+    border: 1px solid #433bdb;
+}
+
+body.light-mode .help-center i{
+    color: #433bdb;
+    font-size: 40px;
+}
+
+body.light-mode #contact{
+    background: #f8f8f8;
+}
+
+body.light-mode #contact-form{
+    background-color: #ffffff;
+    border: 1px solid #98a3b8;
+}
+
+body.light-mode #contact-form input{
+    background-color: #f8f8f8;
+    border: 1px solid #beacff;
+
+}
+
+body.light-mode #contact-form select{
+    background-color: #f8f8f8;
+    border: 1px solid #beacff;
+}
+
+body.light-mode #contact-form textarea{
+    background-color: #f8f8f8;
+    border: 1px solid #beacff;
+}
+
+body.light-mode #contact-form button{
+    background-color: #433bdb;
+    color: white;
+}
+
+body.light-mode #contact-form button:hover{
+    background-color: #2d26ad;
+    color: white;
+}
+
+body.light-mode .about-feature{
+    background: #f8f8f8;
+}
+
+/* About Us Page */
+body.light-mode .about-hero-text{
+    color: #0B1120;
+}
+
+body.light-mode .about-feature-card{
+    background: #ffffff;
+    border: 1px solid #c9e0ff;
+}
+
+body.light-mode .about-feature-card:hover{
+    background: #ffffff;
+    border: 1px solid #483fec;
+    color: #0B1120;
+}
+
+body.light-mode .about-feature-icon{
+    border: 1px solid #c9e0ff;
+}
+
+body.light-mode .feature-icon-text{
+    fill: none;
+    color: white;
+}
+
+body.light-mode .about-about-des{
+    color: #212e50;
+}
+
+body.light-mode .about-about-card{
+    border: 1px solid #c9e0ff;
+}
+
+body.light-mode .about-about-card:hover{
+    border: 1px solid #483fec;
+    background: #f8f8f8;
+}
+
+body.light-mode .team-member{
+    background-color: #ffffff;
+    border: 1px solid #c9e0ff;
+}
+
+body.light-mode .team-member:hover{
+    border: 1px solid #433bdb;
+}
+
+body.light-mode .team-member h3{
+    color: #0f1527;
+}
+
+body.light-mode .team-member p{
+    color: #6b7280;
+}
+
+body.light-mode .team-member a{
+    color: #6c64ff;
+}
+
+body.light-mode .about-cta-cont{
+    background: #f8f8f8;
+}
+
+body.light-mode .about-cta{
+    background: white;
+}
+
+body.light-mode .cta-card{
+    background-color: #ffffff;
+    border: 1px solid #c9e0ff;
+    color: #0B1120;
+}
+
+body.light-mode .cta-card:hover{
+    border: 1px solid #433bdb;
+}
+
+body.light-mode .cta-card a{
+    color: white;
+}
+
+body.light-mode .cta-card p{
+    color: #0B1120;
+}
+
+/* Pricing Page */
+
+body.light-mode .pricing-card{
+    background-color: #ffffff;
+    box-shadow: #212e50;
+}
+
+body.light-mode .toggle-button{
+    background-color: white;
+    border: 1px solid #0f1527;
+}
+
+body.light-mode .buy-plan:hover{
+    background-color: #4c44e7;
+    color: white;
+}
+
+body.light-mode .active-buy-plan{
+    background-color: #4c44e7;
+    color: white;
+}
+
+body.light-mode .active-buy-plan:hover{
+    background-color: #2d26ad;
+    color: white;
+}
+
 /* White Mode Theme End */
 
 
@@ -993,6 +1221,20 @@ body.light-mode .single-product-features p {
         padding-right: 20px;
     }
 
+    .system-req{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .system-req img{
+        width: 100px;
+    }
+
+    .tech-db{
+        margin-top: -150px;
+        margin-bottom: -50px;
+    }
+
     /* App Hosting Page */
 
     .app-hero-body {
@@ -1133,6 +1375,14 @@ body.light-mode .single-product-features p {
     .tech-system {
         padding-left: 20px;
         padding-right: 20px;
+    }
+    .system-req{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .system-req img{
+        width: 100px;
     }
 
     /* Application Hosting Page */

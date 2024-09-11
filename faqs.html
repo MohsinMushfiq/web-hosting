@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing | LxRoot</title>
+    <title>FAQs | LxRoot</title>
     <link rel="stylesheet" href="./output/tailwind.css">
     <link rel="stylesheet" href="./src/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -14,6 +14,31 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/7.13.0/simple-icons.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const button = item.querySelector('.accordion-button');
+                const content = item.querySelector('.accordion-content');
+
+                button.addEventListener('click', () => {
+                    const isOpen = content.classList.contains('hidden');
+
+                    // Close all open items
+                    document.querySelectorAll('.accordion-content').forEach(content => content.classList.add('hidden'));
+                    document.querySelectorAll('.accordion-button svg').forEach(icon => icon.classList.remove('rotate-180'));
+
+                    // Open the clicked one
+                    if (isOpen) {
+                        content.classList.remove('hidden');
+                        button.querySelector('svg').classList.add('rotate-180');
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 
 <body class="bg-[#0B1120] font-inter">
@@ -307,161 +332,347 @@
     <!-- Navigation End -->
 
 
-    <!-- Pricing Section Start -->
-    <div class="max-w-7xl mx-auto flex flex-col items-center text-white py-16 pricing-title">
-        <h2 class="text-base font-semibold text-gray-300">LXROOT LICENCE</h2>
-        <h1 class="text-5xl font-bold mt-2 ">Scalable Pricing</h1>
-        <p class="text-gray-400 text-center max-w-2xl mt-2 mb-8">Pay only for the applications you host, not for the
-            number of servers you run.</p>
 
-        <!-- Toggle Section -->
-        <div class="flex space-x-4 bg-gray-300 p-2 rounded-lg mt-8 border border-gray-400 shadow-md toggle-button">
-            <button id="monthlyBtn"
-                class="py-2 px-6 bg-indigo-600 !text-white rounded-lg focus:outline-none">Monthly</button>
-            <button id="yearlyBtn"
-                class="py-2 px-6 bg-gray-200 text-gray-700 rounded-lg focus:outline-none">Annually</button>
+    <!-- FAQs Main Section Start -->
+    <div class="max-w-7xl mx-auto py-8 px-4 faqs-main justify-center text-center">
+        <div class="mt-24 text-center">
+            <h2 class="text-base font-semibold text-gray-300 pt-12">RESOURCES</h2>
+            <h1 class="text-5xl font-bold mt-2 text-center">FAQs</h1>
+            <p class="text-gray-400 mt-4">Find answers to commonly asked questions about LxRoot.</p>
+        </div>
+       
+        <!-- Tab Navigation -->
+        <div class="mx-auto flex flex-wrap justify-center space-y-2 sm:space-y-0 sm:space-x-4 mb-8 mt-12 rounded faqs-tab">
+            <button id="tab-1-btn" onclick="showTab(1)"
+                class="py-2 px-4 rounded-lg bg-indigo-600 text-white focus:outline-none active:bg-indigo-600 active:text-white">General</button>
+            <button id="tab-2-btn" onclick="showTab(2)"
+                class="tab-gap py-2 px-4 rounded-lg bg-indigo-100 text-indigo-600 focus:outline-none active:bg-indigo-200">Features</button>
+            <button id="tab-3-btn" onclick="showTab(3)"
+                class="tab-gap py-2 px-4 rounded-lg bg-indigo-100 text-indigo-600 focus:outline-none active:bg-indigo-200">Technical</button>
+            <button id="tab-4-btn" onclick="showTab(4)"
+                class="tab-gap py-2 px-4 rounded-lg bg-indigo-100 text-indigo-600 focus:outline-none active:bg-indigo-200">Support</button>
+            <button id="tab-5-btn" onclick="showTab(5)"
+                class="tab-gap py-2 px-4 rounded-lg bg-indigo-100 text-indigo-600 focus:outline-none active:bg-indigo-200">Pricing</button>
         </div>
 
+        <!-- Tab Content -->
 
+        <section id="tab-1" class=" max-w-3xl mx-auto p-5 tab-content">
+        <h1 class="text-3xl font-bold mb-5 text-center">General FAQs</h1>
 
-        <!-- Pricing Cards -->
-        <div class="grid md:grid-cols-3 gap-8 mt-12 w-full max-w-5xl">
-
-            <!-- starter Plan -->
-            <div class="bg-gray-900 p-8 rounded-lg shadow-md text-left pricing-card">
-                <h3 class="text-lg font-semibold">Starter</h3>
-                <p class="mt-4 text-gray-400">Best for 1 - 5K Applications</p>
-                <div class="mt-6">
-                    <span class="text-4xl font-bold" id="starterPrice">$15</span><span>/Per Billing Cycle</span>
-                </div>
-                <button class="mt-6 py-2 px-6 bg-gray-700 text-white rounded-lg buy-plan">Buy plan</button>
-                <ul class="mt-6 space-y-2 text-gray-400">
-                    <li>&check; Application toolkit</li>
-                    <li>&check; Sub / addon / alias domain</li>
-                    <li>&check; Hard resource limits</li>
-                    <li>&check; Powerful incremental backups</li>
-                    <li>&cross; Unlimited servers within your cluster</li>
-                    <li>&cross; Runtimes and docker Implementation</li>
-                </ul>
-            </div>
-
-            <!-- Professional Plan -->
-            <div class="bg-gray-800 p-8 rounded-lg shadow-md text-left pricing-card active-pricing-card">
-                <h3 class="text-lg font-semibold">Professional</h3>
-                <p class="mt-4 text-gray-400">Best for 5,001 - 25K Applications</p>
-                <div class="mt-6">
-                    <span class="text-4xl font-bold" id="professionalPrice">$30</span><span>/Per Billing Cycle</span>
-                </div>
-                <button class="mt-6 py-2 px-6 bg-indigo-500 text-white rounded-lg active-buy-plan">Buy plan</button>
-                <ul class="mt-6 space-y-2 text-gray-400">
-                    <li>&check; Application toolkit</li>
-                    <li>&check; Sub / addon / alias domain</li>
-                    <li>&check; Hard resource limits</li>
-                    <li>&check; Powerful incremental backups</li>
-                    <li>&check; Runtimes and docker Implementation</li>
-                    <li>&cross; Unlimited servers within your cluster</li>
-                </ul>
-            </div>
-
-            <!-- Enterprise Plan -->
-            <div class="bg-gray-900 p-8 rounded-lg shadow-md text-left pricing-card">
-                <h3 class="text-lg font-semibold">Enterprise</h3>
-                <p class="mt-4 text-gray-400">Best for 25k - 100K Applications</p>
-                <div class="mt-6">
-                    <span class="text-4xl font-bold" id="enterprisePrice">$48</span><span>/Per Billing Cycle</span>
-                </div>
-                <button class="mt-6 py-2 px-6 bg-gray-700 text-white rounded-lg buy-plan">Buy plan</button>
-                <ul class="mt-6 space-y-2 text-gray-400">
-                    <li>&check; Application toolkit</li>
-                    <li>&check; Sub / addon / alias domain</li>
-                    <li>&check; Hard resource limits</li>
-                    <li>&check; Powerful incremental backups</li>
-                    <li>&check; Unlimited servers within your cluster</li>
-                    <li>&check; Runtimes and docker Implementation</li>
-                </ul>
+        <div class="accordion-item border-b border-gray-600">
+            <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                Can I use LxRoot in open-source projects?
+                <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div class="accordion-content hidden p-4 text-gray-300">
+                LxRoot is an open-source library of interactive components built on top of Control Panel including
+                buttons, dropdowns, modals, navbars, and more. Check out this guide to learn how to get started and
+                start developing websites even faster with components on top of Control Panel.
             </div>
         </div>
+
+        <div class="accordion-item border-b border-gray-600">
+            <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                Is there a Free Trail file available?
+                <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div class="accordion-content hidden p-4 text-gray-300">
+                Yes, we provide a Free Trail file to help you prototype and design your website. You can find the file in our
+                documentation or contact support.
+            </div>
+        </div>
+
+        <div class="accordion-item border-b border-gray-600">
+            <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                What are the differences between LxRoot and Control Panel?
+                <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div class="accordion-content hidden p-4 text-gray-300 accor-icon">
+                LxRoot is an open-source set of components, while Control Panel is a paid set of components developed by
+                the same creators of Control Panel. LxRoot focuses more on interactivity.
+            </div>
+        </div>
+
+        <div class="accordion-item border-b border-gray-600">
+            <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                What about browser support?
+                <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div class="accordion-content hidden p-4 text-gray-300">
+                LxRoot supports all modern browsers including Chrome, Firefox, Safari, and Edge. However, Internet
+                Explorer is not supported.
+            </div>
+        </div>
+
+        </section>
+
+        <section class="max-w-3xl mx-auto p-5 tab-content hidden" id="tab-2">
+            <h1 class="text-3xl font-bold mb-5 text-center">Features FAQs</h1>
+
+            <div class="accordion-item border-b border-gray-600">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                    Can I use LxRoot in open-source projects?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden p-4 text-gray-300">
+                    LxRoot is an open-source library of interactive components built on top of Control Panel including
+                    buttons, dropdowns, modals, navbars, and more. Check out this guide to learn how to get started and
+                    start developing websites even faster with components on top of Control Panel.
+                </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-600">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                    Is there a Free Trail file available?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden p-4 text-gray-300">
+                    Yes, we provide a Free Trail file to help you prototype and design your website. You can find the file in
+                    our documentation or contact support.
+                </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-600">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                    What are the differences between LxRoot and Control Panel?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden p-4 text-gray-300">
+                    LxRoot is an open-source set of components, while Control Panel is a paid set of components
+                    developed by the same creators of Control Panel. LxRoot focuses more on interactivity.
+                </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-600">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                    What about browser support?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden p-4 text-gray-300">
+                    LxRoot supports all modern browsers including Chrome, Firefox, Safari, and Edge. However, Internet
+                    Explorer is not supported.
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="max-w-3xl mx-auto p-5 tab-content hidden" id="tab-3">
+            <h1 class="text-3xl font-bold mb-5 text-center">Technical FAQs</h1>
+
+            <div class="accordion-item border-b border-gray-600">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                    Can I use LxRoot in open-source projects?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden p-4 text-gray-300">
+                    LxRoot is an open-source library of interactive components built on top of Control Panel including
+                    buttons, dropdowns, modals, navbars, and more. Check out this guide to learn how to get started and
+                    start developing websites even faster with components on top of Control Panel.
+                </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-600">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                    Is there a Free Trail file available?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden p-4 text-gray-300">
+                    Yes, we provide a Free Trail file to help you prototype and design your website. You can find the file in
+                    our documentation or contact support.
+                </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-600">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                    What are the differences between LxRoot and Control Panel?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden p-4 text-gray-300">
+                    LxRoot is an open-source set of components, while Control Panel is a paid set of components
+                    developed by the same creators of Control Panel. LxRoot focuses more on interactivity.
+                </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-600">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                    What about browser support?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon " fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden p-4 text-gray-300">
+                    LxRoot supports all modern browsers including Chrome, Firefox, Safari, and Edge. However, Internet
+                    Explorer is not supported.
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <section class="max-w-3xl mx-auto p-5 tab-content hidden" id="tab-4">
+            <h1 class="text-3xl font-bold mb-5 text-center">Support FAQs</h1>
+
+            <div class="accordion-item border-b border-gray-600">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                    Can I use LxRoot in open-source projects?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden p-4 text-gray-300">
+                    LxRoot is an open-source library of interactive components built on top of Control Panel including
+                    buttons, dropdowns, modals, navbars, and more. Check out this guide to learn how to get started and
+                    start developing websites even faster with components on top of Control Panel.
+                </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-600">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                    Is there a Free Trail file available?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden p-4 text-gray-300">
+                    Yes, we provide a Free Trail file to help you prototype and design your website. You can find the file in
+                    our documentation or contact support.
+                </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-600">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                    What are the differences between LxRoot and Control Panel?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden p-4 text-gray-300">
+                    LxRoot is an open-source set of components, while Control Panel is a paid set of components
+                    developed by the same creators of Control Panel. LxRoot focuses more on interactivity.
+                </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-600">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                    What about browser support?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden p-4 text-gray-300">
+                    LxRoot supports all modern browsers including Chrome, Firefox, Safari, and Edge. However, Internet
+                    Explorer is not supported.
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+        <section class="max-w-3xl mx-auto p-5 tab-content hidden" id="tab-5">
+            <h1 class="text-3xl font-bold mb-5 text-center">Pricing FAQs</h1>
+
+            <div class="accordion-item border-b border-gray-600">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                    Can I use LxRoot in open-source projects?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden p-4 text-gray-300">
+                    LxRoot is an open-source library of interactive components built on top of Control Panel including
+                    buttons, dropdowns, modals, navbars, and more. Check out this guide to learn how to get started and
+                    start developing websites even faster with components on top of Control Panel.
+                </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-600">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                    Is there a Free Trail file available?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden p-4 text-gray-300">
+                    Yes, we provide a Free Trail file to help you prototype and design your website. You can find the file in
+                    our documentation or contact support.
+                </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-600">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                    What are the differences between LxRoot and Control Panel?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden p-4 text-gray-300">
+                    LxRoot is an open-source set of components, while Control Panel is a paid set of components
+                    developed by the same creators of Control Panel. LxRoot focuses more on interactivity.
+                </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-600">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center">
+                    What about browser support?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden p-4 text-gray-300">
+                    LxRoot supports all modern browsers including Chrome, Firefox, Safari, and Edge. However, Internet
+                    Explorer is not supported.
+                </div>
+            </div>
+
+        </section>
     </div>
-
-    <!-- Pricing Section Start -->
-
-
-    <!-- FAQs Section Start -->
-      <div class="max-w-7xl mx-auto faqs">
-        <h2 class="text-4xl font-semibold mb-8 font-white text-center">Frequently Asked Questions</h2>
-        
-        <div class="space-y-4">
-          <!-- FAQ 1 -->
-          <div>
-            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(1)">
-              <span class="faqs-ques">Am I charged for Addon, Alias and Sub domains?</span>
-              <span id="icon-1" class="transform transition-transform duration-500">+</span>
-            </button>
-            <div id="content-1" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-              <p class="faqs-ans">No, there's no charge for Addon, Alias and Sub domains. You are only billed for hosted applications (defined below).</p>
-            </div>
-          </div>
-          
-          <!-- FAQ 2 -->
-          <div>
-            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(2)">
-              <span class="faqs-ques">Is there a per server licence cost?</span>
-              <span id="icon-2" class="transform transition-transform duration-500">+</span>
-            </button>
-            <div id="content-2" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-              <p class="faqs-ans">No, an LxRoot cluster has a centralised control panel and an unlimited number of servers within it (shared or VPS/dedicated). They don't need to be on the same hardware or even in the same data centre. <br> <br>
-
-                If you provision a dedicated server with its own installation of LxRoot (a separate master organisation and control panel) then this installation will require its own licence key and be subject to the $20 minimum cost.</p>
-            </div>
-          </div>
-          
-          <!-- FAQ 3 -->
-          <div>
-            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(3)">
-              <span class="faqs-ques">What is a 'Hosted application'?</span>
-              <span id="icon-3" class="transform transition-transform duration-500">+</span>
-            </button>
-            <div id="content-3" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-              <p class="faqs-ans">A hosted application is an isolated, shared or containerised environment with its own system user, home directory, access rights and optional hard system resource limits. <br><br>
-
-                On LxRoot you can add unlimited Domain aliases which map to the same document root or another document root within that application/site without incurring any additional cost (this is equivalent to 'Addon domains' or 'Parked domain' functionality in other control panels).</p>
-            </div>
-          </div>
-          
-          <!-- FAQ 4 -->
-          <div>
-            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(4)">
-              <span class="faqs-ques">Why do you never see elephants hiding in trees?</span>
-              <span id="icon-4" class="transform transition-transform duration-500">+</span>
-            </button>
-            <div id="content-4" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-              <p class="faqs-ans">Because they're so good at it.</p>
-            </div>
-          </div>
-          
-          <!-- FAQ 5 -->
-          <div>
-            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(5)">
-              <span class="faqs-ques">Why can't you hear a pterodactyl go to the bathroom?</span>
-              <span id="icon-5" class="transform transition-transform duration-500">+</span>
-            </button>
-            <div id="content-5" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-              <p class="faqs-ans">Because the "P" is silent.</p>
-            </div>
-          </div>
-          
-          <!-- FAQ 6 -->
-          <div>
-            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(6)">
-              <span class="faqs-ques">Why did the invisible man turn down the job offer?</span>
-              <span id="icon-6" class="transform transition-transform duration-500">+</span>
-            </button>
-            <div id="content-6" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-              <p class="faqs-ans">He couldn't see himself doing it.</p>
-            </div>
-          </div>
-        </div>
-      </div>
 
     <!-- FAQs Section End -->
 
@@ -730,12 +941,12 @@
             enterprisePrice.textContent = `$${monthlyPrices.enterprise}`;
 
             // Set the active style for Monthly button
-            monthlyBtn.classList.add('bg-indigo-600', 'text-white');
+            monthlyBtn.classList.add('bg-indigo-500', 'text-white');
             monthlyBtn.classList.remove('bg-gray-200', 'text-gray-700');
 
             // Set the inactive style for Yearly button
             yearlyBtn.classList.add('bg-gray-200', 'text-gray-700');
-            yearlyBtn.classList.remove('bg-indigo-600', 'text-white');
+            yearlyBtn.classList.remove('bg-indigo-500', 'text-white');
         });
 
         // Event listener for yearly prices
@@ -745,12 +956,12 @@
             enterprisePrice.textContent = `$${yearlyPrices.enterprise}`;
 
             // Set the active style for Yearly button
-            yearlyBtn.classList.add('bg-indigo-600', 'text-white');
+            yearlyBtn.classList.add('bg-indigo-500', 'text-white');
             yearlyBtn.classList.remove('bg-gray-200', 'text-gray-700');
 
             // Set the inactive style for Monthly button
             monthlyBtn.classList.add('bg-gray-200', 'text-gray-700');
-            monthlyBtn.classList.remove('bg-indigo-600', 'text-white');
+            monthlyBtn.classList.remove('bg-indigo-500', 'text-white');
         });
 
         // End Pricing Toggle 
@@ -760,21 +971,43 @@
         function toggleAccordion(index) {
             const content = document.getElementById(`content-${index}`);
             const icon = document.getElementById(`icon-${index}`);
-            
+
             if (content.classList.contains('hidden')) {
-              content.classList.remove('hidden');
-              icon.textContent = '-';
-              icon.classList.add('rotate-180');
+                content.classList.remove('hidden');
+                icon.textContent = '-';
+                icon.classList.add('rotate-180');
             } else {
-              content.classList.add('hidden');
-              icon.textContent = '+';
-              icon.classList.remove('rotate-180');
+                content.classList.add('hidden');
+                icon.textContent = '+';
+                icon.classList.remove('rotate-180');
             }
-          }
+        }
+
+
+        // FAQs category Tabs Changer
+        function showTab(tabNumber) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.add('hidden'));
+
+            // Show the selected tab
+            document.getElementById(`tab-${tabNumber}`).classList.remove('hidden');
+
+            // Reset all buttons
+            const buttons = document.querySelectorAll('button[id^="tab-"]');
+            buttons.forEach(button => {
+                button.classList.remove('bg-indigo-600', 'text-white');
+                button.classList.add('bg-indigo-100', 'text-indigo-600');
+            });
+
+            // Highlight the selected button
+            document.getElementById(`tab-${tabNumber}-btn`).classList.remove('bg-indigo-100', 'text-indigo-600');
+            document.getElementById(`tab-${tabNumber}-btn`).classList.add('bg-indigo-600', 'text-white');
+        }
+
 
 
     </script>
-
 
     <!-- JavaScript End -->
 

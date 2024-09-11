@@ -1,4 +1,41 @@
 /* Custom CSS Start*/
+
+/* Home Page */
+.main-hero{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.hero-start{
+    margin-top: -50px;
+    margin-bottom: -40px;
+}
+
+.safe-space{
+    margin-top: 200px;
+    margin-bottom: 220px;
+}
+
+#home-price-sec{
+    padding-top: 200px;
+    padding-bottom:200px;
+}
+
+.client-review-sec{
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+
+.testimonial {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slider-container {
+    display: flex;
+    overflow: hidden;
+  }
+
 .team-member {
     background: #192441;
     padding-top: 50px;
@@ -194,7 +231,7 @@
 .tech-other-feature:hover {
     background-color: #17203a;
     border: 1px solid #192441;
-    transition-duration: 0.3s;
+    transition-duration: 300ms;
 }
 
 .technology-sec {
@@ -258,7 +295,7 @@
 .product-features:hover {
     background-color: #17203a;
     border: 1px solid #433bdb;
-    transition-duration: 0.3s;
+    transition-duration: 300ms;
 }
 
 .single-product-features {
@@ -272,7 +309,7 @@
 .single-product-features:hover {
     background-color: #17203a;
     border: 1px solid #433bdb;
-    transition-duration: 0.3s;
+    transition-duration: 300ms;
 }
 
 .single-product-features p {
@@ -289,8 +326,7 @@
 
 
 .pricing-title h1{
-
-    color: #6b63ff;
+    color: white;
     font-size: 40px;
     text-align: center;
 }
@@ -306,7 +342,7 @@
     width: 100%;
     text-align: center;
     background-color: #433bdb;
-    transition-duration: 0.3s;
+    transition-duration: 300ms;
 }
 
 .active-buy-plan{
@@ -319,7 +355,7 @@
     width: 100%;
     text-align: center;
     background-color: #483fec;
-    transition-duration: 0.3s;
+    transition-duration: 300ms;
 }
 
 .active-pricing-card{
@@ -333,10 +369,30 @@
     color: white;
 }
 
-
-
 .faqs-ans{
-    color: #eee9ff;
+    color: #98a3b8;
+}
+
+
+/* FAQs Page */
+
+.faqs-main{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.faqs-main h1{
+    color: white;
+}
+
+.accordion-item{
+    color: white;
+}
+
+.faq-para{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Custom CSS End */
@@ -425,7 +481,7 @@ body.light-mode .dropdown-menu {
     background-color: white;
     border: 1px solid #2d26ad;
     border-top: 3px solid #2d26ad;
-    animation-duration: 0.3s;
+    animation-duration: 300ms;
 }
 
 body.light-mode .dropdown-item:hover {
@@ -532,41 +588,42 @@ body.light-mode .home-feture {
 }
 
 body.light-mode .feature-card {
-    background-color: #4c44e7;
-    border: none;
+    background-color: #f8f8f8;
+    color: #0B1120;
+    border: 1px solid #c9e0ff;
 }
 
 body.light-mode .feature-card:hover {
-    background-color: #2d26ad;
+    border: 1px solid #4c44e7;
 }
 
 body.light-mode .feature-card h3 {
-    color: white;
+    color: #0B1120;
 }
 
 body.light-mode .feature-card i {
-    color: #433bdb;
-    background-color: white;
+    color: white;
+    background-color: #483fec;
 }
 
 body.light-mode .feature-card p {
-    color: #f6f4ff;
+    color: #0f1527;
 }
 
 body.light-mode .feature-card a {
-    color: white;
+    color: #0f1527;
     font-weight: 400;
-    border: 1px solid #beacff;
+    border: 1px solid #17203a;
 }
 
 body.light-mode .feature-card a:hover {
-    color: #433bdb;
-    background-color: white;
-    border: 1px solid white;
+    color: white;
+    background-color: #483fec;
+    border: 1px solid #483fec;
 }
 
 body.light-mode #home-price-sec {
-    background: #f8f8f8;
+    background-image: linear-gradient(to right, #f1eeff, rgb(251, 252, 255), #f1eeff);
     color: #0B1120;
 }
 
@@ -626,8 +683,8 @@ body.light-mode .homepage-support-top p {
 }
 
 body.light-mode .homepage-support-card i {
-    background-color: white;
-    color: #433bdb;
+    background-color: #483fec;
+    color: white;
 }
 
 body.light-mode .homepage-support-card a {
@@ -647,31 +704,31 @@ body.light-mode .homepage-support-card p {
 }
 
 
-body.light-mode .home-review {
-    background-color: #f6f4ff;
+body.light-mode .client-review-sec{
+    background-image: linear-gradient(to right, #f1eeff, rgb(251, 252, 255), #f1eeff);
+}
+
+body.light-mode .home-review{
+    background-color: #ffffff;
+    border: 1px solid #c9e0ff;
+}
+
+body.light-mode .home-review:hover{
+    border: 1px solid #483fec;
+    transition-duration: 300ms;
 }
 
 body.light-mode .home-review i {
-    background-color: white;
+    background-color: #f1eeff;
     color: #433bdb;
 }
 
-body.light-mode .review-left-btn {
-    background-color: #e2e8f0;
-    color: #433bdb;
+body.light-mode .fa-arrow-right{
+    color: white;
 }
 
-body.light-mode .review-left-btn svg {
-    background-color: #e2e8f0;
-    color: #433bdb;
-}
-
-body.light-mode .review-right-btn {
-    background-color: #6c64ff;
-}
-
-body.light-mode .review-icon {
-    color: #0B1120;
+body.light-mode .fa-arrow-left{
+    color: #483fec;
 }
 
 body.light-mode .review-user {
@@ -679,37 +736,36 @@ body.light-mode .review-user {
 }
 
 body.light-mode .home-cta {
-    background: #2d26ad;
+    background-image: linear-gradient(to right, #f1eeff, rgb(251, 252, 255), #f1eeff);
 }
 
 body.light-mode .home-cta h2 {
-    color: white;
+    color: #0B1120;
     font-weight: bold;
 }
 
 body.light-mode .home-cta p {
-    color: #f6f4ff;
+    color: #0f1527;
 }
 
 body.light-mode .cta-live-btn {
-    color: white;
-    border: 1px solid white;
+    color: #0f1527;
+    border: 1px solid #0f1527;
 }
 
 body.light-mode .cta-live-btn:hover {
-    background-color: white;
-    border: 1px solid white;
-    color: #433bdb;
+    background-color: #0B1120;
+    border: 1px solid #0f1527;
+    color: white;
 }
 
 body.light-mode .cta-start-btn {
-    background-color: white;
-    color: #2d26ad;
+    background-color: #483fec;
+    color: white;
 }
 
 body.light-mode .cta-start-btn:hover {
-    background-color: #4c44e7;
-    color: white;
+    background-color: #2d26ad;
 }
 
 body.light-mode .footer-text {
@@ -778,7 +834,7 @@ body.light-mode .tech-other-feature {
 body.light-mode .tech-other-feature:hover {
     background-color: white;
     border: 1px solid #483fec;
-    transition-duration: 0.3s;
+    transition-duration: 300ms;
 
 }
 
@@ -1037,6 +1093,36 @@ body.light-mode .active-buy-plan{
 
 body.light-mode .toggle-button{
     border: 1px solid #2e3e6b;
+}
+
+body.light-mode .faqs h2{
+    color: #0B1120;
+}
+
+body.light-mode .faqs button{
+    background-color: #f6f4ff;
+}
+
+body.light-mode .faqs-des{
+    background-color: white;
+}
+
+body.light-mode .faqs-ans{
+    color: #4b5563;
+}
+
+/* FAQs Page */
+
+body.light-mode .faqs-main h1{
+    color: #0B1120;
+}
+
+body.light-mode .accordion-item{
+    color: #0B1120;
+}
+
+body.light-mode .accor-icon{
+    color: white;
 }
 
 
@@ -1319,6 +1405,31 @@ body.light-mode .toggle-button{
         font-size: 15px;
     }
 
+    .faqs{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 90%;
+    }
+    
+    .faqs h2{
+        font-size: 24px;
+    }
+
+    .faqs-ques {
+        font-size: 15px;
+    }
+
+    .faqs-ans{
+        color: #98a3b8;
+        font-size: 15px;
+    }
+
+
+    /* FAQs Page */
+    .faqs-tab {
+        gap: 8px;
+    }
+
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
@@ -1465,8 +1576,6 @@ body.light-mode .toggle-button{
         padding: 30px;
     }
 
-
-
 }
 
 
@@ -1509,6 +1618,8 @@ body.light-mode .toggle-button{
         padding-right: 20px;
         margin-bottom: 80px;
     }
+
+    /* FAQs page */
 
 
 }

@@ -287,6 +287,12 @@
   border: 1px solid #4b5563;
 }
 
+.pricing-title h1{
+  color: #6b63ff;
+  font-size: 40px;
+  text-align: center;
+}
+
 .buy-plan{
   width: 100%;
   text-align: center;
@@ -315,6 +321,17 @@
 
 .active-pricing-card{
   border: 2px solid #433bdb;
+}
+
+.faqs{
+  margin-top: 140px;
+  margin-bottom: 140px;
+  width: 60%;
+  color: white;
+}
+
+.faqs-ans{
+  color: #eee9ff;
 }
 
 /* Custom CSS End */
@@ -995,9 +1012,8 @@ body.light-mode .pricing-card{
   box-shadow: #212e50;
 }
 
-body.light-mode .toggle-button{
-  background-color: white;
-  border: 1px solid #0f1527;
+body.light-mode .pricing-title h1{
+  color: #483fec;
 }
 
 body.light-mode .buy-plan:hover{
@@ -1010,9 +1026,8 @@ body.light-mode .active-buy-plan{
   color: white;
 }
 
-body.light-mode .active-buy-plan:hover{
-  background-color: #2d26ad;
-  color: white;
+body.light-mode .toggle-button{
+  border: 1px solid #2e3e6b;
 }
 
 /* White Mode Theme End */
@@ -1258,6 +1273,37 @@ body.light-mode .active-buy-plan:hover{
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  /* Pricing Page */
+
+  .pricing-title{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .pricing-title p{
+    font-size: 15px;
+  }
+
+  .toggle-button{
+    font-size: 15px;
+  }
+
+  .pricing-card{
+    padding: 30px;
+  }
+
+  .pricing-card span{
+    font-size: 20px;
+  }
+
+  .pricing-card button{
+    font-size: 18px;
+  }
+
+  .pricing-card li{
+    font-size: 15px;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
@@ -1400,6 +1446,17 @@ body.light-mode .active-buy-plan:hover{
   .product-feature-sec {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  /* Pricing Page */
+
+  .pricing-title{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .pricing-card{
+    padding: 30px;
   }
 }
 

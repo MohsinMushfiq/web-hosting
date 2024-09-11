@@ -308,20 +308,20 @@
 
 
     <!-- Pricing Section Start -->
-    <div class="max-w-7xl mx-auto flex flex-col items-center text-white py-16">
+    <div class="max-w-7xl mx-auto flex flex-col items-center text-white py-16 pricing-title">
         <h2 class="text-base font-semibold text-gray-300">LXROOT LICENCE</h2>
         <h1 class="text-5xl font-bold mt-2 text-indigo-400">Scalable Pricing</h1>
         <p class="text-gray-400 text-center max-w-2xl mt-2 mb-8">Pay only for the applications you host, not for the
             number of servers you run.</p>
 
         <!-- Toggle Section -->
-        <!-- Toggle Section -->
-        <div class="flex space-x-4 bg-gray-700 p-2 rounded-lg mt-8 border border-gray-700 shadow-md toggle-button">
+        <div class="flex space-x-4 bg-gray-200 p-2 rounded-lg mt-8 border border-gray-400 shadow-md toggle-button">
             <button id="monthlyBtn"
-                class="py-2 px-6 bg-indigo-500 text-white rounded-lg focus:outline-none">Monthly</button>
+                class="py-2 px-6 bg-indigo-500 !text-white rounded-lg focus:outline-none">Monthly</button>
             <button id="yearlyBtn"
                 class="py-2 px-6 bg-gray-200 text-gray-700 rounded-lg focus:outline-none">Annually</button>
         </div>
+
 
 
         <!-- Pricing Cards -->
@@ -386,6 +386,80 @@
     <!-- Pricing Section Start -->
 
 
+    <!-- FAQs Section Start -->
+      <div class="max-w-7xl mx-auto faqs">
+        <h2 class="text-4xl font-semibold mb-8 font-white text-center">Frequently Asked Questions</h2>
+        
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div>
+            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(1)">
+              <span class="faqs-ques">Am I charged for Addon, Alias and Sub domains?</span>
+              <span id="icon-1" class="transform transition-transform duration-300">+</span>
+            </button>
+            <div id="content-1" class="hidden p-4 bg-gray-700 rounded-lg">
+              <p class="faqs-ans">No, there's no charge for Addon, Alias and Sub domains. You are only billed for hosted applications (defined below).</p>
+            </div>
+          </div>
+          
+          <!-- FAQ 2 -->
+          <div>
+            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(2)">
+              <span>How do you make holy water?</span>
+              <span id="icon-2" class="transform transition-transform duration-300">+</span>
+            </button>
+            <div id="content-2" class="hidden p-4 bg-gray-700 rounded-lg">
+              <p class="faqs-ans">You boil the hell out of it.</p>
+            </div>
+          </div>
+          
+          <!-- FAQ 3 -->
+          <div>
+            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(3)">
+              <span>What do you call someone with no body and no nose?</span>
+              <span id="icon-3" class="transform transition-transform duration-300">+</span>
+            </button>
+            <div id="content-3" class="hidden p-4 bg-gray-700 rounded-lg">
+              <p class="faqs-ans">Nobody knows.</p>
+            </div>
+          </div>
+          
+          <!-- FAQ 4 -->
+          <div>
+            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(4)">
+              <span>Why do you never see elephants hiding in trees?</span>
+              <span id="icon-4" class="transform transition-transform duration-300">+</span>
+            </button>
+            <div id="content-4" class="hidden p-4 bg-gray-700 rounded-lg">
+              <p class="faqs-ans">Because they're so good at it.</p>
+            </div>
+          </div>
+          
+          <!-- FAQ 5 -->
+          <div>
+            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(5)">
+              <span>Why can't you hear a pterodactyl go to the bathroom?</span>
+              <span id="icon-5" class="transform transition-transform duration-300">+</span>
+            </button>
+            <div id="content-5" class="hidden p-4 bg-gray-700 rounded-lg">
+              <p class="faqs-ans">Because the "P" is silent.</p>
+            </div>
+          </div>
+          
+          <!-- FAQ 6 -->
+          <div>
+            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(6)">
+              <span>Why did the invisible man turn down the job offer?</span>
+              <span id="icon-6" class="transform transition-transform duration-300">+</span>
+            </button>
+            <div id="content-6" class="hidden p-4 bg-gray-700 rounded-lg">
+              <p class="faqs-ans">He couldn't see himself doing it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- FAQs Section End -->
 
 
 
@@ -651,10 +725,11 @@
             professionalPrice.textContent = `$${monthlyPrices.professional}`;
             enterprisePrice.textContent = `$${monthlyPrices.enterprise}`;
 
-            // Toggle active button styles
+            // Set the active style for Monthly button
             monthlyBtn.classList.add('bg-indigo-500', 'text-white');
             monthlyBtn.classList.remove('bg-gray-200', 'text-gray-700');
 
+            // Set the inactive style for Yearly button
             yearlyBtn.classList.add('bg-gray-200', 'text-gray-700');
             yearlyBtn.classList.remove('bg-indigo-500', 'text-white');
         });
@@ -665,10 +740,11 @@
             professionalPrice.textContent = `$${yearlyPrices.professional}`;
             enterprisePrice.textContent = `$${yearlyPrices.enterprise}`;
 
-            // Toggle active button styles
+            // Set the active style for Yearly button
             yearlyBtn.classList.add('bg-indigo-500', 'text-white');
             yearlyBtn.classList.remove('bg-gray-200', 'text-gray-700');
 
+            // Set the inactive style for Monthly button
             monthlyBtn.classList.add('bg-gray-200', 'text-gray-700');
             monthlyBtn.classList.remove('bg-indigo-500', 'text-white');
         });
@@ -676,7 +752,21 @@
         // End Pricing Toggle 
 
 
-
+        // FAQs Toggle
+        function toggleAccordion(index) {
+            const content = document.getElementById(`content-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+            
+            if (content.classList.contains('hidden')) {
+              content.classList.remove('hidden');
+              icon.textContent = '-';
+              icon.classList.add('rotate-180');
+            } else {
+              content.classList.add('hidden');
+              icon.textContent = '+';
+              icon.classList.remove('rotate-180');
+            }
+          }
 
 
     </script>

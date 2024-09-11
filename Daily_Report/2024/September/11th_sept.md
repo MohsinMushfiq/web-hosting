@@ -1,6 +1,6 @@
 <h2>Updates - 11th September, 2024</h2>
 
-Video - https://www.loom.com/share/4e0b2e57f64d4f4d8b68d1b831f07f79?sid=5fe7617e-4da4-4218-b490-5cca2e03edfa</br>
+Video - https://www.loom.com/share/5fc3bf74873c442ab34d1e69669a32f3?sid=3d6c310e-c13a-48b8-91dc-2f482a9efbdf</br>
 Live URL - https://mohsin.lxroot.net/day13 </br>
 GitHub - https://github.com/MohsinMushfiq/LxRoot/blob/main/Daily_Report/2024/September/11th_sept.md
 

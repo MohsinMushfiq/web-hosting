@@ -4,7 +4,6 @@ module.exports = {
   // ...
   content: [
     "index.html",
-    "about.html",
   ],
   theme: {
     extend: {

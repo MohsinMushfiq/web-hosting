@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout | LxRoot</title>
+    <title>Reset Password | LxRoot</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./output/tailwind.css">
     <link rel="stylesheet" href="./src/style.css">
@@ -55,124 +55,32 @@
     </div>
 </header>
 
-  <nav class="bg-indigo-100 py-4">
-    <div class="max-w-7xl mx-auto flex items-center justify-center  px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center space-x-4 justify-center">
-        <a href="getstarted.html" class="text-gray-500">Shop</a>
-        <a href="checkout.html" class="text-indigo-700 font-semibold">Checkout</a>
-        <a href="#" class="text-gray-500">Complete</a>
-      </div>
-      <div>
-        <a href="#" class="text-indigo-700 flex items-center space-x-2 ml-8">
-          <span>1 items</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18l-1.68 8.54A2 2 0 0117.36 13H6.64a2 2 0 01-1.96-1.46L3 3z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13h14v7a2 2 0 01-2 2H7a2 2 0 01-2-2v-7z" />
-          </svg>
-        </a>
-      </div>
-    </div>
-  </nav>
 
+<div class="max-w-3xl mx-auto flex flex-col justify-center px-8 py-8 mt-28">
+    <div class="mt-10">
+      <form class="space-y-6" action="#" method="POST">
 
-   <!-- Top Banner -->
-  <div class="max-w-2xl mx-auto bg-gray-100 py-4 mt-16">
-    <div class="flex items-center justify-between px-4 sm:px-6 lg:px-8 rounded">
-      <div class="flex items-center space-x-4">
-        <a href="#" class="text-indigo-700 flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18l-1.68 8.54A2 2 0 0117.36 13H6.64a2 2 0 01-1.96-1.46L3 3z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13h14v7a2 2 0 01-2 2H7a2 2 0 01-2-2v-7z" />
-          </svg>
-          <span class="ml-2 text-gray-800 hover:text-indigo-800">Not quite finished</span>
-        </a>
-      </div>
-      <div>
-        <a href="pricing.html" target="_blank" class="text-gray-700 flex items-center hover:text-indigo-800">
-          <span>Continue buying</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 ml-2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 12h14" />
-          </svg>
-        </a>
-      </div>
+        <h2 class="text-3xl">Reset Your Password</h2>
+        <p class="py-5 bg-gray-100 pl-8 border-l-[6px] border-indigo-500 rounded">Enter your email address and we’ll send you a password reset link.</p>
+        
+        <div>
+          <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+          <div class="mt-2">
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="Enter Email here" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-4">
+          </div>
+        </div>
+  
+        <div>
+          <button type="submit" class="flex px-12 justify-center rounded-md bg-indigo-600 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700">Reset Password 
+             &RightArrow;</button>
+        </div>
+      </form>
     </div>
   </div>
 
-  <!-- Checkout Card -->
-  <main class="max-w-2xl mx-auto mt-8 bg-white shadow-lg rounded-lg border border-gray-200 p-12">
-    <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between">
-      <!-- Product Information -->
-      <div class="flex items-center space-x-4 mb-4 lg:mb-0">
-        <div class="bg-indigo-100 p-4 rounded-lg">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-12 h-12 text-indigo-600">
-            <path d="M12 2a7 7 0 00-7 7v4a5 5 0 01-1 3h16a5 5 0 01-1-3V9a7 7 0 00-7-7zm0 2a5 5 0 015 5v4a3 3 0 01.17 1H6.83A3 3 0 017 13V9a5 5 0 015-5zm1 8V9a1 1 0 10-2 0v3h2zm1 3h-4v1h4v-1z" />
-          </svg>
-        </div>
-        <div>
-          <h2 class="font-bold text-xl">Licence Key</h2>
-          <p class="text-gray-600">$20</p>
-        </div>
-      </div>
-      
-      <!-- Dropdown and Delete -->
-      <div class="flex items-center space-x-4">
-        <select class="border border-gray-300 rounded-lg py-2 px-3 text-gray-600">
-          <option>Monthly</option>
-          <option>Yearly</option>
-        </select>
-      </div>
-    </div>
 
-    <!-- Discount Code Input -->
-    <div class="mt-4">
-      <label for="discount-code" class="block text-gray-600">Enter Your Discount Code!</label>
-      <div class="flex items-center mt-2">
-        <input type="text" id="discount-code" placeholder="Enter Your Discount Code" class="flex-1 border border-gray-300 rounded-lg py-2 px-4 mr-2">
-        <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500">Apply Now</button>
-      </div>
-    </div>
-
-    <!-- Subtotal -->
-    <div class="mt-4 border-t border-gray-200 pt-4">
-      <div class="flex justify-between text-gray-600">
-        <p>Subtotal:</p>
-        <p>$20.00</p>
-      </div>
-      <div class="flex justify-between text-gray-600">
-        <p>VAT (0%):</p>
-        <p>$0.00</p>
-      </div>
-      <div class="flex justify-between font-bold text-gray-900 mt-2">
-        <p>Total to Pay:</p>
-        <p>$20.00</p>
-      </div>
-    </div>
-
-    <!-- Checkout Button and Agreement -->
-    <div class="mt-8">
-        <a href="signin.html"><button class="flex items-center justify-center w-full text-indigo-600 border border-indigo-600 rounded-lg py-2 px-4 hover:bg-gray-50 duration-300">
-        Sign in to proceed with checkout. <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 ml-2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 12h14" />
-          </svg>
-      </button></a>
-    </div>
-
-    <!-- Terms & Conditions -->
-    <div class="mt-4 flex items-start">
-      <input type="checkbox" id="terms" class="mt-1 h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
-      <label for="terms" class="ml-2 text-gray-600">I confirm that I have read and agree to the <a href="#" class="text-indigo-600 hover:underline">terms & conditions</a> and <a href="#" class="text-indigo-600 hover:underline">Privacy Policy</a>.</label>
-    </div>
-
-    <!-- Place Order Button -->
-    <button class="mt-4 w-full bg-indigo-200 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-300 duration-300">Place Order & Pay</button>
-  </main>
-
-
- 
- 
- 
- <!-- Footer -->
- <footer class="bg-indigo-600 text-white py-4 mt-16">
+<!-- Footer -->
+<footer class="bg-indigo-600 text-white py-4 mt-80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between">
       <p class="text-white">LxRoot LLC &copy; 2024</p>
       <div class="flex space-x-4">

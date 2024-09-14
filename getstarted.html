@@ -1,168 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart | LxRoot</title>
+    <title>Add to Cart | LxRoot</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./output/tailwind.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/7.13.0/simple-icons.min.css">
 </head>
-<body class="bg-gray-100 font-inter">
 
-    <header class="bg-white shadow-md py-1 px-8 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Left Side: Logo -->
-            <div>
-                <a href="index.html">
-                    <svg width="65" height="65" viewBox="0 0 100 100" fill="" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.11206 59V42.2H13.1921V55.4H20.6801V59H9.11206Z"></path>
-                        <path
-                            d="M31.1771 59L28.4651 54.896L27.2171 53.144L22.1771 46.256H26.7851L29.4011 50.168L30.7691 52.04L35.7371 59H31.1771ZM22.0571 59L27.1931 51.848L29.2571 54.32L26.5931 59H22.0571ZM30.4811 53.456L28.4411 51.008L30.9611 46.256H35.4971L30.4811 53.456Z">
-                        </path>
-                        <path
-                            d="M38.2917 59V42.2H45.8517C46.9237 42.2 47.8917 42.432 48.7557 42.896C49.6357 43.36 50.3237 44 50.8197 44.816C51.3157 45.616 51.5637 46.528 51.5637 47.552C51.5637 48.608 51.3157 49.56 50.8197 50.408C50.3237 51.24 49.6437 51.896 48.7797 52.376C47.9157 52.856 46.9397 53.096 45.8517 53.096H42.1797V59H38.2917ZM47.6037 59L43.3317 51.416L47.5077 50.816L52.2597 59H47.6037ZM42.1797 49.976H45.4917C45.9077 49.976 46.2677 49.888 46.5717 49.712C46.8917 49.52 47.1317 49.256 47.2917 48.92C47.4677 48.584 47.5557 48.2 47.5557 47.768C47.5557 47.336 47.4598 46.96 47.2677 46.64C47.0757 46.304 46.7957 46.048 46.4277 45.872C46.0757 45.696 45.6437 45.608 45.1317 45.608H42.1797V49.976Z">
-                        </path>
-                        <path
-                            d="M60.2666 59.24C58.9386 59.24 57.7546 58.952 56.7146 58.376C55.6906 57.8 54.8746 57.016 54.2666 56.024C53.6746 55.032 53.3786 53.896 53.3786 52.616C53.3786 51.336 53.6746 50.2 54.2666 49.208C54.8746 48.216 55.6906 47.432 56.7146 46.856C57.7546 46.28 58.9386 45.992 60.2666 45.992C61.5946 45.992 62.7706 46.28 63.7946 46.856C64.8346 47.432 65.6506 48.216 66.2426 49.208C66.8346 50.2 67.1306 51.336 67.1306 52.616C67.1306 53.896 66.8346 55.032 66.2426 56.024C65.6506 57.016 64.8346 57.8 63.7946 58.376C62.7706 58.952 61.5946 59.24 60.2666 59.24ZM60.2666 55.928C60.8426 55.928 61.3546 55.784 61.8026 55.496C62.2506 55.208 62.6026 54.816 62.8586 54.32C63.1146 53.824 63.2346 53.256 63.2186 52.616C63.2346 51.976 63.1146 51.408 62.8586 50.912C62.6026 50.4 62.2506 50 61.8026 49.712C61.3546 49.424 60.8426 49.28 60.2666 49.28C59.6906 49.28 59.1706 49.424 58.7066 49.712C58.2586 50 57.9066 50.4 57.6506 50.912C57.3946 51.408 57.2746 51.976 57.2906 52.616C57.2746 53.256 57.3946 53.824 57.6506 54.32C57.9066 54.816 58.2586 55.208 58.7066 55.496C59.1706 55.784 59.6906 55.928 60.2666 55.928Z">
-                        </path>
-                        <path
-                            d="M75.6416 59.24C74.3136 59.24 73.1296 58.952 72.0896 58.376C71.0656 57.8 70.2496 57.016 69.6416 56.024C69.0496 55.032 68.7536 53.896 68.7536 52.616C68.7536 51.336 69.0496 50.2 69.6416 49.208C70.2496 48.216 71.0656 47.432 72.0896 46.856C73.1296 46.28 74.3136 45.992 75.6416 45.992C76.9696 45.992 78.1456 46.28 79.1696 46.856C80.2096 47.432 81.0256 48.216 81.6176 49.208C82.2096 50.2 82.5056 51.336 82.5056 52.616C82.5056 53.896 82.2096 55.032 81.6176 56.024C81.0256 57.016 80.2096 57.8 79.1696 58.376C78.1456 58.952 76.9696 59.24 75.6416 59.24ZM75.6416 55.928C76.2176 55.928 76.7296 55.784 77.1776 55.496C77.6256 55.208 77.9776 54.816 78.2336 54.32C78.4896 53.824 78.6096 53.256 78.5936 52.616C78.6096 51.976 78.4896 51.408 78.2336 50.912C77.9776 50.4 77.6256 50 77.1776 49.712C76.7296 49.424 76.2176 49.28 75.6416 49.28C75.0656 49.28 74.5456 49.424 74.0816 49.712C73.6336 50 73.2816 50.4 73.0256 50.912C72.7696 51.408 72.6496 51.976 72.6656 52.616C72.6496 53.256 72.7696 53.824 73.0256 54.32C73.2816 54.816 73.6336 55.208 74.0816 55.496C74.5456 55.784 75.0656 55.928 75.6416 55.928Z">
-                        </path>
-                        <path d="M86.0726 59V43.04H89.9126V59H86.0726ZM83.8166 49.616V46.256H92.3846V49.616H83.8166Z">
-                        </path>
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M76.5399 64C71.5099 73.5156 61.5123 80 50.0001 80C38.4879 80 28.4902 73.5156 23.4603 64H12.5185C18.1935 79.1867 32.834 90 50.0001 90C67.1662 90 81.8067 79.1867 87.4817 64H76.5399ZM22.4964 38C27.1257 27.4046 37.6982 20 50.0001 20C62.302 20 72.8745 27.4046 77.5038 38H88.1689C83.0718 21.7716 67.9107 10 50.0001 10C32.0895 10 16.9284 21.7716 11.8313 38H22.4964Z">
-                        </path>
-                    </svg>
-                </a>
-            </div>
+<body class="bg-gray-50 font-inter">
 
-            <!-- Right Side: Language Selector, Currency Selector, My Account -->
-            <div class="flex items-center space-x-6">
-                <a href="login.html" class="border border-indigo-600 rounded px-4 py-1.5 hover:bg-indigo-600 hover:text-white duration-300" target="_blank">My Account</a>
-            </div>
-        </div>
-    </header>
-
-
-
-    <div class="max-w-5xl mx-auto container p-8">
-        <h2 class="text-2xl font-semibold text-center mb-6 mt-24">Let's Get Started</h2>
-
-        <div class="grid grid-cols-2 gap-8">
-
-        <div class="mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2">Currency</label>
-            <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="currency" onchange="updatePrices()">
-                <option value="bdt">BDT</option>
-                <option value="usd">USD</option>
-            </select>
+  <!-- Top navigation -->
+  <header class="bg-white shadow-md py-1 px-8 sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Left Side: Logo -->
+        <div>
+            <a href="index.html">
+                <svg width="65" height="65" viewBox="0 0 100 100" fill="" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.11206 59V42.2H13.1921V55.4H20.6801V59H9.11206Z"></path>
+                    <path
+                        d="M31.1771 59L28.4651 54.896L27.2171 53.144L22.1771 46.256H26.7851L29.4011 50.168L30.7691 52.04L35.7371 59H31.1771ZM22.0571 59L27.1931 51.848L29.2571 54.32L26.5931 59H22.0571ZM30.4811 53.456L28.4411 51.008L30.9611 46.256H35.4971L30.4811 53.456Z">
+                    </path>
+                    <path
+                        d="M38.2917 59V42.2H45.8517C46.9237 42.2 47.8917 42.432 48.7557 42.896C49.6357 43.36 50.3237 44 50.8197 44.816C51.3157 45.616 51.5637 46.528 51.5637 47.552C51.5637 48.608 51.3157 49.56 50.8197 50.408C50.3237 51.24 49.6437 51.896 48.7797 52.376C47.9157 52.856 46.9397 53.096 45.8517 53.096H42.1797V59H38.2917ZM47.6037 59L43.3317 51.416L47.5077 50.816L52.2597 59H47.6037ZM42.1797 49.976H45.4917C45.9077 49.976 46.2677 49.888 46.5717 49.712C46.8917 49.52 47.1317 49.256 47.2917 48.92C47.4677 48.584 47.5557 48.2 47.5557 47.768C47.5557 47.336 47.4598 46.96 47.2677 46.64C47.0757 46.304 46.7957 46.048 46.4277 45.872C46.0757 45.696 45.6437 45.608 45.1317 45.608H42.1797V49.976Z">
+                    </path>
+                    <path
+                        d="M60.2666 59.24C58.9386 59.24 57.7546 58.952 56.7146 58.376C55.6906 57.8 54.8746 57.016 54.2666 56.024C53.6746 55.032 53.3786 53.896 53.3786 52.616C53.3786 51.336 53.6746 50.2 54.2666 49.208C54.8746 48.216 55.6906 47.432 56.7146 46.856C57.7546 46.28 58.9386 45.992 60.2666 45.992C61.5946 45.992 62.7706 46.28 63.7946 46.856C64.8346 47.432 65.6506 48.216 66.2426 49.208C66.8346 50.2 67.1306 51.336 67.1306 52.616C67.1306 53.896 66.8346 55.032 66.2426 56.024C65.6506 57.016 64.8346 57.8 63.7946 58.376C62.7706 58.952 61.5946 59.24 60.2666 59.24ZM60.2666 55.928C60.8426 55.928 61.3546 55.784 61.8026 55.496C62.2506 55.208 62.6026 54.816 62.8586 54.32C63.1146 53.824 63.2346 53.256 63.2186 52.616C63.2346 51.976 63.1146 51.408 62.8586 50.912C62.6026 50.4 62.2506 50 61.8026 49.712C61.3546 49.424 60.8426 49.28 60.2666 49.28C59.6906 49.28 59.1706 49.424 58.7066 49.712C58.2586 50 57.9066 50.4 57.6506 50.912C57.3946 51.408 57.2746 51.976 57.2906 52.616C57.2746 53.256 57.3946 53.824 57.6506 54.32C57.9066 54.816 58.2586 55.208 58.7066 55.496C59.1706 55.784 59.6906 55.928 60.2666 55.928Z">
+                    </path>
+                    <path
+                        d="M75.6416 59.24C74.3136 59.24 73.1296 58.952 72.0896 58.376C71.0656 57.8 70.2496 57.016 69.6416 56.024C69.0496 55.032 68.7536 53.896 68.7536 52.616C68.7536 51.336 69.0496 50.2 69.6416 49.208C70.2496 48.216 71.0656 47.432 72.0896 46.856C73.1296 46.28 74.3136 45.992 75.6416 45.992C76.9696 45.992 78.1456 46.28 79.1696 46.856C80.2096 47.432 81.0256 48.216 81.6176 49.208C82.2096 50.2 82.5056 51.336 82.5056 52.616C82.5056 53.896 82.2096 55.032 81.6176 56.024C81.0256 57.016 80.2096 57.8 79.1696 58.376C78.1456 58.952 76.9696 59.24 75.6416 59.24ZM75.6416 55.928C76.2176 55.928 76.7296 55.784 77.1776 55.496C77.6256 55.208 77.9776 54.816 78.2336 54.32C78.4896 53.824 78.6096 53.256 78.5936 52.616C78.6096 51.976 78.4896 51.408 78.2336 50.912C77.9776 50.4 77.6256 50 77.1776 49.712C76.7296 49.424 76.2176 49.28 75.6416 49.28C75.0656 49.28 74.5456 49.424 74.0816 49.712C73.6336 50 73.2816 50.4 73.0256 50.912C72.7696 51.408 72.6496 51.976 72.6656 52.616C72.6496 53.256 72.7696 53.824 73.0256 54.32C73.2816 54.816 73.6336 55.208 74.0816 55.496C74.5456 55.784 75.0656 55.928 75.6416 55.928Z">
+                    </path>
+                    <path d="M86.0726 59V43.04H89.9126V59H86.0726ZM83.8166 49.616V46.256H92.3846V49.616H83.8166Z">
+                    </path>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M76.5399 64C71.5099 73.5156 61.5123 80 50.0001 80C38.4879 80 28.4902 73.5156 23.4603 64H12.5185C18.1935 79.1867 32.834 90 50.0001 90C67.1662 90 81.8067 79.1867 87.4817 64H76.5399ZM22.4964 38C27.1257 27.4046 37.6982 20 50.0001 20C62.302 20 72.8745 27.4046 77.5038 38H88.1689C83.0718 21.7716 67.9107 10 50.0001 10C32.0895 10 16.9284 21.7716 11.8313 38H22.4964Z">
+                    </path>
+                </svg>
+            </a>
         </div>
 
-        <div class="mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2">Billing Cycle</label>
-            <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700" id="billingCycle" onchange="updatePrices()">
-                <option value="monthly">Monthly</option>
-                <option value="yearly">Yearly</option>
-            </select>
-        </div>
-
-    </div>
-
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Package 1 -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold">Starter Package</h3>
-                <p class="text-xl font-bold mb-4" id="basicPrice">৳ 500 / month</p>
-                <ul class="mt-6 space-y-2 text-gray-600 text-sm">
-                    <li>&check; Application toolkit</li>
-                    <li>&check; Sub / addon / alias domain</li>
-                    <li>&check; Hard resource limits</li>
-                    <li>&check; Powerful incremental backups</li>
-                    <li>&cross; Unlimited servers within your cluster</li>
-                    <li>&cross; Runtimes and docker Implementation</li>
-                </ul>
-                <button class="bg-indigo-500 text-white py-1.5 px-4 mt-4 rounded hover:bg-indigo-700" onclick="selectPackage('basic')">Add to Cart and Go &rarr;</button>
-            </div>
-
-            <!-- Package 2 -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold">Standard Package</h3>
-                <p class="text-xl font-bold mb-4" id="standardPrice">৳ 1000 / month</p>
-                <ul class="mt-6 space-y-2 text-gray-600 text-sm">
-                    <li>&check; Application toolkit</li>
-                    <li>&check; Sub / addon / alias domain</li>
-                    <li>&check; Hard resource limits</li>
-                    <li>&check; Powerful incremental backups</li>
-                    <li>&check; Runtimes and docker Implementation</li>
-                    <li>&cross; Unlimited servers within your cluster</li>
-                </ul>
-                <button class="bg-indigo-500 text-white py-1.5 px-4 mt-6 rounded hover:bg-indigo-700" onclick="selectPackage('standard')">Add to Cart and Go &rarr;</button>
-            </div>
-
-            <!-- Package 3 -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-lg font-semibold">Premium Package</h3>
-                <p class="text-xl font-bold mb-4" id="premiumPrice">৳ 1500 / month</p>
-                <ul class="mt-6 space-y-2 text-gray-600 text-sm">
-                    <li>&check; Application toolkit</li>
-                    <li>&check; Sub / addon / alias domain</li>
-                    <li>&check; Hard resource limits</li>
-                    <li>&check; Powerful incremental backups</li>
-                    <li>&check; Unlimited servers within your cluster</li>
-                    <li>&check; Runtimes and docker Implementation</li>
-                </ul>
-                <button class="bg-indigo-500 text-white py-1.5 px-4 mt-4 rounded hover:bg-indigo-700" onclick="selectPackage('premium')">Add to Cart and Go &rarr;</button>
-            </div>
-        </div>
-
-    </div>
-    <div class="max-w-7xl mx-auto container border-t border-gray-300 pt-6 pb-5 footer-bottom mt-36">
-        <div class="flex justify-between items-center about-footer-bottom">
-            <div class="text-base text-left">
-                Copyright &copy; 2024 | <a href="index.html"
-                    class="text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC </a>
-            </div>
-            <div class="text-base text-right space-x-4">
-                <a href="#privacy"
-                    class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Privacy Policy</a>
-                <a href="#terms" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Terms &
-                    Conditions</a>
-            </div>
+        <!-- Right Side: Language Selector, Currency Selector, My Account -->
+        <div class="flex items-center space-x-6">
+            <a href="signin.html" class="border border-indigo-600 rounded px-4 py-1.5 hover:bg-indigo-600 hover:text-white duration-300" target="_blank">My Account</a>
         </div>
     </div>
-    
-    
+</header>
 
-    <script>
-        // Define the prices in BDT and USD
-        const prices = {
-            basic: { bdt: { monthly: 500, yearly: 5000 }, usd: { monthly: 5, yearly: 50 } },
-            standard: { bdt: { monthly: 1000, yearly: 10000 }, usd: { monthly: 10, yearly: 100 } },
-            premium: { bdt: { monthly: 1500, yearly: 15000 }, usd: { monthly: 15, yearly: 150 } }
-        };
+  <nav class="bg-indigo-100 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-center  px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center space-x-4 justify-center">
+        <a href="getstarted.html" class="text-indigo-700 font-semibold">Shop</a>
+        <a href="checkout.html" class="text-gray-500">Checkout</a>
+        <a href="#" class="text-gray-500">Complete</a>
+      </div>
+      <div>
+        <a href="#" class="text-indigo-700 flex items-center space-x-2 ml-8">
+          <span>0 items</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18l-1.68 8.54A2 2 0 0117.36 13H6.64a2 2 0 01-1.96-1.46L3 3z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13h14v7a2 2 0 01-2 2H7a2 2 0 01-2-2v-7z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
 
-        // Function to update prices based on selected currency and billing cycle
-        function updatePrices() {
-            const currency = document.getElementById('currency').value;
-            const billingCycle = document.getElementById('billingCycle').value;
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto py-8 px-8 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <!-- Image Section -->
+    <div class="flex justify-center lg:justify-start p-8">
+      <div class="bg-gray-100 rounded border">
+        <img src="https://img.freepik.com/free-vector/security-concept-illustration_114360-417.jpg?t=st=1726281126~exp=1726284726~hmac=2a4d92498a28dc76165ed2866675b0436e5d732afc5e53876de4ed08492da982&w=740" alt="">
+      </div>
+    </div>
 
-            document.getElementById('basicPrice').innerText = `${currency === 'bdt' ? '৳' : '$'} ${prices.basic[currency][billingCycle]} / ${billingCycle}`;
-            document.getElementById('standardPrice').innerText = `${currency === 'bdt' ? '৳' : '$'} ${prices.standard[currency][billingCycle]} / ${billingCycle}`;
-            document.getElementById('premiumPrice').innerText = `${currency === 'bdt' ? '৳' : '$'} ${prices.premium[currency][billingCycle]} / ${billingCycle}`;
-        }
+    <!-- Information Section -->
+    <div class="p-8">
+      <p class="text-sm font-light text-gray-500">LxRoot / License Key</p>
+      <h1 class="text-3xl font-semibold">Licence Key</h1>
+      <p class="text-normal font-medium text-gray-500 mb-1">From $20 a month</p>
+      <div class="flex items-center mb-4">
+        <span class="text-yellow-500 text-sm">★</span>
+        <span class="ml-2 text-gray-500 text-sm">156 reviews</span>
+      </div>
+      <p class="text-gray-600 mb-4">
+        Your licence key and installation guide will be sent by email. <br> One licence key covers your entire cluster and includes:
+      </p>
+      <ul class="list-disc list-inside text-gray-600 mb-4 text-sm">
+        <li>All current features</li>
+        <li>Unlimited servers</li>
+        <li>Technical support (9am – 9pm UTC)</li>
+      </ul>
+      <p class="text-gray-600 mb-4 text-sm">
+        You will be billed per-website or application with a $20 minimum (This will only increase when you add more than 100 websites or applications). Your first month will be charged at $20, month 2 onwards will be invoiced based on your actual website/application usage.
+      </p>
 
-        // Initialize prices on page load
-        window.onload = updatePrices;
+      <!-- Billing Terms -->
+      <div class="mb-4">
+        <p class="font-medium mb-2">Select Billing Terms *</p>
+        <div class="mb-4">
+          <a href="#monthly">  <span class="px-4 py-1.5 text-sm bg-indigo-600 text-white rounded mr-2 font">Monthly</span> </a>
+          <a href="#yearly">   <span class="px-6 py-1 text-sm border border-indigo-600 text-gray-900 rounded">Yearly</span> </a>
+        </div>
+        <div class="flex space-x-4 justify-between">
+          <div class="border border-indigo-600 rounded-lg px-14 py-4 text-center cursor-pointer hover:border-indigo-700 duration-300">
+            <p>Starter</p> <hr>
+            <p class="text-4xl font-bold mb-2 mt-2">$15</p>
+            <p class="text-sm text-gray-600">Monthly</p>
+          </div>
+          <div class="border border-gray-400 rounded-lg px-12 py-4 text-center cursor-pointer hover:border-indigo-700 duration-300">
+            <p>Professional</p> <hr>
+            <p class="text-4xl font-bold mb-2 mt-2">$30</p>
+            <p class="text-sm text-gray-600">Monthly</p>
+          </div>
+          <div class="border border-gray-400 rounded-lg px-14 py-4 text-center cursor-pointer hover:border-indigo-700 duration-300">
+            <p>Enterprise</p> <hr>
+            <p class="text-4xl font-bold mb-2 mt-2">$48</p>
+            <p class="text-sm text-gray-600">Monthly</p>
+          </div>
+        </div>
+      </div>
 
-        // Function to select a package and pass the data to the checkout page
-        function selectPackage(packageType) {
-            const currency = document.getElementById('currency').value;
-            const billingCycle = document.getElementById('billingCycle').value;
-            const price = prices[packageType][currency][billingCycle];
+      <!-- Add to Cart Button -->
+      <a href="checkout.html"><button class="bg-indigo-600 text-white text-sm font-semibold py-2.5 px-6 rounded-lg hover:bg-indigo-700 w-full lg:w-auto duration-300">
+        Add to cart - $20 (excl. taxes)
+      </button></a>
+    </div>
+  </main>
 
-            // Redirect to checkout page with selected package data
-            window.location.href = `checkout.html?package=${packageType}&price=${price}&currency=${currency}&billingCycle=${billingCycle}`;
-        }
-    </script>
+  <!-- Footer -->
+  <footer class="bg-indigo-600 text-white py-4 mt-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between">
+      <p class="text-white">LxRoot LLC &copy; 2024</p>
+      <div class="flex space-x-4">
+        <a href="#" class="text-white hover:underline">Terms & Conditions</a>
+        <a href="#" class="text-white hover:underline">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

@@ -21,7 +21,7 @@
 
   <!-- Top navigation -->
   <header class="bg-white shadow-md py-1 px-8 sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
         <!-- Left Side: Logo -->
         <div>
             <a href="index.html">
@@ -55,32 +55,54 @@
     </div>
 </header>
 
-<div class="max-w-3xl mx-auto flex flex-cols-1 px-8 mt-24 gap-4">
-    <a href="signin.html">
-    <div class="bg-white border border-gray-300 px-8 py-6 rounded hover:focus:">
-        <h2 class="text-xl font-semibold text-gray-900 mb-2"><i class="fa-solid fa-user-check mr-3"></i>Sign in to your account</h2>
-        <p class="text-sm">If you already have an account signin here</p>
+<!-- Sign in / Sign up options Start -->
+<div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-4 mb-5 mt-24 p-4">
+  <a href="signup.html" class="block current border border-indigo-300 p-6 rounded-md bg-white relative">
+    <div class="flex gap-3">
+      <svg class="shrink-0 mt-[2px]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 14C12.33 14 7 15.33 7 18V20H23V18C23 15.33 17.67 14 15 14ZM6 10V7H4V10H1V12H4V15H6V12H9V10M15 12C16.0609 12 17.0783 11.5786 17.8284 10.8284C18.5786 10.0783 19 9.06087 19 8C19 6.93913 18.5786 5.92172 17.8284 5.17157C17.0783 4.42143 16.0609 4 15 4C13.9391 4 12.9217 4.42143 12.1716 5.17157C11.4214 5.92172 11 6.93913 11 8C11 9.06087 11.4214 10.0783 12.1716 10.8284C12.9217 11.5786 13.9391 12 15 12Z" fill="black"></path>
+      </svg>
+      <h1 class="body-text1 mb-[2px] !font-bold text-secondary">Sign up</h1>
     </div>
-</a>
-<a href="signup.html">
-    <div class="bg-white border border-indigo-700 px-8 py-6 rounded">
-        <h2 class="text-xl font-semibold text-gray-900 mb-2"><i class="fa-solid fa-user-plus mr-3"></i>Sign up</h2>
-        <p class="text-sm">New to LxRoot? create an account here</p>
-    </div>
-</a>
-</div>
 
-<div class="max-w-3xl mx-auto flex flex-col justify-center px-8 py-8">
-    <div class="mt-10">
+    <div class=""><p class="body-text2 text-slate-700">New to LxRoot? create an account here</p></div>
+
+    <svg class="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <mask id="mask0_29_6" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="22" height="22">
+        <path d="M12 22C13.3135 22.0017 14.6143 21.7438 15.8278 21.2412C17.0413 20.7385 18.1435 20.001 19.071 19.071C20.001 18.1435 20.7385 17.0413 21.2412 15.8278C21.7438 14.6143 22.0017 13.3135 22 12C22.0017 10.6865 21.7438 9.3857 21.2411 8.17222C20.7385 6.95875 20.001 5.85656 19.071 4.92901C18.1435 3.99902 17.0413 3.26151 15.8278 2.75885C14.6143 2.25619 13.3135 1.99831 12 2.00001C10.6865 1.99833 9.3857 2.25623 8.17222 2.75889C6.95875 3.26154 5.85656 3.99904 4.92901 4.92901C3.99904 5.85656 3.26154 6.95875 2.75889 8.17222C2.25623 9.3857 1.99833 10.6865 2.00001 12C1.99831 13.3135 2.25619 14.6143 2.75885 15.8278C3.26151 17.0413 3.99902 18.1435 4.92901 19.071C5.85656 20.001 6.95875 20.7385 8.17222 21.2411C9.3857 21.7438 10.6865 22.0017 12 22Z" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round"></path>
+        <path d="M8 12L11 15L17 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </mask>
+      <g mask="url(#mask0_29_6)">
+        <path class="fill-primary" d="M0 0H24V24H0V0Z" fill="#4F46E5"></path>
+      </g>
+    </svg>
+  </a>
+  <a href="signin.html" class="block current border border-gray-200 p-6 rounded-md bg-white">
+    <div class="flex gap-3">
+      <svg class="shrink-0 mt-[2px]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.55 12L14 8.45L15.425 7.05L17.55 9.175L21.8 4.925L23.2 6.35L17.55 12ZM9 12C7.9 12 6.95833 11.6083 6.175 10.825C5.39167 10.0417 5 9.1 5 8C5 6.9 5.39167 5.95833 6.175 5.175C6.95833 4.39167 7.9 4 9 4C10.1 4 11.0417 4.39167 11.825 5.175C12.6083 5.95833 13 6.9 13 8C13 9.1 12.6083 10.0417 11.825 10.825C11.0417 11.6083 10.1 12 9 12ZM1 20V17.2C1 16.6333 1.146 16.1127 1.438 15.638C1.73 15.1633 2.11733 14.8007 2.6 14.55C3.63333 14.0333 4.68333 13.646 5.75 13.388C6.81667 13.13 7.9 13.0007 9 13C10.1 12.9993 11.1833 13.1287 12.25 13.388C13.3167 13.6473 14.3667 14.0347 15.4 14.55C15.8833 14.8 16.271 15.1627 16.563 15.638C16.855 16.1133 17.0007 16.634 17 17.2V20H1Z" fill="black"></path>
+      </svg>
+     
+      <h1 class="body-text1 mb-[2px] !font-bold text-secondary">Sign In to LxRoot</h1>
+    </div>
+    <div class=""><p class="body-text2 text-slate-700">If you already have an account signin here</p></div>
+  </a>
+
+  
+</div>
+<!-- Sign in / Sign up options End -->
+
+<div class="max-w-3xl mx-auto flex flex-col justify-center px-4 py-8">
+    <div class="">
       <form class="space-y-6" action="#" method="POST">
         <div>
-            <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Full Name</label>
+            <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Full Name <span class="text-[#FF0000]">*</span></label>
             <div class="mt-2">
-              <input id="name" name="full-name" type="text" autocomplete="" placeholder="Enter your Full Name here" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-4">
+              <input id="name" name="full-name" type="text" autocomplete="" placeholder="Enter Full Name here" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-4">
             </div>
           </div>
         <div>
-          <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+          <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address <span class="text-[#FF0000]">*</span></label>
           <div class="mt-2">
             <input id="email" name="email" type="email" autocomplete="email" required placeholder="Enter Email here" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-4">
           </div>
@@ -88,7 +110,7 @@
   
         <div>
           <div class="flex items-center justify-between">
-            <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+            <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password <span class="text-[#FF0000]">*</span></label>
           </div>
           <div class="mt-2">
             <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Enter Password here" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-4">
@@ -111,7 +133,7 @@
 
 
 <!-- Footer -->
-<footer class="bg-indigo-600 text-white py-4 mt-24">
+<footer class="bg-gray-800 text-white py-4 mt-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between">
       <p class="text-white">LxRoot LLC &copy; 2024</p>
       <div class="flex space-x-4">

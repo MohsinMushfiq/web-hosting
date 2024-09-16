@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/7.13.0/simple-icons.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #toggleB {
+            background-color: #f97316;
+        }
+
+        .toggle-inactive {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body class="bg-white font-sans">
+    <div class="max-w-7xl mx-auto py-12 px-4">
+        <h2 class="text-center text-3xl font-semibold mb-4">Make your Plan</h2>
+        <p class="text-center mb-8 text-gray-500">Choose a subscription plan that best fits your requirement to grow
+            your store</p>
+
+        <!-- Toggle Switch -->
+        <div class="flex justify-center mb-8">
+            <label class="flex items-center cursor-pointer">
+                <span class="mr-3 text-xl font-semibold">Monthly</span>
+                <div class="relative">
+                    <input type="checkbox" id="toggleB" class="sr-only" onclick="togglePricing()">
+                    <div class="block w-14 h-8 rounded-full toggle-inactive"></div>
+                    <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition transform"></div>
+                </div>
+                <span class="ml-3 text-xl font-semibold">Annual</span>
+            </label>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- Basic Plan -->
+            <div class="bg-blue-50 p-8 border text-left rounded-2xl pt-11 pb-10">
+                <h3 class="text-3xl font-bold mb-4 text-gray-900">$<span id="plan1-price">49</span><span
+                        class="text-lg text-gray-500">/month</span></h3>
+                <p class="text-xl font-bold text-gray-700 mb-2">Basic Plan <span class="text-lg text-[#ffdb0e]">&starf;
+                    </span></p>
+                <p class="text-gray-500 mb-6 font-semibold">Per month, paid annually, or <span class="text-blue-600"
+                        id="plan1-annual-price">$399</span> annually</p>
+                <hr class="border-b border-dashed mb-4 border-gray-400 border-spacing-1">
+                <ul class="text-left mb-6 text-gray-600">
+                    <li class="mb-2"><span></span><i class="fa-solid fa-circle-check text-blue-600 check-icon mr-1"></i>
+                        7
+                        Day Free Trial</li>
+                    <li class="mb-2"><span></span><i class="fa-solid fa-circle-check text-blue-600 check-icon mr-1"></i>
+                        1
+                        Store</li>
+                    <li class="mb-2"><span></span><i class="fa-solid fa-circle-check text-blue-600 check-icon mr-1"></i>
+                        50
+                        Orders / month</li>
+                    <li><span></span><i class="fa-solid fa-circle-check text-blue-600 check-icon mr-1"></i> Month to
+                        month,
+                        cancel anytime</li>
+                </ul>
+                <button
+                    class="bg-orange-500 text-white px-6 py-2 rounded-full font-bold hover:bg-orange-600 transition justify-center items-center w-full">Pay
+                    &
+                    Register</button>
+                <p class="text-gray-500 text-sm mt-4 text-center font-semibold">Cancel anytime, you will be charged
+                    after 7 days</p>
+            </div>
+
+            <!-- Standard Plan -->
+            <div class="bg-blue-500 p-8 rounded-2xl pt-11 pb-10 text-left">
+                <h3 class="text-3xl font-bold mb-4 text-white">$<span id="plan2-price">399</span><span
+                        class="text-lg text-blue-200">/month</span></h3>
+                <p class="text-xl font-bold text-white mb-2">Standard Plan <span class="text-lg text-[#ffdb0e]">&starf;
+                        &starf;</span></p>
+                <p class="text-blue-100 mb-6 font-semibold">Per month, paid annually, or <span class="text-white"
+                        id="plan2-annual-price">$3999</span> annually</p>
+                <hr class="border-b border-dashed mb-4 border-white border-spacing-1">
+                <ul class="text-left mb-6 text-blue-100">
+                    <li class="mb-2"><i class="fa-solid fa-circle-check"></i> 7 Day Free Trial</li>
+                    <li class="mb-2"><span></span><i class="fa-solid fa-circle-check text-white check-icon mr-1"></i> 1
+                        Store</li>
+                    <li class="mb-2"><span></span><i class="fa-solid fa-circle-check text-white check-icon mr-1"></i>
+                        Unlimited Orders</li>
+                    <li><span></span><i class="fa-solid fa-circle-check text-white check-icon mr-1"></i> Month to month,
+                        cancel anytime</li>
+                </ul>
+                <button
+                    class="bg-white text-blue-600 px-6 py-2 rounded-full font-bold hover:bg-blue-100 transition justify-center items-center w-full text-center">Pay
+                    &
+                    Register</button>
+                <p class="text-gray-100 text-sm mt-4 font-semibold text-center">Cancel anytime, you will be charged after 7 days</p>
+            </div>
+
+            <!-- Premeium Plan -->
+            <div class="bg-blue-50 border p-8 rounded-2xl pt-11 pb-10 text-left">
+                <h3 class="text-3xl font-bold mb-4 text-gray-900">$<span id="plan3-price">899</span><span
+                        class="text-lg text-gray-500">/month</span></h3>
+                <p class="text-xl font-bold text-gray-700 mb-2">Premium Plan <span
+                        class="text-lg text-[#ffdb0e]">&starf; &starf; &starf;</span></p>
+                <p class="text-gray-500 mb-6 font-semibold">Per month, paid annually, or <span class="text-blue-600"
+                        id="plan3-annual-price">$8999</span> annually</p>
+                <hr class="border-b border-dashed mb-4 border-gray-400 border-spacing-1">
+                <ul class="text-left mb-6 text-gray-600">
+                    <li class="mb-2"><span></span><i class="fa-solid fa-circle-check text-blue-600 check-icon mr-1"></i>
+                        7
+                        Day Free Trial</li>
+                    <li class="mb-2"><span></span><i class="fa-solid fa-circle-check text-blue-600 check-icon mr-1"></i>
+                        Unlimited Stores</li>
+                    <li class="mb-2"><span></span><i class="fa-solid fa-circle-check text-blue-600 check-icon mr-1"></i>
+                        Unlimited Orders</li>
+                    <li><span></span><i class="fa-solid fa-circle-check text-blue-600 check-icon mr-1"></i> Month to
+                        month,
+                        cancel anytime</li>
+                </ul>
+                <button
+                    class="bg-orange-500 text-white px-6 py-2 rounded-full font-bold hover:bg-orange-600 transition justify-center items-center w-full">Pay
+                    &
+                    Register</button>
+                <p class="text-gray-500 text-sm mt-4 text-center font-semibold">Cancel anytime, you will be charged
+                    after 7 days</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript to toggle pricing dynamically -->
+    <script>
+        function togglePricing() {
+            const isChecked = document.getElementById('toggleB').checked;
+
+            // Toggle pricing values for monthly and annual
+            document.getElementById('plan1-price').textContent = isChecked ? '499' : '49';
+            document.getElementById('plan2-price').textContent = isChecked ? '3999' : '399';
+            document.getElementById('plan3-price').textContent = isChecked ? '8999' : '899';
+
+            // Update toggle button color
+            const toggle = document.querySelector('.block');
+            const dot = document.querySelector('.dot');
+
+            if (isChecked) {
+                toggle.classList.add('bg-orange-500');
+                dot.classList.add('translate-x-full');
+            } else {
+                toggle.classList.remove('bg-orange-500');
+                dot.classList.remove('translate-x-full');
+            }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+
+</html>

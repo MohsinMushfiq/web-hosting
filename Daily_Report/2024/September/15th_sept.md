@@ -1,12 +1,12 @@
-<h2>Updates - 14th September, 2024</h2>
+<h2>Updates - 15th September, 2024</h2>
 
 Video - https://www.loom.com/share/7b5194dc306940b1aef7310d9bc0cb11?sid=e1c04bcd-de39-4d39-b957-0d9e5b5bb2d4</br>
-Live URL - https://mohsin.lxroot.net/day15/product.html </br>
+Live URL - https://mohsin.lxroot.net/day16/product.html </br>
 GitHub - https://github.com/MohsinMushfiq/LxRoot/blob/main/Daily_Report/2024/September/15th_sept.md
 
 <h2>Total Hour: 11 Hour+</h2>
 <h3>Work Start: at 7:55 AM</h3>
-<h3>Work Start: at 10:50 AM</h3>
+<h3>Work End: at 10:50 PM</h3>
 
 
 <h3>Todo:</h3>

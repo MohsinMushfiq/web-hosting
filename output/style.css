@@ -206,8 +206,11 @@
 }
 
 .database-item {
-  padding: 30px;
-  border: 1px solid #2e3e6b;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid #212e50;
 }
 
 .database-item:hover {
@@ -216,10 +219,10 @@
 }
 
 .database-item img {
-  height: 150px;
+  height: 200px;
   background-color: white;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 100px;
 }
 
 .tech-other-feature {
@@ -244,8 +247,14 @@
   padding-bottom: 120px;
 }
 
+.email-image{
+  width: 100%;
+  padding-right: 125px;
+}
+
 .system-req {
-  margin-bottom: 150px;
+  margin-top: 200px;
+  margin-bottom: 250px;
 }
 
 .server-req-text {
@@ -253,7 +262,6 @@
 }
 
 .physical-server {
-  background-color: #0f1527;
   padding: 20px;
   color: white;
   align-items: center;
@@ -262,8 +270,9 @@
 }
 
 .physical-server img {
-  width: 200px;
-  background-color: #212e50;
+  width: 100px;
+  border-radius: 100%;
+  border: 1px solid #192441;
 }
 
 /* App Hosting page */
@@ -314,6 +323,16 @@
 .single-product-features p {
   margin-top: 10px;
   color: #98a3b8;
+}
+
+.app-1{
+  padding-top: 260px;
+  padding-bottom: 280px;
+}
+
+.app-2{
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 /* Pricing Page */
@@ -391,6 +410,8 @@
   justify-content: center;
   align-items: center;
 }
+
+/* Pricing New page */
 
 /* Custom CSS End */
 
@@ -781,8 +802,8 @@ body.light-mode .tech-hero-tag {
 }
 
 body.light-mode .tech-hero-des {
-  color: #0f1527;
-  font-weight: 500;
+  color: #6b7280;
+  font-weight: 400;
 }
 
 body.light-mode .about-hero-button a {
@@ -790,21 +811,39 @@ body.light-mode .about-hero-button a {
 }
 
 body.light-mode .technology-text {
-  color: #0f1527;
+  color: #6b7280;
+}
+
+body.light-mode #dns-section{
+  background: white;
+}
+
+body.light-mode #backup-section{
+  background: white;
+}
+
+body.light-mode #email-section{
+  background: #f8f8f8;
+  padding-top: 260px;
+  padding-bottom: 280px;
 }
 
 body.light-mode .database-text {
-  color: #0f1527;
+  color: #6b7280;
 }
 
 body.light-mode .database-item {
-  color: #0B1120;
   background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #f1eeff;
+}
+
+body.light-mode #db-des{
+  color: #6b7280;
 }
 
 body.light-mode .database-item img {
-  background-color: #f6f4ff;
+  background-color: white;
+  border: 1px solid #eee9ff;
 }
 
 body.light-mode .database-item:hover {
@@ -839,9 +878,9 @@ body.light-mode .homepage-support p {
 }
 
 body.light-mode .tech-stack i {
-  color: #0B1120;
+  color: #192441;
   background-color: #ffffff;
-  border: 1px solid #98a3b8;
+  border: 1px solid #eee9ff;
 }
 
 body.light-mode .tech-db {
@@ -853,9 +892,12 @@ body.light-mode .physical-server {
   border: 1px solid #c9e0ff;
 }
 
+body.light-mode .physical-server img{
+  border: 1px solid #f1eeff;
+}
+
 body.light-mode .physical-server h3{
   color: #0B1120;
-  font-weight: ;
 }
 
 /* App Hosting Page */
@@ -871,6 +913,22 @@ body.light-mode .app-hero-des {
 
 body.light-mode .app-hero-button a {
   color: white;
+}
+
+body.light-mode .system-req{
+  background: #f8f8f8;
+}
+
+body.light-mode .app-white-bg{
+  background: #f8f8f8;
+}
+
+body.light-mode .app-section{
+  background: #f8f8f8;
+}
+
+body.light-mode #web-server{
+  background: #f8f8f8;
 }
 
 /* Product Features Page */
@@ -1104,6 +1162,26 @@ body.light-mode .faqs-ans{
   color: #4b5563;
 }
 
+body.light-mode .active-pricing-card{
+  background-color: #2962ff;
+  color: white;
+  border: 1px solid #4375ff;
+}
+
+body.light-mode .active-pricing-card p{
+  color: #f1eeff;
+}
+
+body.light-mode .active-pricing-card ul{
+  color: #f1eeff;
+}
+
+body.light-mode .active-pricing-card button{
+  color: #2962ff;
+  font-weight: 600;
+  background-color: #f6f4ff;
+}
+
 /* FAQs Page */
 
 body.light-mode .faqs-main h1{
@@ -1316,7 +1394,7 @@ body.light-mode .accor-icon{
   }
 
   .system-req{
-    margin-top: 100px;
+    margin-top: 150px;
     margin-bottom: 100px;
   }
 

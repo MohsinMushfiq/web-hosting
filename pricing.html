@@ -313,12 +313,12 @@
             number of servers you run.</p>
 
         <!-- Toggle Section -->
-        <div class="flex space-x-4 bg-gray-300 p-2 rounded-lg mt-8 border border-gray-400 shadow-md toggle-button">
+        <div class="flex space-x-4 p-2 rounded-lg mt-8 border border-gray-600 ">
             <button id="monthlyBtn"
-                class="py-2 px-6 bg-indigo-600 !text-white rounded-lg focus:outline-none">Monthly</button>
-            <button id="yearlyBtn"
-                class="py-2 px-6 bg-gray-200 text-gray-700 rounded-lg focus:outline-none">Annually</button>
+                class="py-2 px-6 bg-indigo-600 text-white rounded-lg focus:outline-none">Monthly</button>
+            <button id="yearlyBtn" class="py-2 px-6   rounded-lg focus:outline-none">Annually</button>
         </div>
+
 
 
 
@@ -332,7 +332,8 @@
                 <div class="mt-6">
                     <span class="text-4xl font-bold" id="starterPrice">$15</span><span>/Per Billing Cycle</span>
                 </div>
-              <a href="getstarted.html"> <button anch class="mt-6 py-2 px-6 bg-gray-700 text-white rounded-full buy-plan">Buy plan</button></a>
+                <a href="getstarted.html"> <button anch
+                        class="mt-6 py-2 px-6 bg-gray-700 text-white rounded-full buy-plan">Buy plan</button></a>
                 <ul class="mt-6 space-y-2 text-gray-400">
                     <li>&check; Application toolkit</li>
                     <li>&check; Sub / addon / alias domain</li>
@@ -350,7 +351,9 @@
                 <div class="mt-6 ">
                     <span class="text-4xl font-bold" id="professionalPrice">$30</span><span>/Per Billing Cycle</span>
                 </div>
-                <a href="getstarted.html"> <button class="mt-6 py-2 px-6 bg-indigo-500 text-white rounded-full active-buy-plan">Buy plan</button></a>
+                <a href="getstarted.html"> <button
+                        class="mt-6 py-2 px-6 bg-indigo-500 text-white rounded-full active-buy-plan">Buy
+                        plan</button></a>
                 <ul class="mt-6 space-y-2 text-gray-400">
                     <li>&check; Application toolkit</li>
                     <li>&check; Sub / addon / alias domain</li>
@@ -368,7 +371,8 @@
                 <div class="mt-6">
                     <span class="text-4xl font-bold" id="enterprisePrice">$48</span><span>/Per Billing Cycle</span>
                 </div>
-                <a href="getstarted.html"><button class="mt-6 py-2 px-6 bg-gray-700 text-white rounded-full buy-plan">Buy plan</button></a>
+                <a href="getstarted.html"><button
+                        class="mt-6 py-2 px-6 bg-gray-700 text-white rounded-full buy-plan">Buy plan</button></a>
                 <ul class="mt-6 space-y-2 text-gray-400">
                     <li>&check; Application toolkit</li>
                     <li>&check; Sub / addon / alias domain</li>
@@ -385,193 +389,222 @@
 
 
     <!-- FAQs Section Start -->
-      <div class="max-w-7xl mx-auto faqs">
-        <h2 class="text-4xl font-semibold mb-8 font-white text-center">Frequently Asked Questions</h2>
-        
-        <div class="space-y-4">
-          <!-- FAQ 1 -->
-          <div>
-            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(1)">
-              <span class="faqs-ques">Am I charged for Addon, Alias and Sub domains?</span>
-              <span id="icon-1" class="transform transition-transform duration-500">+</span>
-            </button>
-            <div id="content-1" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-              <p class="faqs-ans">No, there's no charge for Addon, Alias and Sub domains. You are only billed for hosted applications (defined below).</p>
-            </div>
-          </div>
-          
-          <!-- FAQ 2 -->
-          <div>
-            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(2)">
-              <span class="faqs-ques">Is there a per server licence cost?</span>
-              <span id="icon-2" class="transform transition-transform duration-500">+</span>
-            </button>
-            <div id="content-2" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-              <p class="faqs-ans">No, an LxRoot cluster has a centralised control panel and an unlimited number of servers within it (shared or VPS/dedicated). They don't need to be on the same hardware or even in the same data centre. <br> <br>
+    <div class="bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120] faqs-sec">
+        <div class="max-w-7xl mx-auto faqs">
+            <h2 class="text-4xl font-semibold mb-8 font-white text-center">Frequently Asked Questions</h2>
 
-                If you provision a dedicated server with its own installation of LxRoot (a separate master organisation and control panel) then this installation will require its own licence key and be subject to the $20 minimum cost.</p>
-            </div>
-          </div>
-          
-          <!-- FAQ 3 -->
-          <div>
-            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(3)">
-              <span class="faqs-ques">What is a 'Hosted application'?</span>
-              <span id="icon-3" class="transform transition-transform duration-500">+</span>
-            </button>
-            <div id="content-3" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-              <p class="faqs-ans">A hosted application is an isolated, shared or containerised environment with its own system user, home directory, access rights and optional hard system resource limits. <br><br>
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div>
+                    <button
+                        class="w-full flex justify-between items-center p-4 bg-gray-800 text-left text-white rounded-lg focus:outline-none"
+                        onclick="toggleAccordion(1)">
+                        <span class="faqs-ques">Am I charged for Addon, Alias and Sub domains?</span>
+                        <span id="icon-1" class="transform transition-transform duration-500">+</span>
+                    </button>
+                    <div id="content-1" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
+                        <p class="faqs-ans">No, there's no charge for Addon, Alias and Sub domains. You are only billed
+                            for
+                            hosted applications (defined below).</p>
+                    </div>
+                </div>
 
-                On LxRoot you can add unlimited Domain aliases which map to the same document root or another document root within that application/site without incurring any additional cost (this is equivalent to 'Addon domains' or 'Parked domain' functionality in other control panels).</p>
+                <!-- FAQ 2 -->
+                <div>
+                    <button
+                        class="w-full flex justify-between items-center p-4 bg-gray-800 text-left text-white rounded-lg focus:outline-none"
+                        onclick="toggleAccordion(2)">
+                        <span class="faqs-ques">Is there a per server licence cost?</span>
+                        <span id="icon-2" class="transform transition-transform duration-500">+</span>
+                    </button>
+                    <div id="content-2" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
+                        <p class="faqs-ans">No, an LxRoot cluster has a centralised control panel and an unlimited
+                            number of
+                            servers within it (shared or VPS/dedicated). They don't need to be on the same hardware or
+                            even
+                            in the same data centre. <br> <br>
+
+                            If you provision a dedicated server with its own installation of LxRoot (a separate master
+                            organisation and control panel) then this installation will require its own licence key and
+                            be
+                            subject to the $20 minimum cost.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div>
+                    <button
+                        class="w-full flex justify-between items-center p-4 bg-gray-800 text-left text-white rounded-lg focus:outline-none"
+                        onclick="toggleAccordion(3)">
+                        <span class="faqs-ques">What is a 'Hosted application'?</span>
+                        <span id="icon-3" class="transform transition-transform duration-500">+</span>
+                    </button>
+                    <div id="content-3" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
+                        <p class="faqs-ans">A hosted application is an isolated, shared or containerised environment
+                            with
+                            its own system user, home directory, access rights and optional hard system resource limits.
+                            <br><br>
+
+                            On LxRoot you can add unlimited Domain aliases which map to the same document root or
+                            another
+                            document root within that application/site without incurring any additional cost (this is
+                            equivalent to 'Addon domains' or 'Parked domain' functionality in other control panels).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div>
+                    <button
+                        class="w-full flex justify-between items-center p-4 bg-gray-800 text-left text-white rounded-lg focus:outline-none"
+                        onclick="toggleAccordion(4)">
+                        <span class="faqs-ques">Why do you never see elephants hiding in trees?</span>
+                        <span id="icon-4" class="transform transition-transform duration-500">+</span>
+                    </button>
+                    <div id="content-4" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
+                        <p class="faqs-ans">Because they're so good at it.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div>
+                    <button
+                        class="w-full flex justify-between items-center p-4 bg-gray-800 text-left text-white rounded-lg focus:outline-none"
+                        onclick="toggleAccordion(5)">
+                        <span class="faqs-ques">Why can't you hear a pterodactyl go to the bathroom?</span>
+                        <span id="icon-5" class="transform transition-transform duration-500">+</span>
+                    </button>
+                    <div id="content-5" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
+                        <p class="faqs-ans">Because the "P" is silent.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div>
+                    <button
+                        class="w-full flex justify-between items-center p-4 bg-gray-800 text-left text-white rounded-lg focus:outline-none"
+                        onclick="toggleAccordion(6)">
+                        <span class="faqs-ques">Why did the invisible man turn down the job offer?</span>
+                        <span id="icon-6" class="transform transition-transform duration-500">+</span>
+                    </button>
+                    <div id="content-6" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
+                        <p class="faqs-ans">He couldn't see himself doing it.</p>
+                    </div>
+                </div>
             </div>
-          </div>
-          
-          <!-- FAQ 4 -->
-          <div>
-            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(4)">
-              <span class="faqs-ques">Why do you never see elephants hiding in trees?</span>
-              <span id="icon-4" class="transform transition-transform duration-500">+</span>
-            </button>
-            <div id="content-4" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-              <p class="faqs-ans">Because they're so good at it.</p>
-            </div>
-          </div>
-          
-          <!-- FAQ 5 -->
-          <div>
-            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(5)">
-              <span class="faqs-ques">Why can't you hear a pterodactyl go to the bathroom?</span>
-              <span id="icon-5" class="transform transition-transform duration-500">+</span>
-            </button>
-            <div id="content-5" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-              <p class="faqs-ans">Because the "P" is silent.</p>
-            </div>
-          </div>
-          
-          <!-- FAQ 6 -->
-          <div>
-            <button class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none" onclick="toggleAccordion(6)">
-              <span class="faqs-ques">Why did the invisible man turn down the job offer?</span>
-              <span id="icon-6" class="transform transition-transform duration-500">+</span>
-            </button>
-            <div id="content-6" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-              <p class="faqs-ans">He couldn't see himself doing it.</p>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 
     <!-- FAQs Section End -->
 
 
 
-        <!-- Footer Start -->
-        <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1 full-footer">
-            <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
-                <div class="footer-col space-y-4">
-                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">COMPANY</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="hover:text-white">About</a></li>
-                        <li><a href="articles.html" class="hover:text-white">Articles</a></li>
-                        <li><a href="career.html" class="hover:text-white">Career</a></li>
-                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col space-y-4">
-                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">SOLUTIONS</h4>
-                    <ul class="space-y-2">
-                        <li><a href="features.html" class="hover:text-white">Features</a></li>
-                        <li><a href="technology.html" class="hover:text-white">Technology</a></li>
-                        <li><a href="roadmap.html" class="hover:text-white">Roadmap</a></li>
-                        <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col space-y-4">
-                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">SUPPORT</h4>
-                    <ul class="space-y-2">
-                        <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
-                        <li><a href="community.html" class="hover:text-white">Community</a></li>
-                        <li><a href="support.html" class="hover:text-white">Support Docs</a></li>
-                        <li><a href="faqs.html" class="hover:text-white">FAQs</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col space-y-4">
-                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">LEGAL</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white">Security</a></li>
-                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white">Terms of Use</a></li>
-                        <li><a href="#" class="hover:text-white">Changelogs</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col footer-col-5 space-y-2">
-                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">CONTACT US</h4>
-                    <div class="mt-4 space-y-2">
-                        <div class="flex justify-center lg:justify-start items-center space-x-2">
-                            <i class="fas fa-phone text-gray-400"></i>
-                            <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
-                        </div>
-                        <div class="flex justify-center lg:justify-start items-center space-x-2">
-                            <i class="fas fa-envelope text-gray-400"></i>
-                            <a href="mailto:contact@yourdomain.com"
-                                class="text-gray-400 hover:text-white">contact@lxroot.com</a>
-                        </div>
-                        <div class="flex justify-center lg:justify-start items-center space-x-2">
-                            <i class="fas fa-map-marker-alt text-gray-300"></i>
-                            <p class="text-gray-400">Carmel, Indiana, USA</p>
-                        </div>
+    <!-- Footer Start -->
+    <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1 full-footer">
+        <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
+            <div class="footer-col space-y-4">
+                <h4 class="text-gray-500 border-b border-gray-600 pb-2">COMPANY</h4>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="hover:text-white">About</a></li>
+                    <li><a href="articles.html" class="hover:text-white">Articles</a></li>
+                    <li><a href="career.html" class="hover:text-white">Career</a></li>
+                    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col space-y-4">
+                <h4 class="text-gray-500 border-b border-gray-600 pb-2">SOLUTIONS</h4>
+                <ul class="space-y-2">
+                    <li><a href="features.html" class="hover:text-white">Features</a></li>
+                    <li><a href="technology.html" class="hover:text-white">Technology</a></li>
+                    <li><a href="roadmap.html" class="hover:text-white">Roadmap</a></li>
+                    <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col space-y-4">
+                <h4 class="text-gray-500 border-b border-gray-600 pb-2">SUPPORT</h4>
+                <ul class="space-y-2">
+                    <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
+                    <li><a href="community.html" class="hover:text-white">Community</a></li>
+                    <li><a href="support.html" class="hover:text-white">Support Docs</a></li>
+                    <li><a href="faqs.html" class="hover:text-white">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col space-y-4">
+                <h4 class="text-gray-500 border-b border-gray-600 pb-2">LEGAL</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Security</a></li>
+                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white">Terms of Use</a></li>
+                    <li><a href="#" class="hover:text-white">Changelogs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-col-5 space-y-2">
+                <h4 class="text-gray-500 border-b border-gray-600 pb-2">CONTACT US</h4>
+                <div class="mt-4 space-y-2">
+                    <div class="flex justify-center lg:justify-start items-center space-x-2">
+                        <i class="fas fa-phone text-gray-400"></i>
+                        <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
                     </div>
+                    <div class="flex justify-center lg:justify-start items-center space-x-2">
+                        <i class="fas fa-envelope text-gray-400"></i>
+                        <a href="mailto:contact@yourdomain.com"
+                            class="text-gray-400 hover:text-white">contact@lxroot.com</a>
+                    </div>
+                    <div class="flex justify-center lg:justify-start items-center space-x-2">
+                        <i class="fas fa-map-marker-alt text-gray-300"></i>
+                        <p class="text-gray-400">Carmel, Indiana, USA</p>
+                    </div>
+                </div>
 
-                    <!-- Social Media Icons -->
-                    <div class="flex justify-center lg:justify-start mt-4 space-x-4">
-                        <a href="https://facebook.com/yourprofile" target="_blank"
-                            class="text-gray-500 hover:text-blue-600">
-                            <i class="fab fa-facebook-f fa-lg"></i>
-                        </a>
-                        <a href="https://twitter.com/yourprofile" target="_blank"
-                            class="text-gray-500 hover:text-blue-400">
-                            <i class="fab fa-twitter fa-lg"></i>
-                        </a>
-                        <a href="https://instagram.com/yourprofile" target="_blank"
-                            class="text-gray-500 hover:text-pink-500">
-                            <i class="fab fa-instagram fa-lg"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/yourprofile" target="_blank"
-                            class="text-gray-500 hover:text-blue-700">
-                            <i class="fab fa-linkedin-in fa-lg"></i>
-                        </a>
-                        <a href="https://youtube.com/in/yourprofile" target="_blank"
-                            class="text-gray-500 hover:text-red-700">
-                            <i class="fab fa-youtube fa-lg"></i>
-                        </a>
-                    </div>
+                <!-- Social Media Icons -->
+                <div class="flex justify-center lg:justify-start mt-4 space-x-4">
+                    <a href="https://facebook.com/yourprofile" target="_blank"
+                        class="text-gray-500 hover:text-blue-600">
+                        <i class="fab fa-facebook-f fa-lg"></i>
+                    </a>
+                    <a href="https://twitter.com/yourprofile" target="_blank" class="text-gray-500 hover:text-blue-400">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </a>
+                    <a href="https://instagram.com/yourprofile" target="_blank"
+                        class="text-gray-500 hover:text-pink-500">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank"
+                        class="text-gray-500 hover:text-blue-700">
+                        <i class="fab fa-linkedin-in fa-lg"></i>
+                    </a>
+                    <a href="https://youtube.com/in/yourprofile" target="_blank"
+                        class="text-gray-500 hover:text-red-700">
+                        <i class="fab fa-youtube fa-lg"></i>
+                    </a>
                 </div>
             </div>
-            <div class="max-w-7xl mx-auto container mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
-                <div class="flex justify-between items-center about-footer-bottom">
-                    <div class="text-base text-left">
-                        Copyright &copy; 2024 | <a href="index.html"
-                            class="text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC </a>
-                    </div>
-                    <div class="text-base text-right space-x-4">
-                        <a href="#privacy"
-                            class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Privacy Policy</a>
-                        <a href="#terms" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Terms &
-                            Conditions</a>
-                    </div>
+        </div>
+        <div class="max-w-7xl mx-auto container mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
+            <div class="flex justify-between items-center about-footer-bottom">
+                <div class="text-base text-left">
+                    Copyright &copy; 2024 | <a href="index.html"
+                        class="text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC </a>
+                </div>
+                <div class="text-base text-right space-x-4">
+                    <a href="#privacy" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Privacy
+                        Policy</a>
+                    <a href="#terms" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Terms &
+                        Conditions</a>
                 </div>
             </div>
+        </div>
 
 
-        </footer>
-        <!-- Footer End -->
+    </footer>
+    <!-- Footer End -->
 
 
 
-        <!-- JavaScript Start -->
-        <script src="src/script.js"></script>
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-        <!-- JavaScript End -->
+    <!-- JavaScript Start -->
+    <script src="src/script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- JavaScript End -->
 
 
 </body>

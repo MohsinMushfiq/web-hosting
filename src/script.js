@@ -148,12 +148,12 @@ monthlyBtn.addEventListener("click", () => {
     enterprisePrice.textContent = `$${monthlyPrices.enterprise}`;
 
     // Set the active style for Monthly button
-    monthlyBtn.classList.add('bg-indigo-600', 'text-white');
-    monthlyBtn.classList.remove('bg-gray-200', 'text-gray-700');
+    monthlyBtn.classList.add('bg-blue-600', 'text-white');
+    monthlyBtn.classList.remove('bg-gray-900', 'text-white');
 
     // Set the inactive style for Yearly button
-    yearlyBtn.classList.add('bg-gray-200', 'text-gray-700');
-    yearlyBtn.classList.remove('bg-indigo-600', 'text-white');
+    yearlyBtn.classList.add('bg-gray-900', 'text-white');
+    yearlyBtn.classList.remove('bg-blue-600', 'text-white');
 });
 
 // Event listener for yearly prices
@@ -163,12 +163,12 @@ yearlyBtn.addEventListener("click", () => {
     enterprisePrice.textContent = `$${yearlyPrices.enterprise}`;
 
     // Set the active style for Yearly button
-    yearlyBtn.classList.add('bg-indigo-600', 'text-white');
-    yearlyBtn.classList.remove('bg-gray-200', 'text-gray-700');
+    yearlyBtn.classList.add('bg-blue-600', 'text-white');
+    yearlyBtn.classList.remove('bg-gray-900', 'text-white');
 
     // Set the inactive style for Monthly button
-    monthlyBtn.classList.add('bg-gray-200', 'text-gray-700');
-    monthlyBtn.classList.remove('bg-indigo-600', 'text-white');
+    monthlyBtn.classList.add('bg-gray-900', 'text-white');
+    monthlyBtn.classList.remove('bg-blue-600', 'text-white');
 });
 
 // End Pricing Toggle 

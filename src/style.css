@@ -1,17 +1,30 @@
 /* Home Page */
-.main-hero {
-    margin-top: 50px;
-    margin-bottom: 50px;
+body {
+    background-color: rgb(28, 17, 27);
+    background-image: linear-gradient(327.21deg, rgba(121, 2, 81, 0.24) 3.65%, rgba(20, 0, 46, 0) 40.32%), linear-gradient(245.93deg, rgba(209, 21, 111, 0.16) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgba(12, 10, 22, 0) 29.79%, rgba(209, 25, 80, 0) 36.63%);
+
 }
 
-.hero-start {
-    margin-top: -50px;
-    margin-bottom: -40px;
+.main-menu {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: rgb(19, 17, 28);
+    background-image: linear-gradient(327.21deg, rgba(33, 0, 75, 0.24) 3.65%, rgba(60, 0, 136, 0) 40.32%), linear-gradient(245.93deg, rgba(209, 21, 111, 0.16) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgba(58, 19, 255, 0) 29.79%, rgba(209, 25, 80, 0) 36.63%);
+
+    background-image: linear-gradient(to right, #0b1122, rgb(46, 20, 46));
+
 }
+
+.home-button:hover {
+    background-image: linear-gradient(to right, rgb(60, 60, 255), rgb(158, 53, 158));
+    transition-duration: 300ms;
+}
+
+
 
 .safe-space {
     margin-top: 200px;
-    margin-bottom: 220px;
+    padding-bottom: 50px;
 }
 
 #home-price-sec {
@@ -256,7 +269,6 @@
 }
 
 .technology-sec {
-    margin-top: 50px;
     margin-bottom: 80px;
 }
 
@@ -379,7 +391,7 @@
 .buy-plan:hover {
     width: 100%;
     text-align: center;
-    background-color: #433bdb;
+    background-color: #2962ff;
     transition-duration: 300ms;
 }
 
@@ -392,12 +404,12 @@
 .active-buy-plan:hover {
     width: 100%;
     text-align: center;
-    background-color: #483fec;
+    background-color: #2962ff;
     transition-duration: 300ms;
 }
 
 .active-pricing-card {
-    border: 2px solid #433bdb;
+    border: 1px solid #4375ff;
 }
 
 .faqs {
@@ -425,6 +437,14 @@
 
 .accordion-item {
     color: white;
+}
+
+.accordion-content {
+    padding: 0px;
+    margin-bottom: 25px;
+    text-align: left;
+    color: #98a3b8;
+    transition-duration: 300ms;
 }
 
 .faq-para {
@@ -539,15 +559,16 @@ body.light-mode {
 /* Header and Footer */
 
 body.light-mode .main-menu {
-    background-color: white;
+    background: white;
 }
 
-body.light-mode .full-menu {
-    background-color: white;
-}
 
 body.light-mode .logo-fill {
     color: #433bdb;
+}
+
+body.light-mode .signin-btn {
+    color: #0B1120;
 }
 
 body.light-mode .signin-btn:hover {
@@ -566,9 +587,10 @@ body.light-mode .desktop-nav-menu:hover {
 }
 
 body.light-mode .dropdown-menu {
+    box-shadow: 1px 1px 3px #0f1527;
     background-color: white;
-    border: 1px solid #2d26ad;
-    border-top: 3px solid #2d26ad;
+    border: 1px solid #2e3e6b;
+    border-top: 3px solid #17203a;
     animation-duration: 300ms;
 }
 
@@ -583,13 +605,19 @@ body.light-mode .full-footer a:hover {
 }
 
 /* Mobile Menu White Mode */
-/* body.light-mode .mobile-dropdown {
+body.light-mode .mobile-dropdown {
     background-color: white;
-
+    border: 1px solid #c9e0ff;
 }
 
+body.light-mode .mobile-dropdown:hover {
+    background-color: #f8f8f8;
+    border: 1px solid #4879ff;
+}
+
+
 body.light-mode .mobile-signin-btn:hover {
-    background-color: #4c44e7;
+    background-color: #2962ff;
     color: white;
 }
 
@@ -597,10 +625,21 @@ body.light-mode .mobile-getstart-btn {
     color: white;
 }
 
+body.light-mode .mobile-getstart-btn {
+    background-color: #2962ff;
+}
+
+body.light-mode .mobile-getstart-btn:hover {
+    background-color: #4375ff;
+}
+
 body.light-mode .mobile-dropdown-menu {
     background-color: white;
+}
 
-} */
+body.light .mobile-dropdown-menu li{
+    border-bottom: 1px solid #98a3b8;
+}
 
 /* Home Page White Mode */
 body.light-mode .hero-tooltip {
@@ -792,9 +831,6 @@ body.light-mode .homepage-support-card p {
 }
 
 
-body.light-mode .client-review-sec {
-    background-image: linear-gradient(to right, #f1eeff, rgb(251, 252, 255), #f1eeff);
-}
 
 body.light-mode .home-review {
     background-color: #ffffff;
@@ -823,8 +859,12 @@ body.light-mode .review-user {
     color: #0f1527;
 }
 
-body.light-mode .home-cta {
+body.light-mode .cta-spacing {
     background-image: linear-gradient(to right, #f1eeff, rgb(251, 252, 255), #f1eeff);
+}
+
+body.light-mode #home-price-sec {
+    background: transparent;
 }
 
 body.light-mode .home-cta h2 {
@@ -939,7 +979,7 @@ body.light-mode .tech-other-feature {
     border: 1px solid #e2e8f0;
 }
 
-body.light-mode .tech-other-feature p{
+body.light-mode .tech-other-feature p {
     color: #98a3b8;
 }
 
@@ -1238,7 +1278,7 @@ body.light-mode .pricing-title h1 {
 }
 
 body.light-mode .buy-plan:hover {
-    background-color: #4c44e7;
+    background-color: #2962ff;
     color: white;
 }
 
@@ -1298,6 +1338,7 @@ body.light-mode .faqs-main h1 {
     color: #0B1120;
 }
 
+
 body.light-mode .accordion-item {
     color: #0B1120;
 }
@@ -1326,14 +1367,36 @@ body.light-mode .roadmap-top i {
 }
 
 /* Pricing Page */
-body.light-mode #monthlyBtn:focus {
+body.light-mode .toggle-box {
+    border: 1px solid #d6d6d6;
+}
+
+body.light-mode #monthlyBtn:enabled {
     color: white;
 }
 
-body.light-mode #yearlyBtn:focus {
+body.light-mode #yearlyBtn:enabled {
     color: white;
 }
 
+ody.light-mode #yearlyBtn {
+    color: #374151;
+}
+
+body.light-mode .faqs-tab button:focus {
+    color: white;
+}
+
+body.light-mode .accordion-item {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+}
+
+body.light-mode .pricing-faq {
+    border: none;
+    border-bottom: 1px solid #d6d6d6;
+    background: none;
+}
 
 
 /* White Mode Theme End */
@@ -1640,6 +1703,62 @@ body.light-mode #yearlyBtn:focus {
         gap: 8px;
     }
 
+    /* Home Page New Style */
+    .hero-title{
+        font-size: 35px;
+    }
+
+    #home-hero{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #home-app{
+        margin-top: -20px;
+    }
+
+    #home-features{
+        margin-top: 30px;
+    }
+
+    #home-price-sec{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #monthlyBtn{
+        font-size: 20px;
+    }
+
+    #yearlyBtn{
+        font-size: 20px;
+    }
+
+    #home-review{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #home-review h2{
+        font-size: 26px;
+    }
+
+    #home-cta{
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+    }
+
+    #home-cta a{
+        font-size: 15px;
+    }
+
+    #home-cta h2{
+        font-size: 35px;
+    }
+
+
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
@@ -1785,6 +1904,19 @@ body.light-mode #yearlyBtn:focus {
 
     .pricing-card {
         padding: 30px;
+    }
+
+    /* Home page new design */
+    #home-cta{
+        margin-top: -150px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+    }
+
+    .full-footer{
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
 }

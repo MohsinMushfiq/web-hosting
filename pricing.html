@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing | LxRoot</title>
+    <title>LxRoot - Application Hosting Platform.</title>
     <link rel="stylesheet" href="./output/tailwind.css">
     <link rel="stylesheet" href="./src/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -14,15 +14,40 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/7.13.0/simple-icons.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const button = item.querySelector('.accordion-button');
+                const content = item.querySelector('.accordion-content');
+
+                button.addEventListener('click', () => {
+                    const isOpen = content.classList.contains('hidden');
+
+                    // Close all open items
+                    document.querySelectorAll('.accordion-content').forEach(content => content.classList.add('hidden'));
+                    document.querySelectorAll('.accordion-button svg').forEach(icon => icon.classList.remove('rotate-180'));
+
+                    // Open the clicked one
+                    if (isOpen) {
+                        content.classList.remove('hidden');
+                        button.querySelector('svg').classList.add('rotate-180');
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 
 <body class="bg-[#0B1120] font-inter">
 
+
     <!-- Navbar Start -->
-    <div class="bg-[#0B1120] text-white py-1 sticky top-0 z-50 border-b border-gray-600 font-inter main-menu">
+    <div class="text-white sticky top-0 z-50 border-b border-gray-800 font-inter main-menu">
         <!-- Logo, Menu, and Button -->
-        <div
-            class="flex justify-between items-center bg-[#0B1120] container max-w-7xl mx-auto sm:px-6 lg:px-1 full-menu">
+        <div class="flex justify-between items-center container max-w-7xl mx-auto sm:px-6 lg:px-1 full-menu">
             <!-- Logo -->
             <div class="text-xl font-bold text-white">
                 <a href="/" aria-label="lxroot-logo" class="logo-item">
@@ -53,7 +78,7 @@
             <nav class="hidden md:flex md:space-x-3 text-white ml-40 duration-300">
                 <div class="relative group desktop-nav-menu">
                     <a id="productDropdownLink" href="#"
-                        class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">
+                        class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">
                         Product
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
                             fill="currentColor">
@@ -63,10 +88,10 @@
                         </svg>
                     </a>
                     <ul id="productDropdownMenu"
-                        class="dropdown-menu rounded absolute hidden bg-[#1b2338] mt-2 space-y-1 text-white">
+                        class="dropdown-menu rounded absolute hidden bg-[#2d1938] mt-2 space-y-1 text-white">
                         <div class="p-4 w-64">
                             <a href="features.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -75,7 +100,7 @@
                                 <span>Features</span>
                             </a>
                             <a href="technology.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -84,7 +109,7 @@
                                 <span>Technology Stack</span>
                             </a>
                             <a href="app-hosting.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
@@ -98,12 +123,12 @@
                 </div>
 
                 <a href="roadmap.html"
-                    class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">Roadmap</a>
+                    class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">Roadmap</a>
                 <a href="pricing.html"
-                    class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">Pricing</a>
+                    class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">Pricing</a>
                 <div class="relative group">
                     <a id="dropdownLink" href="#"
-                        class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">
+                        class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">
                         Resources
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
                             fill="currentColor">
@@ -113,10 +138,10 @@
                         </svg>
                     </a>
                     <ul id="dropdownMenu"
-                        class="dropdown-menu absolute hidden rounded bg-[#1b2338] mt-2 space-y-1 text-white">
+                        class="dropdown-menu absolute hidden rounded bg-[#2d1938] mt-2 space-y-1 text-white">
                         <div class="p-4 w-64">
                             <a href="community.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -126,7 +151,7 @@
                             </a>
 
                             <a href="documentation.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
@@ -136,7 +161,7 @@
                             </a>
 
                             <a href="faqs.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -174,10 +199,10 @@
                     <i id="sun-icon" class="fas fa-sun"></i>
                 </button>
                 <a href="signin.html"
-                    class="border border-cyan-800 text-gray-300 px-4 py-2 rounded hover:bg-white hover:text-[#0B1120] duration-300 signin-btn">Sign
+                    class="border border-blue-800 text-gray-300 px-4 py-2 rounded hover:bg-white hover:text-[#0B1120] duration-300 signin-btn">Sign
                     in</a>
                 <a href="getstarted.html"
-                    class="bg-indigo-600 text-white px-4 py-2.5 rounded hover:bg-indigo-700 duration-300 get-start-btn">Get
+                    class="bg-blue-600 text-white px-4 py-2.5 rounded hover:bg-blue-700 duration-300 get-start-btn">Get
                     Started</a>
             </div>
         </div>
@@ -187,7 +212,7 @@
             <ul class="space-y-4 text-white">
                 <li>
                     <div
-                        class="bg-gray-900 flex justify-between items-center border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300 mobile-dropdown">
+                        class="bg-[#402350] flex justify-between items-center border border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938] duration-300 mobile-dropdown">
                         <span>Products</span>
                         <button class="dropdown-btn focus:outline-none">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -197,7 +222,7 @@
                             </svg>
                         </button>
                     </div>
-                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
+                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1  py-6">
                         <li
                             class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
                             <a href="features.html" class="block text-gray-300 hover:text-indigo-400">Features</a>
@@ -234,16 +259,16 @@
 
                 </li>
                 <li
-                    class="mobile-dropdown bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
+                    class="mobile-dropdown bg-[#402350] border border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938] duration-300">
                     <a href="roadmap.html" class="block hover:text-indigo-400">Roadmap </a>
                 </li>
                 <li
-                    class="mobile-dropdown bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
+                    class="mobile-dropdown bg-[#402350] border border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938] duration-300">
                     <a href="pricing.html" class="block hover:text-indigo-400">Pricing</a>
                 </li>
                 <li>
                     <div
-                        class="mobile-dropdown flex justify-between items-center border bg-gray-900 border-gray-800 px-4 py-2 rounded  duration-300">
+                        class="mobile-dropdown flex justify-between items-center border bg-[#402350] border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938]  duration-300">
                         <span>Resources</span>
                         <button class="dropdown-btn focus:outline-none">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -253,7 +278,7 @@
                             </svg>
                         </button>
                     </div>
-                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
+                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1 py-6">
                         <li
                             class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
                             <a href="community.html" class="block text-gray-300 hover:text-indigo-400">Community</a>
@@ -305,28 +330,30 @@
     </div>
     <!-- Navigation End -->
 
-    <!-- Pricing Section Start -->
-    <div class="max-w-7xl mx-auto flex flex-col items-center text-white py-16 pricing-title">
+
+       <!-- Pricing Section Start -->
+       <div class="max-w-7xl mx-auto flex flex-col items-center text-white py-16 pricing-title">
         <h2 class="text-base font-semibold text-gray-300">LXROOT LICENCE</h2>
         <h1 class="text-5xl font-bold mt-2 ">Scalable Pricing</h1>
         <p class="text-gray-400 text-center max-w-2xl mt-2 mb-8">Pay only for the applications you host, not for the
             number of servers you run.</p>
 
         <!-- Toggle Section -->
-        <div class="flex space-x-4 p-2 rounded-lg mt-8 border border-gray-600 ">
+        <div class="flex space-x-4 p-2 rounded-lg shadow-md shadow-blue-500/100 mt-8 border border-gray-600 toggle-box">
             <button id="monthlyBtn"
-                class="py-2 px-6 bg-indigo-600 text-white rounded-lg focus:outline-none">Monthly</button>
-            <button id="yearlyBtn" class="py-2 px-6   rounded-lg focus:outline-none">Annually</button>
+                class="py-2 px-6 bg-blue-600 text-white rounded-lg focus:outline-none">Monthly</button>
+            <button id="yearlyBtn"
+                class="py-2 px-6 bg-gray-900 text-white rounded-lg focus:outline-none">Annually</button>
         </div>
 
 
 
 
         <!-- Pricing Cards -->
-        <div class="grid md:grid-cols-3 gap-8 mt-12 w-full max-w-5xl">
+        <div class="grid md:grid-cols-3 gap-8 mt-12 w-full max-w-6xl">
 
             <!-- starter Plan -->
-            <div class="bg-gray-900 p-8 rounded-lg shadow-md text-left pricing-card">
+            <div class="bg-gray-900 p-8 rounded-lg shadow-md shadow-purple-500/100 text-left pricing-card">
                 <h3 class="text-lg font-semibold">Starter</h3>
                 <p class="mt-4 text-gray-400">Best for 1 - 5K Applications</p>
                 <div class="mt-6">
@@ -345,14 +372,14 @@
             </div>
 
             <!-- Professional Plan -->
-            <div class="bg-gray-800 p-8 rounded-lg shadow-md text-left pricing-card active-pricing-card">
+            <div class="bg-gray-800 p-8 rounded-lg shadow-md shadow-purple-500/100 text-left pricing-card active-pricing-card">
                 <h3 class="text-lg font-semibold">Professional</h3>
                 <p class="mt-4 text-gray-400">Best for 5,001 - 25K Applications</p>
                 <div class="mt-6 ">
                     <span class="text-4xl font-bold" id="professionalPrice">$30</span><span>/Per Billing Cycle</span>
                 </div>
                 <a href="getstarted.html"> <button
-                        class="mt-6 py-2 px-6 bg-indigo-500 text-white rounded-full active-buy-plan">Buy
+                        class="mt-6 py-2 px-6 bg-blue-600 text-white rounded-full active-buy-plan">Buy
                         plan</button></a>
                 <ul class="mt-6 space-y-2 text-gray-400">
                     <li>&check; Application toolkit</li>
@@ -365,7 +392,7 @@
             </div>
 
             <!-- Enterprise Plan -->
-            <div class="bg-gray-900 p-8 rounded-lg shadow-md text-left pricing-card">
+            <div class="bg-gray-900 p-8 rounded-lg shadow-md shadow-purple-500/100 text-left pricing-card">
                 <h3 class="text-lg font-semibold">Enterprise</h3>
                 <p class="mt-4 text-gray-400">Best for 25k - 100K Applications</p>
                 <div class="mt-6">
@@ -388,115 +415,81 @@
     <!-- Pricing Section Start -->
 
 
-    <!-- FAQs Section Start -->
-    <div class="bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120] faqs-sec">
-        <div class="max-w-7xl mx-auto faqs">
-            <h2 class="text-4xl font-semibold mb-8 font-white text-center">Frequently Asked Questions</h2>
 
-            <div class="space-y-4">
-                <!-- FAQ 1 -->
-                <div>
-                    <button
-                        class="w-full flex justify-between items-center p-4 bg-gray-800 text-left text-white rounded-lg focus:outline-none"
-                        onclick="toggleAccordion(1)">
-                        <span class="faqs-ques">Am I charged for Addon, Alias and Sub domains?</span>
-                        <span id="icon-1" class="transform transition-transform duration-500">+</span>
-                    </button>
-                    <div id="content-1" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-                        <p class="faqs-ans">No, there's no charge for Addon, Alias and Sub domains. You are only billed
-                            for
-                            hosted applications (defined below).</p>
-                    </div>
-                </div>
+    <!-- FAQs Main Section Start -->
+    <div class="max-w-7xl mx-auto py-8 px-4 faqs-main justify-center text-center">
+        <div class="mt-24 text-center">
+            <h1 class="text-5xl font-bold text-center text-white">FAQs</h1>
+            <p class="w-52 mx-auto border-b border-gray-600 mt-4">
+            <p class="text-gray-400 mt-4">Find answers to commonly asked questions about LxRoot.</p>
+        </div>
 
-                <!-- FAQ 2 -->
-                <div>
-                    <button
-                        class="w-full flex justify-between items-center p-4 bg-gray-800 text-left text-white rounded-lg focus:outline-none"
-                        onclick="toggleAccordion(2)">
-                        <span class="faqs-ques">Is there a per server licence cost?</span>
-                        <span id="icon-2" class="transform transition-transform duration-500">+</span>
-                    </button>
-                    <div id="content-2" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-                        <p class="faqs-ans">No, an LxRoot cluster has a centralised control panel and an unlimited
-                            number of
-                            servers within it (shared or VPS/dedicated). They don't need to be on the same hardware or
-                            even
-                            in the same data centre. <br> <br>
 
-                            If you provision a dedicated server with its own installation of LxRoot (a separate master
-                            organisation and control panel) then this installation will require its own licence key and
-                            be
-                            subject to the $20 minimum cost.</p>
-                    </div>
-                </div>
 
-                <!-- FAQ 3 -->
-                <div>
-                    <button
-                        class="w-full flex justify-between items-center p-4 bg-gray-800 text-left text-white rounded-lg focus:outline-none"
-                        onclick="toggleAccordion(3)">
-                        <span class="faqs-ques">What is a 'Hosted application'?</span>
-                        <span id="icon-3" class="transform transition-transform duration-500">+</span>
-                    </button>
-                    <div id="content-3" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-                        <p class="faqs-ans">A hosted application is an isolated, shared or containerised environment
-                            with
-                            its own system user, home directory, access rights and optional hard system resource limits.
-                            <br><br>
-
-                            On LxRoot you can add unlimited Domain aliases which map to the same document root or
-                            another
-                            document root within that application/site without incurring any additional cost (this is
-                            equivalent to 'Addon domains' or 'Parked domain' functionality in other control panels).
-                        </p>
-                    </div>
-                </div>
-
-                <!-- FAQ 4 -->
-                <div>
-                    <button
-                        class="w-full flex justify-between items-center p-4 bg-gray-800 text-left text-white rounded-lg focus:outline-none"
-                        onclick="toggleAccordion(4)">
-                        <span class="faqs-ques">Why do you never see elephants hiding in trees?</span>
-                        <span id="icon-4" class="transform transition-transform duration-500">+</span>
-                    </button>
-                    <div id="content-4" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-                        <p class="faqs-ans">Because they're so good at it.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ 5 -->
-                <div>
-                    <button
-                        class="w-full flex justify-between items-center p-4 bg-gray-800 text-left text-white rounded-lg focus:outline-none"
-                        onclick="toggleAccordion(5)">
-                        <span class="faqs-ques">Why can't you hear a pterodactyl go to the bathroom?</span>
-                        <span id="icon-5" class="transform transition-transform duration-500">+</span>
-                    </button>
-                    <div id="content-5" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-                        <p class="faqs-ans">Because the "P" is silent.</p>
-                    </div>
-                </div>
-
-                <!-- FAQ 6 -->
-                <div>
-                    <button
-                        class="w-full flex justify-between items-center p-4 bg-gray-800 text-left text-white rounded-lg focus:outline-none"
-                        onclick="toggleAccordion(6)">
-                        <span class="faqs-ques">Why did the invisible man turn down the job offer?</span>
-                        <span id="icon-6" class="transform transition-transform duration-500">+</span>
-                    </button>
-                    <div id="content-6" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-                        <p class="faqs-ans">He couldn't see himself doing it.</p>
-                    </div>
+        <section id="tab-1" class=" max-w-4xl mx-auto p-5 tab-content mt-12">
+            <div class="accordion-item border-b border-gray-700 duration-300 pricing-faq">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    Can I use LxRoot in open-source projects?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400 duration-300">
+                    LxRoot is an open-source library of interactive components built on top of Control Panel including
+                    buttons, dropdowns, modals, navbars, and more. Check out this guide to learn how to get started and
+                    start developing websites even faster with components on top of Control Panel.
                 </div>
             </div>
-        </div>
+
+            <div class="accordion-item border-b border-gray-700 pricing-faq">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    Is there a Free Trail file available?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400">
+                    Yes, we provide a Free Trail file to help you prototype and design your website. You can find the
+                    file in our
+                    documentation or contact support.
+                </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-700 pricing-faq">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    What are the differences between LxRoot and Control Panel?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400">
+                    LxRoot is an open-source set of components, while Control Panel is a paid set of components
+                    developed by
+                    the same creators of Control Panel. LxRoot focuses more on interactivity.
+                </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-700 pricing-faq">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    What about browser support?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400">
+                    LxRoot supports all modern browsers including Chrome, Firefox, Safari, and Edge. However, Internet
+                    Explorer is not supported.
+                </div>
+            </div>
+
+        </section>
     </div>
 
     <!-- FAQs Section End -->
-
 
 
     <!-- Footer Start -->

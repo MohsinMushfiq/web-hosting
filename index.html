@@ -14,16 +14,40 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/7.13.0/simple-icons.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const button = item.querySelector('.accordion-button');
+                const content = item.querySelector('.accordion-content');
+
+                button.addEventListener('click', () => {
+                    const isOpen = content.classList.contains('hidden');
+
+                    // Close all open items
+                    document.querySelectorAll('.accordion-content').forEach(content => content.classList.add('hidden'));
+                    document.querySelectorAll('.accordion-button svg').forEach(icon => icon.classList.remove('rotate-180'));
+
+                    // Open the clicked one
+                    if (isOpen) {
+                        content.classList.remove('hidden');
+                        button.querySelector('svg').classList.add('rotate-180');
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 
 <body class="bg-[#0B1120] font-inter">
 
 
     <!-- Navbar Start -->
-    <div class="bg-[#0B1120] text-white py-1 sticky top-0 z-50 border-b border-gray-600 font-inter main-menu">
+    <div class="text-white sticky top-0 z-50 border-b border-gray-800 font-inter main-menu">
         <!-- Logo, Menu, and Button -->
-        <div
-            class="flex justify-between items-center bg-[#0B1120] container max-w-7xl mx-auto sm:px-6 lg:px-1 full-menu">
+        <div class="flex justify-between items-center container max-w-7xl mx-auto sm:px-6 lg:px-1 full-menu">
             <!-- Logo -->
             <div class="text-xl font-bold text-white">
                 <a href="/" aria-label="lxroot-logo" class="logo-item">
@@ -54,7 +78,7 @@
             <nav class="hidden md:flex md:space-x-3 text-white ml-40 duration-300">
                 <div class="relative group desktop-nav-menu">
                     <a id="productDropdownLink" href="#"
-                        class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">
+                        class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">
                         Product
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
                             fill="currentColor">
@@ -64,10 +88,10 @@
                         </svg>
                     </a>
                     <ul id="productDropdownMenu"
-                        class="dropdown-menu rounded absolute hidden bg-[#1b2338] mt-2 space-y-1 text-white">
+                        class="dropdown-menu rounded absolute hidden bg-[#2d1938] mt-2 space-y-1 text-white">
                         <div class="p-4 w-64">
                             <a href="features.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -76,7 +100,7 @@
                                 <span>Features</span>
                             </a>
                             <a href="technology.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -85,7 +109,7 @@
                                 <span>Technology Stack</span>
                             </a>
                             <a href="app-hosting.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
@@ -99,12 +123,12 @@
                 </div>
 
                 <a href="roadmap.html"
-                    class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">Roadmap</a>
+                    class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">Roadmap</a>
                 <a href="pricing.html"
-                    class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">Pricing</a>
+                    class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">Pricing</a>
                 <div class="relative group">
                     <a id="dropdownLink" href="#"
-                        class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">
+                        class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">
                         Resources
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
                             fill="currentColor">
@@ -114,10 +138,10 @@
                         </svg>
                     </a>
                     <ul id="dropdownMenu"
-                        class="dropdown-menu absolute hidden rounded bg-[#1b2338] mt-2 space-y-1 text-white">
+                        class="dropdown-menu absolute hidden rounded bg-[#2d1938] mt-2 space-y-1 text-white">
                         <div class="p-4 w-64">
                             <a href="community.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -127,7 +151,7 @@
                             </a>
 
                             <a href="documentation.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
@@ -137,7 +161,7 @@
                             </a>
 
                             <a href="faqs.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -175,10 +199,10 @@
                     <i id="sun-icon" class="fas fa-sun"></i>
                 </button>
                 <a href="signin.html"
-                    class="border border-cyan-800 text-gray-300 px-4 py-2 rounded hover:bg-white hover:text-[#0B1120] duration-300 signin-btn">Sign
+                    class="border border-blue-800 text-gray-300 px-4 py-2 rounded hover:bg-white hover:text-[#0B1120] duration-300 signin-btn">Sign
                     in</a>
                 <a href="getstarted.html"
-                    class="bg-indigo-600 text-white px-4 py-2.5 rounded hover:bg-indigo-700 duration-300 get-start-btn">Get
+                    class="bg-blue-600 text-white px-4 py-2.5 rounded hover:bg-blue-700 duration-300 get-start-btn">Get
                     Started</a>
             </div>
         </div>
@@ -188,7 +212,7 @@
             <ul class="space-y-4 text-white">
                 <li>
                     <div
-                        class="bg-gray-900 flex justify-between items-center border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300 mobile-dropdown">
+                        class="bg-[#402350] flex justify-between items-center border border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938] duration-300 mobile-dropdown">
                         <span>Products</span>
                         <button class="dropdown-btn focus:outline-none">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -198,7 +222,7 @@
                             </svg>
                         </button>
                     </div>
-                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
+                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1  py-6">
                         <li
                             class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
                             <a href="features.html" class="block text-gray-300 hover:text-indigo-400">Features</a>
@@ -235,16 +259,16 @@
 
                 </li>
                 <li
-                    class="mobile-dropdown bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
+                    class="mobile-dropdown bg-[#402350] border border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938] duration-300">
                     <a href="roadmap.html" class="block hover:text-indigo-400">Roadmap </a>
                 </li>
                 <li
-                    class="mobile-dropdown bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
+                    class="mobile-dropdown bg-[#402350] border border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938] duration-300">
                     <a href="pricing.html" class="block hover:text-indigo-400">Pricing</a>
                 </li>
                 <li>
                     <div
-                        class="mobile-dropdown flex justify-between items-center border bg-gray-900 border-gray-800 px-4 py-2 rounded  duration-300">
+                        class="mobile-dropdown flex justify-between items-center border bg-[#402350] border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938]  duration-300">
                         <span>Resources</span>
                         <button class="dropdown-btn focus:outline-none">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -254,7 +278,7 @@
                             </svg>
                         </button>
                     </div>
-                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
+                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1 py-6">
                         <li
                             class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
                             <a href="community.html" class="block text-gray-300 hover:text-indigo-400">Community</a>
@@ -308,8 +332,42 @@
 
 
 
-    <!-- Hero Start -->
-    <div class="main-hero">
+    <!-- Hero Section Start -->
+    <section class="max-w-7xl mx-auto text-white py-24 technology-hero mt-4" id="home-hero">
+        <div class="px-2 lg:flex lg:items-center lg:space-x-12 tech-hero">
+            <!-- Text Content -->
+            <div class="">
+                <h2 class="text-6xl about-h2 font-extrabold mb-2 line-height:2 hero-title">
+                    Multi-server
+                </h2>
+                <h2 class="text-6xl about-h2 font-extrabold mb-6 line-height:2 hero-title">
+                    Hosting Platform
+                </h2>
+                <p class="text-lg mb-8 text-gray-400 font-normal tech-hero-des">
+                    The LxRoot technology stack is secure and flexible allowing you to configure a high performance
+                    multi-server platform to scale and grow your business.
+
+
+                </p>
+                <div class="flex space-x-4 about-hero-button">
+                    <a href="#web-server"
+                        class="bg-gradient-to-r from-blue-700 to-purple-600 shadow-sm shadow-purple-500/50 text-lg text-white font-semibold py-3 px-14 rounded-lg inline-block duration-300 home-button">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+            <!-- Image Content -->
+            <div class="mt-12 lg:mt-0 relative">
+                <div class="relative z-10">
+                    <img class="rounded-lg object-cover object-center"
+                        src="https://cdni.iconscout.com/illustration/premium/thumb/hosting-server-illustration-download-in-svg-png-gif-file-formats--cloud-client-business-pack-illustrations-5174955.png"
+                        alt="Image 1">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+    <div class="main-hero hidden">
         <div>
             <!-- Gradient Background Section -->
             <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -341,7 +399,7 @@
                             class="hero-live-btn border border-cyan-800 text-cyan-300 font-normal px-5 pt-2 pb-2 text-lg rounded hover:bg-white hover:text-black duration-300">Live
                             Demo</a>
                         <a href="#"
-                            class="hero-start-btn rounded-md bg-indigo-500 px-5 py-2.5 text-lg text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 duration-300">Get
+                            class="hero-button-btn rounded-md bg-indigo-500 px-5 py-2.5 text-lg text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 duration-300">Get
                             started</a>
                     </div>
                 </div>
@@ -353,104 +411,128 @@
                 <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
                     style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
                 </div>
-            </div>  
+            </div>
         </div>
     </div>
+
 
 
     <!-- Supported Programming Language Section Start -->
     <div class="mx-auto max-w-7xl px-6 lg:px-8 technology-sec">
-        <p class="text-center text-gray-400 mb-8 technology-text text-light">Officially supported programming language by LxRoot</p>
         <div
-            class="max-w-7xl mx-auto grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 text-gray-400 sm:gap-6 sm:px-5 hero-spacing hero-icon items-center justify-center text-center tech-stack mb-12">
+            class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-10 gap-6 text-gray-400 hero-spacing hero-icon items-center justify-center text-center tech-stack mb-12">
             <i
-                class="devicon-python-plain text-3xl rounded py-4 text-white border border-gray-700 bg-gray-900"><span class="text-3xl"> Python</span></i>
+                class="devicon-python-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900 shadow-md shadow-indigo-500/50">
+                <span class="text-3xl"></span>
+            </i>
             <i
-                class="devicon-go-plain text-3xl rounded py-4 text-white border border-gray-700 bg-gray-900"><span class="text-3xl"> GoLang</span></i>
+                class="fa-brands fa-golang text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900 shadow-md shadow-purple-500/50">
+                <span class="text-3xl"></span>
+            </i>
             <i
-                class="devicon-php-plain text-3xl rounded py-4 text-white border border-gray-700 bg-gray-900"><span class="text-3xl"> PHP</span></i>
+                class="devicon-php-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900 shadow-md shadow-blue-500/50">
+                <span class="text-3xl"></span>
+            </i>
             <i
-                class="devicon-rust-plain text-3xl rounded py-4 text-white border border-gray-700 bg-gray-900"><span class="text-3xl"> Rust</span></i>
+                class="devicon-rust-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900 shadow-md shadow-cyan-500/50">
+                <span class="text-3xl"></span>
+            </i>
             <i
-                class="devicon-html5-plain text-3xl rounded py-4 text-white border border-gray-700 bg-gray-900"><span class="text-3xl"> HTML5</span></i>
+                class="devicon-html5-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900 shadow-md shadow-purple-500/50">
+                <span class="text-3xl"></span>
+            </i>
             <i
-                class="devicon-nodejs-plain text-3xl rounded py-4 text-white border border-gray-700 bg-gray-900"><span class="text-3xl"> NodeJs</span></i>
+                class="devicon-nodejs-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900 shadow-md shadow-blue-500/50">
+                <span class="text-3xl"></span>
+            </i>
             <i
-                class="devicon-java-plain text-3xl rounded py-4 text-white border border-gray-700 bg-gray-900"><span class="text-3xl"> Java</span></i>
+                class="devicon-java-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900 shadow-md shadow-cyan-500/50">
+                <span class="text-3xl"></span>
+            </i>
             <i
-                class="devicon-ruby-plain text-3xl rounded py-4 text-white border border-gray-700 bg-gray-900"><span class="text-3xl"> Ruby</span></i>
-
+                class="devicon-ruby-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900 shadow-md shadow-purple-500/50">
+                <span class="text-3xl"></span>
+            </i>
+            <i
+                class="devicon-docker-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900 shadow-md shadow-indigo-500/50">
+                <span class="text-3xl"></span>
+            </i>
+            <i
+                class="devicon-dotnetcore-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900 shadow-md shadow-cyan-500/50">
+                <span class="text-3xl"></span>
+            </i>
         </div>
     </div>
-<!-- Supported Programming Language Section End -->
+
+    <!-- Supported Programming Language Section End -->
     <!-- Hero End -->
 
 
 
 
     <!-- Application Hosting Section Start -->
-    <section class="py-16 custom-padding app-hosting-sec safe-space">
+    <section class="py-16 custom-padding app-hosting-sec safe-space" id="home-app">
         <!-- Application Tools -->
         <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-5 sm:px-6 lg:px-1">
             <div class="text-left">
                 <h2 class="text-4xl font-semibold mb-5 text-white cta-title">Ready to get started?</h2>
-                <p class="app-text-des mb-8 text-gray-200 font-extralight text-base">Explore products, or create an
+                <p class="app-text-des mb-8 text-gray-400 font-normal text-base">Explore products, or create an
                     account instantly
                     and start accepting payments. You can also contact us to design a custom package for your business.
                 </p>
                 <a href="#"
-                    class="app-btn bg-indigo-500 hover:bg-indigo-600 text-white font-normal py-3 px-10 rounded-lg duration-300 flex justify-center align-center">
+                    class="app-btn bg-gradient-to-r from-blue-700 to-purple-600 shadow-sm shadow-purple-500/50  text-white font-normal py-3 px-10 rounded-lg duration-300 flex justify-center align-center home-button text-lg">
                     Start now →
                 </a>
             </div>
             <!-- Application Tool 1 -->
             <div
-                class="border border-cyan-800 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300 app-card">
+                class="border border-blue-900 p-7 rounded-lg shadow-md shadow-purple-500/50 hover:shadow-md  hover:border-blue-800 hover:shadow-purple-500/50  duration-300 app-card">
                 <div class="float-left mb-4 mr-4">
                     <i
-                        class="fas fa-running float-left rounded text-3xl text-cyan-300 border border-cyan-600 pl-3 pt-3 pr-3 pb-2.5"></i>
+                        class="fas fa-running float-left rounded text-3xl text-blue-400 border border-blue-900 pl-3 pt-2 pr-3 pb-2"></i>
                 </div>
                 <h3 class="text-xl font-semibold mb-2 mt-4 float-left text-white">Runtimes</h3>
-                <p class="app-text-des float-left mb-4 text-gray-200 text-sm font-extralight">Lorem Ipsum has been the
+                <p class="app-text-des float-left mb-4 text-gray-400 text-sm font-normal">Lorem Ipsum has been the
                     industry's
                     standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
                     scrambled
                     it to make a type.</p>
-                <a href="#" class="text-cyan-500 hover:text-indigo-300 block float-left duration-300">Go there →</a>
+                <a href="#" class="text-blue-400 hover:text-purple-500 block float-left duration-300">Go there →</a>
                 <div class="clear-both"></div>
             </div>
 
             <!-- Application Tool 2 -->
             <div
-                class="border border-cyan-800 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300 app-card">
+                class="border border-blue-900 p-7 rounded-lg shadow-md shadow-purple-500/50 hover:shadow-md  hover:border-blue-800 hover:shadow-purple-500/50  duration-300 app-card">
                 <div class="float-left mb-4 mr-4">
                     <i
-                        class="fa-solid fa-sliders float-left rounded text-3xl text-cyan-300 border border-cyan-600 pl-3 pt-3 pr-3 pb-2.5"></i>
+                        class="fa-solid fa-sliders float-left rounded text-3xl text-blue-400 border border-blue-900 pl-3 pt-2 pr-3 pb-2"></i>
                 </div>
                 <h3 class="text-xl font-semibold mb-2 mt-4 float-left text-white">Control Panel</h3>
-                <p class="app-text-des float-left mb-4 text-gray-200 text-sm font-extralight">Lorem Ipsum has been the
+                <p class="app-text-des float-left mb-4 text-gray-400 text-sm font-normal">Lorem Ipsum has been the
                     industry's
                     standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
                     scrambled
                     it to make a type.</p>
-                <a href="#" class="text-cyan-500 hover:text-indigo-300 block float-left duration-300">Go there →</a>
+                <a href="#" class="text-blue-400 hover:text-purple-500 block float-left duration-300">Go there →</a>
                 <div class="clear-both"></div>
             </div>
 
             <!-- Application Tool 3 -->
             <div
-                class="border border-cyan-800 p-7 rounded-lg hover:shadow-2xl hover:bg-[#0B1120] hover:border-indigo-800 duration-300 app-card">
+                class="border border-blue-900 p-7 rounded-lg shadow-md shadow-purple-500/50 hover:shadow-md  hover:border-blue-800 hover:shadow-purple-500/50  duration-300 app-card">
                 <div class="float-left mb-4 mr-4">
                     <i
-                        class="fa-solid fa-cloud-arrow-up float-left rounded text-3xl text-cyan-300 border border-cyan-600 pl-2.5 pt-3 pr-2.5 pb-3"></i>
+                        class="fa-solid fa-cloud-arrow-up float-left rounded text-3xl text-blue-400 border border-blue-900 pl-2 pt-2 pr-2 pb-2"></i>
                 </div>
                 <h3 class="text-xl font-semibold mb-2 mt-4 float-left text-white">Backup</h3>
-                <p class="app-text-des float-left mb-4 text-gray-200 text-sm font-extralight">Lorem Ipsum has been the
+                <p class="app-text-des float-left mb-4 text-gray-400 text-sm font-normal">Lorem Ipsum has been the
                     industry's
                     standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
                     scrambled
                     it to make a type.</p>
-                <a href="#" class="text-cyan-500 hover:text-indigo-300 block float-left duration-300">Go there →</a>
+                <a href="#" class="text-blue-400 hover:text-purple-500 block float-left duration-300">Go there →</a>
                 <div class="clear-both"></div>
             </div>
         </div>
@@ -460,9 +542,9 @@
 
 
     <!-- Features Section Start  -->
-    <section class="max-w-7xl mx-auto pt-9 pb-24 sm:px-6 lg:px-1 custom-padding safe-space">
+    <section class="max-w-7xl mx-auto pt-9 pb-12 sm:px-6 lg:px-1 custom-padding safe-space" id="home-features">
         <div class="text-left mb-10">
-            <h2 class="text-lg font-semibold text-cyan-500">WHY LXROOT?</h2>
+            <h2 class="text-lg font-semibold text-blue-400 mb-2">WHY LXROOT?</h2>
             <h1 class="text-3xl font-semibold text-white features-title">Creativity is nothing but the way to solve new
                 problems.</h1>
         </div>
@@ -470,61 +552,68 @@
         <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Feature 1 -->
             <div
-                class="border border-[#19243F] bg-gray-900 p-9 rounded-lg hover:bg-[#0B1120] duration-300 drop-shadow-md hover:drop-shadow-xl hover:shadow-2xl hover:border-indigo-900 feature-card">
+                class="border border-purple-900 p-7 rounded-lg shadow-md shadow-blue-500/50 hover:shadow-md hover:bg-[#0B1120] hover:border-blue-800 hover:shadow-blue-500/50  duration-300 app-card feature-card">
                 <div class="float-left mr-4">
-                    <i class="fas fa-shield float-left rounded text-3xl bg-cyan-300 pl-3 pt-3 pr-3 pb-2.5"></i>
+                    <i
+                        class="fas fa-shield float-left rounded text-3xl text-white bg-purple-900 pl-2.5 pt-2 pr-2.5 pb-2"></i>
                 </div>
                 <h3 class="text-lg font-semibold mt- mb-2 text-gray-50">Security <br> Essentials</h3>
-                <p class="mb-6 text-gray-400 font-normal text-sm">Lorem Ipsum has been the industry's standard dummy
+                <p class="mb-6 text-gray-400 font-normal text-sm mt-4">Lorem Ipsum has been the industry's standard
+                    dummy
                     text ever since the 1500s, when an unknown printer
                     took a galley of type and scrambled it to make a type.</p>
                 <a href="#"
-                    class="border border-gray-700 text-gray-200 text-sm font-extralight px-4 py-2 rounded hover:bg-indigo-600 hover:text-white hover:border-indigo-600 duration-300">View
+                    class="border border-purple-900 text-gray-200 text-sm font-extralight px-4 py-2 rounded hover:bg-blue-600 hover:text-white hover:border-blue-600 duration-300">View
                     Full Features<span class="ml-2" aria-hidden="true">&rarr;</span></a>
             </div>
 
             <!-- Feature 2 -->
             <div
-                class="border border-[#12192e] bg-gray-900 p-9 rounded-lg hover:bg-[#0B1120] duration-300 drop-shadow-md hover:drop-shadow-xl hover:shadow-2xl hover:border-indigo-900 feature-card">
+                class="border border-purple-900 p-7 rounded-lg shadow-md shadow-blue-500/50 hover:shadow-md hover:bg-[#0B1120] hover:border-blue-800 hover:shadow-blue-500/50  duration-300 app-card feature-card">
                 <div class="float-left mr-4">
-                    <i class="fas fa-server float-left rounded text-3xl bg-cyan-300 pl-3 pt-3 pr-3 pb-2.5"></i>
+                    <i
+                        class="fas fa-server float-left rounded text-3xl text-white bg-purple-900 pl-3 pt-2 pr-3 pb-2"></i>
                 </div>
                 <h3 class="text-lg font-semibold mb-2 text-gray-50">Server <br> Management</h3>
-                <p class="mb-6 text-gray-400 font-normal text-sm">Lorem Ipsum has been the industry's standard dummy
+                <p class="mb-6 text-gray-400 font-normal text-sm mt-4">Lorem Ipsum has been the industry's standard
+                    dummy
                     text ever since the 1500s, when an unknown printer
                     took a galley of type and scrambled it to make a type.</p>
                 <a href="#"
-                    class="border border-gray-700 text-gray-200 text-sm font-extralight px-4 py-2 rounded hover:bg-indigo-600 hover:text-white hover:border-indigo-600 duration-300">View
+                    class="border border-purple-900 text-gray-200 text-sm font-extralight px-4 py-2 rounded hover:bg-blue-600 hover:border-blue-600 hover:text-white duration-300">View
                     Full Features<span class="ml-2" aria-hidden="true">&rarr;</span></a>
             </div>
 
             <!-- Feature 3 -->
             <div
-                class="border border-[#19243F] bg-gray-900 p-9 rounded-lg hover:bg-[#0B1120] duration-300 drop-shadow-md hover:drop-shadow-xl hover:shadow-2xl hover:border-indigo-900 feature-card">
+                class="border border-purple-900 p-7 rounded-lg shadow-md shadow-blue-500/50 hover:shadow-md hover:bg-[#0B1120] hover:border-blue-800 hover:shadow-blue-500/50  duration-300 app-card feature-card">
                 <div class="float-left mr-4">
-                    <i class="fa-solid fa-globe float-left rounded text-3xl bg-cyan-300 pl-3 pt-3 pr-3 pb-2.5"></i>
+                    <i
+                        class="fa-solid fa-globe float-left rounded text-3xl text-white bg-purple-900 pl-3 pt-2 pr-3 pb-2"></i>
                 </div>
                 <h3 class="text-lg font-semibold mb-2 text-gray-50">Website <br> Management</h3>
-                <p class="mb-6 text-gray-400 font-normal text-sm">Lorem Ipsum has been the industry's standard dummy
+                <p class="mb-6 text-gray-400 font-normal text-sm mt-4">Lorem Ipsum has been the industry's standard
+                    dummy
                     text ever since the 1500s, when an unknown printer
                     took a galley of type and scrambled it to make a type.</p>
                 <a href="#"
-                    class="border border-gray-700 text-gray-200 text-sm font-extralight px-4 py-2 rounded hover:bg-indigo-600 hover:text-white hover:border-indigo-600 duration-300">View
+                    class="border border-purple-900 text-gray-200 text-sm font-extralight px-4 py-2 rounded hover:bg-blue-600 hover:text-white hover:border-blue-600 duration-300">View
                     Full Features<span class="ml-2" aria-hidden="true">&rarr;</span></a>
             </div>
 
             <!-- Feature 4 -->
             <div
-                class="border border-[#19243F] bg-gray-900 p-9 rounded-lg hover:bg-[#0B1120] duration-300 drop-shadow-md hover:drop-shadow-xl hover:shadow-2xl hover:border-indigo-900 feature-card">
+                class="border border-purple-900 p-7 rounded-lg shadow-md shadow-blue-500/50 hover:shadow-md hover:bg-[#0B1120] hover:border-blue-800 hover:shadow-blue-500/50  duration-300 app-card feature-card">
                 <div class="float-left mr-4">
-                    <i class="fa-solid fa-code float-left rounded text-3xl bg-cyan-300 pl-2.5 pt-3 pr-2.5 pb-3"></i>
+                    <i class="fa-solid fa-code float-left rounded text-3xl text-white bg-purple-900 p-2"></i>
                 </div>
                 <h3 class="text-lg font-semibold mb-2 text-gray-50">Developer <br> Tools</h3>
-                <p class="mb-6 text-gray-400 font-normal text-sm">Lorem Ipsum has been the industry's standard dummy
+                <p class="mb-6 text-gray-400 font-normal text-sm mt-4">Lorem Ipsum has been the industry's standard
+                    dummy
                     text ever since the 1500s, when an unknown printer
                     took a galley of type and scrambled it to make a type.</p>
                 <a href="#"
-                    class="border border-gray-700 text-gray-200 text-sm font-extralight px-4 py-2 rounded hover:bg-indigo-600 hover:text-white hover:border-indigo-600 duration-300">View
+                    class="border border-purple-900 text-gray-200 text-sm font-extralight px-4 py-2 rounded hover:bg-blue-600 hover:text-white hover:border-blue-600 duration-300">View
                     Full Features<span class="ml-2" aria-hidden="true">&rarr;</span></a>
             </div>
         </div>
@@ -535,15 +624,15 @@
 
 
     <!-- Support Section Start -->
-    <div class="bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120] custom-padding" id="home-price-sec">
-        <section class="max-w-7xl mx-auto text-white pb-12 pt-12 sm:px-6 lg:px-1 homepage-support">
+    <div class="custom-padding" id="home-price-sec">
+        <section class="max-w-7xl mx-auto text-white pb-12 sm:px-6 lg:px-1 homepage-support">
             <div class="mx-auto">
                 <div class="flex flex-col lg:flex-row lg:justify-between">
                     <!-- Support & Knowledgebase Text -->
-                    <div class="lg:mb-0 lg:w-1/2 px-4 homepage-support-top">
-                        <h2 class="text-cyan-500 text-sm font-normal uppercase mt-12 mb-3">All in One Platform</h2>
-                        <h3 class="text-3xl font-bold mb-5">Support & Knowledgebase</h3>
-                        <p class="text-gray-300 text-sm">
+                    <div class="lg:mb-0 lg:w-1/2 px-4 homepage-support-top mt-8 pr-8">
+                        <h2 class="text-blue-400 text-sm font-normal uppercase mt-12 mb-3">All in One Platform</h2>
+                        <h3 class="text-4xl font-bold mb-5">Support & Knowledgebase</h3>
+                        <p class="text-gray-400 text-base text-normal">
                             Lorem ipsum dolor sit amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
                             sint
                             velit officia consequat duis enim velit mollit. Lorem ipsum dolor sit amet minim mollit non
@@ -553,53 +642,54 @@
                     </div>
 
                     <!-- Documentation and API Cards -->
-                    <div class="support-sec grid grid-cols-1 lg:grid-cols-2 gap-6 sm:grid-cols-2">
+                    <div
+                        class="support-sec grid grid-cols-1 lg:grid-cols-2 gap-6 sm:grid-cols-2 border border-blue-900 p-8 rounded-lg shadow-md shadow-purple-700/100">
                         <div class="p-6 rounded-lg homepage-support-card">
                             <div class="flex items-center mb-4">
                                 <i
-                                    class="fa-solid fa-book float-left rounded text-3xl text-[#0B1120] bg-cyan-300 pl-3 pt-3 pr-3 pb-2.5"></i>
+                                    class="fa-solid fa-book float-left rounded text-3xl text-white bg-blue-700 pl-3 pt-2 pr-3 pb-2"></i>
                                 <h4 class="text-xl font-bold pl-5">Documentation</h4>
                             </div>
                             <p class="text-gray-400 mb-4">
                                 Leverages globally distributed edge caches to accelerate content delivery lipsum.
                             </p>
-                            <a href="#" class="text-cyan-500 hover:text-indigo-400 duration-300">Learn more →</a>
+                            <a href="#" class="text-blue-400 hover:text-purple-400 duration-300">Learn more →</a>
                         </div>
 
                         <div class="p-6 rounded-lg homepage-support-card">
                             <div class="flex items-center mb-4">
                                 <i
-                                    class="fa-solid fa-users float-left rounded text-3xl text-[#0B1120] bg-cyan-300 pl-2.5 pt-3 pr-2.5 pb-3"></i>
+                                    class="fa-solid fa-users float-left rounded text-3xl text-white bg-blue-700 pl-2.5 pt-2 pr-2.5 pb-2"></i>
                                 <h4 class="text-xl font-bold pl-5">Community</h4>
                             </div>
                             <p class="text-gray-400 mb-4">
                                 Leverages globally distributed edge caches to accelerate content delivery lipsum.
                             </p>
-                            <a href="#" class="text-cyan-500 hover:text-indigo-400 duration-300">Learn more →</a>
+                            <a href="#" class="text-blue-400 hover:text-purple-400 duration-300">Learn more →</a>
                         </div>
 
                         <div class="p-6 rounded-lg homepage-support-card">
                             <div class="flex items-center mb-4">
                                 <i
-                                    class="fa-solid fa-anchor float-left rounded text-3xl text-[#0B1120] bg-cyan-300 pl-2.5 pt-3 pr-2.5 pb-3"></i>
+                                    class="fa-solid fa-anchor float-left rounded text-3xl text-white bg-blue-700 pl-2.5 pt-2 pr-2.5 pb-2"></i>
                                 <h4 class="text-xl font-bold pl-5">API Doc</h4>
                             </div>
                             <p class="text-gray-400 mb-4">
                                 Leverages globally distributed edge caches to accelerate content delivery lipsum.
                             </p>
-                            <a href="#" class="text-cyan-500 hover:text-indigo-400 duration-300">Learn more →</a>
+                            <a href="#" class="text-blue-400 hover:text-purple-400 duration-300">Learn more →</a>
                         </div>
 
                         <div class="p-6 rounded-lg homepage-support-card">
                             <div class="flex items-center mb-4">
                                 <i
-                                    class="fa-solid fa-clock-rotate-left float-left rounded text-3xl text-[#0B1120] bg-cyan-300 pl-3 pt-3 pr-3 pb-3"></i>
+                                    class="fa-solid fa-clock-rotate-left float-left rounded text-3xl text-white bg-blue-700 pl-3 pt-2 pr-3 pb-2"></i>
                                 <h4 class="text-xl font-bold pl-5">Changelog</h4>
                             </div>
                             <p class="text-gray-400 mb-4">
                                 Leverages globally distributed edge caches to accelerate content delivery lipsum.
                             </p>
-                            <a href="#" class="text-cyan-500 hover:text-indigo-400 duration-300">Learn more →</a>
+                            <a href="#" class="text-blue-400 hover:text-purple-400 duration-300">Learn more →</a>
                         </div>
                     </div>
                 </div>
@@ -610,33 +700,35 @@
 
 
     <!-- Pricing Section Start -->
-    <div class="max-w-7xl mx-auto flex flex-col items-center text-white py-16 pricing-title pt-24 pb-24">
+    <div class="max-w-7xl mx-auto flex flex-col items-center text-white py-16 pricing-title" id="home-pricing">
         <h2 class="text-base font-semibold text-gray-300">LXROOT LICENCE</h2>
-        <h1 class="text-5xl font-bold mt-2">Scalable Pricing</h1>
+        <h1 class="text-5xl font-bold mt-2 ">Scalable Pricing</h1>
         <p class="text-gray-400 text-center max-w-2xl mt-2 mb-8">Pay only for the applications you host, not for the
             number of servers you run.</p>
 
         <!-- Toggle Section -->
-        <div class="flex space-x-4 bg-gray-200 p-2 rounded-lg mt-8 border border-gray-400 shadow-md toggle-button">
+        <div class="flex space-x-4 p-2 rounded-lg shadow-md shadow-blue-500/100 mt-8 border border-gray-600 toggle-box">
             <button id="monthlyBtn"
-                class="py-2 px-6 bg-indigo-600 !text-white rounded-lg focus:outline-none">Monthly</button>
+                class="py-2 px-6 bg-blue-600 text-white rounded-lg focus:outline-none">Monthly</button>
             <button id="yearlyBtn"
-                class="py-2 px-6 bg-gray-200 text-gray-700 rounded-lg focus:outline-none">Annually</button>
+                class="py-2 px-6 bg-gray-900 text-white rounded-lg focus:outline-none">Annually</button>
         </div>
 
 
 
+
         <!-- Pricing Cards -->
-        <div class="grid md:grid-cols-3 gap-8 mt-12 w-full max-w-5xl">
+        <div class="grid md:grid-cols-3 gap-8 mt-12 w-full max-w-6xl">
 
             <!-- starter Plan -->
-            <div class="bg-gray-900 p-8 rounded-lg shadow-md text-left pricing-card">
+            <div class="bg-gray-900 p-8 rounded-lg shadow-md shadow-purple-500/100 text-left pricing-card">
                 <h3 class="text-lg font-semibold">Starter</h3>
                 <p class="mt-4 text-gray-400">Best for 1 - 5K Applications</p>
                 <div class="mt-6">
                     <span class="text-4xl font-bold" id="starterPrice">$15</span><span>/Per Billing Cycle</span>
                 </div>
-                <button class="mt-6 py-2 px-6 bg-gray-700 text-white rounded-lg buy-plan">Buy plan</button>
+                <a href="getstarted.html"> <button anch
+                        class="mt-6 py-2 px-6 bg-gray-700 text-white rounded-full buy-plan">Buy plan</button></a>
                 <ul class="mt-6 space-y-2 text-gray-400">
                     <li>&check; Application toolkit</li>
                     <li>&check; Sub / addon / alias domain</li>
@@ -648,13 +740,16 @@
             </div>
 
             <!-- Professional Plan -->
-            <div class="bg-gray-800 p-8 rounded-lg shadow-md text-left pricing-card active-pricing-card">
+            <div
+                class="bg-gray-800 p-8 rounded-lg shadow-md shadow-purple-500/100 text-left pricing-card active-pricing-card">
                 <h3 class="text-lg font-semibold">Professional</h3>
                 <p class="mt-4 text-gray-400">Best for 5,001 - 25K Applications</p>
-                <div class="mt-6">
+                <div class="mt-6 ">
                     <span class="text-4xl font-bold" id="professionalPrice">$30</span><span>/Per Billing Cycle</span>
                 </div>
-                <button class="mt-6 py-2 px-6 bg-indigo-500 text-white rounded-lg active-buy-plan">Buy plan</button>
+                <a href="getstarted.html"> <button
+                        class="mt-6 py-2 px-6 bg-blue-600 text-white rounded-full active-buy-plan">Buy
+                        plan</button></a>
                 <ul class="mt-6 space-y-2 text-gray-400">
                     <li>&check; Application toolkit</li>
                     <li>&check; Sub / addon / alias domain</li>
@@ -666,13 +761,14 @@
             </div>
 
             <!-- Enterprise Plan -->
-            <div class="bg-gray-900 p-8 rounded-lg shadow-md text-left pricing-card">
+            <div class="bg-gray-900 p-8 rounded-lg shadow-md shadow-purple-500/100 text-left pricing-card">
                 <h3 class="text-lg font-semibold">Enterprise</h3>
                 <p class="mt-4 text-gray-400">Best for 25k - 100K Applications</p>
                 <div class="mt-6">
                     <span class="text-4xl font-bold" id="enterprisePrice">$48</span><span>/Per Billing Cycle</span>
                 </div>
-                <button class="mt-6 py-2 px-6 bg-gray-700 text-white rounded-lg buy-plan">Buy plan</button>
+                <a href="getstarted.html"><button
+                        class="mt-6 py-2 px-6 bg-gray-700 text-white rounded-full buy-plan">Buy plan</button></a>
                 <ul class="mt-6 space-y-2 text-gray-400">
                     <li>&check; Application toolkit</li>
                     <li>&check; Sub / addon / alias domain</li>
@@ -684,34 +780,37 @@
             </div>
         </div>
     </div>
+
     <!-- Pricing Section Start -->
 
 
 
+
     <!-- Clients Reviews Section Start -->
-    <div class="bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120] text-white custom-padding client-review-sec">
-        <div class="pb-8 pt-24">
+    <div class=" text-white custom-padding client-review-sec" id="home-review">
+        <div class="pb-8 pt-10">
             <div class="max-w-7xl mx-auto flex items-center justify-between sm:px-6 lg:px-1">
                 <div>
-                    <h3 class="text-cyan-500 text-sm mb-1">WHAT CUSTOMERS SAY</h3>
+                    <h3 class="text-blue-500 text-sm mb-1">WHAT CUSTOMERS SAY</h3>
                     <h2 class="text-4xl font-bold text-white reviews-title">Recent Reviews</h2>
                 </div>
                 <div class="flex space-x-2">
-                    <button class="rounded bg-white p-3 hover:bg-cyan-400"><i
-                        class="fa-solid fa-arrow-left float-left text-xl text-[#0B1120]"></i></button>
-                        <button class="rounded bg-indigo-500"><i
-                            class="fa-solid fa-arrow-right float-left text-xl text-white p-3"></i></button>
+                    <button class="rounded bg-white  pl-4 pr-4 hover:bg-blue-600 hover:text-white"><i
+                            class="fa-solid fa-arrow-left float-left text-xl text-[#0B1120] hover:text-white"></i></button>
+                    <button class="rounded bg-blue-600 pt-2 pb-2 pl-4 pr-4 hover:bg-blue-700 hover:text-white"><i
+                            class="fa-solid fa-arrow-right float-left text-xl text-white hover:text-white"></i></button>
                 </div>
             </div>
         </div>
         <div class="max-w-7xl mx-auto  sm:px-6 lg:px-1 pb-24">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-5">
-                <div class="home-review bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-indigo-600">
+                <div
+                    class="home-review bg-gray-900 p-6 rounded-lg border shadow-sm shadow-blue-600 border-purple-900 hover:border-purple-800">
                     <p class="text-gray-400 mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
                         sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
                     <div class="flex items-center">
                         <i
-                            class="fa-solid fa-user float-left text-2xl text-[#0B1120] rounded-full bg-white pl-3 pt-2.5 pr-2.5 pb-2.5 mr-4"></i>
+                            class="fa-solid fa-user float-left text-2xl text-[#0B1120] rounded-full bg-white px-3 py-2 mr-4"></i>
                         <div>
                             <p class="font-semibold text-gray-200 review-user">Kristin Watson</p>
                             <p class="text-sm text-gray-400 font-light mt-1">Jun 27, 2020 • 6 min read</p>
@@ -721,12 +820,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="home-review bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-indigo-600">
+                <div
+                    class="home-review bg-gray-900 p-6 rounded-lg border shadow-sm shadow-blue-600 border-purple-900 hover:border-purple-800">
                     <p class="text-gray-400 mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
                         sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
                     <div class="flex items-center">
                         <i
-                            class="fa-solid fa-user float-left text-2xl text-[#0B1120] rounded-full bg-white pl-3 pt-2.5 pr-2.5 pb-2.5 mr-4"></i>
+                            class="fa-solid fa-user float-left text-2xl text-[#0B1120] rounded-full bg-white px-3 py-2 mr-4"></i>
                         <div>
                             <p class="font-semibold text-gray-200 review-user">Kristin Watson</p>
                             <p class="text-sm text-gray-400 font-light mt-1">Jun 27, 2020 • 6 min read</p>
@@ -736,12 +836,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="home-review bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-indigo-600 duration-300">
+                <div
+                    class="home-review bg-gray-900 p-6 rounded-lg border shadow-sm shadow-blue-600 border-purple-900 hover:border-purple-800">
                     <p class="text-gray-400 mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
                         sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
                     <div class="flex items-center">
                         <i
-                            class="fa-solid fa-user float-left text-2xl text-[#0B1120] rounded-full bg-white pl-3 pt-2.5 pr-2.5 pb-2.5 mr-4"></i>
+                            class="fa-solid fa-user float-left text-2xl text-[#0B1120] rounded-full bg-white px-3 py-2 mr-4"></i>
                         <div>
                             <p class="font-semibold text-gray-200 review-user">Kristin Watson</p>
                             <p class="text-sm text-gray-400 font-light mt-1">Jun 27, 2020 • 6 min read</p>
@@ -758,121 +859,97 @@
     <!-- Clients Reviews Section Start -->
 
 
-    <!-- FAQs Section Start -->
-    <div class="max-w-7xl mx-auto faqs" id="home-faq">
-        <h2 class="text-4xl font-semibold mb-8 pt-12 font-white text-center">Frequently Asked Questions</h2>
-
-        <div class="space-y-4 pb-12">
-            <!-- FAQ 1 -->
-            <div>
-                <button
-                    class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none"
-                    onclick="toggleAccordion(1)">
-                    <span class="faqs-ques">Am I charged for Addon, Alias and Sub domains?</span>
-                    <span id="icon-1" class="transform transition-transform duration-500">+</span>
-                </button>
-                <div id="content-1" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-                    <p class="faqs-ans">No, there's no charge for Addon, Alias and Sub domains. You are only billed for
-                        hosted applications (defined below).</p>
-                </div>
-            </div>
-
-            <!-- FAQ 2 -->
-            <div>
-                <button
-                    class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none"
-                    onclick="toggleAccordion(2)">
-                    <span class="faqs-ques">Is there a per server licence cost?</span>
-                    <span id="icon-2" class="transform transition-transform duration-500">+</span>
-                </button>
-                <div id="content-2" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-                    <p class="faqs-ans">No, an LxRoot cluster has a centralised control panel and an unlimited number of
-                        servers within it (shared or VPS/dedicated). They don't need to be on the same hardware or even
-                        in the same data centre. <br> <br>
-
-                        If you provision a dedicated server with its own installation of LxRoot (a separate master
-                        organisation and control panel) then this installation will require its own licence key and be
-                        subject to the $20 minimum cost.</p>
-                </div>
-            </div>
-
-            <!-- FAQ 3 -->
-            <div>
-                <button
-                    class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none"
-                    onclick="toggleAccordion(3)">
-                    <span class="faqs-ques">What is a 'Hosted application'?</span>
-                    <span id="icon-3" class="transform transition-transform duration-500">+</span>
-                </button>
-                <div id="content-3" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-                    <p class="faqs-ans">A hosted application is an isolated, shared or containerised environment with
-                        its own system user, home directory, access rights and optional hard system resource limits.
-                        <br><br>
-
-                        On LxRoot you can add unlimited Domain aliases which map to the same document root or another
-                        document root within that application/site without incurring any additional cost (this is
-                        equivalent to 'Addon domains' or 'Parked domain' functionality in other control panels).
-                    </p>
-                </div>
-            </div>
-
-            <!-- FAQ 4 -->
-            <div>
-                <button
-                    class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none"
-                    onclick="toggleAccordion(4)">
-                    <span class="faqs-ques">Why do you never see elephants hiding in trees?</span>
-                    <span id="icon-4" class="transform transition-transform duration-500">+</span>
-                </button>
-                <div id="content-4" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-                    <p class="faqs-ans">Because they're so good at it.</p>
-                </div>
-            </div>
-
-            <!-- FAQ 5 -->
-            <div>
-                <button
-                    class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none"
-                    onclick="toggleAccordion(5)">
-                    <span class="faqs-ques">Why can't you hear a pterodactyl go to the bathroom?</span>
-                    <span id="icon-5" class="transform transition-transform duration-500">+</span>
-                </button>
-                <div id="content-5" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-                    <p class="faqs-ans">Because the "P" is silent.</p>
-                </div>
-            </div>
-
-            <!-- FAQ 6 -->
-            <div>
-                <button
-                    class="w-full flex justify-between items-center p-4 bg-gray-900 text-left text-white rounded-lg focus:outline-none"
-                    onclick="toggleAccordion(6)">
-                    <span class="faqs-ques">Why did the invisible man turn down the job offer?</span>
-                    <span id="icon-6" class="transform transition-transform duration-500">+</span>
-                </button>
-                <div id="content-6" class="faqs-des hidden p-4 bg-gray-700 rounded-lg">
-                    <p class="faqs-ans">He couldn't see himself doing it.</p>
-                </div>
-            </div>
+    <!-- FAQs Main Section Start -->
+    <div class="max-w-7xl mx-auto py-4 px-4 faqs-main justify-center text-center hidden">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold text-center text-white">FAQs</h1>
+            <p class="w-52 mx-auto border-b border-gray-600 mt-4">
+            <p class="text-gray-400 mt-4">Find answers to commonly asked questions about LxRoot.</p>
         </div>
+
+
+
+        <section id="tab-1" class=" max-w-4xl mx-auto p-5 tab-content mt-12">
+            <div class="accordion-item border-b border-gray-700 duration-300 pricing-faq">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    Can I use LxRoot in open-source projects?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400 duration-300">
+                    LxRoot is an open-source library of interactive components built on top of Control Panel including
+                    buttons, dropdowns, modals, navbars, and more. Check out this guide to learn how to get started and
+                    start developing websites even faster with components on top of Control Panel.
+                </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-700 pricing-faq">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    Is there a Free Trail file available?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400">
+                    Yes, we provide a Free Trail file to help you prototype and design your website. You can find the
+                    file in our
+                    documentation or contact support.
+                </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-700 pricing-faq">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    What are the differences between LxRoot and Control Panel?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400">
+                    LxRoot is an open-source set of components, while Control Panel is a paid set of components
+                    developed by
+                    the same creators of Control Panel. LxRoot focuses more on interactivity.
+                </div>
+            </div>
+
+            <div class="accordion-item border-b border-gray-700 pricing-faq">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    What about browser support?
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400">
+                    LxRoot supports all modern browsers including Chrome, Firefox, Safari, and Edge. However, Internet
+                    Explorer is not supported.
+                </div>
+            </div>
+
+        </section>
     </div>
 
     <!-- FAQs Section End -->
 
 
 
+
     <!-- Call to Action Section Start -->
-    <div class="home-cta bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120] pt-24 pb-24">
-        <div class="mx-auto max-w-7xl cta-spacing">
+    <div class="home-cta pt-4 pb-56" id="home-cta">
+        <div
+            class="mx-auto max-w-7xl cta-spacing rounded-xl border border-purple-950 pt-20 pb-16 bg-gradient-to-r from-[#2f1835] to-purple-00 shadow-md shadow-purple-500/50">
             <div class="text-center">
-                <h2 class="text-5xl font-bold tracking-tight text-white sm:text-4xl cta-title">Ready to dive in?</h2>
-                <p class="mt-2 text-lg leading-8 text-cyan-300 cta-tagline">Get Started with your free trial today.</p>
+                <h2 class="text-5xl font-bold tracking-tight text-white cta-title">Ready to dive in?</h2>
+                <p class="mt-2 text-xl leading-8 text-blue-400 cta-tagline">Get Started with your free trial today.</p>
                 <div class="mt-5 flex justify-center gap-x-4">
                     <a href="#"
-                        class="cta-live-btn border border-cyan-800 text-gray-300 px-4 pt-2 pb-2 rounded hover:bg-white hover:text-black duration-300">Live
+                        class="cta-live-btn border border-blue-800 text-gray-300 px-5 text-lg py-3 rounded hover:bg-blue-700 hover:text-white duration-300">Live
                         Demo -></a>
                     <a href="#"
-                        class="cta-start-btn bg-indigo-600 text-white font-normal px-4 py-2.5 rounded hover:bg-indigo-700 duration-300">Get
+                        class="home-button cta-start-btn bg-gradient-to-r from-blue-700 to-purple-600 text-white font-normal px-6 py-3 text-lg rounded hover:bg-purple-700 duration-300">Get
                         Started -></a>
                 </div>
             </div>
@@ -882,113 +959,113 @@
 
 
 
-        <!-- Footer Start -->
-        <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1 full-footer">
-            <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
-                <div class="footer-col space-y-4">
-                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">COMPANY</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="hover:text-white">About</a></li>
-                        <li><a href="articles.html" class="hover:text-white">Articles</a></li>
-                        <li><a href="career.html" class="hover:text-white">Career</a></li>
-                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
-                    </ul>
+ <!-- Footer Start -->
+ <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1 full-footer">
+    <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
+        <div class="footer-col space-y-4">
+            <h4 class="text-gray-500 border-b border-gray-600 pb-2">COMPANY</h4>
+            <ul class="space-y-2">
+                <li><a href="about.html" class="hover:text-white">About</a></li>
+                <li><a href="articles.html" class="hover:text-white">Articles</a></li>
+                <li><a href="career.html" class="hover:text-white">Career</a></li>
+                <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col space-y-4">
+            <h4 class="text-gray-500 border-b border-gray-600 pb-2">SOLUTIONS</h4>
+            <ul class="space-y-2">
+                <li><a href="features.html" class="hover:text-white">Features</a></li>
+                <li><a href="technology.html" class="hover:text-white">Technology</a></li>
+                <li><a href="roadmap.html" class="hover:text-white">Roadmap</a></li>
+                <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+            </ul>
+        </div>
+        <div class="footer-col space-y-4">
+            <h4 class="text-gray-500 border-b border-gray-600 pb-2">SUPPORT</h4>
+            <ul class="space-y-2">
+                <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
+                <li><a href="community.html" class="hover:text-white">Community</a></li>
+                <li><a href="support.html" class="hover:text-white">Support Docs</a></li>
+                <li><a href="faqs.html" class="hover:text-white">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="footer-col space-y-4">
+            <h4 class="text-gray-500 border-b border-gray-600 pb-2">LEGAL</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-white">Security</a></li>
+                <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-white">Terms of Use</a></li>
+                <li><a href="#" class="hover:text-white">Changelogs</a></li>
+            </ul>
+        </div>
+        <div class="footer-col footer-col-5 space-y-2">
+            <h4 class="text-gray-500 border-b border-gray-600 pb-2">CONTACT US</h4>
+            <div class="mt-4 space-y-2">
+                <div class="flex justify-center lg:justify-start items-center space-x-2">
+                    <i class="fas fa-phone text-gray-400"></i>
+                    <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
                 </div>
-                <div class="footer-col space-y-4">
-                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">SOLUTIONS</h4>
-                    <ul class="space-y-2">
-                        <li><a href="features.html" class="hover:text-white">Features</a></li>
-                        <li><a href="technology.html" class="hover:text-white">Technology</a></li>
-                        <li><a href="roadmap.html" class="hover:text-white">Roadmap</a></li>
-                        <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
-                    </ul>
+                <div class="flex justify-center lg:justify-start items-center space-x-2">
+                    <i class="fas fa-envelope text-gray-400"></i>
+                    <a href="mailto:contact@yourdomain.com"
+                        class="text-gray-400 hover:text-white">contact@lxroot.com</a>
                 </div>
-                <div class="footer-col space-y-4">
-                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">SUPPORT</h4>
-                    <ul class="space-y-2">
-                        <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
-                        <li><a href="community.html" class="hover:text-white">Community</a></li>
-                        <li><a href="support.html" class="hover:text-white">Support Docs</a></li>
-                        <li><a href="faqs.html" class="hover:text-white">FAQs</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col space-y-4">
-                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">LEGAL</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white">Security</a></li>
-                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white">Terms of Use</a></li>
-                        <li><a href="#" class="hover:text-white">Changelogs</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col footer-col-5 space-y-2">
-                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">CONTACT US</h4>
-                    <div class="mt-4 space-y-2">
-                        <div class="flex justify-center lg:justify-start items-center space-x-2">
-                            <i class="fas fa-phone text-gray-400"></i>
-                            <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
-                        </div>
-                        <div class="flex justify-center lg:justify-start items-center space-x-2">
-                            <i class="fas fa-envelope text-gray-400"></i>
-                            <a href="mailto:contact@yourdomain.com"
-                                class="text-gray-400 hover:text-white">contact@lxroot.com</a>
-                        </div>
-                        <div class="flex justify-center lg:justify-start items-center space-x-2">
-                            <i class="fas fa-map-marker-alt text-gray-300"></i>
-                            <p class="text-gray-400">Carmel, Indiana, USA</p>
-                        </div>
-                    </div>
-
-                    <!-- Social Media Icons -->
-                    <div class="flex justify-center lg:justify-start mt-4 space-x-4">
-                        <a href="https://facebook.com/yourprofile" target="_blank"
-                            class="text-gray-500 hover:text-blue-600">
-                            <i class="fab fa-facebook-f fa-lg"></i>
-                        </a>
-                        <a href="https://twitter.com/yourprofile" target="_blank"
-                            class="text-gray-500 hover:text-blue-400">
-                            <i class="fab fa-twitter fa-lg"></i>
-                        </a>
-                        <a href="https://instagram.com/yourprofile" target="_blank"
-                            class="text-gray-500 hover:text-pink-500">
-                            <i class="fab fa-instagram fa-lg"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/yourprofile" target="_blank"
-                            class="text-gray-500 hover:text-blue-700">
-                            <i class="fab fa-linkedin-in fa-lg"></i>
-                        </a>
-                        <a href="https://youtube.com/in/yourprofile" target="_blank"
-                            class="text-gray-500 hover:text-red-700">
-                            <i class="fab fa-youtube fa-lg"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="max-w-7xl mx-auto container mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
-                <div class="flex justify-between items-center about-footer-bottom">
-                    <div class="text-base text-left">
-                        Copyright &copy; 2024 | <a href="index.html"
-                            class="text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC </a>
-                    </div>
-                    <div class="text-base text-right space-x-4">
-                        <a href="#privacy"
-                            class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Privacy Policy</a>
-                        <a href="#terms" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Terms &
-                            Conditions</a>
-                    </div>
+                <div class="flex justify-center lg:justify-start items-center space-x-2">
+                    <i class="fas fa-map-marker-alt text-gray-300"></i>
+                    <p class="text-gray-400">Carmel, Indiana, USA</p>
                 </div>
             </div>
 
+            <!-- Social Media Icons -->
+            <div class="flex justify-center lg:justify-start mt-4 space-x-4">
+                <a href="https://facebook.com/yourprofile" target="_blank"
+                    class="text-gray-500 hover:text-blue-600">
+                    <i class="fab fa-facebook-f fa-lg"></i>
+                </a>
+                <a href="https://twitter.com/yourprofile" target="_blank"
+                    class="text-gray-500 hover:text-blue-400">
+                    <i class="fab fa-twitter fa-lg"></i>
+                </a>
+                <a href="https://instagram.com/yourprofile" target="_blank"
+                    class="text-gray-500 hover:text-pink-500">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank"
+                    class="text-gray-500 hover:text-blue-700">
+                    <i class="fab fa-linkedin-in fa-lg"></i>
+                </a>
+                <a href="https://youtube.com/in/yourprofile" target="_blank"
+                    class="text-gray-500 hover:text-red-700">
+                    <i class="fab fa-youtube fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto container mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
+        <div class="flex justify-between items-center about-footer-bottom">
+            <div class="text-base text-left">
+                Copyright &copy; 2024 | <a href="index.html"
+                    class="text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC </a>
+            </div>
+            <div class="text-base text-right space-x-4">
+                <a href="#privacy"
+                    class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Privacy Policy</a>
+                <a href="#terms" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Terms &
+                    Conditions</a>
+            </div>
+        </div>
+    </div>
 
-        </footer>
-        <!-- Footer End -->
+
+</footer>
+<!-- Footer End -->
 
 
 
-        <!-- JavaScript Start -->
-        <script src="src/script.js"></script>
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-        <!-- JavaScript End -->
+    <!-- JavaScript Start -->
+    <script src="src/script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- JavaScript End -->
 
 
 </body>

@@ -64,5 +64,5 @@ Upload to Server </br>
 Upload to GitHub
 
 
-<h3>End at 9:30 PM</h3>
+<h3>End at 9:00 PM</h3>
 

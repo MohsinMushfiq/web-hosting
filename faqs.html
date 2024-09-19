@@ -45,7 +45,7 @@
 
 
     <!-- Navbar Start -->
-    <div class="text-white sticky top-0 z-50 border-b border-gray-800 font-inter main-menu">
+    <div class="text-white sticky top-0 z-50 shadow font-inter main-menu">
         <!-- Logo, Menu, and Button -->
         <div class="flex justify-between items-center container max-w-7xl mx-auto sm:px-6 lg:px-1 full-menu">
             <!-- Logo -->
@@ -199,7 +199,7 @@
                     <i id="sun-icon" class="fas fa-sun"></i>
                 </button>
                 <a href="signin.html"
-                    class="border border-blue-800 text-gray-300 px-4 py-2 rounded hover:bg-white hover:text-[#0B1120] duration-300 signin-btn">Sign
+                    class="border border-gray-500 text-gray-300 px-4 py-2 rounded hover:bg-white hover:text-[#0B1120] duration-300 signin-btn">Sign
                     in</a>
                 <a href="getstarted.html"
                     class="bg-blue-600 text-white px-4 py-2.5 rounded hover:bg-blue-700 duration-300 get-start-btn">Get
@@ -338,7 +338,7 @@
     </div>
 
     <!-- FAQs Main Section Start -->
-    <div class="max-w-7xl mx-auto px-4 faqs-main justify-center text-center flex flex-cols-1">
+    <div class="max-w-7xl mx-auto px-4 faqs-main justify-center text-center flex flex-cols-1 mb-52">
 
 
         <!-- Tab Navigation -->
@@ -365,11 +365,11 @@
 
         <!-- Tab Content -->
 
-        <section id="tab-1" class="w-3/4 mx-auto p-8 tab-content">
+        <div id="tab-1" class="w-3/4 mx-auto tab-content">
             <h1 class="text-3xl font-bold mb-5 text-left">General FAQs</h1>
 
-            <div class="accordion-item bg-gray-900 p-5 rounded">
-                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+            <div class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded">
+                <button class=" accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
                     Can I use LxRoot in open-source projects?
                     <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -383,7 +383,7 @@
                 </div>
             </div>
 
-            <div class="accordion-item bg-gray-900 p-5 rounded mt-4">
+            <div class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
                 <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
                     Is there a Free Trail file available?
                     <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
@@ -398,7 +398,7 @@
                 </div>
             </div>
 
-            <div class="accordion-item bg-gray-900 p-5 rounded mt-4">
+            <div class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
                 <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
                     What are the differences between LxRoot and Control Panel?
                     <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
@@ -413,7 +413,7 @@
                 </div>
             </div>
 
-            <div class="accordion-item bg-gray-900 p-5 rounded mt-4">
+            <div class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
                 <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
                     What about browser support?
                     <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
@@ -427,7 +427,7 @@
                 </div>
             </div>
 
-        </section>
+        </div>
 
 
     </div>
@@ -436,104 +436,128 @@
 
 
 
+
+    <!-- Call to Action Section Start -->
+    <div class="home-cta pt-4 pb-56" id="home-cta">
+        <div class="mx-auto max-w-7xl cta-spacing rounded-xl border border-purple-950 pt-20 pb-16 bg-gradient-to-r from-[#2f1835] to-purple-00 shadow-md shadow-purple-500/50"
+            id="home-cta-sec">
+            <div class="text-center">
+                <h2 class="text-5xl font-bold tracking-tight text-white cta-title">Ready to dive in?</h2>
+                <p class="mt-2 text-xl leading-8 text-blue-400 cta-tagline">Get Started with your free trial today.</p>
+                <div class="mt-5 flex justify-center gap-x-4">
+                    <a href="#"
+                        class="cta-live-btn border border-blue-800 text-gray-300 px-5 text-lg py-3 rounded hover:bg-blue-700 hover:text-white duration-300">Live
+                        Demo -></a>
+                    <a href="#"
+                        class="home-button cta-start-btn bg-gradient-to-r from-blue-700 to-purple-600 text-white font-normal px-6 py-3 text-lg rounded hover:bg-purple-700 duration-300">Get
+                        Started -></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Call to Action Section End -->
+
+
+
     <!-- Footer Start -->
-    <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1 full-footer">
-        <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
-            <div class="footer-col space-y-4">
-                <h4 class="text-gray-500 border-b border-gray-600 pb-2">COMPANY</h4>
-                <ul class="space-y-2">
-                    <li><a href="about.html" class="hover:text-white">About</a></li>
-                    <li><a href="articles.html" class="hover:text-white">Articles</a></li>
-                    <li><a href="career.html" class="hover:text-white">Career</a></li>
-                    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col space-y-4">
-                <h4 class="text-gray-500 border-b border-gray-600 pb-2">SOLUTIONS</h4>
-                <ul class="space-y-2">
-                    <li><a href="features.html" class="hover:text-white">Features</a></li>
-                    <li><a href="technology.html" class="hover:text-white">Technology</a></li>
-                    <li><a href="roadmap.html" class="hover:text-white">Roadmap</a></li>
-                    <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
-                </ul>
-            </div>
-            <div class="footer-col space-y-4">
-                <h4 class="text-gray-500 border-b border-gray-600 pb-2">SUPPORT</h4>
-                <ul class="space-y-2">
-                    <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
-                    <li><a href="community.html" class="hover:text-white">Community</a></li>
-                    <li><a href="support.html" class="hover:text-white">Support Docs</a></li>
-                    <li><a href="faqs.html" class="hover:text-white">FAQs</a></li>
-                </ul>
-            </div>
-            <div class="footer-col space-y-4">
-                <h4 class="text-gray-500 border-b border-gray-600 pb-2">LEGAL</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-white">Security</a></li>
-                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-white">Terms of Use</a></li>
-                    <li><a href="#" class="hover:text-white">Changelogs</a></li>
-                </ul>
-            </div>
-            <div class="footer-col footer-col-5 space-y-2">
-                <h4 class="text-gray-500 border-b border-gray-600 pb-2">CONTACT US</h4>
-                <div class="mt-4 space-y-2">
-                    <div class="flex justify-center lg:justify-start items-center space-x-2">
-                        <i class="fas fa-phone text-gray-400"></i>
-                        <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
+.    <div id="footer">
+        <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1 full-footer">
+            <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
+                <div class="footer-col space-y-4">
+                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">COMPANY</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-white">About</a></li>
+                        <li><a href="articles.html" class="hover:text-white">Articles</a></li>
+                        <li><a href="career.html" class="hover:text-white">Career</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col space-y-4">
+                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">SOLUTIONS</h4>
+                    <ul class="space-y-2">
+                        <li><a href="features.html" class="hover:text-white">Features</a></li>
+                        <li><a href="technology.html" class="hover:text-white">Technology</a></li>
+                        <li><a href="roadmap.html" class="hover:text-white">Roadmap</a></li>
+                        <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col space-y-4">
+                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">SUPPORT</h4>
+                    <ul class="space-y-2">
+                        <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
+                        <li><a href="community.html" class="hover:text-white">Community</a></li>
+                        <li><a href="support.html" class="hover:text-white">Support Docs</a></li>
+                        <li><a href="faqs.html" class="hover:text-white">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col space-y-4">
+                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">LEGAL</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Security</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-white">Changelogs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-col-5 space-y-2">
+                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">CONTACT US</h4>
+                    <div class="mt-4 space-y-2">
+                        <div class="flex justify-center lg:justify-start items-center space-x-2">
+                            <i class="fas fa-phone text-gray-400"></i>
+                            <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
+                        </div>
+                        <div class="flex justify-center lg:justify-start items-center space-x-2">
+                            <i class="fas fa-envelope text-gray-400"></i>
+                            <a href="mailto:contact@yourdomain.com"
+                                class="text-gray-400 hover:text-white">contact@lxroot.com</a>
+                        </div>
+                        <div class="flex justify-center lg:justify-start items-center space-x-2">
+                            <i class="fas fa-map-marker-alt text-gray-300"></i>
+                            <p class="text-gray-400">Carmel, Indiana, USA</p>
+                        </div>
                     </div>
-                    <div class="flex justify-center lg:justify-start items-center space-x-2">
-                        <i class="fas fa-envelope text-gray-400"></i>
-                        <a href="mailto:contact@yourdomain.com"
-                            class="text-gray-400 hover:text-white">contact@lxroot.com</a>
-                    </div>
-                    <div class="flex justify-center lg:justify-start items-center space-x-2">
-                        <i class="fas fa-map-marker-alt text-gray-300"></i>
-                        <p class="text-gray-400">Carmel, Indiana, USA</p>
-                    </div>
-                </div>
 
-                <!-- Social Media Icons -->
-                <div class="flex justify-center lg:justify-start mt-4 space-x-4">
-                    <a href="https://facebook.com/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-blue-600">
-                        <i class="fab fa-facebook-f fa-lg"></i>
-                    </a>
-                    <a href="https://twitter.com/yourprofile" target="_blank" class="text-gray-500 hover:text-blue-400">
-                        <i class="fab fa-twitter fa-lg"></i>
-                    </a>
-                    <a href="https://instagram.com/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-pink-500">
-                        <i class="fab fa-instagram fa-lg"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-blue-700">
-                        <i class="fab fa-linkedin-in fa-lg"></i>
-                    </a>
-                    <a href="https://youtube.com/in/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-red-700">
-                        <i class="fab fa-youtube fa-lg"></i>
-                    </a>
+                    <!-- Social Media Icons -->
+                    <div class="flex justify-center lg:justify-start mt-4 space-x-4">
+                        <a href="https://facebook.com/yourprofile" target="_blank"
+                            class="text-gray-500 hover:text-blue-600">
+                            <i class="fab fa-facebook-f fa-lg"></i>
+                        </a>
+                        <a href="https://twitter.com/yourprofile" target="_blank"
+                            class="text-gray-500 hover:text-blue-400">
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </a>
+                        <a href="https://instagram.com/yourprofile" target="_blank"
+                            class="text-gray-500 hover:text-pink-500">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank"
+                            class="text-gray-500 hover:text-blue-700">
+                            <i class="fab fa-linkedin-in fa-lg"></i>
+                        </a>
+                        <a href="https://youtube.com/in/yourprofile" target="_blank"
+                            class="text-gray-500 hover:text-red-700">
+                            <i class="fab fa-youtube fa-lg"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="max-w-7xl mx-auto container mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
-            <div class="flex justify-between items-center about-footer-bottom">
-                <div class="text-base text-left">
-                    Copyright &copy; 2024 | <a href="index.html"
-                        class="text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC </a>
-                </div>
-                <div class="text-base text-right space-x-4">
-                    <a href="#privacy" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Privacy
-                        Policy</a>
-                    <a href="#terms" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Terms &
-                        Conditions</a>
+            <div class="max-w-7xl mx-auto container mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
+                <div class="flex justify-between items-center about-footer-bottom">
+                    <div class="text-base text-left">
+                        Copyright &copy; 2024 | <a href="index.html"
+                            class="text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC </a>
+                    </div>
+                    <div class="text-base text-right space-x-4">
+                        <a href="#privacy"
+                            class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Privacy Policy</a>
+                        <a href="#terms" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Terms &
+                            Conditions</a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-
-    </footer>
+        </footer>
+    </div>
     <!-- Footer End -->
 
 

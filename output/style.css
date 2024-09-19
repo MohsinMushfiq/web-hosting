@@ -210,7 +210,6 @@ body {
 }
 
 .tech-hero-server {
-  background-color: #0B1120;
   color: white;
 }
 
@@ -236,12 +235,6 @@ body {
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  border: 1px solid #212e50;
-}
-
-.database-item:hover {
-  border: 1px solid #433bdb;
-  background-color: #0f1527;
 }
 
 .database-item img {
@@ -252,14 +245,11 @@ body {
 }
 
 .tech-other-feature {
-  width: 500px;
   padding: 30px;
-  background-color: #0f1527;
   border: 1px solid #17203a;
 }
 
 .tech-other-feature:hover {
-  background-color: #17203a;
   border: 1px solid #192441;
   transition-duration: 300ms;
 }
@@ -312,14 +302,10 @@ body {
   width: 600px;
 }
 
-.app-hosting-card {
-  background: #0f1527;
-}
-
 /* Product Features Page */
 
 .product-features {
-  background-color: #0f1527;
+  background-color: #0B1120;
   padding-top: 20px;
   padding-bottom: 20px;
   border: 1px solid #17203a;
@@ -327,8 +313,8 @@ body {
 }
 
 .product-features:hover {
-  background-color: #17203a;
-  border: 1px solid #433bdb;
+  background-color: #0b1122;
+  border: 1px solid #2962ff;
   transition-duration: 300ms;
 }
 
@@ -349,16 +335,6 @@ body {
 .single-product-features p {
   margin-top: 10px;
   color: #98a3b8;
-}
-
-.app-1 {
-  padding-top: 50px;
-  padding-bottom: 280px;
-}
-
-.app-2 {
-  padding-top: 50px;
-  padding-bottom: 200px;
 }
 
 /* Pricing Page */
@@ -460,8 +436,6 @@ body {
 }
 
 .roadmap-top:hover {
-  border: 1px solid #171283;
-  background-color: #0f1527;
   transition-duration: 300ms;
 }
 
@@ -485,6 +459,45 @@ body {
 .about-cta {
   background-color: #0f1527;
   border-radius: 10px;
+}
+
+/* Technology page new style */
+
+#technology-database {
+  padding-top: 40px;
+  padding-bottom: 140px;
+}
+
+#dns-section {
+  padding-top: 80px;
+  padding-bottom: 150px;
+}
+
+#email-section {
+  padding-top: 130px;
+  padding-bottom: 150px;
+}
+
+/* App Hosting page */
+
+.apphosting-1 {
+  padding-bottom: 160px;
+}
+
+.apphosting-2 {
+  padding-bottom: 150px;
+}
+
+.apphosting-3 {
+  padding-bottom: 80px;
+}
+
+.apphosting-4 {
+  padding-bottom: 200px;
+}
+
+.apphosting-title {
+  font-size: 45px;
 }
 
 /* Custom CSS End */
@@ -543,13 +556,6 @@ body.light-mode svg {
   fill: #0B1120;
 }
 
-body.light-mode {
-  background-color: #ffffff;
-  opacity: 1;
-  background-image: radial-gradient(ellipse farthest-corner at 4px 4px, #e9eaff, #f3f3ff 50%, #ffffff 50%);
-  background-size: 4px 4px;
-}
-
 /* Header and Footer */
 
 body.light-mode .main-menu {
@@ -562,6 +568,7 @@ body.light-mode .logo-fill {
 
 body.light-mode .signin-btn {
   color: #0B1120;
+  border: 1px solid #17203a;
 }
 
 body.light-mode .signin-btn:hover {
@@ -594,7 +601,11 @@ body.light-mode .dropdown-item:hover {
 /* Footer White Mode */
 
 body.light-mode .full-footer a:hover {
-  color: #2d26ad;
+  color: #2962ff;
+}
+
+body.light-mode #footer {
+  background: #f8f8f8;
 }
 
 /* Mobile Menu White Mode */
@@ -627,7 +638,7 @@ body.light-mode .mobile-dropdown-menu {
   background-color: white;
 }
 
-body.light .mobile-dropdown-menu li{
+body.light .mobile-dropdown-menu li {
   border-bottom: 1px solid #98a3b8;
 }
 
@@ -681,13 +692,13 @@ body.light-mode .app-card {
 
 body.light-mode .app-card:hover {
   background-color: #ffffff;
-  border: 1px solid #6c64ff;
-  color: white;
+  border: 1px solid #2962ff;
 }
 
 body.light-mode .app-card i {
-  color: #433bdb;
+  color: #2962ff;
   background-color: white;
+  border: 1px solid #beacff;
 }
 
 body.light-mode .app-card a {
@@ -705,13 +716,13 @@ body.light-mode .home-feture {
 }
 
 body.light-mode .feature-card {
-  background-color: #f8f8f8;
+  background-color: white;
   color: #0B1120;
   border: 1px solid #c9e0ff;
 }
 
 body.light-mode .feature-card:hover {
-  border: 1px solid #4c44e7;
+  border: 1px solid #433bdb;
 }
 
 body.light-mode .feature-card h3 {
@@ -720,7 +731,7 @@ body.light-mode .feature-card h3 {
 
 body.light-mode .feature-card i {
   color: white;
-  background-color: #483fec;
+  background-color: #2962ff;
 }
 
 body.light-mode .feature-card p {
@@ -728,15 +739,17 @@ body.light-mode .feature-card p {
 }
 
 body.light-mode .feature-card a {
-  color: #0f1527;
-  font-weight: 400;
-  border: 1px solid #17203a;
+  color: #4375ff;
+  font-weight: 500;
 }
 
 body.light-mode .feature-card a:hover {
-  color: white;
-  background-color: #483fec;
-  border: 1px solid #483fec;
+  color: #7625b4;
+}
+
+body.light-mode #home-support {
+  border: 1px solid #c9e0ff;
+  box-shadow: 1px 1px 3px #4879ff;
 }
 
 body.light-mode #home-price-sec {
@@ -795,16 +808,16 @@ body.light-mode .homepage-support-top p {
 }
 
 body.light-mode .homepage-support-card i {
-  background-color: #483fec;
+  background-color: #4375ff;
   color: white;
 }
 
 body.light-mode .homepage-support-card a {
-  color: #433bdb;
+  color: #4375ff;
 }
 
 body.light-mode .homepage-support-card a:hover {
-  color: #171283;
+  color: #2962ff;
 }
 
 body.light-mode .homepage-support-card h4 {
@@ -851,7 +864,7 @@ body.light-mode #home-price-sec {
 }
 
 body.light-mode .home-cta h2 {
-  color: #0B1120;
+  color: #2962ff;
   font-weight: bold;
 }
 
@@ -862,6 +875,10 @@ body.light-mode .home-cta p {
 body.light-mode .cta-live-btn {
   color: #0f1527;
   border: 1px solid #0f1527;
+}
+
+body.light-mode #home-cta-sec {
+  border: 1px solid #c9e0ff;
 }
 
 body.light-mode .cta-live-btn:hover {
@@ -909,20 +926,6 @@ body.light-mode .about-hero-button a {
 
 body.light-mode .technology-text {
   color: #6b7280;
-}
-
-body.light-mode #dns-section {
-  background: white;
-}
-
-body.light-mode #backup-section {
-  background: white;
-}
-
-body.light-mode #email-section {
-  background: #f8f8f8;
-  padding-top: 260px;
-  padding-bottom: 280px;
 }
 
 body.light-mode .database-text {
@@ -979,13 +982,13 @@ body.light-mode .homepage-support p {
 }
 
 body.light-mode .tech-stack i {
-  color: #192441;
   background-color: #ffffff;
-  border: 1px solid #eee9ff;
+  border: 1px solid #d6d6d6;
+  box-shadow: 1px 1px 2px blue;
 }
 
-body.light-mode .tech-db {
-  background-color: #f8f8f8;
+body.light-mode #dns-card {
+  border: 1px solid #c9e0ff;
 }
 
 body.light-mode .physical-server {
@@ -1016,10 +1019,6 @@ body.light-mode .app-hero-button a {
   color: white;
 }
 
-body.light-mode .system-req {
-  background: #f8f8f8;
-}
-
 body.light-mode .app-white-bg {
   background: #f8f8f8;
 }
@@ -1040,13 +1039,12 @@ body.light-mode .product-features {
 }
 
 body.light-mode .product-features:hover {
-  background-color: rgba(250, 250, 255, 0.5);
-  border: 1px solid #6c64ff;
-  box-shadow: #192441;
+  background-color: white;
+  border: 1px solid #2962ff;
 }
 
 body.light-mode .product-features i {
-  color: #433bdb;
+  color: #2962ff;
 }
 
 /* Individual Product Features Page */
@@ -1248,10 +1246,11 @@ body.light-mode .cta-card p {
 body.light-mode .pricing-card {
   background-color: #ffffff;
   box-shadow: #212e50;
+  border: 1px solid #c9e0ff;
 }
 
 body.light-mode .pricing-title h1 {
-  color: #483fec;
+  color: #2962ff;
 }
 
 body.light-mode .buy-plan:hover {
@@ -1288,7 +1287,7 @@ body.light-mode .faqs-ans {
 body.light-mode .active-pricing-card {
   background-color: #2962ff;
   color: white;
-  border: 1px solid #4375ff;
+  border: 1px solid #2962ff;
 }
 
 body.light-mode .active-pricing-card p {
@@ -1303,6 +1302,10 @@ body.light-mode .active-pricing-card button {
   color: #2962ff;
   font-weight: 600;
   background-color: #f6f4ff;
+}
+
+body.light-mode .h-review-r-btn {
+  color: white;
 }
 
 /* FAQs Page */
@@ -1572,6 +1575,8 @@ body.light-mode .pricing-faq {
   .system-req {
     margin-top: 150px;
     margin-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .system-req img {
@@ -1674,58 +1679,104 @@ body.light-mode .pricing-faq {
 
   /* Home Page New Style */
 
-  .hero-title{
+  .hero-title {
     font-size: 35px;
   }
 
-  #home-hero{
+  #home-hero {
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  #home-app{
+  #home-app {
     margin-top: -20px;
   }
 
-  #home-features{
+  #home-features {
     margin-top: 30px;
   }
 
-  #home-price-sec{
+  #home-price-sec {
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
-  #monthlyBtn{
+  #monthlyBtn {
     font-size: 20px;
   }
 
-  #yearlyBtn{
+  #yearlyBtn {
     font-size: 20px;
   }
 
-  #home-review{
+  #home-review {
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
-  #home-review h2{
+  #home-review h2 {
     font-size: 26px;
   }
 
-  #home-cta{
+  #home-cta {
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 50px;
   }
 
-  #home-cta a{
+  #home-cta a {
     font-size: 15px;
   }
 
-  #home-cta h2{
+  #home-cta h2 {
     font-size: 35px;
+  }
+
+  #home-cta p {
+    font-size: 17px;
+  }
+
+  /* Technology page */
+
+  .technology-hero {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #technology-database {
+    padding-top: 80px;
+  }
+
+  #dns-section {
+    padding-top: 30px;
+  }
+
+  #email-section {
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
+
+  .email-image {
+    display: none;
+  }
+
+  /* Application Hosting Page */
+
+  .apphosting-1 {
+    padding-bottom: 100px;
+  }
+
+  .apphosting-3 {
+    padding-bottom: 80px;
+  }
+
+  .apphosting-4 {
+    padding-top: 10px;
+  }
+
+  .apphosting-5 {
+    padding-bottom: 150px;
   }
 }
 
@@ -1734,6 +1785,11 @@ body.light-mode .pricing-faq {
 
   .mobile-menu-nav {
     display: none;
+  }
+
+  .main-menu {
+    padding-left: 10px;
+    padding-right: 15px;
   }
 
   nav {
@@ -1750,6 +1806,46 @@ body.light-mode .pricing-faq {
   }
 
   /* Homepage */
+
+  #home-hero {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #home-features {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .technology-page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #footer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .apphosting-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .apphosting-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .apphosting-3 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .apphosting-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
   .custom-padding {
     padding-left: 20px;
@@ -1843,12 +1939,18 @@ body.light-mode .pricing-faq {
   }
 
   .system-req {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 100px;
   }
 
   .system-req img {
     width: 100px;
+  }
+
+  .email-image {
+    width: 100%;
+    padding-right: 30px;
   }
 
   /* Application Hosting Page */
@@ -1884,16 +1986,36 @@ body.light-mode .pricing-faq {
 
   /* Home page new design */
 
-  #home-cta{
+  #home-cta {
     margin-top: -150px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 50px;
   }
 
-  .full-footer{
+  .full-footer {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  /* App Hosting Page */
+
+  .apphosting-4 {
+    padding-top: 50px;
+    padding-bottom: 150px;
+  }
+
+  .apphosting-5 {
+    padding-top: 10px;
+    padding-bottom: 200px;
+  }
+
+  /* Roadmap page */
+
+  #roadmap {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 100px;
   }
 }
 
@@ -3006,6 +3128,11 @@ video {
   border-color: rgb(21 94 117 / var(--tw-border-opacity));
 }
 
+.border-gray-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
+
 .border-gray-600 {
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
@@ -3288,10 +3415,6 @@ video {
   padding-left: 0.75rem;
 }
 
-.pl-4 {
-  padding-left: 1rem;
-}
-
 .pl-5 {
   padding-left: 1.25rem;
 }
@@ -3306,10 +3429,6 @@ video {
 
 .pr-3 {
   padding-right: 0.75rem;
-}
-
-.pr-4 {
-  padding-right: 1rem;
 }
 
 .pr-8 {
@@ -3452,6 +3571,11 @@ video {
   color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
 .text-cyan-300 {
   --tw-text-opacity: 1;
   color: rgb(103 232 249 / var(--tw-text-opacity));
@@ -3497,6 +3621,11 @@ video {
   color: rgb(129 140 248 / var(--tw-text-opacity));
 }
 
+.text-purple-300 {
+  --tw-text-opacity: 1;
+  color: rgb(216 180 254 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -3509,6 +3638,12 @@ video {
 
 .opacity-30 {
   opacity: 0.3;
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-md {
@@ -3587,11 +3722,6 @@ video {
 
 .duration-300 {
   transition-duration: 300ms;
-}
-
-.hover\:border-blue-600:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(37 99 235 / var(--tw-border-opacity));
 }
 
 .hover\:border-blue-800:hover {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technology | LxRoot</title>
+    <title>LxRoot - Application Hosting Platform.</title>
     <link rel="stylesheet" href="./output/tailwind.css">
     <link rel="stylesheet" href="./src/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -14,16 +14,40 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/7.13.0/simple-icons.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const button = item.querySelector('.accordion-button');
+                const content = item.querySelector('.accordion-content');
+
+                button.addEventListener('click', () => {
+                    const isOpen = content.classList.contains('hidden');
+
+                    // Close all open items
+                    document.querySelectorAll('.accordion-content').forEach(content => content.classList.add('hidden'));
+                    document.querySelectorAll('.accordion-button svg').forEach(icon => icon.classList.remove('rotate-180'));
+
+                    // Open the clicked one
+                    if (isOpen) {
+                        content.classList.remove('hidden');
+                        button.querySelector('svg').classList.add('rotate-180');
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 
 <body class="bg-[#0B1120] font-inter">
 
 
     <!-- Navbar Start -->
-    <div class="bg-[#0B1120] text-white py-1 sticky top-0 z-50 border-b border-gray-800 font-inter main-menu">
+    <div class="text-white sticky top-0 z-50 shadow font-inter main-menu">
         <!-- Logo, Menu, and Button -->
-        <div
-            class="flex justify-between items-center bg-[#0B1120] container max-w-7xl mx-auto sm:px-6 lg:px-1 full-menu">
+        <div class="flex justify-between items-center container max-w-7xl mx-auto sm:px-6 lg:px-1 full-menu">
             <!-- Logo -->
             <div class="text-xl font-bold text-white">
                 <a href="/" aria-label="lxroot-logo" class="logo-item">
@@ -54,7 +78,7 @@
             <nav class="hidden md:flex md:space-x-3 text-white ml-40 duration-300">
                 <div class="relative group desktop-nav-menu">
                     <a id="productDropdownLink" href="#"
-                        class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">
+                        class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">
                         Product
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
                             fill="currentColor">
@@ -64,10 +88,10 @@
                         </svg>
                     </a>
                     <ul id="productDropdownMenu"
-                        class="dropdown-menu rounded absolute hidden bg-[#1b2338] mt-2 space-y-1 text-white">
+                        class="dropdown-menu rounded absolute hidden bg-[#2d1938] mt-2 space-y-1 text-white">
                         <div class="p-4 w-64">
                             <a href="features.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -76,7 +100,7 @@
                                 <span>Features</span>
                             </a>
                             <a href="technology.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -85,7 +109,7 @@
                                 <span>Technology Stack</span>
                             </a>
                             <a href="app-hosting.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
@@ -99,12 +123,12 @@
                 </div>
 
                 <a href="roadmap.html"
-                    class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">Roadmap</a>
+                    class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">Roadmap</a>
                 <a href="pricing.html"
-                    class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">Pricing</a>
+                    class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">Pricing</a>
                 <div class="relative group">
                     <a id="dropdownLink" href="#"
-                        class="flex items-center hover:bg-gray-700 px-4 py-2 rounded-md desktop-nav-menu">
+                        class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">
                         Resources
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
                             fill="currentColor">
@@ -114,10 +138,10 @@
                         </svg>
                     </a>
                     <ul id="dropdownMenu"
-                        class="dropdown-menu absolute hidden rounded bg-[#1b2338] mt-2 space-y-1 text-white">
+                        class="dropdown-menu absolute hidden rounded bg-[#2d1938] mt-2 space-y-1 text-white">
                         <div class="p-4 w-64">
                             <a href="community.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
                                     stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -127,7 +151,7 @@
                             </a>
 
                             <a href="documentation.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
@@ -137,7 +161,7 @@
                             </a>
 
                             <a href="faqs.html"
-                                class="dropdown-item flex items-center space-x-2 hover:bg-gray-700 p-2 rounded-lg">
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                     stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -175,10 +199,10 @@
                     <i id="sun-icon" class="fas fa-sun"></i>
                 </button>
                 <a href="signin.html"
-                    class="border border-cyan-800 text-gray-300 px-4 py-2 rounded hover:bg-white hover:text-[#0B1120] duration-300 signin-btn">Sign
+                    class="border border-gray-500 text-gray-300 px-4 py-2 rounded hover:bg-white hover:text-[#0B1120] duration-300 signin-btn">Sign
                     in</a>
                 <a href="getstarted.html"
-                    class="bg-indigo-600 text-white px-4 py-2.5 rounded hover:bg-indigo-700 duration-300 get-start-btn">Get
+                    class="bg-blue-600 text-white px-4 py-2.5 rounded hover:bg-blue-700 duration-300 get-start-btn">Get
                     Started</a>
             </div>
         </div>
@@ -188,7 +212,7 @@
             <ul class="space-y-4 text-white">
                 <li>
                     <div
-                        class="bg-gray-900 flex justify-between items-center border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300 mobile-dropdown">
+                        class="bg-[#402350] flex justify-between items-center border border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938] duration-300 mobile-dropdown">
                         <span>Products</span>
                         <button class="dropdown-btn focus:outline-none">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -198,7 +222,7 @@
                             </svg>
                         </button>
                     </div>
-                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
+                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1  py-6">
                         <li
                             class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
                             <a href="features.html" class="block text-gray-300 hover:text-indigo-400">Features</a>
@@ -235,16 +259,16 @@
 
                 </li>
                 <li
-                    class="mobile-dropdown bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
+                    class="mobile-dropdown bg-[#402350] border border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938] duration-300">
                     <a href="roadmap.html" class="block hover:text-indigo-400">Roadmap </a>
                 </li>
                 <li
-                    class="mobile-dropdown bg-gray-900 border border-gray-800 px-4 py-2 rounded hover:bg-[#1b2338] duration-300">
+                    class="mobile-dropdown bg-[#402350] border border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938] duration-300">
                     <a href="pricing.html" class="block hover:text-indigo-400">Pricing</a>
                 </li>
                 <li>
                     <div
-                        class="mobile-dropdown flex justify-between items-center border bg-gray-900 border-gray-800 px-4 py-2 rounded  duration-300">
+                        class="mobile-dropdown flex justify-between items-center border bg-[#402350] border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938]  duration-300">
                         <span>Resources</span>
                         <button class="dropdown-btn focus:outline-none">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -254,7 +278,7 @@
                             </svg>
                         </button>
                     </div>
-                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1 bg-[#0B1120] py-6">
+                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1 py-6">
                         <li
                             class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
                             <a href="community.html" class="block text-gray-300 hover:text-indigo-400">Community</a>
@@ -308,11 +332,11 @@
 
 
     <!-- Hero Section Start -->
-    <section class="max-w-7xl mx-auto text-white py-24 technology-hero">
+    <section class="max-w-7xl mx-auto text-white py-24 technology-hero technology-page">
         <div class="px-2 lg:flex lg:items-center lg:space-x-12 tech-hero">
             <!-- Text Content -->
             <div class="">
-                <div class="text-normal font-normal text-cyan-300 tech-hero-tag mb-2">
+                <div class="text-normal font-normal text-blue-400 tech-hero-tag mb-2">
                     LxRoot Product
                 </div>
                 <h2 class="text-5xl about-h2 font-extrabold mb-6 line-height:2">
@@ -326,8 +350,8 @@
                 </p>
                 <div class="flex space-x-4 about-hero-button">
                     <a href="#web-server"
-                        class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-10 rounded-lg inline-block">
-                        Get Started &darr;
+                        class="bg-gradient-to-r from-blue-700 to-purple-600 shadow-sm shadow-purple-500/50 text-lg text-white font-semibold py-3 px-14 rounded-lg inline-block duration-300 home-button">
+                        Get Started
                     </a>
                 </div>
             </div>
@@ -345,33 +369,33 @@
 
 
     <!-- Supported Programming Language Section Start -->
-    <div class="mx-auto max-w-7xl px-6 lg:px-8 technology-sec">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8 technology-sec mt-12">
         <h2 class="text-center text-4xl font-semibold leading-8 text-white">Supported Programming Language
         </h2>
         <p class="text-center text-gray-400 mt-4 mb-8 technology-text">Officially supported programming language by
             LxRoot</p>
 
         <div
-            class="max-w-7xl mx-auto flex flex-cols-1 gap-6 sm:flex-cols-3 md:flex-cols-5 lg:flex-cols-10 xl:flex-cols-10 text-gray-400  hero-spacing hero-icon items-center justify-center text-center tech-stack mb-12">
-            <i class="devicon-python-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900"><span
+            class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-10 gap-6 text-gray-400 hero-spacing hero-icon items-center justify-center text-center tech-stack mb-12">
+            <i class="devicon-python-plain text-5xl rounded p-4 text-white border border-blue-900 bg-gray-900"><span
                     class="text-3xl"></span></i>
-            <i class="fa-brands fa-golang text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900"><span
+            <i class="fa-brands fa-golang text-5xl rounded p-4 text-white border border-purple-900 bg-gray-900"><span
                     class="text-3xl"></span></i>
-            <i class="devicon-php-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900"><span
+            <i class="devicon-php-plain text-5xl rounded p-4 text-white border border-cyan-900 bg-gray-900"><span
                     class="text-3xl"></span></i>
-            <i class="devicon-rust-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900"><span
+            <i class="devicon-rust-plain text-5xl rounded p-4 text-white border border-blue-900 bg-gray-900"><span
                     class="text-3xl"></span></i>
-            <i class="devicon-html5-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900"><span
+            <i class="devicon-html5-plain text-5xl rounded p-4 text-white border border-purple-900 bg-gray-900"><span
                     class="text-3xl"></span></i>
-            <i class="devicon-nodejs-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900"><span
+            <i class="devicon-nodejs-plain text-5xl rounded p-4 text-white border border-cyan-900 bg-gray-900"><span
                     class="text-3xl"></span></i>
-            <i class="devicon-java-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900"><span
+            <i class="devicon-java-plain text-5xl rounded p-4 text-white border border-blue-900 bg-gray-900"><span
                     class="text-3xl"></span></i>
-            <i class="devicon-ruby-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900"><span
+            <i class="devicon-ruby-plain text-5xl rounded p-4 text-white border border-purple-900 bg-gray-900"><span
                     class="text-3xl"></span></i>
-            <i class="devicon-docker-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900"><span
+            <i class="devicon-docker-plain text-5xl rounded p-4 text-white border border-cyan-900 bg-gray-900"><span
                     class="text-3xl"></span></i>
-            <i class="devicon-dotnetcore-plain text-5xl rounded p-4 text-white border border-gray-800 bg-gray-900"><span
+            <i class="devicon-dotnetcore-plain text-5xl rounded p-4 text-white border border-blue-900 bg-gray-900"><span
                     class="text-3xl"></span></i>
 
         </div>
@@ -380,7 +404,7 @@
 
 
     <!-- Database Section Start -->
-    <div class="pt-12 pb-12 tech-db">
+    <div class="pt-16 pb-16 tech-db" id="technology-database">
         <!-- Content Section -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2 tech-database">
             <div class="text-4xl font-bold text-white text-center">
@@ -391,7 +415,8 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 database-sec">
 
                     <!-- Card 1 -->
-                    <div class="border border-indigo-600 rounded g text-center duration-300 database-item">
+                    <div
+                        class="border border-purple-950 shadow-md shadow-purple-500/50 rounded g text-center duration-300 hover:border-blue-950 hover:shadow-blue-500/50 database-item">
                         <img class="card-img mx-auto mt-4 mb-8"
                             src="https://cdn.iconscout.com/icon/free/png-512/free-mysql-logo-icon-download-in-svg-png-gif-file-formats--wordmark-programming-language-pack-logos-icons-1174941.png?f=webp&w=256"
                             alt="">
@@ -402,7 +427,8 @@
 
 
                     <!-- Card 2 -->
-                    <div class="border border-indigo-600 rounded text-center database-item duration-300">
+                    <div
+                        class="border border-purple-950 shadow-md shadow-purple-500/50 rounded g text-center duration-300 hover:border-blue-950 hover:shadow-blue-500/50 database-item">
                         <img class="card-img mx-auto mt-4 mb-6"
                             src="https://www.stickersdevs.com.br/wp-content/uploads/2022/01/postgreesql-logo-adesivo-sticker.png"
                             alt="">
@@ -411,7 +437,8 @@
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="border border-indigo-600  rounded text-center database-item duration-300">
+                    <div
+                        class="border border-purple-950 shadow-md shadow-purple-500/50 rounded g text-center duration-300 hover:border-blue-950 hover:shadow-blue-500/50 database-item">
                         <img class="card-img mx-auto mt-4 mb-6"
                             src="https://cdn.iconscout.com/icon/free/png-512/free-couchbase-logo-icon-download-in-svg-png-gif-file-formats--company-brand-world-logos-vol-4-pack-icons-282632.png?f=webp&w=256"
                             alt="">
@@ -426,8 +453,7 @@
     <!-- Database Section End -->
 
 
-    <section
-        class="max-w-7xl mx-auto text-white py-24 technology-hero bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120] app-1" id="dns-section">
+    <section class="max-w-7xl mx-auto text-white technology-hero technology-page" id="dns-section">
         <div class="px-2 lg:flex lg:items-center lg:space-x-12 tech-hero">
             <!-- Text Content -->
             <div class="">
@@ -442,12 +468,15 @@
                 </p>
             </div>
             <!-- Image Content -->
-            <div class="mt-12 flex flex-cols-1 lg:mt-0 relative gap-8">
-                <div class="relative rounded-lg border border-gray-600 bg-white">
-                    <img class="object-center mt-12"
-                        src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/powerdns01-7GBi.png" alt="Image 1">
+            <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 lg:mt-0 relative gap-8">
+                <div class="relative rounded-lg border border-purple-950 shadow-lg shadow-purple-500/50 bg-white dns-card"
+                    id="dns-card">
+                    <img class="object-center mt-12 powerdns"
+                        src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/powerdns01-7GBi.png"
+                        alt="Image 1">
                 </div>
-                <div class="relative rounded-lg border border-gray-600 bg-white">
+                <div class="relative rounded-lg border border-purple-950 shadow-lg shadow-purple-500/50 bg-white"
+                    id="dns-card">
                     <img class="object-center"
                         src="https://www.iwf.org.uk/media/3q5dsyw1/cloudfare_updated.png?rmode=max&width=773&v=1d91078500ba280"
                         alt="Image 1">
@@ -457,13 +486,14 @@
     </section>
 
 
-    <section class=" text-white py-24 technology-hero app-2" id="email-section">
+    <section class=" text-white pb-12 pt-12 technology-hero app-2 technology-page" id="email-section">
         <div class="max-w-7xl mx-auto px-2 flex-col-1 lg:flex lg:items-center lg:space-x-12 tech-hero">
 
-              <!-- Image Content -->
-              <div class="mt-12 flex flex-cols-1 lg:mt-0 relative gap-8 email-image">
+            <!-- Image Content -->
+            <div class="mt-12 flex flex-cols-1 lg:mt-0 relative gap-8 email-image">
                 <div class="relative">
-                    <img src="https://freepngimg.com/download/email_marketing/142670-symbol-vector-email-download-free-image.png" alt="" class="email-image">
+                    <img src="https://freepngimg.com/download/email_marketing/142670-symbol-vector-email-download-free-image.png"
+                        alt="" class="email-image">
                 </div>
 
             </div>
@@ -486,13 +516,12 @@
                     service.</p>
 
             </div>
-          
+
         </div>
     </section>
 
 
-    <section
-        class="max-w-7xl mx-auto text-white py-24 technology-hero bg-gradient-to-r from-[#0B1120] via-gray-900 to-[#0B1120] app-1" id="backup-section">
+    <section class="max-w-7xl mx-auto text-white py-24 technology-hero app-1 technology-page" id="backup-section">
         <div class="px-2 lg:flex lg:items-center lg:space-x-12 tech-hero">
             <!-- Text Content -->
             <div class="">
@@ -500,158 +529,190 @@
                     Backups
                 </h2>
                 <p class="text-lg mb-8 text-gray-400 font-light tech-hero-des mr-4">
-                    LxRoot Backup service creates incremental, de-duplicated "time machine" backups using the btrfs file system. These snapshots are fast to create and restore as well as being very disk space efficient.</p>
+                    LxRoot Backup service creates incremental, de-duplicated "time machine" backups using the btrfs file
+                    system. These snapshots are fast to create and restore as well as being very disk space efficient.
+                </p>
 
-                    <ul class="text-gray-400">
-                        <li>&check; S3 compatible backups from providers like Backblaze</li>
-                        <li>&check; AWS and R2 to capture website backup</li>
-                        <li>&check;  LxRoot's built-in backups system and S3 backups</li>
-                    </ul>
+                <ul class="text-gray-400">
+                    <li>&check; S3 compatible backups from providers like Backblaze</li>
+                    <li>&check; AWS and R2 to capture website backup</li>
+                    <li>&check; LxRoot's built-in backups system and S3 backups</li>
+                </ul>
             </div>
             <!-- Image Content -->
             <div class="mt-12 lg:mt-0 relative gap-8">
                 <div class="relative">
-                    <img class="rounded-lg object-cover object-center p-12"
-                        src="https://www.pngplay.com/wp-content/uploads/6/Backup-Background-PNG-Image.png" alt="Image 1">
+                    <img class="rounded-lg object-cover object-center"
+                        src="https://www.pngplay.com/wp-content/uploads/6/Backup-Background-PNG-Image.png"
+                        alt="Image 1">
                 </div>
-            
+
             </div>
         </div>
     </section>
 
 
-    
+
 
     <!-- System Requirements Start -->
     <div class="system-req app-2">
         <div class="max-w-6xl mx-auto">
-        <h2 class="text-4xl font-bold text-white text-center">System requirements</h2>
-        <p class="text-center text-base font-normal text-gray-400 mt-4 mb-8">Minimum system requirements for installing
-            the
-            LxRoot control panel</p>
-        <div class="grid gap-8 sm:grid-cols-2">
-            <div class="flex items-start physical-server">
-                <img src="https://cdn.icon-icons.com/icons2/1852/PNG/512/iconfinder-secureserver-4417098_116636.png" alt="Server" class="rounded-lg">
-                <div class="server-req-text">
-                    <h3 class="text-2xl font-semibold mb-4">1+ physical server or VM</h3>
-                    <p class="text-sm text-gray-500">4GB RAM, 20GB disk, 2CPU cores or vCPUs</p>
+            <h2 class="text-4xl font-bold text-white text-center">System requirements</h2>
+            <p class="text-center text-base font-normal text-gray-400 mt-4 mb-8">Minimum system requirements for
+                installing
+                the
+                LxRoot control panel</p>
+            <div class="grid gap-8 sm:grid-cols-2">
+                <div
+                    class="flex items-start physical-server border-purple-950 shadow-md shadow-purple-500/50 hover:border-blue-950 hover:shadow-blue-500/50">
+                    <img src="https://cdn.icon-icons.com/icons2/1852/PNG/512/iconfinder-secureserver-4417098_116636.png"
+                        alt="Server" class="rounded-lg">
+                    <div class="server-req-text">
+                        <h3 class="text-2xl font-semibold mb-4">1+ physical server or VM</h3>
+                        <p class="text-sm text-gray-500">4GB RAM, 20GB disk, 2CPU cores or vCPUs</p>
+                    </div>
                 </div>
-            </div>
-            <div class="flex items-start physical-server">
-                <img src="https://store-images.s-microsoft.com/image/apps.60707.161bd463-9f0d-4108-88b5-1fcd680cb12f.fe1019b0-9c16-4674-93d3-27881e9d721f.a26ff6e5-07e4-4c75-92b8-2ce71f88467b"
-                    class="rounded">
-                <div class="server-req-text">
-                    <h3 class="text-2xl font-semibold mb-4">Ubuntu</h3>
-                    <p class="text-sm text-gray-500">The server's base operation system should be Ubuntu 22.04 LTS</p>
+                <div
+                    class="flex items-start physical-server border-purple-950 shadow-md shadow-purple-500/50 hover:border-blue-950 hover:shadow-blue-500/50">
+                    <img src="https://store-images.s-microsoft.com/image/apps.60707.161bd463-9f0d-4108-88b5-1fcd680cb12f.fe1019b0-9c16-4674-93d3-27881e9d721f.a26ff6e5-07e4-4c75-92b8-2ce71f88467b"
+                        class="rounded">
+                    <div class="server-req-text">
+                        <h3 class="text-2xl font-semibold mb-4">Ubuntu</h3>
+                        <p class="text-sm text-gray-500">The server's base operation system should be Ubuntu 22.04 LTS
+                        </p>
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
     </div>
 
     <!-- System Requirements End -->
 
 
 
+
+    <!-- Call to Action Section Start -->
+    <div class="home-cta pt-4 pb-56" id="home-cta">
+        <div class="mx-auto max-w-7xl cta-spacing rounded-xl border border-purple-950 pt-20 pb-16 bg-gradient-to-r from-[#2f1835] to-purple-00 shadow-md shadow-purple-500/50"
+            id="home-cta-sec">
+            <div class="text-center">
+                <h2 class="text-5xl font-bold tracking-tight text-white cta-title">Ready to dive in?</h2>
+                <p class="mt-2 text-xl leading-8 text-blue-400 cta-tagline">Get Started with your free trial today.</p>
+                <div class="mt-5 flex justify-center gap-x-4">
+                    <a href="#"
+                        class="cta-live-btn border border-blue-800 text-gray-300 px-5 text-lg py-3 rounded hover:bg-blue-700 hover:text-white duration-300">Live
+                        Demo -></a>
+                    <a href="#"
+                        class="home-button cta-start-btn bg-gradient-to-r from-blue-700 to-purple-600 text-white font-normal px-6 py-3 text-lg rounded hover:bg-purple-700 duration-300">Get
+                        Started -></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Call to Action Section End -->
+
+
+
     <!-- Footer Start -->
-    <footer class="text-gray-400 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1 full-footer">
-        <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
-            <div class="footer-col space-y-4">
-                <h4 class="text-gray-500 border-b border-gray-600 pb-2">COMPANY</h4>
-                <ul class="space-y-2">
-                    <li><a href="about.html" class="hover:text-white">About</a></li>
-                    <li><a href="articles.html" class="hover:text-white">Articles</a></li>
-                    <li><a href="career.html" class="hover:text-white">Career</a></li>
-                    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col space-y-4">
-                <h4 class="text-gray-500 border-b border-gray-600 pb-2">SOLUTIONS</h4>
-                <ul class="space-y-2">
-                    <li><a href="features.html" class="hover:text-white">Features</a></li>
-                    <li><a href="technology.html" class="hover:text-white">Technology</a></li>
-                    <li><a href="roadmap.html" class="hover:text-white">Roadmap</a></li>
-                    <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
-                </ul>
-            </div>
-            <div class="footer-col space-y-4">
-                <h4 class="text-gray-500 border-b border-gray-600 pb-2">SUPPORT</h4>
-                <ul class="space-y-2">
-                    <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
-                    <li><a href="community.html" class="hover:text-white">Community</a></li>
-                    <li><a href="support.html" class="hover:text-white">Support Docs</a></li>
-                    <li><a href="faqs.html" class="hover:text-white">FAQs</a></li>
-                </ul>
-            </div>
-            <div class="footer-col space-y-4">
-                <h4 class="text-gray-500 border-b border-gray-600 pb-2">LEGAL</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-white">Security</a></li>
-                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-white">Terms of Use</a></li>
-                    <li><a href="#" class="hover:text-white">Changelogs</a></li>
-                </ul>
-            </div>
-            <div class="footer-col footer-col-5 space-y-2">
-                <h4 class="text-gray-500 border-b border-gray-600 pb-2">CONTACT US</h4>
-                <div class="mt-4 space-y-2">
-                    <div class="flex justify-center lg:justify-start items-center space-x-2">
-                        <i class="fas fa-phone text-gray-400"></i>
-                        <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
+    <div id="footer">
+        <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1 full-footer">
+            <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
+                <div class="footer-col space-y-4">
+                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">COMPANY</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-white">About</a></li>
+                        <li><a href="articles.html" class="hover:text-white">Articles</a></li>
+                        <li><a href="career.html" class="hover:text-white">Career</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col space-y-4">
+                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">SOLUTIONS</h4>
+                    <ul class="space-y-2">
+                        <li><a href="features.html" class="hover:text-white">Features</a></li>
+                        <li><a href="technology.html" class="hover:text-white">Technology</a></li>
+                        <li><a href="roadmap.html" class="hover:text-white">Roadmap</a></li>
+                        <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col space-y-4">
+                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">SUPPORT</h4>
+                    <ul class="space-y-2">
+                        <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
+                        <li><a href="community.html" class="hover:text-white">Community</a></li>
+                        <li><a href="support.html" class="hover:text-white">Support Docs</a></li>
+                        <li><a href="faqs.html" class="hover:text-white">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col space-y-4">
+                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">LEGAL</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Security</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-white">Changelogs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-col-5 space-y-2">
+                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">CONTACT US</h4>
+                    <div class="mt-4 space-y-2">
+                        <div class="flex justify-center lg:justify-start items-center space-x-2">
+                            <i class="fas fa-phone text-gray-400"></i>
+                            <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
+                        </div>
+                        <div class="flex justify-center lg:justify-start items-center space-x-2">
+                            <i class="fas fa-envelope text-gray-400"></i>
+                            <a href="mailto:contact@yourdomain.com"
+                                class="text-gray-400 hover:text-white">contact@lxroot.com</a>
+                        </div>
+                        <div class="flex justify-center lg:justify-start items-center space-x-2">
+                            <i class="fas fa-map-marker-alt text-gray-300"></i>
+                            <p class="text-gray-400">Carmel, Indiana, USA</p>
+                        </div>
                     </div>
-                    <div class="flex justify-center lg:justify-start items-center space-x-2">
-                        <i class="fas fa-envelope text-gray-400"></i>
-                        <a href="mailto:contact@yourdomain.com"
-                            class="text-gray-400 hover:text-white">contact@lxroot.com</a>
-                    </div>
-                    <div class="flex justify-center lg:justify-start items-center space-x-2">
-                        <i class="fas fa-map-marker-alt text-gray-300"></i>
-                        <p class="text-gray-400">Carmel, Indiana, USA</p>
-                    </div>
-                </div>
 
-                <!-- Social Media Icons -->
-                <div class="flex justify-center lg:justify-start mt-4 space-x-4">
-                    <a href="https://facebook.com/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-blue-600">
-                        <i class="fab fa-facebook-f fa-lg"></i>
-                    </a>
-                    <a href="https://twitter.com/yourprofile" target="_blank" class="text-gray-500 hover:text-blue-400">
-                        <i class="fab fa-twitter fa-lg"></i>
-                    </a>
-                    <a href="https://instagram.com/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-pink-500">
-                        <i class="fab fa-instagram fa-lg"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-blue-700">
-                        <i class="fab fa-linkedin-in fa-lg"></i>
-                    </a>
-                    <a href="https://youtube.com/in/yourprofile" target="_blank"
-                        class="text-gray-500 hover:text-red-700">
-                        <i class="fab fa-youtube fa-lg"></i>
-                    </a>
+                    <!-- Social Media Icons -->
+                    <div class="flex justify-center lg:justify-start mt-4 space-x-4">
+                        <a href="https://facebook.com/yourprofile" target="_blank"
+                            class="text-gray-500 hover:text-blue-600">
+                            <i class="fab fa-facebook-f fa-lg"></i>
+                        </a>
+                        <a href="https://twitter.com/yourprofile" target="_blank"
+                            class="text-gray-500 hover:text-blue-400">
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </a>
+                        <a href="https://instagram.com/yourprofile" target="_blank"
+                            class="text-gray-500 hover:text-pink-500">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank"
+                            class="text-gray-500 hover:text-blue-700">
+                            <i class="fab fa-linkedin-in fa-lg"></i>
+                        </a>
+                        <a href="https://youtube.com/in/yourprofile" target="_blank"
+                            class="text-gray-500 hover:text-red-700">
+                            <i class="fab fa-youtube fa-lg"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="max-w-7xl mx-auto container mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
-            <div class="flex justify-between items-center about-footer-bottom">
-                <div class="text-base text-left">
-                    Copyright &copy; 2024 | <a href="index.html"
-                        class="text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC </a>
-                </div>
-                <div class="text-base text-right space-x-4">
-                    <a href="#privacy" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Privacy
-                        Policy</a>
-                    <a href="#terms" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Terms &
-                        Conditions</a>
+            <div class="max-w-7xl mx-auto container mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
+                <div class="flex justify-between items-center about-footer-bottom">
+                    <div class="text-base text-left">
+                        Copyright &copy; 2024 | <a href="index.html"
+                            class="text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC </a>
+                    </div>
+                    <div class="text-base text-right space-x-4">
+                        <a href="#privacy"
+                            class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Privacy Policy</a>
+                        <a href="#terms" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Terms &
+                            Conditions</a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-
-    </footer>
+        </footer>
+    </div>
     <!-- Footer End -->
 
 
@@ -660,7 +721,6 @@
     <script src="src/script.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <!-- JavaScript End -->
-
 
 </body>
 

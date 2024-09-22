@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LxRoot - Application Hosting Platform.</title>
+    <link rel="stylesheet" href="./output/tailwind.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/7.13.0/simple-icons.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const button = item.querySelector('.accordion-button');
+                const content = item.querySelector('.accordion-content');
+
+                button.addEventListener('click', () => {
+                    const isOpen = content.classList.contains('hidden');
+
+                    // Close all open items
+                    document.querySelectorAll('.accordion-content').forEach(content => content.classList.add('hidden'));
+                    document.querySelectorAll('.accordion-button svg').forEach(icon => icon.classList.remove('rotate-180'));
+
+                    // Open the clicked one
+                    if (isOpen) {
+                        content.classList.remove('hidden');
+                        button.querySelector('svg').classList.add('rotate-180');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body class="bg-[#0B1120] font-inter">
+
+
+    <!-- Navbar Start -->
+    <div class="text-white sticky top-0 z-50 shadow font-inter main-menu">
+        <!-- Logo, Menu, and Button -->
+        <div class="flex justify-between items-center container max-w-7xl mx-auto sm:px-6 lg:px-1 full-menu">
+            <!-- Logo -->
+            <div class="text-xl font-bold text-white">
+                <a href="/" aria-label="lxroot-logo" class="logo-item">
+                    <svg width="75" height="75" viewBox="0 0 100 100" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.11206 59V42.2H13.1921V55.4H20.6801V59H9.11206Z"></path>
+                        <path
+                            d="M31.1771 59L28.4651 54.896L27.2171 53.144L22.1771 46.256H26.7851L29.4011 50.168L30.7691 52.04L35.7371 59H31.1771ZM22.0571 59L27.1931 51.848L29.2571 54.32L26.5931 59H22.0571ZM30.4811 53.456L28.4411 51.008L30.9611 46.256H35.4971L30.4811 53.456Z">
+                        </path>
+                        <path
+                            d="M38.2917 59V42.2H45.8517C46.9237 42.2 47.8917 42.432 48.7557 42.896C49.6357 43.36 50.3237 44 50.8197 44.816C51.3157 45.616 51.5637 46.528 51.5637 47.552C51.5637 48.608 51.3157 49.56 50.8197 50.408C50.3237 51.24 49.6437 51.896 48.7797 52.376C47.9157 52.856 46.9397 53.096 45.8517 53.096H42.1797V59H38.2917ZM47.6037 59L43.3317 51.416L47.5077 50.816L52.2597 59H47.6037ZM42.1797 49.976H45.4917C45.9077 49.976 46.2677 49.888 46.5717 49.712C46.8917 49.52 47.1317 49.256 47.2917 48.92C47.4677 48.584 47.5557 48.2 47.5557 47.768C47.5557 47.336 47.4598 46.96 47.2677 46.64C47.0757 46.304 46.7957 46.048 46.4277 45.872C46.0757 45.696 45.6437 45.608 45.1317 45.608H42.1797V49.976Z">
+                        </path>
+                        <path
+                            d="M60.2666 59.24C58.9386 59.24 57.7546 58.952 56.7146 58.376C55.6906 57.8 54.8746 57.016 54.2666 56.024C53.6746 55.032 53.3786 53.896 53.3786 52.616C53.3786 51.336 53.6746 50.2 54.2666 49.208C54.8746 48.216 55.6906 47.432 56.7146 46.856C57.7546 46.28 58.9386 45.992 60.2666 45.992C61.5946 45.992 62.7706 46.28 63.7946 46.856C64.8346 47.432 65.6506 48.216 66.2426 49.208C66.8346 50.2 67.1306 51.336 67.1306 52.616C67.1306 53.896 66.8346 55.032 66.2426 56.024C65.6506 57.016 64.8346 57.8 63.7946 58.376C62.7706 58.952 61.5946 59.24 60.2666 59.24ZM60.2666 55.928C60.8426 55.928 61.3546 55.784 61.8026 55.496C62.2506 55.208 62.6026 54.816 62.8586 54.32C63.1146 53.824 63.2346 53.256 63.2186 52.616C63.2346 51.976 63.1146 51.408 62.8586 50.912C62.6026 50.4 62.2506 50 61.8026 49.712C61.3546 49.424 60.8426 49.28 60.2666 49.28C59.6906 49.28 59.1706 49.424 58.7066 49.712C58.2586 50 57.9066 50.4 57.6506 50.912C57.3946 51.408 57.2746 51.976 57.2906 52.616C57.2746 53.256 57.3946 53.824 57.6506 54.32C57.9066 54.816 58.2586 55.208 58.7066 55.496C59.1706 55.784 59.6906 55.928 60.2666 55.928Z">
+                        </path>
+                        <path
+                            d="M75.6416 59.24C74.3136 59.24 73.1296 58.952 72.0896 58.376C71.0656 57.8 70.2496 57.016 69.6416 56.024C69.0496 55.032 68.7536 53.896 68.7536 52.616C68.7536 51.336 69.0496 50.2 69.6416 49.208C70.2496 48.216 71.0656 47.432 72.0896 46.856C73.1296 46.28 74.3136 45.992 75.6416 45.992C76.9696 45.992 78.1456 46.28 79.1696 46.856C80.2096 47.432 81.0256 48.216 81.6176 49.208C82.2096 50.2 82.5056 51.336 82.5056 52.616C82.5056 53.896 82.2096 55.032 81.6176 56.024C81.0256 57.016 80.2096 57.8 79.1696 58.376C78.1456 58.952 76.9696 59.24 75.6416 59.24ZM75.6416 55.928C76.2176 55.928 76.7296 55.784 77.1776 55.496C77.6256 55.208 77.9776 54.816 78.2336 54.32C78.4896 53.824 78.6096 53.256 78.5936 52.616C78.6096 51.976 78.4896 51.408 78.2336 50.912C77.9776 50.4 77.6256 50 77.1776 49.712C76.7296 49.424 76.2176 49.28 75.6416 49.28C75.0656 49.28 74.5456 49.424 74.0816 49.712C73.6336 50 73.2816 50.4 73.0256 50.912C72.7696 51.408 72.6496 51.976 72.6656 52.616C72.6496 53.256 72.7696 53.824 73.0256 54.32C73.2816 54.816 73.6336 55.208 74.0816 55.496C74.5456 55.784 75.0656 55.928 75.6416 55.928Z">
+                        </path>
+                        <path d="M86.0726 59V43.04H89.9126V59H86.0726ZM83.8166 49.616V46.256H92.3846V49.616H83.8166Z">
+                        </path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M76.5399 64C71.5099 73.5156 61.5123 80 50.0001 80C38.4879 80 28.4902 73.5156 23.4603 64H12.5185C18.1935 79.1867 32.834 90 50.0001 90C67.1662 90 81.8067 79.1867 87.4817 64H76.5399ZM22.4964 38C27.1257 27.4046 37.6982 20 50.0001 20C62.302 20 72.8745 27.4046 77.5038 38H88.1689C83.0718 21.7716 67.9107 10 50.0001 10C32.0895 10 16.9284 21.7716 11.8313 38H22.4964Z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Menu (Visible on larger screens) -->
+            <nav class="hidden md:flex md:space-x-3 text-white ml-40 duration-300">
+                <div class="relative group desktop-nav-menu">
+                    <a id="productDropdownLink" href="#"
+                        class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">
+                        Product
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M6.293 8.707a1 1 0 011.414 0L10 11.086l2.293-2.379a1 1 0 011.414 1.415l-3 3.12a1 1 0 01-1.414 0l-3-3.12a1 1 0 010-1.415z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <ul id="productDropdownMenu"
+                        class="dropdown-menu rounded absolute hidden bg-[#2d1938] mt-2 space-y-1 text-white">
+                        <div class="p-4 w-64">
+                            <a href="features.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11 19v-6M6 19v-4M16 19v-8M21 19V7M1 19h22M5 10h0M10 14h0M15 11h0M20 8h0" />
+                                </svg>
+                                <span>Features</span>
+                            </a>
+                            <a href="technology.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 3L2 9l10 6 10-6-10-6zm0 0v12m10-6l-10 6-10-6" />
+                                </svg>
+                                <span>Technology Stack</span>
+                            </a>
+                            <a href="app-hosting.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm2 0v14h14V5H5zm2 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h10v2H7v-2z" />
+                                </svg>
+                                <span>Application Hosting</span>
+                            </a>
+                            <!-- Add more items here -->
+                        </div>
+                    </ul>
+                </div>
+
+                <a href="roadmap.html"
+                    class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">Roadmap</a>
+                <a href="pricing.html"
+                    class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">Pricing</a>
+                <div class="relative group">
+                    <a id="dropdownLink" href="#"
+                        class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">
+                        Resources
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M6.293 8.707a1 1 0 011.414 0L10 11.086l2.293-2.379a1 1 0 011.414 1.415l-3 3.12a1 1 0 01-1.414 0l-3-3.12a1 1 0 010-1.415z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <ul id="dropdownMenu"
+                        class="dropdown-menu absolute hidden rounded bg-[#2d1938] mt-2 space-y-1 text-white">
+                        <div class="p-4 w-64">
+                            <a href="community.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5V8m-5 12a2 2 0 01-2-2V8a2 2 0 012-2h5M12 20v-6m0 0V8a2 2 0 00-2-2h-5M9 20H4a2 2 0 01-2-2v-5a2 2 0 012-2h5m5-4a2 2 0 00-2-2H7a2 2 0 00-2 2v5M9 4a2 2 0 11-4 0 2 2 0 014 0zm6 4a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                                <span>Community</span>
+                            </a>
+
+                            <a href="documentation.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M6 2a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8.414a2 2 0 00-.586-1.414l-4.414-4.414A2 2 0 0014.586 2H6zm7 7h-4v2h4v-2zm-4 4h6v2h-6v-2zm0 4h4v2h-4v-2zM8 9V4h6v4h4v12H6V4h2v5z" />
+                                </svg>
+                                <span>Documentation</span>
+                            </a>
+
+                            <a href="faqs.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8 9h4m0 0h4m-4 0v4m0-4l3 3m1 1v4m-4-1h1m-8-2h6m-6 4h6m-6 4h4m-4-8h8m4 0h1m-2 0v4m0-4h2" />
+                                </svg>
+                                <span>FAQs</span>
+                            </a>
+                            <!-- Add more items here -->
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Hamburger Button (Visible on smaller screens) -->
+            <div class="flex items-center">
+                <button id="mobile-theme-toggle" class="text-white focus:outline-none mr-4 mobile-toggler">
+                    <i id="moon-icon" class="fas fa-moon"></i>
+                    <i id="sun-icon" class="fas fa-sun"></i>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="text-white focus:outline-none md:hidden mobile-menu-nav">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Get Started Button -->
+            <div class="hidden md:block space-x-1 desktop-nav-btn">
+                <button id="theme-toggle" class="desktop-toggler text-white focus:outline-none mr-4">
+                    <i id="moon-icon" class="fas fa-moon"></i>
+                    <i id="sun-icon" class="fas fa-sun"></i>
+                </button>
+                <a href="signin.html"
+                    class="border border-gray-500 text-gray-300 px-4 py-2 rounded hover:bg-white hover:text-[#0B1120] duration-300 signin-btn">Sign
+                    in</a>
+                <a href="getstarted.html"
+                    class="bg-blue-600 text-white px-4 py-2.5 rounded hover:bg-blue-700 duration-300 get-start-btn">Get
+                    Started</a>
+            </div>
+        </div>
+
+        <!-- Dropdown Menu (Visible on smaller screens) -->
+        <nav id="menu" class="hidden mt-4 mobile-menu-spacing">
+            <ul class="space-y-4 text-white">
+                <li>
+                    <div
+                        class="bg-[#402350] flex justify-between items-center border border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938] duration-300 mobile-dropdown">
+                        <span>Products</span>
+                        <button class="dropdown-btn focus:outline-none">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1  py-6">
+                        <li
+                            class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
+                            <a href="features.html" class="block text-gray-300 hover:text-indigo-400">Features</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                        <li
+                            class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700 duration-300">
+                            <a href="technology.html" class="block text-gray-300 hover:text-indigo-400">Technology
+                                Stack</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                        <li class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700">
+                            <a href="app-hosting.html" class="block text-gray-300 hover:text-indigo-400">Application
+                                Hosting</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                    </ul>
+
+
+                </li>
+                <li
+                    class="mobile-dropdown bg-[#402350] border border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938] duration-300">
+                    <a href="roadmap.html" class="block hover:text-indigo-400">Roadmap </a>
+                </li>
+                <li
+                    class="mobile-dropdown bg-[#402350] border border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938] duration-300">
+                    <a href="pricing.html" class="block hover:text-indigo-400">Pricing</a>
+                </li>
+                <li>
+                    <div
+                        class="mobile-dropdown flex justify-between items-center border bg-[#402350] border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938]  duration-300">
+                        <span>Resources</span>
+                        <button class="dropdown-btn focus:outline-none">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1 py-6">
+                        <li
+                            class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
+                            <a href="community.html" class="block text-gray-300 hover:text-indigo-400">Community</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                        <li
+                            class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700 duration-300">
+                            <a href="documentation.html"
+                                class="block text-gray-300 hover:text-indigo-400">Documentation</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                        <li class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700">
+                            <a href="faqs.html" class="block text-gray-300 hover:text-indigo-400">FAQs</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="py-4">
+                    <a href="signin.html"
+                        class="text-white border border-indigo-600 px-8 py-3 rounded w-full hover:text-indigo-700 hover:bg-white duration-300 block text-center mobile-signin-btn">
+                        Sign In
+                    </a>
+                    <a href="getstarted.html"
+                        class="bg-indigo-600 text-white px-8 py-3 rounded w-full hover:bg-indigo-800 duration-300 block text-center mt-4 mobile-getstart-btn">
+                        Get Started
+                    </a>
+
+                </li>
+
+
+            </ul>
+        </nav>
+    </div>
+    <!-- Navigation End -->
+
+
+    <section>
+        <section class="max-w-৭xl mx-auto text-white app-hero-body pt-24">
+            <div class="max-w-7xl mx-auto lg:flex lg:items-center lg:space-x-12 justify-center text-center">
+                <!-- Text Content -->
+                <div class="hero-text app-hero-sec">
+                    <h2 class="text-5xl about-h2 font-extrabold mb-4 line-height:2">
+                        Terms & Conditions
+                    </h2>
+                    <p class="text-lg mb-8 text-gray-200 font-extralight app-hero-des">
+                        Last updated: May 2024
+                    </p>
+                </div>
+            </div>
+            <div id="tab-1" class="max-w-6xl mx-auto tab-content pt-8 pb-40">
+
+
+                <div
+                    class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded">
+                    <button class=" accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                        1. YOUR ACCEPTANCE AND CONTRACTUAL RELATIONSHIP
+                        <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content hidden text-gray-400 pt-4">
+                        By using the Services, you represent and warrant that you are of age under the laws of your
+                        jurisdiction and/or lawfully able to enter into contracts. If you are not legally able to enter
+                        into contracts, you may not use the Services at any time or in any manner, or submit any
+                        information to LxRoot or the Services.
+
+                        If you are entering into these Terms on behalf of a business entity or organization, you
+                        represent and warrant that you have the legal authority and capacity to bind such business
+                        entity or organization. If you are not authorized nor deemed by law to have such authority, you
+                        assume sole personal liability for the obligations set out in these Terms.
+                    </div>
+                </div>
+
+                <div
+                    class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                    <button class=" accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                        2. PRIVACY
+                        <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content hidden text-gray-400 pt-4">
+                        Please review our privacy policy (the “Privacy Policy”) which explains how we use information
+                        that you submit to LxRoot. The Privacy Policy is hereby incorporated by reference. Additionally,
+                        for California residents please refer to our California Privacy Notice and for residents of the
+                        European Economic Area (EEA) please refer to our GDPR Privacy Notice before registering for the
+                        Services.
+                    </div>
+                </div>
+
+                <div
+                    class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                    <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                        3. MODIFICATIONS AND ADDITIONAL TERMS
+                        <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content hidden text-gray-400 pt-4">
+                        (a) These Terms. LxRoot can change, update, add or remove provisions of these Terms at any time
+                        by posting the updated Terms on the Site and by providing a notice on the Services. We will ask
+                        for your express consent to the updated Terms where we are legally required to do so, and our
+                        notice to you will explain how you can accept or reject the changes. If you do not agree with
+                        any of the updated Terms, you must stop using the Services. Unless otherwise required by law,
+                        the updated Terms are effective as of the day of posting.
+
+                        (b) The Services. LxRoot may make changes to the Services at any time, without notice to you. If
+                        you object to any changes to the Services, your sole recourse will be to cease using the
+                        Services. Continued use of the Services following posting of any such changes will indicate your
+                        acknowledgement of such changes and satisfaction with the Services as modified. We also reserve
+                        the right to discontinue the Services, or any component of it, at any time without notice to
+                        you. We will not be liable to you or any third party should we exercise our right to modify or
+                        discontinue the Services.
+
+                        (c) Paid subscriptions. Please note that if you are under paid-subscription services with us, in
+                        the event we change the price for the services which you have previously agreed to pay or if we
+                        substantially change the services you are paying for, we will also notify you of such changes as
+                        contemplated in Section 3(a) above. Any changes will become effective after your then-current
+                        subscription expires or terminates. If you do not agree with such changes and you communicate
+                        this to us in accordance with the notification, we will not automatically renew your
+                        subscription even if you previously agreed to automatic renewal for payment.
+
+                        (d) Additional Terms. In addition, certain features of the Services may be subject to additional
+                        terms of use (“Additional Terms”), which shall be provided to you at the moment you choose to
+                        use such features or services. By using such features, or any part thereof, you agree to be
+                        bound by the Additional Terms applicable to such features. In the event that any of the
+                        Additional Terms governing such features conflict with these Terms, the Additional Terms will
+                        govern.
+
+                        (e) Executed Contract(s). If You have entered into a separate executed (i.e. signed) agreement
+                        for services with LxRoot (collectively and individually, “Contract”), such Contract shall
+                        supersede these Terms. In the event of any conflict between these Terms and the Contract, the
+                        Contract will prevail. In cases where the Contract does not address specific provisions included
+                        in these Terms, these Terms will apply, supplementing the Contract.
+                    </div>
+                </div>
+
+                <div
+                    class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                    <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                        4. USERS
+                        <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content hidden text-gray-400 pt-4">
+                        (a) Visitors. Visitors may browse the Site in accordance with these Terms but will not have full
+                        access to the Services without first becoming “Registered Users.”
+
+                        (b) Registered Users and Accounts. In order to access certain features of the Services you will
+                        be required to become a Registered User. A “Registered User” is a User who has registered an
+                        account with us (your “Account”). As a Registered User you choose what information you may make
+                        public or showcase. By registering as a User you represent that you are not barred from using
+                        the Services under these Terms, the laws of the United States of America, your place of
+                        residence or any other applicable jurisdiction.
+
+                        (c) Registration Data. In registering for the Services, you agree to (i) provide true, accurate,
+                        current and complete information about yourself as prompted by the Services’ registration form
+                        (the “Registration Data”); and (ii) maintain and promptly update the Registration Data to keep
+                        it true, accurate, current and complete. You agree that all notices and communications between
+                        Us will be sent to the email address You provide. If you provide any information that is untrue,
+                        inaccurate, not current or incomplete, or LxRoot has reasonable grounds to suspect that such
+                        information is untrue, inaccurate, not current or incomplete, LxRoot has the right to suspend or
+                        terminate your Account and refuse any and all current or future use of the Services (or any
+                        portion hereof) for breach. You agree not to create an Account using a false identity or
+                        information. You agree that you shall not have more than one Account at any given time. You
+                        agree not to register for an Account on behalf of an individual other than Yourself, or register
+                        for an Account on behalf of any group or entity unless you are authorized to bind such person,
+                        group, organization, or entity to these Terms. By registering another person, group,
+                        organization, or entity you hereby represent that you are authorized to do so. You agree not to
+                        create an Account or use the Services if you have been previously removed by LxRoot, or if you
+                        have been previously banned from any of the LxRoot properties.
+
+                        (d) Account Management. When You register for the Services, you will choose a login (email) and
+                        password. You may use the Services or modify Your Content and data only through such login and
+                        password. You are entirely responsible for maintaining the confidentiality of Your password and
+                        for any and all activities which occur using Your credentials and/or under your Account. LxRoot
+                        reserves the right to establish an Account verification process to verify the account and/or any
+                        information provided. You agree to immediately notify Us of any unauthorized use of Your Account
+                        or any other breach of security known to (or reasonably suspected by) You at support@lxroot.com.
+                        LxRoot shall be entitled to monitor your username and password and, at its discretion, require
+                        you to change it. If you use a username and password that LxRoot considers insecure or
+                        inappropriate, LxRoot will be entitled to require this to be changed and/or terminate your
+                        Account. LxRoot reserves the right to remove or reclaim any usernames at any time and for any
+                        reason, including but not limited to, claims by a third party that a username violates the third
+                        party’s rights. It is also Your responsibility to make sure that Our domain(s) (including
+                        “lxroot.com”) are not included in any spam block list used by You or Your mail provider. You are
+                        required to perform all necessary security configuration and management tasks (1) for Your
+                        site(s) and all domains, web pages or IP addresses which You are hosting through the Services,
+                        and (2) to protect Your Content (defend below) and data, including that of Your customers and/or
+                        end users hosted through the Services. You are responsible for management of updates and
+                        security patches, any application software or utilities installed, any flees accessible via Your
+                        site(s), and the configuration of any LxRoot-provided security utilities.
+                    </div>
+                </div>
+
+                <div
+                    class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                    <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                        5. SERVICES
+                        <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content hidden text-gray-400 pt-4">
+                        At the time of initial registration, you will select from the list of available Services the
+                        service plan(s) to which You wish to subscribe (each a “Subscription”). All Subscriptions to
+                        Services are subject to formal acceptance by LxRoot. Your Subscription to the Services will be
+                        deemed accepted by LxRoot when LxRoot delivers a confirmation of the Subscription to You. LxRoot
+                        reserves the right to refuse to provide You with any Service for any reason. Notwithstanding Our
+                        Uptime Guarantee, LxRoot also reserves the right to interrupt access to the Services to perform
+                        regular and emergency maintenance as needed. You may order additional Services at any time,
+                        provided that You agree to pay the then-current fees for such additional Services. All
+                        additional services shall be considered "Services" hereunder. All Services provided are subject
+                        to availability and to these Terms.
+
+                        For as long as you agree to these Terms and abide by them, you may use the Services. These Terms
+                        apply to all Users of the Service, including Visitors and Registered Users, who are also
+                        contributors of User Content. The Services are licensed, not sold, to you.
+
+                        (a) Grant of a Limited License. The Services are protected by copyright laws throughout the
+                        world. Subject to your agreement, and continuing compliance with these Terms, and any other
+                        relevant LxRoot policies, LxRoot grants you a non-exclusive, non-transferable, non-sub
+                        licensable, revocable limited license subject to the limitations below to use the Services
+                        and/or download, and use a copy of any Apps or client-software on a device or computer that you
+                        own or control and to run such copy solely for your own internal business or individual purposes
+                        only. You agree not to use the Services for any other purpose.
+
+                        Restrictions. You may not: (i) remove any copyright, trademark or other proprietary notices from
+                        any portion of the Services; (ii) reproduce, modify, prepare derivative works based upon,
+                        distribute, license, lease, sell, resell, transfer, publicly display, publicly perform,
+                        transmit, stream, broadcast or otherwise exploit the Services except as expressly permitted by
+                        LxRoot; (iii) decompile, reverse engineer or disassemble the Services except as may be permitted
+                        by applicable law; (iv) link to, mirror or frame any portion of the Services except as expressly
+                        permitted by LxRoot; (v) cause or launch any programs or scripts for the purpose of scraping,
+                        indexing, surveying, or otherwise data mining any portion of the Services or unduly burdening or
+                        hindering the operation and/or functionality of any aspect of the Services; or (vi) attempt to
+                        gain unauthorized access to or impair any aspect of the Services or its related systems or
+                        networks.
+                    </div>
+                </div>
+                <div
+                    class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                    <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                        6. SUBSCRIPTIONS AND CANCELLATIONS
+                        <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content hidden text-gray-400 pt-4">
+                        (a) Subscriptions. Your Subscription or commencement of the Services shall begin upon
+                        confirmation to You and receipt of lawful funds, whichever comes earlier. The Subscription
+                        initial term's length is chosen by You and shall be indicated when You subscribe to Our
+                        Services. The Subscription may not be terminated by You during the Initial Term (and any
+                        renewals thereof) except in the event of a breach by LxRoot. After the Initial Term, the
+                        Subscription shall automatically renew for successive terms, equal in length to the Initial
+                        Term, unless terminated or canceled by either party as provided herein.
+
+                        (b) Pricing. Subject to Section 3(c), LxRoot reserves the right to change prices for paid
+                        Subscriptions at any time and does not provide price protection or refunds in the event of
+                        promotions or price decreases. Any pricing changes will become effective after your then-current
+                        Subscription expires or terminates. You understand that if We agree to provide Services to You
+                        in the future after your Subscription terminates for any reason, the amount You paid under any
+                        prior term or time period is not determinative of the amount You will pay should We provide
+                        Services to You again. It is Your responsibility to check Our Site for plan or price changes
+                        should You wish to take advantage of plan or price changes which may have occurred. LxRoot does
+                        not automatically update Your Subscription plan. All upgrades or downgrades will be performed at
+                        Your request and may include modification Fees (defend in Section 7(a)) or require reinitiating
+                        service with Us.
+
+                        (c) Automatic Renewal Terms: To facilitate continuity of the Services to you, each paid
+                        Subscription contains automatic renewal terms. LxRoot will automatically renew your paid
+                        Subscription as per the Subscription period of your choosing (each a “Subscription Term”), on
+                        the anniversary of that date that LxRoot first charges your Account for the first Subscription
+                        fee, and, as authorized by you during the Subscription sign-up process, LxRoot will charge your
+                        Account with the applicable Subscription fee and any sales or similar taxes that may be imposed
+                        on your Subscription fee payment (unless you cancel prior to the anniversary date). Each
+                        Subscription renewal period is for the same Subscription Term as the prior one, unless otherwise
+                        agreed between you and LxRoot. IF YOU CANCEL YOUR SUBSCRIPTION, YOUR ACCESS TO AND USE OF THE
+                        SERVICES WILL BE SHUT OFF ONCE YOUR THEN CURRENT SUBSCRIPTION TERM EXPIRES.
+
+                        LxRoot reserves the right to modify pricing at any time (but not the price in effect for your
+                        then-current Subscription Term), upon advance notice to you. If you have not canceled your
+                        Subscription or turned off the auto-renew function within the specified time after receiving
+                        notice of a price change, your Subscription will auto-renew at the price indicated in your
+                        notice.
+
+                        (d) CANCELLATION TERMS: YOU MAY CANCEL YOUR SUBSCRIPTION AT ANY TIME, AND SUCH CANCELLATION
+                        SHALL BECOME EFFECTIVE UPON EXPIRATION OF YOUR THEN-CURRENT SUBSCRIPTION TERM. You agree and
+                        understand that you will be charged Subscription fees until the expiration of your then-current
+                        Subscription Term and SUBSCRIPTION FEES WILL NOT BE REFUNDED, IN WHOLE OR IN PART, SUBJECT TO
+                        APPLICABLE LAW. You will not be eligible for a pro-rated refund of any portion of the
+                        Subscription fees paid for any unused days of the then-current Subscription Term. If you have
+                        any problems or concerns with your cancellation please contact us at support@LxRoot.com for
+                        assistance.
+                    </div>
+                </div>
+
+                <div
+                    class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                    <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                        7. PAYMENTS
+                        <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content hidden text-gray-400 pt-4">
+                        (a) If you purchase any Services that we offer for a fee, either on a one-time or on a
+                        Subscription basis (collectively “Fees”), you agree and consent to LxRoot’s use of third-party
+                        payment providers for billing and processing online payments (see below), and you agree to pay
+                        the applicable Fees for the Services (including, without limitation, periodic fees for
+                        Subscriptions) as they become due, plus all related taxes, and to reimburse us for all
+                        collection costs and interest for any overdue amounts. Unless separately negotiated by You and
+                        Us, and confirmed by separate written agreement, the initial and recurring Fees for the Services
+                        selected by You shall be as provided in the initial on-line order form. All set-up fees and
+                        special programming fees are non-refundable. Unless otherwise indicated, we may invoice Fees for
+                        Services in advance. Failure to make payment of Fees for Services when due may result in the
+                        suspension or termination of Services.
+
+                        (b) Services are billed on an automatic, auto-renewal and recurring basis unless and until you
+                        follow LxRoot's cancellation procedure set forth in this Agreement. Your obligation to pay fees
+                        continues through the end of the Subscription Term (defined in Section 6(c)). Our Subscriptions
+                        may be subject to usage limits. You agree and understand that we verify use of the Service
+                        periodically. If as part of a routine verification process, we determine that Usage exceeds the
+                        current amount of usage limits purchased, we reserve the right to invoice you for the additional
+                        use. We may contact you to discuss your current plan and other options available to you. You
+                        agree to upgrade to a higher usage plan if necessary.
+
+                        (c) At the time of registration, you must select a payment method. By providing a payment
+                        method, you expressly authorize LxRoot to charge said payment method at regular intervals
+                        subject to Your Particular Subscription. LxRoot reserves the right to contract with a third
+                        party to process all payments. Such third party may impose additional terms and conditions
+                        governing payment processing. If You do not pay all Fees when due, your account will be deemed
+                        past due. For any past due Fees, LxRoot reserves the right to charge You interest at five
+                        percent (5%) or the highest rate allowed by applicable law, whichever is lower, per month of the
+                        unpaid amount, until paid.
+
+                        (d) You agree to pay any and all taxes, including personal property, value added, or sales
+                        taxes, resulting from Your use of the Services. LxRoot is not responsible for any bank fees
+                        incurred by You due to Your use of check cards, automatic payment services, insufficient funds,
+                        and any and all other fees your financial institution may impose due to Your use of the
+                        Services. If LxRoot should receive less than full payment of the Fees due to taxes, bank
+                        charges, transfer fees, or the like, LxRoot will invoice You for the difference between payment
+                        received and the Fees due. You also agree to pay all attorney and collection fees arising from
+                        LxRoot's efforts to collect any past-due Fees.
+
+                        (e) If you cancel any Service prior to the expiration of the pre-paid Fees, you understand and
+                        agree that LxRoot, at its sole discretion, may not issue You any refund whatsoever, including
+                        but not limited to any remaining pre-paid Fees, set up Fees, and/or special programming Fees.
+                        Any refunds, if any, will be refunded to the original method of payment only.
+
+                        (f) If you do not pay on time or if LxRoot cannot charge your payment method for any reason,
+                        LxRoot reserves the right to either suspend or terminate your Subscription, access to the
+                        Services, and/or Account and terminate these Terms.
+
+                        (g) Coupons and Discount Codes. From time to time, LxRoot may offer coupons or other discount
+                        codes which may be used when signing up for Services with Us. Coupons and discount codes are for
+                        first-time customers of LxRoot only and must be used at the time of Your initial purchase with
+                        Us – they may not be applied after commencement of the Services. Unless expressly provided, such
+                        coupons and discount codes may not be used toward upgrades to Your account. Any account We deem
+                        to be attempting unauthorized coupon or discount code use may be subject to Termination for
+                        Cause (see Section 9).
+                    </div>
+                </div>
+
+                <div
+                    class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                    <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                        8. Referral Program
+                        <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content hidden text-gray-400 pt-4">
+                        We may offer programs allowing our users to earn service credits and rewards (“Rewards”) on
+                        their Accounts. Please refer to our Referral Program Terms as these may be amended from time to
+                        time, before participating in our Rewards’ program. The Referral Program Terms are hereby
+                        incorporated by reference.
+                    </div>
+                </div>
+
+                <div
+                    class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                    <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                        9. TERMINATION
+                        <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content hidden text-gray-400 pt-4">
+                        (a) LxRoot may terminate your Subscription in its sole discretion at any time for any reason or
+                        no reason ("Termination without Cause"). In such case, LxRoot will provide You with thirty (30)
+                        days written notice before the discontinuation of Services. If LxRoot cancels your Subscription
+                        pursuant to any of the terms outlined in these Terms, with the exception of Termination without
+                        Cause, LxRoot shall not refund to You any fees paid or prepaid in advance of such cancellation
+                        and You shall be obligated to pay all fees and charges accrued prior to the effectiveness of
+                        such cancellation. In the event that LxRoot terminates the Agreement for cause, all prepaid Fees
+                        will be forfeited and are not refundable. The termination of your Subscription does not relieve
+                        You of Your obligation to pay any Fees accrued or payable to LxRoot prior to the effective date
+                        of termination of your Subscription.
+
+                        (b) In addition to LxRoot's right to terminate your Subscription provided elsewhere in these
+                        Terms, LxRoot may terminate your Subscription effective immediately if, based on LxRoot's sole
+                        judgment, it determines that You or any of Your end users: (i) have breached the Acceptable Use
+                        Policy ("AUP") or Anti-Spam Policy, (ii) have infringed or violated any intellectual property
+                        right or privacy or publicity right of a third party, (iii) have not complied with any
+                        applicable law, statute or regulation, or (iv) have uploaded, published or disseminated any
+                        images, text, graphics, code or video which LxRoot considers illegal or high risk, in its
+                        discretion, or (v) breached these Terms. Nothing contained in these Terms is intended to, or
+                        shall, impose any duty or obligation upon LxRoot to monitor or review Your Content (defined in
+                        Section 12) or the content of Your end users at any time. You remain solely responsible for Your
+                        Content, and any liability generated therefrom.
+
+                        (c) The termination of your Subscription will end Your access to the Services and Your license
+                        to the Materials. LxRoot shall not be liable to You or to any third party for termination of the
+                        Services permitted under these Terms. Upon termination of your Subscription, LxRoot reserves the
+                        right to maintain copies of Your data flees and records for archival purposes but does not
+                        undertake any obligation to do so. LxRoot reserves the right to impose an early termination
+                        charge for all Services terminated prior to the last day of the billing cycle.
+
+                        (d) If either party cancels or terminates your Subscription for any reason, you shall be solely
+                        responsible for making all necessary arrangements for securing a replacement service provider
+                        and timely moving all electronic data, graphics, images, video or text to the new service
+                        provider.
+
+                        (e) LxRoot will not have any liability whatsoever to you for any suspension or termination,
+                        including for deletion of Content. All provisions of the Terms, which by their nature should
+                        survive, shall survive termination of the Service, including without limitation, ownership
+                        provisions, warranty disclaimers, and limitation of liability. You may close your Account by
+                        using the feature provided in the Services or, in the alternative, by emailing us at
+                        support@lxroot.com. We will proceed to close your Account and send you an email confirmation.
+                    </div>
+                </div>
+
+                <div
+                    class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                    <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                        IX. Public Forums, Member Directories, and Internal Messaging
+                        <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content hidden text-gray-400 pt-4">
+                        Public Forums - Any information posted to a Forum should immediately be considered to be public
+                        information. <br> <br>
+
+                        Member Directories - Any information provided in a user profile, Member directory, or other
+                        related
+                        service should be considered to be public information. We do not, cannot, and will not act to
+                        maintain the privacy of any information that you provide in any such forum or medium. <br> <br>
+
+                        Internal Messaging - We provide an internal messaging system for use between Members of our
+                        SITE.
+                        Any information that you send via this internal messaging system is not secure and is not
+                        considered
+                        to be private information. You should use caution when sending any personal information over the
+                        internal messaging system, and you should not transmit any information that you would not wish
+                        to
+                        see disclosed to the general public.
+                    </div>
+                </div>
+
+
+                <div
+                    class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                    <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                        10. INTELLECTUAL PROPERTY INFRINGEMENT AND DMCA NOTIFICATIONS
+                        <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content hidden text-gray-400 pt-4">
+                        LxRoot does not permit copyright-infringing activities and infringement of intellectual property
+                        rights on the Services, and pursuant to the safe-harbor provisions provided by the Digital
+                        Millennium Copyright Act of 1998 (“DMCA”), LxRoot will remove User Content if properly notified
+                        that such User Content infringes on another's intellectual property rights (please refer to our
+                        Copyright Policy). LxRoot reserves the right to remove User Content without prior notice.
+                    </div>
+                </div>
+
+                <div
+                    class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                    <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                        11. USER CONTENT
+                        <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content hidden text-gray-400 pt-4">
+                        11.1 Content.
+
+                        (a) You are responsible for the information, text, opinions, messages, comments, audio visual
+                        works, motion pictures, photographs, animation, videos, graphics, sounds, music, software, Apps,
+                        and any other content or material that You or your end users submit, upload, post, host, store,
+                        or otherwise make available (“Make Available”) on or through the Services (collectively, “Your
+                        Content,” “Content” or “User Content”). You may not Make Available on the Services any material
+                        protected by copyright, trademark, or any other proprietary right without the express permission
+                        of the owner of such copyright, trademark or other proprietary right owned by a third party, and
+                        the burden of determining whether any such right protects any material is on you. You shall be
+                        solely liable for any damage resulting from any infringement of copyrights, trademarks,
+                        proprietary rights, violation of contract, privacy or publicity rights or any other harm
+                        resulting from any User Content that you make or submit. As between you and us, you own your
+                        User Content and you have full responsibility for all User Content you make or submit, including
+                        its legality, reliability and appropriateness, while using the Services. You hereby grant to
+                        LxRoot a non-exclusive, perpetual, irrevocable, royalty-free, fully paid-up, worldwide license
+                        (including the right to sublicense through multiple tiers) to use, reproduce, process, adapt,
+                        publicly perform, publicly display, modify, prepare derivative works, publish, transmit and
+                        distribute each of your User Content, or any portion thereof, in any form, medium or
+                        distribution method now known or hereafter existing, known or developed, and otherwise use and
+                        commercialize the User Content in any way that LxRoot deems appropriate, without any further
+                        consent, notice and/or compensation to you or to any third parties, for purposes of providing
+                        the Services to you.
+
+                        (b) LxRoot will not actively monitor Content being hosted by LxRoot, although LxRoot, at its
+                        sole discretion, may elect to electronically monitor its network and may disclose any content or
+                        records concerning Your Account as necessary to satisfy any law, regulation, or other
+                        governmental request or to properly operate Our network and protect any of Our customers. LxRoot
+                        will investigate complaints of a violation of a third-party right or of the AUP. LxRoot will
+                        cooperate with those attempting to minimize Internet abuse and reserves the right to institute
+                        "filters" or other mechanisms for that purpose. LxRoot will cooperate with law enforcement
+                        authorities and reserves the right to notify such authorities if it suspects that You or any of
+                        Your end users are engaged in illegal activities. Nothing contained in this Section, or anywhere
+                        in these Terms, is intended to bestow any rights on any third party, and no third parties shall
+                        be entitled to enforce any terms of these Terms between us, the parties.
+
+                        (c) You acknowledge and expressly agree that LxRoot will not be liable to You or any of Your end
+                        users for any action LxRoot takes to remove or restrict access to the Services for any alleged
+                        violation of the AUP, or exercising its rights as a Good Samaritan under the Telecommunications
+                        Act of 1996 (47 U.S.C. § 230(d)) or under the DMCA.
+
+                        LxRoot may, at its sole discretion, immediately terminate Your Account and access to the
+                        Services, and terminate these Terms for cause, if Your conduct violates our Policies (See
+                        Section 10), or if any of Your end users' or downstream customers' conduct violate such
+                        Policies. We respect the intellectual property rights of all parties and have adopted a policy
+                        regarding termination of repeat copyright infringers under the DMCA (See Section 11).
+
+                        (e) Child Pornography. LxRoot takes the issue of child pornography very seriously, and any
+                        potential harm to minors using our Services is strictly prohibited. Content that is or may be
+                        perceived to be child pornography will be immediately removed from public access upon
+                        notification or detection by Us. Additionally, LxRoot reserves the right to terminate any
+                        Account whose website(s) hosts or links to child pornography immediately and without notice to
+                        You. If the account is a LxRoot reseller account, the account will be suspended, and the
+                        reseller will be directed to terminate the responsible account. You agree to cooperate in any
+                        such efforts. Content or communications seeking to solicit, lure or entice minors into sexual
+                        activity or lewd behavior is also strictly prohibited, and will be treated the same as, or
+                        similar to, child pornography, consistent with applicable law. You agree to cooperate with
+                        LxRoot in any effort to investigate, disable or remove such Content originating with Your end
+                        users. Consistent with federal law, LxRoot will cooperate with law enforcement authorities and
+                        will notify such authorities if it suspects that You or any of Your downstream customers or end
+                        users are engaged in any such illegal activities.
+
+                        In accordance with the reporting requirements of 18 U.S.C.
+                        § 2258A, We will report to the CyberTipline (report.cybertip.org) any actual knowledge of
+                        apparent violations of 18 U.S.C §§ 2251, 2251A, 2252, 2252A, 2252B, 2260, or 1466A. If You
+                        suspect any instances of child pornography appearing on sites hosted by LxRoot, We encourage You
+                        to send such reports to Our abuse address at abuse@LxRoot.com, and include the flee name and/or
+                        URL (or other location on the Customer's site), victim (if known), date of birth, date of
+                        production, and any other information about the suspect image(s). Do not send the image(s) in
+                        question. Alternately, you may use the CyberTipline to report suspected child pornography.
+                        Reports involving sites not hosted by LxRoot should be directed to law enforcement or to a
+                        cooperating child pornography organization such as:
+                        https://www.asacp.org/index.php?content=report.
+
+                        (f) Content appropriate for Minors and Section 230 Notice: You acknowledge Your responsibility
+                        to prevent minors under Your care from accessing harmful or inappropriate material on Your site
+                        and services. You agree not to allow minors to view any such materials and agree to take
+                        responsible measures to prevent them from doing so. Numerous commercial online safety filters
+                        are available which may help users limit minors' access to harmful or inappropriate material.
+                        Pursuant to 47 U.S.C. §230(d), you are hereby informed that you can research such services at
+                        websites such as www.asacp.org. Please note that the Service makes no representation or warranty
+                        regarding any of the products or services referenced on such sites and recommends that the user
+                        conduct appropriate due diligence before purchasing or installing any online filter. You agree
+                        to take particular steps to prevent minors from viewing these kind of materials if Your computer
+                        can be accessed by a minor. Finally, you agree that if You are a parent or guardian of a minor
+                        child, it is Your responsibility, not Ours, to keep any age-restricted content on Our Site from
+                        being displayed or accessed by Your children or wards.
+
+                        Pursuant to the Communications Decency Act ("CDA"), 47 U.S.C. § 230(c)(1), and court decisions
+                        interpreting the scope of the CDA, you acknowledge and understand that LxRoot operates as the
+                        provider of an interactive computer service. Thus, we are immune from, and cannot be held
+                        responsible for, claims arising from the publication of Your Content (including third-party
+                        content published on Your web site(s)). We do not create such content, and We are not
+                        responsible for the publication of remarks or communications of You or third-parties that may
+                        arguably rise to the level of being actionable under federal or state laws including, but not
+                        limited to, the publication of material that might be considered defamatory, or violate of
+                        privacy or publicity rights. Note, that federal law allows LxRoot to remove any content found to
+                        be offensive, defamatory, obscene or otherwise violate of Our policies, without impacting Our
+                        immunity status as an interactive computer service. Nothing contained in this Section is
+                        intended to limit or alter the immunity from claims provided by Section 230 of the
+                        Communications Decency Act. In the event that any court finds that any third-party communication
+                        or third-party content hosted by us falls outside of the realm of the immunity provided by the
+                        CDA, this shall not be deemed to be a waiver of any legal protections provided by Section 230
+                        for any and all other content posted on our Site or hosted via our Services.
+
+                        11.2 Specific Requirements for Service Providers and User-Generated Content Subscribers.
+
+                        (a) If You use Our Services for any site, sub-domain, page or business model that allows Your
+                        end users or customers to control or upload material to Internet space assigned to You by Us,
+                        you shall be deemed to be acting as a "Service Provider" with respect to such services and/or
+                        customers. Service Providers include but are not limited to customers which; (i) resell
+                        bandwidth as hosts to third parties; (ii) operate user-generated content sites such as forums,
+                        "tube" sites, review sites, and online classified advertising sites; (iii) operate search
+                        engines; or
+
+                        (iv) operate peer-to-peer flee sharing networks. Customers acting as a Service Provider for
+                        third-party users shall comply with the following provisions:
+
+                        You shall notify Us of all domains, web pages or IP addresses for which You are acting as a
+                        Service Provider.
+
+                        You shall comply with 17 U.S.C. §512 of the DMCA by properly designating an agent for receipt of
+                        copyright infringement notices, and You shall publish a link on the home page of any website for
+                        which You are a Service Provider to a DMCA Notice and Takedown Policy, identifying the website's
+                        designated agent and associated contact information. "Service Providers" within the meaning of
+                        17 U.S.C. § 512(k)(1) require that any DMCA Notices relating to alleged infringement of a LxRoot
+                        Service Provider Customer be submitted directly to the DMCA Agent designated by such Customer.
+
+                        You shall provide Us with a current link to Your DMCA Notice and Takedown Policy and further
+                        advise Us of any changes to Your Designated Agent contact information. This shall be a
+                        continuing obligation for as long as You use Our Services.
+
+                        It is the policy of LxRoot to provide any infringement notices it receives relating to Service
+                        Provider subscribers directly to the subscriber's Designated DMCA Agent, and to further notify
+                        any copyright claimants of the identity and contact information for such Agent. Failure to
+                        maintain compliance with this section shall constitute a material breach of these Terms.
+
+                        (b) In keeping with Our DMCA policies and obligations set forth above, You understand, agree,
+                        and expressly allow Us to access and subsequently disable public access to any flees or data
+                        residing on the server, disk, partition, or other data space under Your control when such flees
+                        or data, in Our discretion: (i) have been identified in a substantially- compliant DMCA notice
+                        under 17 U.S.C. § 512; or (ii) when We become aware of facts or circumstances indicating that
+                        such flees or data are infringing on the copyrights or other intellectual property rights of
+                        third parties. Given that Our customers may employ various methods of securing flees in
+                        conjunction with Our Services, and in an attempt to avoid material disruption of Our Customers’
+                        Services, you agree that You will provide Us with Your preferred procedure for disabling access
+                        to material identified under this provision. If We forward You a substantially-compliant DMCA
+                        Notice and which concerns content under Your control, you are obligated under these Terms to
+                        immediately disable or remove access to such content. Irrespective of the above, we reserve the
+                        right to disable or remove access to such content, in Our discretion, and without claim of
+                        damage or injury by You. While We will attempt to simply disable access to such Content without
+                        fully deleting it, or suspending all services to your Account, we make no warranties concerning
+                        harm or injury to the Content, and reserve the right to take any necessary actions to disable
+                        access to the identified material, including suspension or termination of Services. It is
+                        therefore in Your best interest to promptly respond to any DMCA Notices You may receive. Should
+                        You or Your web site's users feel that such DMCA Notice was erroneously or improperly sent, You
+                        must follow the Counter- Notification procedure set forth in our Copyright Policy, and wait the
+                        required period of time, before We allow public access to the content to resume.
+
+                        (c) Nothing contained in this Section, or any part of these Terms, shall constitute legal or
+                        professional advice regarding any matter referenced therein. You are responsible for obtaining
+                        your own legal advice regarding compliance with any and all applicable laws or regulations.
+
+                        11.3 Content that you Make Publicly Available.
+
+                        (a) In addition to the license granted in Section 11.1(a), You also authorize others to use the
+                        User Content that you publicly share or Make Available through the Services.
+
+                        You may delete, or request deletion of your User Content at any time, unless you have shared
+                        such User Content with others and they have not deleted it, or it was copied or stored by other
+                        Users. Any User Content you submit is at your own risk of loss, and if shared publicly,
+                        non-confidential.
+
+                        (c) LxRoot agrees to use any personally identifiable information contained in any of your User
+                        Content in accordance with LxRoot’s Privacy Policy, to the extent applicable. Additionally,
+                        please note that certain information, statements, data, and content (such as photographs) which
+                        you may submit to LxRoot, or groups you choose to join might, or are likely to, reveal your
+                        gender, ethnic origin, nationality, age, and/or other personal information about you. You
+                        acknowledge that your submission of any User Content is voluntary on your part.
+
+                        (d) We may modify or adapt your User Content in order to transmit, display or distribute them
+                        over computer networks and in various media and/or make changes to the User Content as necessary
+                        to conform and adapt them to any requirements or limitations of any networks, devices, services
+                        or media.
+
+                        (e) If you use any “rating” feature of the Services, as applicable, and/or if you send or
+                        transmit any communications, comments, questions, suggestions, or related materials to LxRoot,
+                        whether by letter, email, telephone, or otherwise (collectively, “Feedback”), suggesting or
+                        recommending changes to the Services, including, without limitation, new features or
+                        functionality relating thereto, all such Feedback is, and will be treated as, non-confidential
+                        and non-proprietary. You hereby assign all right, title, and interest in, and LxRoot is free to
+                        use, without any attribution or compensation to you, any ratings submitted within the Services,
+                        and any ideas, know-how, concepts, techniques, or other intellectual property and proprietary
+                        rights contained in the Feedback, whether or not patentable, for any purpose whatsoever,
+                        including but not limited to, developing, manufacturing, having manufactured, licensing,
+                        marketing, and selling, directly or indirectly, products and services using such Feedback.
+
+                        You understand and agree that LxRoot may use any of this Feedback in aggregated or
+                        non-aggregated from, however LxRoot is not obligated to use, display, reproduce, or distribute
+                        any such ratings, ideas, know-how, concepts, or techniques contained in the Feedback, and you
+                        have no right to compel such use, display, reproduction, or distribution
+
+                        (f) Forums and messaging. LxRoot may offer various forums where you can post your observations
+                        and comments on designated topics. By offering this feature, LxRoot is merely acting as an
+                        intermediary and is not responsible and shall not be liable for such communications. Please note
+                        that ideas you post and information you share may be seen and used by other Users, and LxRoot
+                        cannot guarantee that other Users will not use the ideas and information that you share on the
+                        Services. Therefore, if you have an idea or information that you would like to keep confidential
+                        and/or don't want others to use, or that is subject to third-party rights that may be infringed
+                        by your sharing it, do not post it on the public forums of the Services. Please refer to Section
+                        11 and our Copyright Policy for more information regarding how we treat infringing content.
+                        LXROOT IS NOT RESPONSIBLE FOR A USER'S MISUSE OR MISAPPROPRIATION OF ANY CONTENT OR INFORMATION
+                        POSTED IN ANY LXROOT COMMUNITY FORUMS.
+                    </div>
+                </div>
+
+                <div
+                    class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                    <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                        12. THIRD-PARTY SERVICES, SOFTWARE, LINKS AND LICENSING
+                        <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content hidden text-gray-400 pt-4">
+                        (a) Third-Party Services. You may in Your sole discretion elect to use third-party products,
+                        software and/or services (collectively, “Third-Party Services”, offered by one or more “Third
+                        Party”) in connection with the LxRoot Services such as through the LxRoot Marketplace (see
+                        Section 14), and LxRoot may in its sole discretion help facilitate Your use of such Third-Party
+                        Services in connection with the LxRoot Services, however You acknowledge and agree as follows:
+
+                        (i) You are solely responsible for purchasing or licensing Third- Party Services as may be
+                        required by any such third party;
+                        (ii) You shall be subject to any applicable terms governing such Third-Party Services, which are
+                        in addition to this Agreement;
+                        (iii) You shall pay all fees charged by such third party for such Third-Party Services, and
+                        recognize that the terms governing such fees (including any price adjustments) are not
+                        necessarily in LxRoot’s control, even if payment is facilitated through the LxRoot Services;
+                        (iv) regardless of LxRoot’s assistance, You are solely responsible for installing and
+                        maintaining any Third-Party Services at Your expense; and
+                        (v) LXROOT SHALL NOT BE LIABLE IN ANY MANNER FOR ANY THIRD-PARTY SERVICES, and any assistance
+                        provided by LxRoot in connection with such Third-Party Services shall not alter Your
+                        responsibility or Our liability disclaimer under this section.
+
+                        You agree and understand that you, and not LxRoot, are solely responsible for your compliance
+                        with the licensing terms of any Third-Party Services or products that are made available to you
+                        within the LxRoot Services. If LxRoot notifies you of any reporting or compliance obligations to
+                        the Third-Party provider, it is your obligation to report your own usage and comply with any
+                        licensing terms. LxRoot will not and does not monitor your compliance.
+
+                        Notwithstanding the foregoing, if any such Third-Party provider finds you (or any of LxRoot’s
+                        customers) non- compliant with the Third Party’s agreement or obligations, LxRoot reserves the
+                        right to terminate the Services or Account of the non-compliant customer, without giving any
+                        advance notice. You agree and understand that LxRoot may and will share all available Customer
+                        data with the applicable Third Party if contractually obligated.
+
+                        (b) Third-Party Sites and Links. The Services may also be linked to other websites that are not
+                        LxRoot properties (collectively, “Third-Party Sites”). You acknowledge and agree that the
+                        Third-Party Sites may have different privacy policies and terms and conditions and/or user
+                        guides and business practices than LxRoot, and you further acknowledge and agree that your use
+                        of such Third-Party Sites is governed by the respective Third-Party Site privacy policy and
+                        terms and conditions and/or user guides. You hereby agree to comply with any and all terms and
+                        conditions, users guide and privacy policies of any of Third-Party Sites. LxRoot does not
+                        verify, make any representations or take responsibility for any Third-Party Site, including,
+                        without limitation, the truthfulness, accuracy, quality or completeness of the content,
+                        services, links displayed and/or any other activities conducted on or through such Third-Party
+                        Sites. YOU AGREE THAT LXROOT WILL NOT, UNDER ANY CIRCUMSTANCES, BE RESPONSIBLE OR LIABLE,
+                        DIRECTLY OR INDIRECTLY, FOR ANY GOODS, SERVICES, INFORMATION, RESOURCES AND/OR CONTENT AVAILABLE
+                        ON OR THROUGH ANY THIRD-PARTY SITES AND/OR THIRD-PARTY DEALINGS OR COMMUNICATIONS, OR FOR ANY
+                        HARM RELATED THERETO, OR FOR ANY DAMAGES OR LOSS CAUSED OR ALLEGED TO BE CAUSED BY OR IN
+                        CONNECTION WITH YOUR USE OR RELIANCE ON THE CONTENT OR BUSINESS PRACTICES OF ANY THIRD PARTY.
+                        Any reference on the Services to any product, service, publication, institution, organization of
+                        any third-party entity or individual does not constitute or imply LxRoot's endorsement or
+                        recommendation.
+
+                        (c) Bring Your Own License. Bring Your Own License (“BYOL”) is the process by which you bring
+                        your previously purchased licenses to run on our cloud (“LxRoot Cloud”). Our deployment model
+                        has options to meet platform licensing needs, i.e. you can use licenses provided by us or you
+                        can bring your own. When you BYOL, any licensing costs of the product you bring is removed from
+                        the price of the instance, and you are solely responsible for managing your licenses.
+                    </div>
+                </div>
+
+                <div
+                    class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                    <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                        13. THE LXROOT MARKETPLACE
+                        <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content hidden text-gray-400 pt-4">
+                        As part of our Services we may offer access to our online marketplace (the “LxRoot Marketplace”)
+                        for third-party and proprietary cloud and downloadable software applications, plugins and
+                        extensions (the “Apps”) that are designed to interoperate with our Services, software and cloud
+                        offerings. Please refer to our App Marketplace Terms as these may be amended from time to time,
+                        before downloading or using Apps from our LxRoot Marketplace.
+
+                        The App Marketplace Terms are hereby incorporated by reference.
+                    </div>
+                </div>
+
+                <div
+                class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    13. THE LXROOT MARKETPLACE
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                        </path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400 pt-4">
+                    As part of our Services we may offer access to our online marketplace (the “LxRoot Marketplace”)
+                    for third-party and proprietary cloud and downloadable software applications, plugins and
+                    extensions (the “Apps”) that are designed to interoperate with our Services, software and cloud
+                    offerings. Please refer to our App Marketplace Terms as these may be amended from time to time,
+                    before downloading or using Apps from our LxRoot Marketplace.
+
+                    The App Marketplace Terms are hereby incorporated by reference.
+                </div>
+            </div>
+
+
+            </div>
+        </section>
+
+
+
+        <!-- Call to Action Section Start -->
+        <div class="home-cta pt-4 pb-56 pl-4 pr-4" id="home-cta">
+            <div class="mx-auto max-w-7xl cta-spacing rounded-xl border border-purple-950 pt-20 pb-16 pl-4 pr-4 bg-gradient-to-r from-[#2f1835] to-purple-00 shadow-md shadow-purple-500/50"
+                id="home-cta-sec">
+                <div class="text-center">
+                    <h2 class="text-5xl font-bold tracking-tight text-white cta-title">Ready to dive in?</h2>
+                    <p class="mt-2 text-xl leading-8 text-blue-400 cta-tagline">Get Started with your free trial today.
+                    </p>
+                    <div class="mt-5 flex justify-center gap-x-4">
+                        <a href="#"
+                            class="cta-live-btn border border-blue-800 text-gray-300 px-5 text-lg py-3 rounded hover:bg-blue-700 hover:text-white duration-300">Live
+                            Demo -></a>
+                        <a href="#"
+                            class="home-button cta-start-btn bg-gradient-to-r from-blue-700 to-purple-600 text-white font-normal px-6 py-3 text-lg rounded hover:bg-purple-700 duration-300">Get
+                            Started -></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Call to Action Section End -->
+
+
+
+        <!-- Footer Start -->
+        <div id="footer">
+            <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1 full-footer">
+                <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
+                    <div class="footer-col space-y-4">
+                        <h4 class="text-gray-500 border-b border-gray-400 pb-2">COMPANY</h4>
+                        <ul class="space-y-2">
+                            <li><a href="about.html" class="hover:text-white">About</a></li>
+                            <li><a href="articles.html" class="hover:text-white">Articles</a></li>
+                            <li><a href="career.html" class="hover:text-white">Career</a></li>
+                            <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col space-y-4">
+                        <h4 class="text-gray-500 border-b border-gray-400 pb-2">SOLUTIONS</h4>
+                        <ul class="space-y-2">
+                            <li><a href="features.html" class="hover:text-white">Features</a></li>
+                            <li><a href="technology.html" class="hover:text-white">Technology</a></li>
+                            <li><a href="roadmap.html" class="hover:text-white">Roadmap</a></li>
+                            <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col space-y-4">
+                        <h4 class="text-gray-500 border-b border-gray-400 pb-2">SUPPORT</h4>
+                        <ul class="space-y-2">
+                            <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
+                            <li><a href="community.html" class="hover:text-white">Community</a></li>
+                            <li><a href="support.html" class="hover:text-white">Support Docs</a></li>
+                            <li><a href="faqs.html" class="hover:text-white">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col space-y-4">
+                        <h4 class="text-gray-500 border-b border-gray-400 pb-2">LEGAL</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-white">Security</a></li>
+                            <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-white">Terms of Use</a></li>
+                            <li><a href="#" class="hover:text-white">Changelogs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col footer-col-5 space-y-2">
+                        <h4 class="text-gray-500 border-b border-gray-400 pb-2">CONTACT US</h4>
+                        <div class="mt-4 space-y-2">
+                            <div class="flex justify-center lg:justify-start items-center space-x-2">
+                                <i class="fas fa-phone text-gray-00"></i>
+                                <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
+                            </div>
+                            <div class="flex justify-center lg:justify-start items-center space-x-2">
+                                <i class="fas fa-envelope text-gray-400"></i>
+                                <a href="mailto:contact@yourdomain.com"
+                                    class="text-gray-400 hover:text-white">contact@lxroot.com</a>
+                            </div>
+                            <div class="flex justify-center lg:justify-start items-center space-x-2">
+                                <i class="fas fa-map-marker-alt text-gray-400"></i>
+                                <p class="text-gray-400">Carmel, Indiana, USA</p>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Icons -->
+                        <div class="flex justify-center lg:justify-start mt-4 space-x-4 social-icon">
+                            <a href="https://facebook.com/yourprofile" target="_blank"
+                                class="text-gray-500 hover:text-blue-600">
+                                <i class="fab fa-facebook-f fa-lg"></i>
+                            </a>
+                            <a href="https://twitter.com/yourprofile" target="_blank"
+                                class="text-gray-500 hover:text-blue-400">
+                                <i class="fab fa-twitter fa-lg"></i>
+                            </a>
+                            <a href="https://instagram.com/yourprofile" target="_blank"
+                                class="text-gray-500 hover:text-pink-500">
+                                <i class="fab fa-instagram fa-lg"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/yourprofile" target="_blank"
+                                class="text-gray-500 hover:text-blue-700">
+                                <i class="fab fa-linkedin-in fa-lg"></i>
+                            </a>
+                            <a href="https://youtube.com/in/yourprofile" target="_blank"
+                                class="text-gray-500 hover:text-red-700">
+                                <i class="fab fa-youtube fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="max-w-7xl mx-auto container mt-12 border-t border-gray-500 pt-4 pb-5 footer-bottom">
+                    <div class="flex justify-between items-center about-footer-bottom">
+                        <div class="text-base text-left">
+                            Copyright &copy; 2024 | <a href="index.html"
+                                class="text-gray-400 hover:text-white duration-300 footer-text">LxRoot LLC </a>
+                        </div>
+                        <div class="text-base text-right space-x-4">
+                            <a href="#privacy" class="footer-text text-gray-400 hover:text-white duration-300">Privacy
+                                Policy</a>
+                            <a href="#terms" class="footer-text text-gray-400 hover:text-white  duration-300">Terms &
+                                Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- Footer End -->
+
+
+
+        <!-- JavaScript Start -->
+        <script src="src/script.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <!-- JavaScript End -->
+
+
+</body>
+
+</html>

@@ -331,7 +331,6 @@
     <!-- Navigation End -->
 
 
-
     <!-- Hero Section Start -->
     <section class="max-w-7xl mx-auto text-white py-24 technology-hero mt-4" id="home-hero">
         <div class="px-2 lg:flex lg:items-center lg:space-x-12 tech-hero">
@@ -350,7 +349,7 @@
 
                 </p>
                 <div class="flex space-x-4 about-hero-button">
-                    <a href="#web-server"
+                    <a href=""
                         class="bg-gradient-to-r from-blue-700 to-purple-600 shadow-sm shadow-purple-500/50 text-lg text-white font-semibold py-3 px-14 rounded-lg inline-block duration-300 home-button">
                         Get Started
                     </a>
@@ -789,7 +788,7 @@
 
 
     <!-- Clients Reviews Section Start -->
-    <div class=" text-white custom-padding client-review-sec" id="home-review">
+    <div class="text-white custom-padding client-review-sec" id="home-review">
         <div class="pb-8 pt-10">
             <div class="max-w-7xl mx-auto flex items-center justify-between sm:px-6 lg:px-1">
                 <div>
@@ -798,21 +797,21 @@
                 </div>
                 <div class="flex space-x-2">
                     <button
-                        class="rounded bg-white text-blue-600 text-xl text-bold px-3 py-2 hover:bg-blue-600 hover:text-white duration-300">&LeftArrow;</button>
+                        class="rounded bg-white text-blue-600 text-xl font-bold px-4 py-2 hover:bg-blue-600 hover:text-white duration-300"
+                        id="prev-btn"><i class="fa-solid fa-arrow-left"></i></button>
                     <button
-                        class="rounded bg-blue-600 text-white text-xl px-3 py-2 hover:bg-blue-700 hover:text-white duration-300 h-review-r-btn">&RightArrow;</button>
+                        class="rounded bg-blue-600 text-white text-xl px-4 py-2 hover:bg-blue-700 hover:text-white duration-300"
+                        id="next-btn"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto  sm:px-6 lg:px-1 pb-24">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-5">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-1 pb-24 overflow-hidden">
+            <div class="flex space-x-6 reviews-container transition-transform duration-300 ease-in-out">
                 <div
-                    class="home-review bg-gray-900 p-6 rounded-lg border shadow-sm shadow-blue-600 border-purple-900 hover:border-purple-800">
-                    <p class="text-gray-400 mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                        sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
+                    class="home-review p-8 rounded-lg border border-purple-950 hover:border-blue-950 duration-300">
+                    <p class="text-gray-400 mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
                     <div class="flex items-center">
-                        <i
-                            class="fa-solid fa-user float-left text-2xl text-[#0B1120] rounded-full bg-white px-3 py-2 mr-4"></i>
+                        <i class="fa-solid fa-user float-left text-2xl text-[#0B1120] rounded-full bg-white px-3 py-2 mr-4"></i>
                         <div>
                             <p class="font-semibold text-gray-200 review-user">Kristin Watson</p>
                             <p class="text-sm text-gray-400 font-light mt-1">Jun 27, 2020 • 6 min read</p>
@@ -822,42 +821,73 @@
                         </div>
                     </div>
                 </div>
-                <div
-                    class="home-review bg-gray-900 p-6 rounded-lg border shadow-sm shadow-blue-600 border-purple-900 hover:border-purple-800">
-                    <p class="text-gray-400 mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                        sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
-                    <div class="flex items-center">
-                        <i
-                            class="fa-solid fa-user float-left text-2xl text-[#0B1120] rounded-full bg-white px-3 py-2 mr-4"></i>
-                        <div>
-                            <p class="font-semibold text-gray-200 review-user">Kristin Watson</p>
-                            <p class="text-sm text-gray-400 font-light mt-1">Jun 27, 2020 • 6 min read</p>
-                        </div>
-                        <div class="ml-auto text-yellow-500">
-                            &#9733;&#9733;&#9733;&#9733;&#9734;
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="home-review bg-gray-900 p-6 rounded-lg border shadow-sm shadow-blue-600 border-purple-900 hover:border-purple-800">
-                    <p class="text-gray-400 mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                        sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
-                    <div class="flex items-center">
-                        <i
-                            class="fa-solid fa-user float-left text-2xl text-[#0B1120] rounded-full bg-white px-3 py-2 mr-4"></i>
-                        <div>
-                            <p class="font-semibold text-gray-200 review-user">Kristin Watson</p>
-                            <p class="text-sm text-gray-400 font-light mt-1">Jun 27, 2020 • 6 min read</p>
-                        </div>
-                        <div class="ml-auto text-yellow-500">
-                            &#9733;&#9733;&#9733;&#9733;&#9734;
-                        </div>
-                    </div>
-                </div>
-            </div>
 
+                <div
+                    class="home-review p-8 rounded-lg border border-purple-950 hover:border-blue-950 duration-300">
+                    <p class="text-gray-400 mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-user float-left text-2xl text-[#0B1120] rounded-full bg-white px-3 py-2 mr-4"></i>
+                        <div>
+                            <p class="font-semibold text-gray-200 review-user">Kristin Watson</p>
+                            <p class="text-sm text-gray-400 font-light mt-1">Jun 27, 2020 • 6 min read</p>
+                        </div>
+                        <div class="ml-auto text-yellow-500">
+                            &#9733;&#9733;&#9733;&#9733;&#9734;
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="home-review p-8 rounded-lg border border-purple-950 hover:border-blue-950 duration-300">
+                    <p class="text-gray-400 mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-user float-left text-2xl text-[#0B1120] rounded-full bg-white px-3 py-2 mr-4"></i>
+                        <div>
+                            <p class="font-semibold text-gray-200 review-user">Kristin Watson</p>
+                            <p class="text-sm text-gray-400 font-light mt-1">Jun 27, 2020 • 6 min read</p>
+                        </div>
+                        <div class="ml-auto text-yellow-500">
+                            &#9733;&#9733;&#9733;&#9733;&#9734;
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="home-review p-8 rounded-lg border border-purple-950 hover:border-blue-950 duration-300">
+                    <p class="text-gray-400 mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-user float-left text-2xl text-[#0B1120] rounded-full bg-white px-3 py-2 mr-4"></i>
+                        <div>
+                            <p class="font-semibold text-gray-200 review-user">Kristin Watson</p>
+                            <p class="text-sm text-gray-400 font-light mt-1">Jun 27, 2020 • 6 min read</p>
+                        </div>
+                        <div class="ml-auto text-yellow-500">
+                            &#9733;&#9733;&#9733;&#9733;&#9734;
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="home-review p-8 rounded-lg border border-purple-950 hover:border-blue-950 duration-300">
+                    <p class="text-gray-400 mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint velit officia consequat duis enim velit mollit exercitation veniam.</p>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-user float-left text-2xl text-[#0B1120] rounded-full bg-white px-3 py-2 mr-4"></i>
+                        <div>
+                            <p class="font-semibold text-gray-200 review-user">Kristin Watson</p>
+                            <p class="text-sm text-gray-400 font-light mt-1">Jun 27, 2020 • 6 min read</p>
+                        </div>
+                        <div class="ml-auto text-yellow-500">
+                            &#9733;&#9733;&#9733;&#9733;&#9734;
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Duplicate or Add More Reviews -->
+            </div>
         </div>
     </div>
+    
+
     <!-- Clients Reviews Section Start -->
 
 
@@ -940,8 +970,8 @@
 
 
     <!-- Call to Action Section Start -->
-    <div class="home-cta pt-4 pb-56" id="home-cta">
-        <div class="mx-auto max-w-7xl cta-spacing rounded-xl border border-purple-950 pt-20 pb-16 bg-gradient-to-r from-[#2f1835] to-purple-00 shadow-md shadow-purple-500/50"
+    <div class="home-cta pt-4 pb-56 pl-4 pr-4" id="home-cta">
+        <div class="mx-auto max-w-7xl cta-spacing rounded-xl border border-purple-950 pt-20 pb-16 pl-4 pr-4 bg-gradient-to-r from-[#2f1835] to-purple-00 shadow-md shadow-purple-500/50"
             id="home-cta-sec">
             <div class="text-center">
                 <h2 class="text-5xl font-bold tracking-tight text-white cta-title">Ready to dive in?</h2>
@@ -962,11 +992,11 @@
 
 
     <!-- Footer Start -->
-.    <div id="footer">
+    <div id="footer">
         <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1 full-footer">
             <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
                 <div class="footer-col space-y-4">
-                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">COMPANY</h4>
+                    <h4 class="text-gray-500 border-b border-gray-400 pb-2">COMPANY</h4>
                     <ul class="space-y-2">
                         <li><a href="about.html" class="hover:text-white">About</a></li>
                         <li><a href="articles.html" class="hover:text-white">Articles</a></li>
@@ -975,7 +1005,7 @@
                     </ul>
                 </div>
                 <div class="footer-col space-y-4">
-                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">SOLUTIONS</h4>
+                    <h4 class="text-gray-500 border-b border-gray-400 pb-2">SOLUTIONS</h4>
                     <ul class="space-y-2">
                         <li><a href="features.html" class="hover:text-white">Features</a></li>
                         <li><a href="technology.html" class="hover:text-white">Technology</a></li>
@@ -984,7 +1014,7 @@
                     </ul>
                 </div>
                 <div class="footer-col space-y-4">
-                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">SUPPORT</h4>
+                    <h4 class="text-gray-500 border-b border-gray-400 pb-2">SUPPORT</h4>
                     <ul class="space-y-2">
                         <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
                         <li><a href="community.html" class="hover:text-white">Community</a></li>
@@ -993,7 +1023,7 @@
                     </ul>
                 </div>
                 <div class="footer-col space-y-4">
-                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">LEGAL</h4>
+                    <h4 class="text-gray-500 border-b border-gray-400 pb-2">LEGAL</h4>
                     <ul class="space-y-2">
                         <li><a href="#" class="hover:text-white">Security</a></li>
                         <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
@@ -1002,10 +1032,10 @@
                     </ul>
                 </div>
                 <div class="footer-col footer-col-5 space-y-2">
-                    <h4 class="text-gray-500 border-b border-gray-600 pb-2">CONTACT US</h4>
+                    <h4 class="text-gray-500 border-b border-gray-400 pb-2">CONTACT US</h4>
                     <div class="mt-4 space-y-2">
                         <div class="flex justify-center lg:justify-start items-center space-x-2">
-                            <i class="fas fa-phone text-gray-400"></i>
+                            <i class="fas fa-phone text-gray-00"></i>
                             <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
                         </div>
                         <div class="flex justify-center lg:justify-start items-center space-x-2">
@@ -1014,13 +1044,13 @@
                                 class="text-gray-400 hover:text-white">contact@lxroot.com</a>
                         </div>
                         <div class="flex justify-center lg:justify-start items-center space-x-2">
-                            <i class="fas fa-map-marker-alt text-gray-300"></i>
+                            <i class="fas fa-map-marker-alt text-gray-400"></i>
                             <p class="text-gray-400">Carmel, Indiana, USA</p>
                         </div>
                     </div>
 
                     <!-- Social Media Icons -->
-                    <div class="flex justify-center lg:justify-start mt-4 space-x-4">
+                    <div class="flex justify-center lg:justify-start mt-4 space-x-4 social-icon">
                         <a href="https://facebook.com/yourprofile" target="_blank"
                             class="text-gray-500 hover:text-blue-600">
                             <i class="fab fa-facebook-f fa-lg"></i>
@@ -1044,16 +1074,16 @@
                     </div>
                 </div>
             </div>
-            <div class="max-w-7xl mx-auto container mt-12 border-t border-gray-700 pt-4 pb-5 footer-bottom">
+            <div class="max-w-7xl mx-auto container mt-12 border-t border-gray-500 pt-4 pb-5 footer-bottom">
                 <div class="flex justify-between items-center about-footer-bottom">
                     <div class="text-base text-left">
                         Copyright &copy; 2024 | <a href="index.html"
-                            class="text-indigo-400 hover:text-indigo-500 duration-300 footer-text">LxRoot LLC </a>
+                            class="text-gray-400 hover:text-white duration-300 footer-text">LxRoot LLC </a>
                     </div>
                     <div class="text-base text-right space-x-4">
-                        <a href="#privacy"
-                            class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Privacy Policy</a>
-                        <a href="#terms" class="footer-text text-indigo-400 hover:text-indigo-500 duration-300">Terms &
+                        <a href="#privacy" class="footer-text text-gray-400 hover:text-white duration-300">Privacy
+                            Policy</a>
+                        <a href="#terms" class="footer-text text-gray-400 hover:text-white  duration-300">Terms &
                             Conditions</a>
                     </div>
                 </div>

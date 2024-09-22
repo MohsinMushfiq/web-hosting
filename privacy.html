@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy & Policy | LxRoot</title>
+    <link rel="stylesheet" href="./output/tailwind.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/7.13.0/simple-icons.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const button = item.querySelector('.accordion-button');
+                const content = item.querySelector('.accordion-content');
+
+                button.addEventListener('click', () => {
+                    const isOpen = content.classList.contains('hidden');
+
+                    // Close all open items
+                    document.querySelectorAll('.accordion-content').forEach(content => content.classList.add('hidden'));
+                    document.querySelectorAll('.accordion-button svg').forEach(icon => icon.classList.remove('rotate-180'));
+
+                    // Open the clicked one
+                    if (isOpen) {
+                        content.classList.remove('hidden');
+                        button.querySelector('svg').classList.add('rotate-180');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body class="bg-[#0B1120] font-inter">
+
+
+    <!-- Navbar Start -->
+    <div class="text-white sticky top-0 z-50 shadow font-inter main-menu">
+        <!-- Logo, Menu, and Button -->
+        <div class="flex justify-between items-center container max-w-7xl mx-auto sm:px-6 lg:px-1 full-menu">
+            <!-- Logo -->
+            <div class="text-xl font-bold text-white">
+                <a href="/" aria-label="lxroot-logo" class="logo-item">
+                    <svg width="75" height="75" viewBox="0 0 100 100" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.11206 59V42.2H13.1921V55.4H20.6801V59H9.11206Z"></path>
+                        <path
+                            d="M31.1771 59L28.4651 54.896L27.2171 53.144L22.1771 46.256H26.7851L29.4011 50.168L30.7691 52.04L35.7371 59H31.1771ZM22.0571 59L27.1931 51.848L29.2571 54.32L26.5931 59H22.0571ZM30.4811 53.456L28.4411 51.008L30.9611 46.256H35.4971L30.4811 53.456Z">
+                        </path>
+                        <path
+                            d="M38.2917 59V42.2H45.8517C46.9237 42.2 47.8917 42.432 48.7557 42.896C49.6357 43.36 50.3237 44 50.8197 44.816C51.3157 45.616 51.5637 46.528 51.5637 47.552C51.5637 48.608 51.3157 49.56 50.8197 50.408C50.3237 51.24 49.6437 51.896 48.7797 52.376C47.9157 52.856 46.9397 53.096 45.8517 53.096H42.1797V59H38.2917ZM47.6037 59L43.3317 51.416L47.5077 50.816L52.2597 59H47.6037ZM42.1797 49.976H45.4917C45.9077 49.976 46.2677 49.888 46.5717 49.712C46.8917 49.52 47.1317 49.256 47.2917 48.92C47.4677 48.584 47.5557 48.2 47.5557 47.768C47.5557 47.336 47.4598 46.96 47.2677 46.64C47.0757 46.304 46.7957 46.048 46.4277 45.872C46.0757 45.696 45.6437 45.608 45.1317 45.608H42.1797V49.976Z">
+                        </path>
+                        <path
+                            d="M60.2666 59.24C58.9386 59.24 57.7546 58.952 56.7146 58.376C55.6906 57.8 54.8746 57.016 54.2666 56.024C53.6746 55.032 53.3786 53.896 53.3786 52.616C53.3786 51.336 53.6746 50.2 54.2666 49.208C54.8746 48.216 55.6906 47.432 56.7146 46.856C57.7546 46.28 58.9386 45.992 60.2666 45.992C61.5946 45.992 62.7706 46.28 63.7946 46.856C64.8346 47.432 65.6506 48.216 66.2426 49.208C66.8346 50.2 67.1306 51.336 67.1306 52.616C67.1306 53.896 66.8346 55.032 66.2426 56.024C65.6506 57.016 64.8346 57.8 63.7946 58.376C62.7706 58.952 61.5946 59.24 60.2666 59.24ZM60.2666 55.928C60.8426 55.928 61.3546 55.784 61.8026 55.496C62.2506 55.208 62.6026 54.816 62.8586 54.32C63.1146 53.824 63.2346 53.256 63.2186 52.616C63.2346 51.976 63.1146 51.408 62.8586 50.912C62.6026 50.4 62.2506 50 61.8026 49.712C61.3546 49.424 60.8426 49.28 60.2666 49.28C59.6906 49.28 59.1706 49.424 58.7066 49.712C58.2586 50 57.9066 50.4 57.6506 50.912C57.3946 51.408 57.2746 51.976 57.2906 52.616C57.2746 53.256 57.3946 53.824 57.6506 54.32C57.9066 54.816 58.2586 55.208 58.7066 55.496C59.1706 55.784 59.6906 55.928 60.2666 55.928Z">
+                        </path>
+                        <path
+                            d="M75.6416 59.24C74.3136 59.24 73.1296 58.952 72.0896 58.376C71.0656 57.8 70.2496 57.016 69.6416 56.024C69.0496 55.032 68.7536 53.896 68.7536 52.616C68.7536 51.336 69.0496 50.2 69.6416 49.208C70.2496 48.216 71.0656 47.432 72.0896 46.856C73.1296 46.28 74.3136 45.992 75.6416 45.992C76.9696 45.992 78.1456 46.28 79.1696 46.856C80.2096 47.432 81.0256 48.216 81.6176 49.208C82.2096 50.2 82.5056 51.336 82.5056 52.616C82.5056 53.896 82.2096 55.032 81.6176 56.024C81.0256 57.016 80.2096 57.8 79.1696 58.376C78.1456 58.952 76.9696 59.24 75.6416 59.24ZM75.6416 55.928C76.2176 55.928 76.7296 55.784 77.1776 55.496C77.6256 55.208 77.9776 54.816 78.2336 54.32C78.4896 53.824 78.6096 53.256 78.5936 52.616C78.6096 51.976 78.4896 51.408 78.2336 50.912C77.9776 50.4 77.6256 50 77.1776 49.712C76.7296 49.424 76.2176 49.28 75.6416 49.28C75.0656 49.28 74.5456 49.424 74.0816 49.712C73.6336 50 73.2816 50.4 73.0256 50.912C72.7696 51.408 72.6496 51.976 72.6656 52.616C72.6496 53.256 72.7696 53.824 73.0256 54.32C73.2816 54.816 73.6336 55.208 74.0816 55.496C74.5456 55.784 75.0656 55.928 75.6416 55.928Z">
+                        </path>
+                        <path d="M86.0726 59V43.04H89.9126V59H86.0726ZM83.8166 49.616V46.256H92.3846V49.616H83.8166Z">
+                        </path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M76.5399 64C71.5099 73.5156 61.5123 80 50.0001 80C38.4879 80 28.4902 73.5156 23.4603 64H12.5185C18.1935 79.1867 32.834 90 50.0001 90C67.1662 90 81.8067 79.1867 87.4817 64H76.5399ZM22.4964 38C27.1257 27.4046 37.6982 20 50.0001 20C62.302 20 72.8745 27.4046 77.5038 38H88.1689C83.0718 21.7716 67.9107 10 50.0001 10C32.0895 10 16.9284 21.7716 11.8313 38H22.4964Z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Menu (Visible on larger screens) -->
+            <nav class="hidden md:flex md:space-x-3 text-white ml-40 duration-300">
+                <div class="relative group desktop-nav-menu">
+                    <a id="productDropdownLink" href="#"
+                        class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">
+                        Product
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M6.293 8.707a1 1 0 011.414 0L10 11.086l2.293-2.379a1 1 0 011.414 1.415l-3 3.12a1 1 0 01-1.414 0l-3-3.12a1 1 0 010-1.415z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <ul id="productDropdownMenu"
+                        class="dropdown-menu rounded absolute hidden bg-[#2d1938] mt-2 space-y-1 text-white">
+                        <div class="p-4 w-64">
+                            <a href="features.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11 19v-6M6 19v-4M16 19v-8M21 19V7M1 19h22M5 10h0M10 14h0M15 11h0M20 8h0" />
+                                </svg>
+                                <span>Features</span>
+                            </a>
+                            <a href="technology.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 3L2 9l10 6 10-6-10-6zm0 0v12m10-6l-10 6-10-6" />
+                                </svg>
+                                <span>Technology Stack</span>
+                            </a>
+                            <a href="app-hosting.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm2 0v14h14V5H5zm2 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h10v2H7v-2z" />
+                                </svg>
+                                <span>Application Hosting</span>
+                            </a>
+                            <!-- Add more items here -->
+                        </div>
+                    </ul>
+                </div>
+
+                <a href="roadmap.html"
+                    class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">Roadmap</a>
+                <a href="pricing.html"
+                    class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">Pricing</a>
+                <div class="relative group">
+                    <a id="dropdownLink" href="#"
+                        class="flex items-center hover:bg-[#2d1938] px-4 py-2 rounded-md desktop-nav-menu">
+                        Resources
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M6.293 8.707a1 1 0 011.414 0L10 11.086l2.293-2.379a1 1 0 011.414 1.415l-3 3.12a1 1 0 01-1.414 0l-3-3.12a1 1 0 010-1.415z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <ul id="dropdownMenu"
+                        class="dropdown-menu absolute hidden rounded bg-[#2d1938] mt-2 space-y-1 text-white">
+                        <div class="p-4 w-64">
+                            <a href="community.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5V8m-5 12a2 2 0 01-2-2V8a2 2 0 012-2h5M12 20v-6m0 0V8a2 2 0 00-2-2h-5M9 20H4a2 2 0 01-2-2v-5a2 2 0 012-2h5m5-4a2 2 0 00-2-2H7a2 2 0 00-2 2v5M9 4a2 2 0 11-4 0 2 2 0 014 0zm6 4a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                                <span>Community</span>
+                            </a>
+
+                            <a href="documentation.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M6 2a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8.414a2 2 0 00-.586-1.414l-4.414-4.414A2 2 0 0014.586 2H6zm7 7h-4v2h4v-2zm-4 4h6v2h-6v-2zm0 4h4v2h-4v-2zM8 9V4h6v4h4v12H6V4h2v5z" />
+                                </svg>
+                                <span>Documentation</span>
+                            </a>
+
+                            <a href="faqs.html"
+                                class="dropdown-item flex items-center space-x-2 hover:bg-[#21162b] p-2 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8 9h4m0 0h4m-4 0v4m0-4l3 3m1 1v4m-4-1h1m-8-2h6m-6 4h6m-6 4h4m-4-8h8m4 0h1m-2 0v4m0-4h2" />
+                                </svg>
+                                <span>FAQs</span>
+                            </a>
+                            <!-- Add more items here -->
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Hamburger Button (Visible on smaller screens) -->
+            <div class="flex items-center">
+                <button id="mobile-theme-toggle" class="text-white focus:outline-none mr-4 mobile-toggler">
+                    <i id="moon-icon" class="fas fa-moon"></i>
+                    <i id="sun-icon" class="fas fa-sun"></i>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="text-white focus:outline-none md:hidden mobile-menu-nav">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Get Started Button -->
+            <div class="hidden md:block space-x-1 desktop-nav-btn">
+                <button id="theme-toggle" class="desktop-toggler text-white focus:outline-none mr-4">
+                    <i id="moon-icon" class="fas fa-moon"></i>
+                    <i id="sun-icon" class="fas fa-sun"></i>
+                </button>
+                <a href="signin.html"
+                    class="border border-gray-500 text-gray-300 px-4 py-2 rounded hover:bg-white hover:text-[#0B1120] duration-300 signin-btn">Sign
+                    in</a>
+                <a href="getstarted.html"
+                    class="bg-blue-600 text-white px-4 py-2.5 rounded hover:bg-blue-700 duration-300 get-start-btn">Get
+                    Started</a>
+            </div>
+        </div>
+
+        <!-- Dropdown Menu (Visible on smaller screens) -->
+        <nav id="menu" class="hidden mt-4 mobile-menu-spacing">
+            <ul class="space-y-4 text-white">
+                <li>
+                    <div
+                        class="bg-[#402350] flex justify-between items-center border border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938] duration-300 mobile-dropdown">
+                        <span>Products</span>
+                        <button class="dropdown-btn focus:outline-none">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1  py-6">
+                        <li
+                            class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
+                            <a href="features.html" class="block text-gray-300 hover:text-indigo-400">Features</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                        <li
+                            class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700 duration-300">
+                            <a href="technology.html" class="block text-gray-300 hover:text-indigo-400">Technology
+                                Stack</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                        <li class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700">
+                            <a href="app-hosting.html" class="block text-gray-300 hover:text-indigo-400">Application
+                                Hosting</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                    </ul>
+
+
+                </li>
+                <li
+                    class="mobile-dropdown bg-[#402350] border border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938] duration-300">
+                    <a href="roadmap.html" class="block hover:text-indigo-400">Roadmap </a>
+                </li>
+                <li
+                    class="mobile-dropdown bg-[#402350] border border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938] duration-300">
+                    <a href="pricing.html" class="block hover:text-indigo-400">Pricing</a>
+                </li>
+                <li>
+                    <div
+                        class="mobile-dropdown flex justify-between items-center border bg-[#402350] border-gray-800 px-4 py-2 rounded hover:bg-[#2d1938]  duration-300">
+                        <span>Resources</span>
+                        <button class="dropdown-btn focus:outline-none">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="mobile-dropdown-menu hidden pl-3 space-y-1 py-6">
+                        <li
+                            class="flex justify-between items-center pb-3 mr-3 border-b-[1px] border-gray-700 duration-300">
+                            <a href="community.html" class="block text-gray-300 hover:text-indigo-400">Community</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                        <li
+                            class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700 duration-300">
+                            <a href="documentation.html"
+                                class="block text-gray-300 hover:text-indigo-400">Documentation</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                        <li class="flex justify-between items-center py-3 mr-3 border-b-[1px] border-gray-700">
+                            <a href="faqs.html" class="block text-gray-300 hover:text-indigo-400">FAQs</a>
+                            <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="py-4">
+                    <a href="signin.html"
+                        class="text-white border border-indigo-600 px-8 py-3 rounded w-full hover:text-indigo-700 hover:bg-white duration-300 block text-center mobile-signin-btn">
+                        Sign In
+                    </a>
+                    <a href="getstarted.html"
+                        class="bg-indigo-600 text-white px-8 py-3 rounded w-full hover:bg-indigo-800 duration-300 block text-center mt-4 mobile-getstart-btn">
+                        Get Started
+                    </a>
+
+                </li>
+
+
+            </ul>
+        </nav>
+    </div>
+    <!-- Navigation End -->
+
+
+    <section>
+        <div class="max-w-7xl mx-auto lg:flex lg:items-center lg:space-x-12 justify-center text-center pt-24">
+            <!-- Text Content -->
+            <div class="hero-text app-hero-sec">
+                <h2 class="text-5xl text-white about-h2 font-extrabold mb-4 line-height:2">
+                    Privacy Policy
+                </h2>
+                <p class="text-lg mb-8 text-gray-200 font-extralight app-hero-des">
+                    Last updated: May 2024
+                </p>
+            </div>
+        </div>
+
+        <div id="tab-1" class="max-w-6xl mx-auto tab-content pt-8 pb-40">
+
+            <div
+                class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded">
+                <button class=" accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    I. General
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400 pt-4">
+                    This Privacy Policy (“Policy”) refers to LxRoot, LLC and you, the user of this site. <br> <br>
+
+                    Us, We, Our - LxRoot, LLC is the publisher and operator of the website https://www.LxRoot.com, and
+                    is referred to as “LxRoot.com”. “us”, “we”, “our”, “ours”, etc. refer to LxRoot, LLC. “The SITE” or
+                    “SITE” refers to https://LxRoot.com and LxRoot as an entity. <br> <br>
+
+                    You, the User - This Policy will refer to the user as “you” or “yours”, etc. <br> <br>
+
+                    This Policy describes how we use information received about you when you visit our SITE or when you
+                    subscribe to, or otherwise use our online services. This Policy does not cover any information that
+                    we may receive from or about you through channels other than through the use of the SITE. <br> <br>
+
+                    **Users who reside in the EEA are invited to read our GDPR Privacy Notice. <br> <br>
+
+                    CHILDRENS ONLINE PRIVACY PROTECTION ACT v
+
+                    Compliance and Non-Applicability Statement. <br> <br>
+
+                    The Children’s Online Privacy Protection Act applies to the online collection of personal
+                    information from children under the age of 13. LxRoot.com does not collect any personal information
+                    about children under the age of 13. Our SITE is not designed for children under 16, and children
+                    under the age of 16 are not authorized to access or use our services. If we discover that a child
+                    under the age of 16 has provided us with personal information, we will endeavor to purge any such
+                    information as soon as possible. <br> <br>
+
+                    If you are entering into these Terms on behalf of a business entity or organization, you represent
+                    and warrant that you have the legal authority and capacity to bind such business entity or
+                    organization. If you are not authorized nor deemed by law to have such authority, you assume sole
+                    personal liability for the obligations set out in these Terms.
+                </div>
+            </div>
+
+            <div
+                class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    II. Revisions to this Policy
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400 pt-4">
+                    This Policy is current as of the Last Modified set forth above. We reserve the right to revise,
+                    amend, or modify this Policy and our other policies and agreements at any time and in any manner. We
+                    will post any updates to this Policy on our SITE. You should periodically check for any
+                    modifications of this Policy by re-visiting this web page. If we make any changes to this Policy
+                    that materially affect our practices with regard to the personal information we have previously
+                    collected from you, we will endeavor to provide you with notice in advance of such change by
+                    highlighting the change on our SITE
+                </div>
+            </div>
+
+            <div
+                class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    III. Information that we collect
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400 pt-4">
+                    Visitors to our SITE and services will have multiple manners of interacting with us. Depending upon
+                    your level of interaction, we will collect different information about you. We collect information
+                    about you directly from you and from third parties, as well as automatically through your use of our
+                    SITE. The type of information collected is as follows: <br> <br>
+
+                    Account Registration. When you register for an Account, we may ask for your contact information,
+                    including items such as name, company name, address, email address, and telephone number. If you
+                    choose to refer a friend to our Services, we may also collect your friend’s email address so that we
+                    may send them a referral or promotional code to sign up for our Services. <br> <br>
+
+                    Payment Information. When you add your financial account information to your Account, that
+                    information is directed to our third-party payment processor. We do not store your financial account
+                    information on our systems; however, we have access to, and may retain, subscriber information
+                    through our third-party payment processor. <br> <br>
+
+                    Personal Data. This means information that identifies, relates to, describes, is reasonably capable
+                    of being associated with, or could reasonably be linked, directly or indirectly, with a user in
+                    particular by reference to an identifier such as a name, an identification number, location data, an
+                    online identifier or to one or more factors specific to the physical, physiological, genetic,
+                    mental, economic, cultural or social identity of that natural person. “Personal Data” includes
+                    equivalent terms in other Data Protection Law, such as the CCPA- defined term “Personal
+                    Information,” as context requires. <br> <br>
+
+                    User Content. Our “Community” feature allows you to publicly post content on our Services. By
+                    registering for our Community, you agree that your profile information and the content you post may
+                    be viewed and used by other users and third parties we do not control. <br> <br>
+
+                    Communications. If you contact us directly, we may receive additional information about you such as
+                    your name, email address, phone number, the contents of the message and/or attachments you may send
+                    us, and any other information you may choose to provide. We may also receive a confirmation when you
+                    open an email from us. The personal information that you are asked to provide, and the reasons why
+                    you are asked to provide it, will be made clear to you at the point we ask you to provide your
+                    personal information. <br> <br>
+
+                    Additionally, we define all visitors on our SITE in the following formats: <br> <br>
+
+                    Members - Members are those users who subscribe to our services will be prompted to provide their
+                    name, their address, their age, their phone number, and any other necessary billing information.
+                    <br> <br>
+
+                    Posters - Posters are visitors to our SITE who choose to register to post information in our public
+                    forums. We collect your email address and the password you create for your account when you
+                    register, and we also collect information about your posts to our forums. Any information entered
+                    voluntarily by the Poster on one of our forums should be considered public information or
+                    information that is publicly available. If you do not wish for information to be made public, you
+                    should not enter it into your user profile when registering as a Poster. <br> <br>
+
+                    All SITE users and visitors - We automatically collect the following information from all users and
+                    visitors to our SITE through cookies, web beacons, and other technologies: your domain name; your
+                    browser type and operating system; web pages you view; links you click; your IP address; the length
+                    of time you visit or use our SITE; and the referring URL, or the webpage that led you to our SITE.
+                    We may combine this information with other information that we have collected about you, including,
+                    where applicable, your user name, name, and other personal information. Please see the section
+                    “Cookies and Other Tracking Mechanisms” below for more information.
+                </div>
+            </div>
+
+            <div
+                class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    IV. Our Use of Cookies and Other Tracking Mechanisms
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400 pt-4">
+                    We and our third party service providers use cookies and other tracking mechanisms, including those
+                    designed for mobile applications, to track information about your use of our SITE. We may combine
+                    this information with other personal information we collect from you (and our third party service
+                    providers may do so on our behalf). <br> <br>
+
+                    Cookies. Cookies are alphanumeric identifiers that we transfer to your device’s hard drive through
+                    your web browser for record-keeping purposes. Some cookies allow us to make it easier for you to
+                    navigate our SITE, while others are used to enable a faster log-in process or to allow us to track
+                    your activities at our SITE and service, including for online advertising purposes. <br> <br>
+
+                    Disabling Cookies. Most web browsers automatically accept cookies, but if you prefer, you can edit
+                    your browser options to block them in the future. The Help portion of the toolbar on most browsers
+                    will tell you how to prevent your computer from accepting new cookies, how to have the browser
+                    notify you when you receive a new cookie, or how to disable cookies altogether. Visitors to our SITE
+                    who disable cookies will be able to browse certain areas of the SITE, but some features may not
+                    function. <br> <br>
+
+                    Clear GIFs, pixel tags and other technologies. Clear GIFs are tiny graphics with a unique
+                    identifier, similar in function to cookies. In contrast to cookies, which are stored on your
+                    device’s hard drive, clear GIFs are embedded invisibly on web pages. We may use clear GIFs (a.k.a.
+                    web beacons, web bugs or pixel tags), in connection with our SITE to, among other things, track the
+                    activities of SITE visitors and users, help us manage content, and compile statistics about SITE
+                    usage. We and our third party service providers also use clear GIFs in HTML emails to our customers,
+                    to help us track email response rates, identify when our emails are viewed, and track whether our
+                    emails are forwarded. <br> <br>
+
+                    Third Party Analytics. We use automated devices and applications, such as Google Analytics, to
+                    evaluate usage of our SITE. We also may use other analytic means to evaluate our SITE. We use these
+                    tools to help us improve our services, performance, and user experiences. These entities may use
+                    cookies and other tracking technologies to perform their services. To learn more about Google’s
+                    privacy practices, please review the Google Policy at https://www.google.com/policies/privacy/. You
+                    can also download the Google Analytics Opt-out Browser Add-on to prevent their data from being used
+                    by Google Analytics at https://tools.google.com/dlpage/gaoptout. <br> <br>
+
+                    Do-Not-Track. Currently, our systems do not recognize browser “do-not-track” requests. You may,
+                    however, disable certain tracking as discussed in this section (e.g., by disabling cookies); you
+                    also may opt-out of targeted advertising by following the instructions in the Third Party Ad Network
+                    section. <br> <br>
+
+                    Third-Party Ad Networks. We use third parties such as network advertisers to serve advertisements on
+                    third-party websites or other media (e.g., social networking platforms). This enables us and these
+                    third parties to target advertisements to you for products and services in which you might be
+                    interested. Third-party ad network providers, advertisers, sponsors and/or traffic measurement
+                    services may use cookies, JavaScript, web beacons (including clear GIFs), Flash LSOs and other
+                    tracking technologies to measure the effectiveness of their ads and to personalize advertising
+                    content to you. These third-party cookies and other technologies are governed by each third party’s
+                    specific privacy policy, not this one. We may provide these third-party advertisers with
+                    information, including personal information, about you. <br> <br>
+
+                    Users in the United States may opt out of many third-party ad networks. For example, you may go to
+                    the Digital Advertising Alliance (“DAA”) Consumer Choice Page for information about opting out of
+                    interest-based advertising and their choices regarding having information used by DAA companies. You
+                    may also go to the Network Advertising Initiative (“NAI”) Consumer Opt-Out Page for information
+                    about opting out of interest- based advertising and their choices regarding having information used
+                    by NAI members. <br> <br>
+
+                    Opting out from one or more companies listed on the DAA Consumer Choice Page or the NAI Consumer
+                    Opt-Out Page will opt you out from those companies’ delivery of interest-based content or ads to
+                    you, but it does not mean you will no longer receive any advertising through our SITE or on other
+                    websites. You may continue to receive advertisements, for example, based on the particular website
+                    that you are viewing (i.e., contextually based ads). Also, if your browsers are configured to reject
+                    cookies when you opt out on the DAA or NAI websites, yours opt out may not be effective. Additional
+                    information is available on the DAA’s website at www.aboutads.info or the NAI’s website at
+                    www.networkadvertising.org.
+                </div>
+            </div>
+            <div
+                class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    V. How we use your information
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400 pt-4">
+                    We use your information, including your personal information, for the following purposes: <br> <br>
+
+                    To provide our services to you, to communicate with you about your use of our services, to respond
+                    to your inquiries, to fulfil your orders, and for other customer service purposes. <br> <br>
+
+                    To tailor the content and information that we may send or display to you, such as displaying
+                    information on your use of our cloud services, to offer location customization, and personalized
+                    help and instructions, and to otherwise personalize your experiences while using the SITE. <br> <br>
+
+                    For marketing and promotional purposes. For example, we may use your information, such as your email
+                    address, to send you news and newsletters, special offers, and promotions, or to otherwise contact
+                    you about products or information we think may interest you. We also may use the information that we
+                    learn about you to assist us in advertising our services on third party websites. <br> <br>
+
+                    To better understand how users access and use our SITE, both on an aggregated and individualized
+                    basis, in order to improve our SITE and services and respond to user desires and preferences, and
+                    for other research and analytical purposes. <br> <br>
+
+                    To administer surveys and questionnaires. <br> <br>
+
+                    To comply with applicable legal or regulatory obligations, including as part of a judicial
+                    proceeding; to respond to a subpoena, warrant, court order, or other legal process; or as part of an
+                    investigation or request, whether formal or informal, from law enforcement or a governmental
+                    authority. <br> <br>
+
+                    To protect the safety, rights, property, or security of LxRoot, our services, any third party, or
+                    the general public; to detect, prevent, or otherwise address fraud, security, or technical issues;
+                    to prevent or stop activity that LxRoot, in its sole discretion, may consider to be, or to pose a
+                    risk of being, an illegal, unethical, or legally actionable activity; to use as evidence in
+                    litigation; to conduct audits; and to enforce this Policy, our Acceptable Use Policy, and our Terms
+                    of Service.
+                </div>
+            </div>
+
+            <div
+                class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    VI. How We Disclose Your Information
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400 pt-4">
+                    We may share your information, including personal information, as follows: <br> <br>
+
+                    Forum Users. If you create an account to use one of our forums, your forum profile, LxRoot directory
+                    information, and any information you post on one of our forums will be available to other forum
+                    users and all SITE visitors. <br> <br>
+
+                    Affiliates. We may disclose the information we collect from you to our affiliates or subsidiaries;
+                    however, if we do so, their use and disclosure of your personal information will be subject to this
+                    Policy. <br> <br>
+
+                    Service Providers. We may disclose the information we collect from you to third party vendors,
+                    digital wallet companies, service providers, contractors or agents who perform functions on our
+                    behalf. <br> <br>
+
+                    We also disclose information in the following circumstances: <br> <br>
+
+                    Business Transfers. If we are or may be acquired by or merged with another company, if any of our
+                    assets are transferred to another company, or as part of a bankruptcy proceeding, we may transfer
+                    the information we have collected from you to the other company. <br> <br>
+
+                    In Response to Legal Process. We also may disclose the information we collect from you in order to
+                    comply with the law, a judicial proceeding, court order, or other legal process, such as in response
+                    to a court order or a subpoena. <br> <br>
+
+                    To Protect Us and Others. We also may disclose the information we collect from you where we believe
+                    it is necessary to investigate, prevent, or take action regarding illegal activities, suspected
+                    fraud, situations involving potential threats to the safety of any person, violations of our Terms
+                    of Service, Acceptable Use Policy, or this privacy Policy, or as evidence in litigation in which
+                    LxRoot is involved. <br> <br>
+
+                    Aggregate and De-Identified Information. We may share aggregate or de-identified information about
+                    users with third parties for marketing, advertising, research or similar purposes.
+                </div>
+            </div>
+
+            <div
+                class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    VII. Your Data Protection Rights Under the General Data Protection Regulation (GDPR)
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400 pt-4">
+                    If you are a resident of the EEA, Switzerland, or the United Kingdom (“UK”), you have the following
+                    data protection rights: <br> <br>
+
+                    If you wish to access, correct, update, or request deletion of your personal information, you can do
+                    so at any time by emailing info@lxroot.com. <br> <br>
+
+                    To exercise your rights to deletion of your personal data under the GDPR or other data protection
+                    laws, you can deactivate and purge your account in your control panel settings. All account data
+                    will be deleted within 90 days of purging. <br> <br>
+
+                    In addition, you can object to the processing of your personal data, ask us to restrict the
+                    processing of your personal data, or request portability of your personal data. Again, you can
+                    exercise these rights by emailing info@lxroot.com. <br> <br>
+
+                    You have the right to opt-out of marketing communications we send you at any time. You can exercise
+                    this right by clicking on the “unsubscribe” or “opt-out” link in the marketing emails we send you.
+                    To opt-out of other forms of marketing, please contact us by emailing info@lxroot.com. <br> <br>
+
+                    Similarly, if we have collected and process your personal data with your consent, then you can
+                    withdraw your consent at any time. Withdrawing your consent will not affect the lawfulness of any
+                    processing we conducted prior to your withdrawal, nor will it affect the processing of your personal
+                    data conducted in reliance on lawful processing grounds other than consent. <br> <br>
+
+                    You have the right to complain to a data protection authority about our collection and use of your
+                    personal data. For more information, please contact your local data protection authority. <br> <br>
+
+                    We respond to all requests we receive from individuals wishing to exercise their data protection
+                    rights in accordance with applicable data protection laws.
+                </div>
+            </div>
+
+            <div
+                class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    VIII. Transmittals from Us
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400 pt-4">
+                    We may send you periodic announcements including the details of our existing and new programs. You
+                    may opt out of these announcements by contacting info@lxroot.com If you opt out of these marketing
+                    emails, you may still receive system notices and other information that is specifically related to
+                    your account.
+                </div>
+            </div>
+
+            <div
+                class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    IX. Public Forums, Member Directories, and Internal Messaging
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400 pt-4">
+                    Public Forums - Any information posted to a Forum should immediately be considered to be public
+                    information. <br> <br>
+
+                    Member Directories - Any information provided in a user profile, Member directory, or other related
+                    service should be considered to be public information. We do not, cannot, and will not act to
+                    maintain the privacy of any information that you provide in any such forum or medium. <br> <br>
+
+                    Internal Messaging - We provide an internal messaging system for use between Members of our SITE.
+                    Any information that you send via this internal messaging system is not secure and is not considered
+                    to be private information. You should use caution when sending any personal information over the
+                    internal messaging system, and you should not transmit any information that you would not wish to
+                    see disclosed to the general public.
+                </div>
+            </div>
+
+
+            <div
+                class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    X. Security of Your Information
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400 pt-4">
+                    We have implemented reasonable precautions to protect the information we collect from loss, misuse,
+                    and unauthorized access, disclosure, alteration, and destruction. For example, we take measures,
+                    including data encryption, to protect the transmission of sensitive end-user information.
+                    Nevertheless, we cannot guarantee that our security measures will prevent third-party “hackers” from
+                    illegally obtaining this information. We take reasonable measures to prevent such breaches of
+                    security, but given the resourcefulness of cyber-criminals we are unable to guarantee that our
+                    security is 100% breach-proof. You assume the risk of such breaches to the extent that they occur
+                    despite our reasonable security measures.
+                </div>
+            </div>
+
+            <div
+                class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    XI. How to Access or Modify Your Information
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400 pt-4">
+                    We offer our Members the opportunity to access or modify information provided during registration.
+                    To access or modify such information, contact our Customer Service Department at
+                    https://www.LxRoot.com/contact
+                </div>
+            </div>
+
+            <div
+                class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    XII. Your Choices
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400 pt-4">
+                    You can use some of the features of the Services without registering, thereby limiting the type of
+                    information that we collect. <br> <br>
+
+                    You may unsubscribe from receiving certain promotional emails from us. If you wish to do so, simply
+                    follow the instructions found at the end of the email. Even if you unsubscribe, we may still contact
+                    you for informational, transactional, account-related, or similar purposes. <br> <br>
+
+                    Many browsers have an option for disabling cookies, which may prevent your browser from accepting
+                    new cookies or enable selective use of cookies. Please note that, if you choose not to accept
+                    cookies, some features and the personalization of our Services may no longer work for you. You will
+                    continue to receive advertising material but it will not be tailored to your interests.
+                </div>
+            </div>
+
+            <div
+                class="accordion-item bg-gray-900 border border-purple-950 hover:border-blue-950 shadow-md shadow-purple-500/50 hover:shadow-blue-500/50 p-5 rounded mt-4">
+                <button class="accordion-button w-full text-left py-4 flex justify-between items-center text-lg">
+                    XIII. Where to Direct Questions About Our Privacy Policy
+                    <svg class="w-6 h-6 transition-transform duration-300 accor-icon" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="accordion-content hidden text-gray-400 pt-4">
+                    If you have any questions about this Policy or the practices described herein, you may contact us at
+                    https://www.lxroot.com/contact
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- Call to Action Section Start -->
+    <div class="home-cta pt-4 pb-56 pl-4 pr-4" id="home-cta">
+        <div class="mx-auto max-w-7xl cta-spacing rounded-xl border border-purple-950 pt-20 pb-16 pl-4 pr-4 bg-gradient-to-r from-[#2f1835] to-purple-00 shadow-md shadow-purple-500/50"
+            id="home-cta-sec">
+            <div class="text-center">
+                <h2 class="text-5xl font-bold tracking-tight text-white cta-title">Ready to dive in?</h2>
+                <p class="mt-2 text-xl leading-8 text-blue-400 cta-tagline">Get Started with your free trial today.</p>
+                <div class="mt-5 flex justify-center gap-x-4">
+                    <a href="#"
+                        class="cta-live-btn border border-blue-800 text-gray-300 px-5 text-lg py-3 rounded hover:bg-blue-700 hover:text-white duration-300">Live
+                        Demo -></a>
+                    <a href="#"
+                        class="home-button cta-start-btn bg-gradient-to-r from-blue-700 to-purple-600 text-white font-normal px-6 py-3 text-lg rounded hover:bg-purple-700 duration-300">Get
+                        Started -></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Call to Action Section End -->
+
+
+
+    <!-- Footer Start -->
+    <div id="footer">
+        <footer class="text-gray-400 pt-20 z-0 max-w-7xl mx-auto sm:px-6 lg:px-1 full-footer">
+            <div class="container footer-container mx-auto flex-wrap justify-between text-center lg:text-left">
+                <div class="footer-col space-y-4">
+                    <h4 class="text-gray-500 border-b border-gray-400 pb-2">COMPANY</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-white">About</a></li>
+                        <li><a href="articles.html" class="hover:text-white">Articles</a></li>
+                        <li><a href="career.html" class="hover:text-white">Career</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col space-y-4">
+                    <h4 class="text-gray-500 border-b border-gray-400 pb-2">SOLUTIONS</h4>
+                    <ul class="space-y-2">
+                        <li><a href="features.html" class="hover:text-white">Features</a></li>
+                        <li><a href="technology.html" class="hover:text-white">Technology</a></li>
+                        <li><a href="roadmap.html" class="hover:text-white">Roadmap</a></li>
+                        <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col space-y-4">
+                    <h4 class="text-gray-500 border-b border-gray-400 pb-2">SUPPORT</h4>
+                    <ul class="space-y-2">
+                        <li><a href="documentation.html" class="hover:text-white">Documentation</a></li>
+                        <li><a href="community.html" class="hover:text-white">Community</a></li>
+                        <li><a href="support.html" class="hover:text-white">Support Docs</a></li>
+                        <li><a href="faqs.html" class="hover:text-white">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col space-y-4">
+                    <h4 class="text-gray-500 border-b border-gray-400 pb-2">LEGAL</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Security</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-white">Changelogs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-col-5 space-y-2">
+                    <h4 class="text-gray-500 border-b border-gray-400 pb-2">CONTACT US</h4>
+                    <div class="mt-4 space-y-2">
+                        <div class="flex justify-center lg:justify-start items-center space-x-2">
+                            <i class="fas fa-phone text-gray-00"></i>
+                            <a href="tel:+1234567890" class="text-gray-400 hover:text-white">+1 (234) 567-890</a>
+                        </div>
+                        <div class="flex justify-center lg:justify-start items-center space-x-2">
+                            <i class="fas fa-envelope text-gray-400"></i>
+                            <a href="mailto:contact@yourdomain.com"
+                                class="text-gray-400 hover:text-white">contact@lxroot.com</a>
+                        </div>
+                        <div class="flex justify-center lg:justify-start items-center space-x-2">
+                            <i class="fas fa-map-marker-alt text-gray-400"></i>
+                            <p class="text-gray-400">Carmel, Indiana, USA</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Icons -->
+                    <div class="flex justify-center lg:justify-start mt-4 space-x-4 social-icon">
+                        <a href="https://facebook.com/yourprofile" target="_blank"
+                            class="text-gray-500 hover:text-blue-600">
+                            <i class="fab fa-facebook-f fa-lg"></i>
+                        </a>
+                        <a href="https://twitter.com/yourprofile" target="_blank"
+                            class="text-gray-500 hover:text-blue-400">
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </a>
+                        <a href="https://instagram.com/yourprofile" target="_blank"
+                            class="text-gray-500 hover:text-pink-500">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank"
+                            class="text-gray-500 hover:text-blue-700">
+                            <i class="fab fa-linkedin-in fa-lg"></i>
+                        </a>
+                        <a href="https://youtube.com/in/yourprofile" target="_blank"
+                            class="text-gray-500 hover:text-red-700">
+                            <i class="fab fa-youtube fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto container mt-12 border-t border-gray-500 pt-4 pb-5 footer-bottom">
+                <div class="flex justify-between items-center about-footer-bottom">
+                    <div class="text-base text-left">
+                        Copyright &copy; 2024 | <a href="index.html"
+                            class="text-gray-400 hover:text-white duration-300 footer-text">LxRoot LLC </a>
+                    </div>
+                    <div class="text-base text-right space-x-4">
+                        <a href="#privacy" class="footer-text text-gray-400 hover:text-white duration-300">Privacy
+                            Policy</a>
+                        <a href="#terms" class="footer-text text-gray-400 hover:text-white  duration-300">Terms &
+                            Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Footer End -->
+
+
+
+    <!-- JavaScript Start -->
+    <script src="src/script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- JavaScript End -->
+
+
+</body>
+
+</html>

@@ -214,3 +214,56 @@ function showTab(tabNumber) {
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const container = document.querySelector('.reviews-container');
+    const nextBtn = document.getElementById('next-btn');
+    const prevBtn = document.getElementById('prev-btn');
+
+    const itemWidth = container.querySelector('.home-review').offsetWidth + 20; // Add space for gap (20px)
+    const scrollStep = itemWidth * 1.5;  // Scroll based on one and half review items width
+
+    // Handle next button
+    nextBtn.addEventListener('click', function () {
+        container.scrollBy({
+            left: scrollStep,
+            behavior: 'smooth'
+        });
+    });
+
+    // Handle previous button
+    prevBtn.addEventListener('click', function () {
+        container.scrollBy({
+            left: -scrollStep,
+            behavior: 'smooth'
+        });
+    });
+
+    // Add mouse dragging functionality
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    container.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+    });
+
+    container.addEventListener('mouseleave', () => {
+        isDown = false;
+    });
+
+    container.addEventListener('mouseup', () => {
+        isDown = false;
+    });
+
+    container.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 2;  // Increase scroll speed
+        container.scrollLeft = scrollLeft - walk;
+    });
+});
+
+

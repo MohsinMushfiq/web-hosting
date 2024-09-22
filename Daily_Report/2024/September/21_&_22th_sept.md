@@ -1,6 +1,6 @@
 <h2>Updates - 21th & 22th September, 2024</h2>
 
-Video - </br>
+Video - https://www.loom.com/share/f218a0723dfa4cffb9127b06304797c5?sid=7aa54ab0-45b9-4357-b451-2156979c7d48</br>
 Live URL - https://mohsin.lxroot.net/day21</br>
 GitHub - https://github.com/MohsinMushfiq/LxRoot/blob/main/Daily_Report/2024/September/21_&_22th_sept.md
 

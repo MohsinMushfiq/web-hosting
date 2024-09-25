@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biling | LxRoot</title>
+    <link rel="stylesheet" href="./output/tailwind.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/7.13.0/simple-icons.min.css">
+    <link rel="shortcut icon" href="/images/favicon_32x32.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body id="dashboard-main">
+
+    <div class="max-w-7xl mx-auto min-h-screen bg-[#13111C] text-gray-300 px-8">
+        <div
+            class="flex items-center justify-between mb-8 sticky top-0 bg-[#13111C] border-b border-gray-800 py-4 z-50">
+            <!-- Logo -->
+            <div class="w-12 h-12 rounded-full flex items-center justify-center">
+                <!-- Logo image/icon here -->
+                <a href="">
+                    <svg width="60" height="60" viewBox="0 0 100 100" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.11206 59V42.2H13.1921V55.4H20.6801V59H9.11206Z"></path>
+                        <path
+                            d="M31.1771 59L28.4651 54.896L27.2171 53.144L22.1771 46.256H26.7851L29.4011 50.168L30.7691 52.04L35.7371 59H31.1771ZM22.0571 59L27.1931 51.848L29.2571 54.32L26.5931 59H22.0571ZM30.4811 53.456L28.4411 51.008L30.9611 46.256H35.4971L30.4811 53.456Z">
+                        </path>
+                        <path
+                            d="M38.2917 59V42.2H45.8517C46.9237 42.2 47.8917 42.432 48.7557 42.896C49.6357 43.36 50.3237 44 50.8197 44.816C51.3157 45.616 51.5637 46.528 51.5637 47.552C51.5637 48.608 51.3157 49.56 50.8197 50.408C50.3237 51.24 49.6437 51.896 48.7797 52.376C47.9157 52.856 46.9397 53.096 45.8517 53.096H42.1797V59H38.2917ZM47.6037 59L43.3317 51.416L47.5077 50.816L52.2597 59H47.6037ZM42.1797 49.976H45.4917C45.9077 49.976 46.2677 49.888 46.5717 49.712C46.8917 49.52 47.1317 49.256 47.2917 48.92C47.4677 48.584 47.5557 48.2 47.5557 47.768C47.5557 47.336 47.4598 46.96 47.2677 46.64C47.0757 46.304 46.7957 46.048 46.4277 45.872C46.0757 45.696 45.6437 45.608 45.1317 45.608H42.1797V49.976Z">
+                        </path>
+                        <path
+                            d="M60.2666 59.24C58.9386 59.24 57.7546 58.952 56.7146 58.376C55.6906 57.8 54.8746 57.016 54.2666 56.024C53.6746 55.032 53.3786 53.896 53.3786 52.616C53.3786 51.336 53.6746 50.2 54.2666 49.208C54.8746 48.216 55.6906 47.432 56.7146 46.856C57.7546 46.28 58.9386 45.992 60.2666 45.992C61.5946 45.992 62.7706 46.28 63.7946 46.856C64.8346 47.432 65.6506 48.216 66.2426 49.208C66.8346 50.2 67.1306 51.336 67.1306 52.616C67.1306 53.896 66.8346 55.032 66.2426 56.024C65.6506 57.016 64.8346 57.8 63.7946 58.376C62.7706 58.952 61.5946 59.24 60.2666 59.24ZM60.2666 55.928C60.8426 55.928 61.3546 55.784 61.8026 55.496C62.2506 55.208 62.6026 54.816 62.8586 54.32C63.1146 53.824 63.2346 53.256 63.2186 52.616C63.2346 51.976 63.1146 51.408 62.8586 50.912C62.6026 50.4 62.2506 50 61.8026 49.712C61.3546 49.424 60.8426 49.28 60.2666 49.28C59.6906 49.28 59.1706 49.424 58.7066 49.712C58.2586 50 57.9066 50.4 57.6506 50.912C57.3946 51.408 57.2746 51.976 57.2906 52.616C57.2746 53.256 57.3946 53.824 57.6506 54.32C57.9066 54.816 58.2586 55.208 58.7066 55.496C59.1706 55.784 59.6906 55.928 60.2666 55.928Z">
+                        </path>
+                        <path
+                            d="M75.6416 59.24C74.3136 59.24 73.1296 58.952 72.0896 58.376C71.0656 57.8 70.2496 57.016 69.6416 56.024C69.0496 55.032 68.7536 53.896 68.7536 52.616C68.7536 51.336 69.0496 50.2 69.6416 49.208C70.2496 48.216 71.0656 47.432 72.0896 46.856C73.1296 46.28 74.3136 45.992 75.6416 45.992C76.9696 45.992 78.1456 46.28 79.1696 46.856C80.2096 47.432 81.0256 48.216 81.6176 49.208C82.2096 50.2 82.5056 51.336 82.5056 52.616C82.5056 53.896 82.2096 55.032 81.6176 56.024C81.0256 57.016 80.2096 57.8 79.1696 58.376C78.1456 58.952 76.9696 59.24 75.6416 59.24ZM75.6416 55.928C76.2176 55.928 76.7296 55.784 77.1776 55.496C77.6256 55.208 77.9776 54.816 78.2336 54.32C78.4896 53.824 78.6096 53.256 78.5936 52.616C78.6096 51.976 78.4896 51.408 78.2336 50.912C77.9776 50.4 77.6256 50 77.1776 49.712C76.7296 49.424 76.2176 49.28 75.6416 49.28C75.0656 49.28 74.5456 49.424 74.0816 49.712C73.6336 50 73.2816 50.4 73.0256 50.912C72.7696 51.408 72.6496 51.976 72.6656 52.616C72.6496 53.256 72.7696 53.824 73.0256 54.32C73.2816 54.816 73.6336 55.208 74.0816 55.496C74.5456 55.784 75.0656 55.928 75.6416 55.928Z">
+                        </path>
+                        <path d="M86.0726 59V43.04H89.9126V59H86.0726ZM83.8166 49.616V46.256H92.3846V49.616H83.8166Z">
+                        </path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M76.5399 64C71.5099 73.5156 61.5123 80 50.0001 80C38.4879 80 28.4902 73.5156 23.4603 64H12.5185C18.1935 79.1867 32.834 90 50.0001 90C67.1662 90 81.8067 79.1867 87.4817 64H76.5399ZM22.4964 38C27.1257 27.4046 37.6982 20 50.0001 20C62.302 20 72.8745 27.4046 77.5038 38H88.1689C83.0718 21.7716 67.9107 10 50.0001 10C32.0895 10 16.9284 21.7716 11.8313 38H22.4964Z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Right header -->
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-300 hover:text-gray-400">Help</button>
+                <button class="text-gray-300 hover:text-gray-400">Dashboard</button>
+                <div class="bg-green-950 text-green-600 font-normal py-1 px-3 rounded-md">
+                    TRIAL $5.00
+                </div>
+                <div class="account">
+                    <img src="https://avatars.githubusercontent.com/u/6620" alt="Account Image" id="accountImage">
+                    <div class="dasDropdown" id="dasDropdownMenu">
+                        <div data-side="bottom" data-align="end" role="menu" aria-orientation="vertical"
+                            data-state="open" data-radix-menu-content="" dir="ltr" id="radix-:r59:"
+                            aria-labelledby="radix-:r58:"
+                            class="z-50 min-w-[130px] bg-[#13111C] rounded p-2 overflow-y-auto border border-gray-800 py-2 max-h-[calc(var(--radix-dropdown-menu-content-available-height)-1rem)] w-[280px]"
+                            tabindex="-1" data-orientation="vertical">
+                            <div class="flex flex-col space-y-1">
+                                <div
+                                    class="flex flex-col space-y-3 items-center justify-center relative bg-[#1a1825] pt-7 pb-5 mb-2 rounded-md">
+                                    <div
+                                        class="flex flex-col absolute py-1 px-3 rounded bg-[#13111C] top-0 left-0 mt-2 ml-2">
+                                        <p class="uppercase text-[10px] font-medium text-green-600">Trial</p>
+                                    </div>
+                                    <div class="relative"><span class="inline-block rounded-full overflow-hidden"
+                                            title="Mohsin Islam Mushfiq"
+                                            style="width: 48px; height: 48px; min-width: 48px; min-height: 48px;">
+                                            <div class="w-full h-full rounded-full bg-cover bg-no-repeat bg-center"
+                                                style="background-image: url(&quot;https://avatars.githubusercontent.com/u/6620&quot;);">
+                                            </div>
+                                        </span></div>
+                                    <div class="flex flex-col items-center justify-center">
+                                        <p class="text-lg font-medium text-white">Mohsin Islam</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <a class="focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 mt-2 mb-1"
+                                href="account.html">
+                                <div role="menuitem"
+                                    class="text-gray-300 group flex items-center text-sm px-3 h-9 cursor-pointer hover:bg-[#1a1825] focus:outline-none rounded"
+                                    tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+                                    <div class="icon-container icon-sm text-lg mr-3 opacity-70 text-gray-300"
+                                        aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-user">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg></div>Account Settings
+                                </div>
+                            </a>
+                            <a class="focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 mb-1"
+                                href="usage.html">
+                                <div role="menuitem"
+                                    class="text-gray-300 group flex items-center text-sm px-3 h-9 cursor-pointer hover:bg-[#1a1825] focus:outline-none rounded"
+                                    tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+                                    <div class="icon-container icon-sm text-lg mr-3 opacity-70 text-gray-300"
+                                        aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-bar-chart-2">
+                                            <path d="M18 20V10m-6 10V4M6 20v-6"></path>
+                                        </svg></div>Project Usage
+                                </div>
+                            </a>
+                            <div role="menuitem"
+                                class="text-gray-300  group flex items-center text-sm px-3 h-9 cursor-pointer  focus:outline-none rounded hover:bg-[#1a1825]"
+                                tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+                                <div class="icon-container icon-sm text-lg mr-3 opacity-70 group-hover:opacity-90 text-gray-300"
+                                    aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-message-square">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg></div>Support
+                            </div>
+                            <div role="separator" aria-orientation="horizontal" class="bg-gray-800 w-full my-2"
+                                style="height: 1px;"></div>
+                            <div class="flex justify-between items-center mt-4">
+                                <div role="menuitem"
+                                    class="text-gray-200 hover:bg-[#1a1825] group flex items-center text-sm px-3 h-9 cursor-pointer focus:bg-gray-100 focus:outline-none rounded"
+                                    tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+                                    <div class="icon-container icon-md text-2xl mr-3 opacity-70 group-hover:opacity-90 text-gray-200"
+                                        aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-sun">
+                                            <circle cx="12" cy="12" r="5"></circle>
+                                            <path
+                                                d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                                            </path>
+                                        </svg></div>Light Theme
+                                </div><button
+                                    class="group/button flex items-center justify-center border transform transition-transform duration-50 active:scale-95 focus:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-50 bg-transparent border-transparent text-red-500 hover:text-white dark:text-red-700 hover:bg-[#35121294] disabled:bg-transparent disabled:border-transparent focus-visible:ring-red-600  h-[34px] py-1.5 px-3 rounded-md text-sm leading-5 space-x-2"
+                                    type="button"><span class="inline-block text-red-400">Logout</span>
+                                    <div class="icon-container icon-md text-2xl !w-4 !h-4 text-red-400"
+                                        aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-power">
+                                            <path d="M18.36 6.64a9 9 0 1 1-12.73 0M12 2v10"></path>
+                                        </svg></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row">
+            <!-- Sidebar -->
+            <div class="w-full md:w-1/4 lg:w-1/5 space-y-4 text-sm mt-6 mb-8 md:mb-0 pr-4" id="sidebar">
+                <a href="#"
+                    class="flex items-center space-x-2 border bg-[#1a1825] border-gray-900 hover:bg-[#171522] hover:border-gray-800 p-2 rounded-lg duration-300">
+                    <img class="w-10 h-10 rounded-full mr-2" src="https://avatars.githubusercontent.com/u/6620"
+                        alt="User Avatar">
+                    <div>
+                        <div class="font-bold text-white text-lg">Mohsin Islam</div>
+                        <div class="text-gray-400">Personal Account</div>
+                    </div>
+                </a>
+                <nav class="space-y-2">
+                    <a href="account.html"
+                        class="block py-2 px-3 rounded-md text-gray-400 hover:bg-[#1a1825] hover:text-white text-base"><i
+                            class="fa-solid fa-gear mr-2"></i> General</a>
+                    <a href="plans.html"
+                        class="block py-2 px-3 rounded-md text-gray-400 hover:bg-[#1a1825] hover:text-white text-base"><i
+                            class="fa-solid fa-layer-group mr-2"></i>Plans</a>
+                    <a href="usage.html"
+                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base"><i
+                            class="fa-solid fa-chart-pie mr-2"></i>Usage</a>
+                    <a href="billing.html"
+                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-white bg-[#1a1825] text-base"><i
+                            class="fa-regular fa-credit-card mr-2 text-blue-500"></i>Billing</a>
+                    <a href="feature-flags.html"
+                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base"><i
+                            class="fa-solid fa-flag mr-2"></i>Feature Flags</a>
+                    <a href="tokens.html"
+                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base"><i
+                            class="fa-solid fa-ticket mr-2"></i>Tokens</a>
+                    <a href="securities.html"
+                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base"><i
+                            class="fa-solid fa-lock mr-2"></i>Security</a>
+                    <a href="referrals.html"
+                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base"><i
+                            class="fa-solid fa-gift mr-2"></i>Referrals</a>
+                    <a href="earnings.html"
+                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base"><i
+                            class="fa-solid fa-hand-holding-dollar mr-2"></i>Earnings</a>
+                    <a href="templates.html"
+                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base"><i
+                            class="fa-solid fa-folder-tree mr-2"></i>Templates</a>
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+
+            <div class="w-full md:w-3/4 lg:w-4/5 rounded-md p-6 pl-10" id="main-content">
+                <h2 class="text-2xl font-semibold mb-6 text-white">Usage</h2>
+
+                <div class="border-b border-gray-800 mb-12 mt-12">
+
+                </div>
+
+                <div class="flex flex-col space-y-12">
+                    <div class="flex flex-col space-y-8">
+                        <h2 class="text-xl font-semibold">Active Plan</h2>
+                        <div class="flex flex-col space-y-4">
+                            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 p-6 border rounded-lg border-blue-950">
+                                <div class="flex flex-col space-y-3">
+                                    <div class="flex space-x-2 items-center">
+                                        <div class="icon-container icon-md text-2xl text-blue-400" aria-hidden="true">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" class="feather feather-gift">
+                                                <path
+                                                    d="M20 12v10H4V12M2 7h20v5H2zm10 15V7m0 0H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zm0 0h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z">
+                                                </path>
+                                            </svg></div>
+                                        <p class="text-lg font-semibold text-blue-400"> Trial Plan</p>
+                                    </div>
+                                    <p class="text-sm text-gray-100">Your plan includes a one-time credit grant of
+                                        <strong>$5.00</strong>. All deployments will be shut down when you run out of
+                                        credits.</p>
+                                </div>
+                                <div class="flex flex-col divide-y divide-gray-800 -mt-2">
+                                    <div class="flex justify-between items-center py-2 text-blue-600">
+                                        <p class="text-sm text-gray-400">Account Status</p>
+                                        <p class="text-sm font-semibold text-green-400">Verified</p>
+                                    </div>
+                                    <div class="flex justify-between items-center py-2">
+                                        <p class="text-sm text-gray-400">Memory per container</p>
+                                        <p class="text-sm font-semibold text-white">512 MB</p>
+                                    </div>
+                                    <div class="flex justify-between items-center py-2">
+                                        <p class="text-sm text-gray-400">CPU per container</p>
+                                        <p class="text-sm font-semibold text-white">2 vCPU</p>
+                                    </div>
+                                    <div class="flex justify-between items-center py-2">
+                                        <p class="text-sm text-gray-400">Shared disk</p>
+                                        <p class="text-sm font-semibold text-white">1 GB</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                <div
+                                    class="flex flex-col rounded-lg border border-purple-950 p-6 relative overflow-hidden">
+                                    <img alt="" src="/billing/chart-dark.svg"
+                                        class="absolute bottom-0 left-1/4 hidden lg:flex">
+                                    <div class="flex flex-col space-y-8">
+                                        <div class="flex justify-between items-center">
+                                            <div class="flex space-x-2 items-center">
+                                                <div class="icon-container icon-md text-2xl text-purple-400"
+                                                    aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24"
+                                                        fill="none" stroke="currentColor" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                        class="feather feather-arrow-up-circle">
+                                                        <circle cx="12" cy="12" r="10"></circle>
+                                                        <path d="m16 12-4-4-4 4m4 4V8"></path>
+                                                    </svg></div>
+                                                <p class="text-base text-purple-400 font-semibold">Unlock Hobby plan</p>
+                                            </div><a
+                                                class="group/button flex items-center justify-center border transform transition-transform duration-50 active:scale-95 focus:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-50 bg-purple-600 border-purple-600 text-white hover:bg-purple-700 hover:border-purple-700 disabled:bg-purple-500 disabled:border-purple-500 focus-visible:ring-purple-600 h-[34px] py-1.5 px-3 rounded-md text-sm leading-5 space-x-2"
+                                                name="Unlock" href="/account/upgrade"><span
+                                                    class="inline-block">Unlock</span></a>
+                                        </div>
+                                        <p class="text-sm text-purple-400">Get up to 8 GB of RAM, 8 vCPU, and 100 GB of
+                                            Shared Disk. Subscribe monthly or purchase credits.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col space-y-6">
+                        <h2 class="text-xl font-semibold">Billing History</h2>
+                        <div class="flex flex-col">
+                            <p class="text-base text-gray-400">No billing history found</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="max-w-7xl mx-auto text-gray-400 py-8 px-4 md:px-16 pt-24" id="dashborad-footer">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-start">
+            <!-- Left section: Logo and status -->
+            <div class="mb-8 md:mb-0 md:w-1/3" id="footer-left">
+                <div class="flex items-center mb-4">
+                    <!-- Logo -->
+                    <svg width="50" height="50" viewBox="0 0 100 100" fill="#ffff" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.11206 59V42.2H13.1921V55.4H20.6801V59H9.11206Z"></path>
+                        <path
+                            d="M31.1771 59L28.4651 54.896L27.2171 53.144L22.1771 46.256H26.7851L29.4011 50.168L30.7691 52.04L35.7371 59H31.1771ZM22.0571 59L27.1931 51.848L29.2571 54.32L26.5931 59H22.0571ZM30.4811 53.456L28.4411 51.008L30.9611 46.256H35.4971L30.4811 53.456Z">
+                        </path>
+                        <path
+                            d="M38.2917 59V42.2H45.8517C46.9237 42.2 47.8917 42.432 48.7557 42.896C49.6357 43.36 50.3237 44 50.8197 44.816C51.3157 45.616 51.5637 46.528 51.5637 47.552C51.5637 48.608 51.3157 49.56 50.8197 50.408C50.3237 51.24 49.6437 51.896 48.7797 52.376C47.9157 52.856 46.9397 53.096 45.8517 53.096H42.1797V59H38.2917ZM47.6037 59L43.3317 51.416L47.5077 50.816L52.2597 59H47.6037ZM42.1797 49.976H45.4917C45.9077 49.976 46.2677 49.888 46.5717 49.712C46.8917 49.52 47.1317 49.256 47.2917 48.92C47.4677 48.584 47.5557 48.2 47.5557 47.768C47.5557 47.336 47.4598 46.96 47.2677 46.64C47.0757 46.304 46.7957 46.048 46.4277 45.872C46.0757 45.696 45.6437 45.608 45.1317 45.608H42.1797V49.976Z">
+                        </path>
+                        <path
+                            d="M60.2666 59.24C58.9386 59.24 57.7546 58.952 56.7146 58.376C55.6906 57.8 54.8746 57.016 54.2666 56.024C53.6746 55.032 53.3786 53.896 53.3786 52.616C53.3786 51.336 53.6746 50.2 54.2666 49.208C54.8746 48.216 55.6906 47.432 56.7146 46.856C57.7546 46.28 58.9386 45.992 60.2666 45.992C61.5946 45.992 62.7706 46.28 63.7946 46.856C64.8346 47.432 65.6506 48.216 66.2426 49.208C66.8346 50.2 67.1306 51.336 67.1306 52.616C67.1306 53.896 66.8346 55.032 66.2426 56.024C65.6506 57.016 64.8346 57.8 63.7946 58.376C62.7706 58.952 61.5946 59.24 60.2666 59.24ZM60.2666 55.928C60.8426 55.928 61.3546 55.784 61.8026 55.496C62.2506 55.208 62.6026 54.816 62.8586 54.32C63.1146 53.824 63.2346 53.256 63.2186 52.616C63.2346 51.976 63.1146 51.408 62.8586 50.912C62.6026 50.4 62.2506 50 61.8026 49.712C61.3546 49.424 60.8426 49.28 60.2666 49.28C59.6906 49.28 59.1706 49.424 58.7066 49.712C58.2586 50 57.9066 50.4 57.6506 50.912C57.3946 51.408 57.2746 51.976 57.2906 52.616C57.2746 53.256 57.3946 53.824 57.6506 54.32C57.9066 54.816 58.2586 55.208 58.7066 55.496C59.1706 55.784 59.6906 55.928 60.2666 55.928Z">
+                        </path>
+                        <path
+                            d="M75.6416 59.24C74.3136 59.24 73.1296 58.952 72.0896 58.376C71.0656 57.8 70.2496 57.016 69.6416 56.024C69.0496 55.032 68.7536 53.896 68.7536 52.616C68.7536 51.336 69.0496 50.2 69.6416 49.208C70.2496 48.216 71.0656 47.432 72.0896 46.856C73.1296 46.28 74.3136 45.992 75.6416 45.992C76.9696 45.992 78.1456 46.28 79.1696 46.856C80.2096 47.432 81.0256 48.216 81.6176 49.208C82.2096 50.2 82.5056 51.336 82.5056 52.616C82.5056 53.896 82.2096 55.032 81.6176 56.024C81.0256 57.016 80.2096 57.8 79.1696 58.376C78.1456 58.952 76.9696 59.24 75.6416 59.24ZM75.6416 55.928C76.2176 55.928 76.7296 55.784 77.1776 55.496C77.6256 55.208 77.9776 54.816 78.2336 54.32C78.4896 53.824 78.6096 53.256 78.5936 52.616C78.6096 51.976 78.4896 51.408 78.2336 50.912C77.9776 50.4 77.6256 50 77.1776 49.712C76.7296 49.424 76.2176 49.28 75.6416 49.28C75.0656 49.28 74.5456 49.424 74.0816 49.712C73.6336 50 73.2816 50.4 73.0256 50.912C72.7696 51.408 72.6496 51.976 72.6656 52.616C72.6496 53.256 72.7696 53.824 73.0256 54.32C73.2816 54.816 73.6336 55.208 74.0816 55.496C74.5456 55.784 75.0656 55.928 75.6416 55.928Z">
+                        </path>
+                        <path d="M86.0726 59V43.04H89.9126V59H86.0726ZM83.8166 49.616V46.256H92.3846V49.616H83.8166Z">
+                        </path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M76.5399 64C71.5099 73.5156 61.5123 80 50.0001 80C38.4879 80 28.4902 73.5156 23.4603 64H12.5185C18.1935 79.1867 32.834 90 50.0001 90C67.1662 90 81.8067 79.1867 87.4817 64H76.5399ZM22.4964 38C27.1257 27.4046 37.6982 20 50.0001 20C62.302 20 72.8745 27.4046 77.5038 38H88.1689C83.0718 21.7716 67.9107 10 50.0001 10C32.0895 10 16.9284 21.7716 11.8313 38H22.4964Z">
+                        </path>
+                    </svg>
+                </div>
+                <!-- Status -->
+                <p class="text-green-400 mb-4 text-sm">All systems operational</p>
+                <div class="border-b border-gray-800 mb-4 mt-4 w-56"></div>
+                <!-- Copyright -->
+                <p class="text-gray-500 text-sm">Copyright &copy; 2024 LxRoot LLC. <br> All rights reserved.</p>
+                <!-- Compliance logos -->
+                <div class="flex justify-center lg:justify-start mt-4 space-x-4 social-icon">
+                    <a href="https://m.facebook.com/LxRootLLC" target="_blank"
+                        class="text-gray-500 hover:text-blue-600">
+                        <i class="fab fa-facebook-f fa-sm"></i>
+                    </a>
+                    <a href="https://x.com/lxrootllc" target="_blank" class="text-gray-500 hover:text-blue-400">
+                        <i class="fab fa-twitter fa-sm"></i>
+                    </a>
+                    <a href="https://www.instagram.com/lxrootllc" target="_blank"
+                        class="text-gray-500 hover:text-pink-500">
+                        <i class="fab fa-instagram fa-sm"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/lxroot" target="_blank"
+                        class="text-gray-500 hover:text-blue-700">
+                        <i class="fab fa-linkedin-in fa-sm"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@lxrootllc" target="_blank"
+                        class="text-gray-500 hover:text-red-700">
+                        <i class="fab fa-youtube fa-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right section: Links -->
+            <div class="flex flex-wrap justify-between md:space-x-16 space-y-8 md:space-y-0 w-full md:w-2/3" id="footer-right">
+                <!-- Product -->
+                <div>
+                    <h4 class="font-bold mb-4">Product</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Features</a></li>
+                        <li><a href="#" class="hover:text-white">Docs</a></li>
+                        <li><a href="#" class="hover:text-white">Changelog</a></li>
+                        <li><a href="#" class="hover:text-white">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white">Templates</a></li>
+                        <li><a href="#" class="hover:text-white">OSS Kickback</a></li>
+                        <li><a href="#" class="hover:text-white">Migrate from Heroku</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">About</a></li>
+                        <li><a href="#" class="hover:text-white">Careers</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Shop</a></li>
+                        <li><a href="#" class="hover:text-white">Trust</a></li>
+                        <li><a href="#" class="hover:text-white">Startup Program</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Support</a></li>
+                        <li><a href="#" class="hover:text-white">Discord</a></li>
+                        <li><a href="#" class="hover:text-white">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white">GitHub</a></li>
+                        <li><a href="#" class="hover:text-white">Email</a></li>
+                        <li><a href="#" class="hover:text-white">Enterprise</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Fair Use</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white">Bug Bounty Program</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const accountImage = document.getElementById('accountImage');
+        const dasDropdownMenu = document.getElementById('dasDropdownMenu');
+
+        // Toggle dropdown visibility
+        accountImage.addEventListener('click', () => {
+            dasDropdownMenu.style.display = dasDropdownMenu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Hide dropdown if clicked outside
+        window.addEventListener('click', (e) => {
+            if (!accountImage.contains(e.target) && !dasDropdownMenu.contains(e.target)) {
+                dasDropdownMenu.style.display = 'none';
+            }
+        });
+    </script>
+    
+
+</body>
+
+</html>

@@ -267,3 +267,19 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+ const accountImage = document.getElementById('accountImage');
+        const dasDropdownMenu = document.getElementById('dasDropdownMenu');
+
+        // Toggle dropdown visibility
+        accountImage.addEventListener('click', () => {
+            dasDropdownMenu.style.display = dasDropdownMenu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Hide dropdown if clicked outside
+        window.addEventListener('click', (e) => {
+            if (!accountImage.contains(e.target) && !dasDropdownMenu.contains(e.target)) {
+                dasDropdownMenu.style.display = 'none';
+            }
+        });
+
+

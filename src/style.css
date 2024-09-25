@@ -320,28 +320,30 @@ body {
 .reviews-container {
     display: flex;
     overflow-x: scroll;
-    scrollbar-width: none; /* For Firefox */
-  }
-  
-  .reviews-container::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Opera */
-  }
-  
-  @media (min-width: 768px) {
+    scrollbar-width: none;
+    /* For Firefox */
+}
+
+.reviews-container::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari, and Opera */
+}
+
+@media (min-width: 768px) {
     .home-review {
-      min-width: 400px;
-      max-width: 400px;
+        min-width: 400px;
+        max-width: 400px;
     }
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .home-review {
-      min-width: 300px;
-      max-width: 300px;
+        min-width: 300px;
+        max-width: 300px;
     }
-  }
-  
-  
+}
+
+
 
 
 
@@ -510,6 +512,76 @@ body {
 }
 
 
+/* Dashboard Styling Start */
+#dashboard-bg {
+    background-color: #ffffff;
+    color: #0B1120;
+    background-image: linear-gradient(327.21deg, rgba(141, 167, 255, 0.24) 3.65%, rgba(80, 104, 223, 0) 40.32%), linear-gradient(245.93deg, rgba(0, 38, 165, 0.16) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgba(0, 62, 185, 0) 29.79%, rgba(0, 68, 255, 0) 36.63%);
+}
+
+#dashboard-main {
+    background: #13111C;
+}
+
+/* Account Image */
+.account {
+    position: relative;
+    display: inline-block;
+}
+
+.account img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Dropdown styles */
+.dasDropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dasDropdown img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px auto;
+    display: block;
+}
+
+.dasDropdown .name {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.dasDropdown a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.dasDropdown a:hover {
+    background-color: #1a1825;
+    border-radius: 10px;
+}
+
+#dashborad-item:hover{
+    background-color: #1a1825;
+}
+
+
+
+
 /* Custom CSS End */
 
 
@@ -519,6 +591,7 @@ body.light-mode {
     color: #0B1120;
     background-image: linear-gradient(327.21deg, rgba(141, 167, 255, 0.24) 3.65%, rgba(80, 104, 223, 0) 40.32%), linear-gradient(245.93deg, rgba(0, 38, 165, 0.16) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgba(0, 62, 185, 0) 29.79%, rgba(0, 68, 255, 0) 36.63%);
 }
+
 
 /* Light Mode for Specific Elements */
 body.light-mode .bg-[#0B1120] {
@@ -869,11 +942,11 @@ body.light-mode .fa-arrow-right {
     color: white;
 }
 
-body.light-mode #prev-btn{
+body.light-mode #prev-btn {
     background: #e2e8f0;
 }
 
-body.light-mode #prev-btn:hover{
+body.light-mode #prev-btn:hover {
     background: #ffffff;
 }
 
@@ -1708,7 +1781,7 @@ body.light-mode .pricing-faq {
         padding-right: 20px;
     }
 
-    #explore{
+    #explore {
         padding-top: 0px;
     }
 
@@ -2049,14 +2122,14 @@ body.light-mode .pricing-faq {
         display: none;
     }
 
-    .contact-main{
+    .contact-main {
         padding-top: 80px;
         padding-bottom: 80px;
         padding-left: 20px;
         padding-right: 20px;
     }
 
-    #contact{
+    #contact {
         padding-left: 10px;
         padding-right: 10px;
         padding-bottom: 150px;
@@ -2122,7 +2195,7 @@ body.light-mode .pricing-faq {
         padding-right: 20px;
     }
 
-    #explore{
+    #explore {
         padding-left: 20px;
         padding-right: 20px;
         padding-top: 0px;
@@ -2172,10 +2245,43 @@ body.light-mode .pricing-faq {
     }
 
     /* Footer */
-    .footer-col-5 a, p{
+    .footer-col-5 a,
+    p {
         font-size: 15px;
         line-height: 2;
     }
+
+
+    /* Dashborad Responsive */
+    #sidebar {
+        width: 30%;
+    }
+
+    #dashborad-footer {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    #footer-left {
+        width: 20%;
+    }
+
+    #footer-right {
+        width: 80%;
+        padding-left: 70px;
+    }
+
+    #main-content {
+        width: 90%;
+        padding-left: 15px;
+        padding-right: 5px;
+    }
+
+    #account-integration {
+        gap: 1rem;
+    }
+
+
 
 
 }

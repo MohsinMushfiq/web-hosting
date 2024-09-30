@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Application Settings | LxRoot</title>
+    <link rel="stylesheet" href="./output/tailwind.css">
+    <link rel="stylesheet" href="./src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/7.13.0/simple-icons.min.css">
+    <link rel="shortcut icon" href="images/favicon_32x32.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Background grid pattern */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+            /* Example pattern */
+            opacity: 0.12;
+            z-index: -1;
+        }
+
+        .sticky-sidebar {
+            max-height: 100vh;
+        }
+
+        .hidden-sidebar {
+            transform: trangrayX(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .visible-sidebar {
+            transform: trangrayX(0);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="docs-body relative bg-gray-950 text-gray-900 dark:text-gray-100">
+    <div>
+
+        <!-- Main Wrapper -->
+        <div class="docs-main-menu flex min-h-screen">
+
+
+            <!-- Sidebar (Toggleable) -->
+            <nav id="doc-sidebar"
+                class="w-80 bg-gray-200 dark:bg-gray-800 sticky-sidebar sticky top-0 overflow-y-auto overflow-x-auto transform -translate-x-full md:transform-none md:transition-none transition-transform duration-300 md:block">
+                <!-- Sidebar Header with Theme Switcher -->
+                <div
+                    class="docs-side-header flex justify-between items-center mb-6 pt-2 z-50 p-2 sticky top-0 bg-[#030712] border-b border-gray-800">
+                    <a href="">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="#fff"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.11206 59V42.2H13.1921V55.4H20.6801V59H9.11206Z"></path>
+                            <path
+                                d="M31.1771 59L28.4651 54.896L27.2171 53.144L22.1771 46.256H26.7851L29.4011 50.168L30.7691 52.04L35.7371 59H31.1771ZM22.0571 59L27.1931 51.848L29.2571 54.32L26.5931 59H22.0571ZM30.4811 53.456L28.4411 51.008L30.9611 46.256H35.4971L30.4811 53.456Z">
+                            </path>
+                            <path
+                                d="M38.2917 59V42.2H45.8517C46.9237 42.2 47.8917 42.432 48.7557 42.896C49.6357 43.36 50.3237 44 50.8197 44.816C51.3157 45.616 51.5637 46.528 51.5637 47.552C51.5637 48.608 51.3157 49.56 50.8197 50.408C50.3237 51.24 49.6437 51.896 48.7797 52.376C47.9157 52.856 46.9397 53.096 45.8517 53.096H42.1797V59H38.2917ZM47.6037 59L43.3317 51.416L47.5077 50.816L52.2597 59H47.6037ZM42.1797 49.976H45.4917C45.9077 49.976 46.2677 49.888 46.5717 49.712C46.8917 49.52 47.1317 49.256 47.2917 48.92C47.4677 48.584 47.5557 48.2 47.5557 47.768C47.5557 47.336 47.4598 46.96 47.2677 46.64C47.0757 46.304 46.7957 46.048 46.4277 45.872C46.0757 45.696 45.6437 45.608 45.1317 45.608H42.1797V49.976Z">
+                            </path>
+                            <path
+                                d="M60.2666 59.24C58.9386 59.24 57.7546 58.952 56.7146 58.376C55.6906 57.8 54.8746 57.016 54.2666 56.024C53.6746 55.032 53.3786 53.896 53.3786 52.616C53.3786 51.336 53.6746 50.2 54.2666 49.208C54.8746 48.216 55.6906 47.432 56.7146 46.856C57.7546 46.28 58.9386 45.992 60.2666 45.992C61.5946 45.992 62.7706 46.28 63.7946 46.856C64.8346 47.432 65.6506 48.216 66.2426 49.208C66.8346 50.2 67.1306 51.336 67.1306 52.616C67.1306 53.896 66.8346 55.032 66.2426 56.024C65.6506 57.016 64.8346 57.8 63.7946 58.376C62.7706 58.952 61.5946 59.24 60.2666 59.24ZM60.2666 55.928C60.8426 55.928 61.3546 55.784 61.8026 55.496C62.2506 55.208 62.6026 54.816 62.8586 54.32C63.1146 53.824 63.2346 53.256 63.2186 52.616C63.2346 51.976 63.1146 51.408 62.8586 50.912C62.6026 50.4 62.2506 50 61.8026 49.712C61.3546 49.424 60.8426 49.28 60.2666 49.28C59.6906 49.28 59.1706 49.424 58.7066 49.712C58.2586 50 57.9066 50.4 57.6506 50.912C57.3946 51.408 57.2746 51.976 57.2906 52.616C57.2746 53.256 57.3946 53.824 57.6506 54.32C57.9066 54.816 58.2586 55.208 58.7066 55.496C59.1706 55.784 59.6906 55.928 60.2666 55.928Z">
+                            </path>
+                            <path
+                                d="M75.6416 59.24C74.3136 59.24 73.1296 58.952 72.0896 58.376C71.0656 57.8 70.2496 57.016 69.6416 56.024C69.0496 55.032 68.7536 53.896 68.7536 52.616C68.7536 51.336 69.0496 50.2 69.6416 49.208C70.2496 48.216 71.0656 47.432 72.0896 46.856C73.1296 46.28 74.3136 45.992 75.6416 45.992C76.9696 45.992 78.1456 46.28 79.1696 46.856C80.2096 47.432 81.0256 48.216 81.6176 49.208C82.2096 50.2 82.5056 51.336 82.5056 52.616C82.5056 53.896 82.2096 55.032 81.6176 56.024C81.0256 57.016 80.2096 57.8 79.1696 58.376C78.1456 58.952 76.9696 59.24 75.6416 59.24ZM75.6416 55.928C76.2176 55.928 76.7296 55.784 77.1776 55.496C77.6256 55.208 77.9776 54.816 78.2336 54.32C78.4896 53.824 78.6096 53.256 78.5936 52.616C78.6096 51.976 78.4896 51.408 78.2336 50.912C77.9776 50.4 77.6256 50 77.1776 49.712C76.7296 49.424 76.2176 49.28 75.6416 49.28C75.0656 49.28 74.5456 49.424 74.0816 49.712C73.6336 50 73.2816 50.4 73.0256 50.912C72.7696 51.408 72.6496 51.976 72.6656 52.616C72.6496 53.256 72.7696 53.824 73.0256 54.32C73.2816 54.816 73.6336 55.208 74.0816 55.496C74.5456 55.784 75.0656 55.928 75.6416 55.928Z">
+                            </path>
+                            <path
+                                d="M86.0726 59V43.04H89.9126V59H86.0726ZM83.8166 49.616V46.256H92.3846V49.616H83.8166Z">
+                            </path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M76.5399 64C71.5099 73.5156 61.5123 80 50.0001 80C38.4879 80 28.4902 73.5156 23.4603 64H12.5185C18.1935 79.1867 32.834 90 50.0001 90C67.1662 90 81.8067 79.1867 87.4817 64H76.5399ZM22.4964 38C27.1257 27.4046 37.6982 20 50.0001 20C62.302 20 72.8745 27.4046 77.5038 38H88.1689C83.0718 21.7716 67.9107 10 50.0001 10C32.0895 10 16.9284 21.7716 11.8313 38H22.4964Z">
+                            </path>
+                        </svg>
+                    </a>
+                    <button onclick="toggleSidebar()" class="p-2 rounded block md:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                    <div>
+                        <div role="menuitem" class="group flex items-center text-sm  h-9 cursor-pointe" tabindex="-1"
+                            data-orientation="vertical" data-radix-collection-item="" onclick="switchTheme()">
+                            <div class="icon-md text-2xl mr-3 opacity-70 text-white" aria-hidden="true">
+                                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-sun">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <path
+                                        d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Search Bar -->
+                <div class="docs-sidebar-search relative px-2 hidden md:block">
+                    <input type="text" placeholder="Search..."
+                        class="w-full px-4 py-1 bg-[#030712] border border-gray-700 rounded focus:outline-none text-gray-800 hover:border-purple-800">
+                    <span class="absolute top-2 right-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-4.35-4.35m1.75-5.65a7 7 0 10-14 0 7 7 0 0014 0z" />
+                        </svg>
+                    </span>
+                </div>
+
+
+                <!-- Sidebar Menu Links -->
+                <ul role="list" class="-ml-0.5 h-[calc(100vh-4.5rem)] md:py-7 py-16 pl-0.5 docs-scrollbar">
+
+                    <li class="text-gray-300 mb-6">
+                        <a href="docs.html">
+                            <h3
+                                class="text-gray-400 hover:bg-gray-900 hover:text-white py-1 pl-4 font-semibold tracking-tight">
+                                Home
+                            </h3>
+                        </a>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown1', 'icon1')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            Getting started
+                            <i id="icon1" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown1" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="installation-guide.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Installation
+                                    Guide</a>
+                            </li>
+                            <li><a href="post-install-steps.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Post
+                                    Install Steps</a></li>
+                            <li><a href="requirements.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Hardware
+                                    Requirements</a>
+                            </li>
+                            <li><a href="using-lxroot-with-a-firewall.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">LxRoot
+                                    with an external Firewall</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown2', 'icon2')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            Account
+                            <i id="icon2" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown2" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="users-and-roles.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Users and
+                                    Roles</a>
+                            </li>
+                            <li><a href="password-reset.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Password
+                                    Reset</a></li>
+                            <li><a href="transfer-account-ownership.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Transfer
+                                    Account Ownership</a>
+                            </li>
+                            <li><a href="reissue-license.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Reissue
+                                    Your LxRoot License</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown3', 'icon3')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            Application
+                            <i id="icon3" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown3" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="application-overview.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Overview</a>
+                            </li>
+                            <li><a href="installing-application-role.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Installing
+                                    Application Role</a>
+                            </li>
+                            <li><a href="switching-application-role.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Switching
+                                    webserver kind</a></li>
+                            <li><a href="application-settings.html"
+                                    class="block px-4 py-1.5 bg-purple-800 hover:bg-purple-800 text-white  focus:outline-none border-r-4 border-purple-400">Global
+                                    Application Settings</a>
+                            </li>
+                            <li><a href="general-per-server-settings.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">General
+                                    Per Server Application Settings</a>
+                            </li>
+                            <li><a href="apache-configurations.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Apache
+                                    Per Server Settings</a>
+                            </li>
+                            <li><a href="litespeed-webserver.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">LiteSpeed
+                                    Per Sever Settings</a>
+                            </li>
+                            <li><a href="nginx.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Nginx Per
+                                    Server Settings</a>
+                            </li>
+                            <li><a href="application-logs.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Application
+                                    Logs</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown4', 'icon4')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            PHP
+                            <i id="icon4" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown4" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="php-fpm.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">PHP-FPM</a>
+                            </li>
+                            <li><a href="php-ini.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">PHP.INI</a>
+                            </li>
+                            <li><a href="php-logging.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">PHP
+                                    Logging</a>
+                            </li>
+                            <li><a href="php-versions.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">PHP
+                                    Versions and Modules</a>
+                            </li>
+                            <li><a href="enable-brotli.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Enable
+                                    Brotli</a>
+                            </li>
+                            <li><a href="setting-upload-max-filesize.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Setting
+                                    PHP Upload Max Size</a>
+                            </li>
+                            <li><a href="force-php-restart.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Force PHP
+                                    Restart</a>
+                            </li>
+                            <li><a href="strace-php.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Strace
+                                    PHP</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown5', 'icon5')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            Backups
+                            <i id="icon5" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown5" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="backup-role.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Overview</a>
+                            </li>
+                            <li><a href="installing-backup-role.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Installing
+                                    the Backup Role</a></li>
+                            <li><a href="backup-settings.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Global
+                                    Backup Settings</a>
+                            </li>
+                            <li><a href="restore-backup-manually.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Restoring
+                                    Backups Manually</a>
+                            </li>
+                            <li><a href="resizing-btrfs-volume.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Resizing
+                                    a btrfs Volume</a>
+                            </li>
+                            <li><a href="s3-backups.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">S3
+                                    Backups (beta)</a>
+                            </li>
+                            <li><a href="backup-logs.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Backup
+                                    Logs</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown6', 'icon6')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            Customers
+                            <i id="icon6" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown6" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="customer_management.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Customer
+                                    Management</a>
+                            </li>
+                            <li><a href="customer-ssh-useful-commands.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Customer
+                                    SSH - Useful Commands</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown7', 'icon7')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            Database
+                            <i id="icon7" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown7" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="database-role.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Overview</a>
+                            </li>
+                            <li><a href="installing-database-role.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Installing
+                                    Database Role</a>
+                            </li>
+                            <li><a href="database-kinds.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Database
+                                    Comparison</a>
+                            </li>
+                            <li><a href="mycnf-settings.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">my.cnf
+                                    Per Server Settings</a>
+                            </li>
+                            <li><a href="backup-database-as-root.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Backing
+                                    Up a Database as Root</a>
+                            </li>
+                            <li><a href="managing-mysql.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Managing
+                                    MySQL</a>
+                            </li>
+                            <li><a href="migrate-mysql-to-mariadb.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Migrate
+                                    MySQL to MariaDB</a>
+                            </li>
+                            <li><a href="phpmyadmin.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">PHPMyAdmin</a>
+                            </li>
+                            <li><a href="database-logs.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">MySQL
+                                    Logs</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown8', 'icon8')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            DNS & Nameservers
+                            <i id="icon8" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown8" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="dns-role.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Overview</a>
+                            </li>
+                            <li><a href="installing-dns-role.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Installing
+                                    the DNS role</a>
+                            </li>
+                            <li><a href="dns-templating.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">DNS zone
+                                    templating</a>
+                            </li>
+                            <li><a href="dns-cloudflare.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">LxRoot
+                                    DNS and Cloudflare</a>
+                            </li>
+                            <li><a href="nameservers.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Nameservers</a>
+                            </li>
+                            <li><a href="dns-logs.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">DNS
+                                    Logs</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown8', 'icon8')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            Email
+                            <i id="icon8" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown8" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="email-role.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Overview</a>
+                            </li>
+                            <li><a href="installing-email-role.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Installing
+                                    Email Role</a>
+                            </li>
+                            <li><a href="email-settings.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Email
+                                    Settings</a>
+                            </li>
+                            <li><a href="email-logs.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Email
+                                    Logs</a>
+                            </li>
+                            <li><a href="webmail.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Webmail
+                                    (RoundCube)</a>
+                            </li>
+                            <li><a href="dns-logs.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">DNS
+                                    Logs</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown9', 'icon9')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            Resellers
+                            <i id="icon9" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown9" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="resellers.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Overview</a>
+                            </li>
+                            <li><a href="create-reseller-package.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Creating
+                                    a Reseller Package</a>
+                            </li>
+                            <li><a href="reseller-tools.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Reseller
+                                    tools</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown10', 'icon10')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            Security
+                            <i id="icon10" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown10" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="security.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Overview</a>
+                            </li>
+                            <li><a href="modsecurity.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">ModSecurity</a>
+                            </li>
+                            <li><a href="two-factor-authentication.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Two
+                                    Factor Authentication (2FA)</a>
+                            </li>
+                            <li><a href="letsencrypt.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">
+                                    Let's Encrypt Certificates</a>
+                            </li>
+                            <li><a href="third-party-ssl.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Third
+                                    party SSL certificates</a>
+                            </li>
+                            <li><a href="bot-protection.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Brute
+                                    force protection</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown11', 'icon11')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            Server Management
+                            <i id="icon11" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown11" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="security.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Adding
+                                    Servers to Cluster</a>
+                            </li>
+                            <li><a href="disaster-recovery.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Adding
+                                    Disaster Recovery</a>
+                            </li>
+                            <li><a href="server-hostname.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Server
+                                    hostname</a>
+                            </li>
+                            <li><a href="ipv6.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">
+                                    IPv6</a>
+                            </li>
+                            <li><a href="firewall-ufw.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Firewall
+                                    UFW</a>
+                            </li>
+                            <li><a href="move-site-to-new-server.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Move Site
+                                    to New Server</a>
+                            </li>
+                            <li><a href="server-groups.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Server
+                                    Groups</a>
+                            </li>
+                            <li><a href="server-roles.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Server
+                                    Roles</a>
+                            </li>
+                            <li><a href="server-ssl-certificates.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Server
+                                    SSL Certificates</a>
+                            </li>
+                            <li><a href="updating-ubuntu.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Updating
+                                    Ubuntu</a>
+                            </li>
+                            <li><a href="website-server-placement.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Website
+                                    Server Placement</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown12', 'icon12')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            Branding Settings
+                            <i id="icon12" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown12" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="branding-settings.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Adding
+                                    Branding Settings</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown13', 'icon13')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            Platform Settings
+                            <i id="icon13" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown13" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="system-generated-emails.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Adding
+                                    System Generated Emails</a>
+                            </li>
+                            <li><a href="updates.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">LxRoot
+                                    Updates
+                                    About</a>
+                            </li>
+                            <li><a href="platform-domains.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Platform
+                                    Domains</a>
+                            </li>
+                            <li><a href="brute-force-protection.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">brute-force-protection.html</a>
+                            </li>
+                            <li><a href="prohibited-domains.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Prohibited
+                                    Domains</a>
+                            </li>
+                            <li><a href="language-selection.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Language
+                                    Selection</a>
+                            </li>
+                            <li><a href="website-server-placement.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Website
+                                    Server Placement</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown14', 'icon14')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            Platform Settings
+                            <i id="icon14" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown14" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="system-generated-emails.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Adding
+                                    System Generated Emails</a>
+                            </li>
+                            <li><a href="updates.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">LxRoot
+                                    Updates
+                                    About</a>
+                            </li>
+                            <li><a href="platform-domains.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Platform
+                                    Domains</a>
+                            </li>
+                            <li><a href="brute-force-protection.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Brute
+                                    Force Protection</a>
+                            </li>
+                            <li><a href="prohibited-domains.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Prohibited
+                                    Domains</a>
+                            </li>
+                            <li><a href="language-selection.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Language
+                                    Selection</a>
+                            </li>
+                            <li><a href="website-server-placement.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Website
+                                    Server Placement</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown15', 'icon15')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            Packages
+                            <i id="icon15" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown15" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="packages.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Packages</a>
+                            </li>
+                            <li><a href="add-package.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Add
+                                    Hosting Package</a>
+                            </li>
+                            <li><a href="system-resource-limits.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">System
+                                    Resource Limits</a>
+                            </li>
+                            <li><a href="subscribe-package.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Subscribe
+                                    a Customer to a Package</a>
+                            </li>
+                            <li><a href="upgrade-downgrade.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Upgrade
+                                    or Downgrade a Package</a>
+                            </li>
+                            <li><a href="create-location-based-hosting-packages.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Add
+                                    Location Based Hosting Packages</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown16', 'icon16')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            Technical Guidance
+                            <i id="icon16" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown16" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="lxroot-terminology.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">LxRoot
+                                    Terminology Guide</a>
+                            </li>
+                            <li><a href="how-to-get-the-full-path.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">How to
+                                    get the full path to a file</a>
+                            </li>
+                            <li><a href="enabling-gzip-compression.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Enable
+                                    GZIP Compression</a>
+                            </li>
+                            <li><a href="increase-proxy-timeout-apache.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Increase
+                                    Proxy Timeout in Apache</a>
+                            </li>
+                            <li><a href="adding-an-ssh-key-as-root.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Adding a
+                                    public SSH key for root access</a>
+                            </li>
+                            <li><a href="how-to-find-a-website-with-malware.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">How to
+                                    find a website that contains malware</a>
+                            </li>
+                            <li><a href="reduce-hard-disk-usage.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Reduce
+                                    disk space usage</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown17', 'icon17')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            Website Management
+                            <i id="icon17" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown17" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="nginx-website.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Nginx
+                                    Website Tools</a>
+                            </li>
+                            <li><a href="cloning-websites.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Cloning
+                                    Websites</a>
+                            </li>
+                            <li><a href="staging-websites.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Staging
+                                    Websites</a>
+                            </li>
+                            <li><a href="service-websites.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Service
+                                    Websites</a>
+                            </li>
+                            <li><a href="custom-vhosts.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Custom
+                                    Virtualhosts</a>
+                            </li>
+                            <li><a href="databases.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Databases</a>
+                            </li>
+                            <li><a href="domains.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Domains</a>
+                            </li>
+                            <li><a href="emails.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Email
+                                    Accounts</a>
+                            </li>
+                            <li><a href="enabling-redis.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Email
+                                    Accounts</a>
+                            </li>
+                            <li><a href="enabling-ioncube.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Ioncube</a>
+                            </li>
+                            <li><a href="cpanel-importer.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">cPanel
+                                    Importer</a>
+                            </li>
+                            <li><a href="plesk-importer.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Importing
+                                    a Plesk backup</a>
+                            </li>
+                            <li><a href="website-backups.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Backups</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown18', 'icon18')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            WordPress
+                            <i id="icon18" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown18" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="wordpress.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Overview</a>
+                            </li>
+                            <li><a href="installing-wordpress.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Installing
+                                    WordPress</a>
+                            </li>
+                            <li><a href="restrict-admin-access.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Restrict
+                                    Admin Access</a>
+                            </li>
+                            <li><a href="plugin-manager.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Plugin
+                                    Manager</a>
+                            </li>
+                            <li><a href="wordpress-update.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Core
+                                    Auto-updates</a>
+                            </li>
+                            <li><a href="user-manager.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">User
+                                    Manager</a>
+                            </li>
+                            <li><a href="wp-debug-mode.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Debug
+                                    Mode</a>
+                            </li>
+                            <li><a href="optimising-for-wordpress.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Optimising
+                                    servers for WordPress</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown19', 'icon19')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            Troubleshooting
+                            <i id="icon19" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown19" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="php-version-error.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">"Website
+                                    had no php version installed" error</a>
+                            </li>
+                            <li><a href="wordpress-site-404.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">WordPress
+                                    Site 404</a>
+                            </li>
+                            <li><a href="complete-install-closed-window.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Completing
+                                    installation if you closed your terminal window</a>
+                            </li>
+                            <li><a href="unable-to-connect-to-ftp.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Unable to
+                                    connect to FTP</a>
+                            </li>
+                            <li><a href="php-websites-cannot-connect-to-the-outside-internet.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">php
+                                    websites cannot connect to the outside internet</a>
+                            </li>
+                            <li><a href="switching-webserver-type-but-the-web-server-does-not-restart.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Switching
+                                    webserver type but the web server does not restart</a>
+                            </li>
+                            <li><a href="php-modules-not-showing.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">PHP
+                                    Modules Not Showing</a>
+                            </li>
+                            <li><a href="how-to-remove-dedicated-server.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">How to
+                                    remove a dedicated server role</a>
+                            </li>
+                            <li><a href="data-migration-failed.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">LxRoot
+                                    installation hangs</a>
+                            </li>
+                            <li><a href="data-migration-failed.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">"Data
+                                    migration failure: internal: Cleaning up failed app transfer from destination
+                                    server" error</a>
+                            </li>
+                            <li><a href="websites-on-litespeed-404.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Websites
+                                    on LiteSpeed 404</a>
+                            </li>
+                            <li><a href="cant-generate-a-website-backup.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Can't
+                                    generate a website backup</a>
+                            </li>
+                            <li><a href="roundcube-gives-a-white-page.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Roundcube
+                                    gives a white page</a>
+                            </li>
+                            <li><a href="email-tools-are-not-showing-on-a-website.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Email
+                                    tools are not showing on a website</a>
+                            </li>
+                            <li><a href="email-tools-are-not-showing-on-a-website.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Certificate
+                                    warning in Email software</a>
+                            </li>
+                            <li><a href="move-server-timesout.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Move
+                                    server timesout</a>
+                            </li>
+                            <li><a href="staging-website-doesnt-get-a-lets-encrypt-certificate.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Staging
+                                    domains doesn't get a Let's Encrypt Certificate</a>
+                            </li>
+                            <li><a href="cpanel-importer-failed-homedir-not-found-error.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">"cPanel
+                                    importer failed: homedir not found" error</a>
+                            </li>
+                            <li><a href="failed-to-backup-website-backup-server-not-found.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">"Failed
+                                    to backup {website}. Backup server not found" error</a>
+                            </li>
+                            <li><a href="an-error-occurred-while-requesting-a-password-reset-link.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">"An error
+                                    occurred while requesting a password reset link" error</a>
+                            </li>
+                            <li><a href="i-have-not-received-my-user-invite.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">I have
+                                    not received my user invite by email</a>
+                            </li>
+                            <li><a href="failed-to-install-database-role.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Failed to
+                                    install 'Database' role error</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <button onclick="toggleDropdown('dropdown20', 'icon20')"
+                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-gray-900 text-gray-300 hover:text-white focus:outline-none">
+                            WHMCS
+                            <i id="icon20" class="fas fa-chevron-right text-sm transition-transform"></i>
+                        </button>
+                        <ul id="dropdown20" class="hidden space-y-1 pl-6 mt-2">
+                            <li><a href="whmcs.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">WHMCS</a>
+                            </li>
+                            <li><a href="whmcs-getting-started.html.html"
+                                    class="block px-4 py-1.5 text-gray-400 hover:bg-gray-900 hover:text-white">Installing
+                                    WHMCS</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- Hamburger Menu -->
+            <div class="docs-mobile-menu bg-[#030712] fixed top-0 right-0 md:hidden pl-4 pr-3 z-50 w-full">
+                <div class="flex flex-cols-1 justify-between p-3 z-50 items-center">
+                    <div>
+                        <a href="">
+                            <svg width="45" height="45" viewBox="0 0 100 100" fill="#fff"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.11206 59V42.2H13.1921V55.4H20.6801V59H9.11206Z"></path>
+                                <path
+                                    d="M31.1771 59L28.4651 54.896L27.2171 53.144L22.1771 46.256H26.7851L29.4011 50.168L30.7691 52.04L35.7371 59H31.1771ZM22.0571 59L27.1931 51.848L29.2571 54.32L26.5931 59H22.0571ZM30.4811 53.456L28.4411 51.008L30.9611 46.256H35.4971L30.4811 53.456Z">
+                                </path>
+                                <path
+                                    d="M38.2917 59V42.2H45.8517C46.9237 42.2 47.8917 42.432 48.7557 42.896C49.6357 43.36 50.3237 44 50.8197 44.816C51.3157 45.616 51.5637 46.528 51.5637 47.552C51.5637 48.608 51.3157 49.56 50.8197 50.408C50.3237 51.24 49.6437 51.896 48.7797 52.376C47.9157 52.856 46.9397 53.096 45.8517 53.096H42.1797V59H38.2917ZM47.6037 59L43.3317 51.416L47.5077 50.816L52.2597 59H47.6037ZM42.1797 49.976H45.4917C45.9077 49.976 46.2677 49.888 46.5717 49.712C46.8917 49.52 47.1317 49.256 47.2917 48.92C47.4677 48.584 47.5557 48.2 47.5557 47.768C47.5557 47.336 47.4598 46.96 47.2677 46.64C47.0757 46.304 46.7957 46.048 46.4277 45.872C46.0757 45.696 45.6437 45.608 45.1317 45.608H42.1797V49.976Z">
+                                </path>
+                                <path
+                                    d="M60.2666 59.24C58.9386 59.24 57.7546 58.952 56.7146 58.376C55.6906 57.8 54.8746 57.016 54.2666 56.024C53.6746 55.032 53.3786 53.896 53.3786 52.616C53.3786 51.336 53.6746 50.2 54.2666 49.208C54.8746 48.216 55.6906 47.432 56.7146 46.856C57.7546 46.28 58.9386 45.992 60.2666 45.992C61.5946 45.992 62.7706 46.28 63.7946 46.856C64.8346 47.432 65.6506 48.216 66.2426 49.208C66.8346 50.2 67.1306 51.336 67.1306 52.616C67.1306 53.896 66.8346 55.032 66.2426 56.024C65.6506 57.016 64.8346 57.8 63.7946 58.376C62.7706 58.952 61.5946 59.24 60.2666 59.24ZM60.2666 55.928C60.8426 55.928 61.3546 55.784 61.8026 55.496C62.2506 55.208 62.6026 54.816 62.8586 54.32C63.1146 53.824 63.2346 53.256 63.2186 52.616C63.2346 51.976 63.1146 51.408 62.8586 50.912C62.6026 50.4 62.2506 50 61.8026 49.712C61.3546 49.424 60.8426 49.28 60.2666 49.28C59.6906 49.28 59.1706 49.424 58.7066 49.712C58.2586 50 57.9066 50.4 57.6506 50.912C57.3946 51.408 57.2746 51.976 57.2906 52.616C57.2746 53.256 57.3946 53.824 57.6506 54.32C57.9066 54.816 58.2586 55.208 58.7066 55.496C59.1706 55.784 59.6906 55.928 60.2666 55.928Z">
+                                </path>
+                                <path
+                                    d="M75.6416 59.24C74.3136 59.24 73.1296 58.952 72.0896 58.376C71.0656 57.8 70.2496 57.016 69.6416 56.024C69.0496 55.032 68.7536 53.896 68.7536 52.616C68.7536 51.336 69.0496 50.2 69.6416 49.208C70.2496 48.216 71.0656 47.432 72.0896 46.856C73.1296 46.28 74.3136 45.992 75.6416 45.992C76.9696 45.992 78.1456 46.28 79.1696 46.856C80.2096 47.432 81.0256 48.216 81.6176 49.208C82.2096 50.2 82.5056 51.336 82.5056 52.616C82.5056 53.896 82.2096 55.032 81.6176 56.024C81.0256 57.016 80.2096 57.8 79.1696 58.376C78.1456 58.952 76.9696 59.24 75.6416 59.24ZM75.6416 55.928C76.2176 55.928 76.7296 55.784 77.1776 55.496C77.6256 55.208 77.9776 54.816 78.2336 54.32C78.4896 53.824 78.6096 53.256 78.5936 52.616C78.6096 51.976 78.4896 51.408 78.2336 50.912C77.9776 50.4 77.6256 50 77.1776 49.712C76.7296 49.424 76.2176 49.28 75.6416 49.28C75.0656 49.28 74.5456 49.424 74.0816 49.712C73.6336 50 73.2816 50.4 73.0256 50.912C72.7696 51.408 72.6496 51.976 72.6656 52.616C72.6496 53.256 72.7696 53.824 73.0256 54.32C73.2816 54.816 73.6336 55.208 74.0816 55.496C74.5456 55.784 75.0656 55.928 75.6416 55.928Z">
+                                </path>
+                                <path
+                                    d="M86.0726 59V43.04H89.9126V59H86.0726ZM83.8166 49.616V46.256H92.3846V49.616H83.8166Z">
+                                </path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M76.5399 64C71.5099 73.5156 61.5123 80 50.0001 80C38.4879 80 28.4902 73.5156 23.4603 64H12.5185C18.1935 79.1867 32.834 90 50.0001 90C67.1662 90 81.8067 79.1867 87.4817 64H76.5399ZM22.4964 38C27.1257 27.4046 37.6982 20 50.0001 20C62.302 20 72.8745 27.4046 77.5038 38H88.1689C83.0718 21.7716 67.9107 10 50.0001 10C32.0895 10 16.9284 21.7716 11.8313 38H22.4964Z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="docs-mobile-menu-search relative px-2 ml-2">
+                        <input type="text" placeholder="Search..."
+                            class=" w-full px-4 py-1 bg-[#030712] border border-gray-700 rounded focus:outline-none text-gray-800 hover:border-purple-800">
+                        <span class="absolute top-2 right-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-4.35-4.35m1.75-5.65a7 7 0 10-14 0 7 7 0 0014 0z" />
+                            </svg>
+                        </span>
+                    </div>
+                    <button onclick="toggleSidebar()" class="rounded text-white px-4">
+                        <!-- Hamburger Menu Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                    <div>
+                        <div role="menuitem" class="group flex items-center text-sm  h-9 cursor-pointe" tabindex="-1"
+                            data-orientation="vertical" data-radix-collection-item="" onclick="switchTheme()">
+                            <div class="icon-md text-2xl mr-3 opacity-70  text-white" aria-hidden="true">
+                                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-sun">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <path
+                                        d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="flex-1 p-8 mb-12">
+                <!-- Header Section -->
+                <header class="mb-6 flex justify-between items-center">
+                    <h1 class="text-4xl font-bold text-white"></h1>
+                    <a href="" class="text-gray-500 px-4 py-2 rounded-lg hover:text-purple-500"><i
+                            class="fa-solid fa-house"></i> Go to
+                        LxRoot</a>
+                </header>
+
+                <!-- Hero Section -->
+                <div class="max-w-4xl mx-auto pt-6">
+                    <div>
+                        <article class="text-[#334155] dark:text-slate-400">
+                            <header class="">
+                                <!-- <p class="text-base font-medium text-slate-500">
+                                    Getting started
+                                </p> -->
+
+                                <h1 class="text-3xl tracking-tight  text-slate-900 dark:text-slate-200 font-bold">
+                                    Global Application Settings </h1>
+
+                                <div class="toc">
+                                    <ul class="list-outside list-disc">
+                                        <li><a href="#about" class="text-sky-500 hover:underline">About</a></li>
+                                        <li><a href="#screenshot-interval"
+                                                class="text-sky-500 hover:underline">Screenshot
+                                                Interval</a></li>
+                                        <li><a href="#screenshot-driver-pool-size"
+                                                class="text-sky-500 hover:underline">Screenshot Driver Pool Size</a>
+                                        </li>
+                                        <li><a href="#php-fpm-settings" class="text-sky-500 hover:underline">php-fpm
+                                                Settings</a></li>
+                                        <li><a href="#php-ini-settings" class="text-sky-500 hover:underline">php.ini
+                                                Settings</a></li>
+                                    </ul>
+                                </div>
+                            </header>
+
+
+                            <div
+                                class="prose prose-slate max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-lead:text-slate-500 prose-a:font-semibold prose-a:underline prose-pre:bg-slate-900">
+
+                                <h3 class="text-2xl font-semibold text-slate-800 dark:text-slate-200 group" id="about">
+                                    <a href="#about" class="header-anchor">#</a>
+                                    About
+                                </h3>
+
+                                <p>Global Application Settings include 'screenshot interval', 'Screenshot driver
+                                    pool size', 'Automatically provision Let's Encrypt certificates','php-fpm' (Apache
+                                    only) and
+                                    'php.ini', and are automatically applied to each Application server in your LxRoot
+                                    cluster.
+                                </p>
+                                <p>Some settings, including 'php.ini'can be overriden on a per server basis.</p>
+                                <p>Further per server customisations can be made for Apache, LiteSpeed and Nginx
+                                    webserver kinds.</p>
+
+
+                                <h3 class="text-2xl font-semibold text-slate-800 dark:text-slate-200 group"
+                                    id="screenshot-interval">
+                                    <a href="#screenshot-interval" class="header-anchor">#</a>
+                                    Screenshot Interval
+                                </h3>
+
+                                <p>This setting determines the frequency at which a screenshot of a website will be
+                                    taken. A website screenshot is used for display purposes only and is displayed on a
+                                    website's dashboard. It is possible for a customer to manually trigger a screenshot.
+                                </p>
+
+                                <p><strong>Default:</strong> 1 day</p>
+
+                                <p class="font-bold">To edit the global default Screenshot Interval:</p>
+
+                                <ol class="list-outside list-decimal my-4">
+                                    <li>Open <strong>Settings</strong> in the left sidebar</li>
+                                    <li>Select <strong>Service</strong> settings</li>
+                                    <li>Scroll to the <strong>Application</strong> section</li>
+                                    <li>Locate <strong>Screenshot interval</strong> and select your preference from the
+                                        drop
+                                        down. Your selection will automatically be saved.</li>
+                                </ol>
+
+
+                                <h3 class="text-2xl font-semibold text-slate-800 dark:text-slate-200 group"
+                                    id="screenshot-driver-pool-size">
+                                    <a href="#screenshot-driver-pool-size" class="header-anchor">#</a>
+                                    Screenshot Driver Pool Size
+                                </h3>
+
+                                <p>This setting determines the number of screenshot worker processes per
+                                    application server.</p>
+                                <p><strong>Default:</strong> 1 </p>
+
+                                <p class=" font-bold">To edit the global default Screenshot Driver Pool Size:</p>
+
+                                <ol class="list-outside list-decimal my-4">
+                                    <li>Open <strong>Settings</strong> in the left sidebar</li>
+                                    <li>Select <strong>Service</strong> settings</li>
+                                    <li>Scroll to the <strong>Application</strong> section</li>
+                                    <li>Locate <strong>Screenshot Driver Pool Size</strong> and select your preference
+                                        from the
+                                        drop down. Your selection will automatically be saved.</li>
+                                </ol>
+                                <h3 class="text-2xl font-semibold text-slate-800 dark:text-slate-200 group"
+                                    id="php-fpm-settings">
+                                    <a href="#php-fpm-settings" class="header-anchor">#</a>
+                                    php-fpm Settings
+                                </h3>
+                                <p>php-fpm settings are automatically applied to every website placed on the
+                                    application role. php-fpm settings can be overridden on a per server (Apache and
+                                    Nginx) and
+                                    a per website basis. These settings are visible to website owners as default php-fpm
+                                    setting
+                                    and can then be overridden by the website owner.</p>
+
+                                <p class=" font-bold">To edit the global default php-fpm configuration:</p>
+
+                                <ol class="list-outside list-decimal my-4">
+                                    <li>Open <strong>Settings</strong> in the left sidebar</li>
+                                    <li>Select <strong>Service</strong> settings</li>
+                                    <li>Scroll to the <strong>Application</strong> section</li>
+                                    <li>Locate <strong>php-fpm</strong></li>
+                                    <li>Select <strong>Add directive</strong> to add a new directive</li>
+                                    <li>Click <strong>Save</strong> to finsh</li>
+                                </ol>
+
+                                <h3 class="text-2xl font-semibold text-slate-800 dark:text-slate-200 group"
+                                    id="php-ini-settings">
+                                    <a href="#php-ini-settings" class="header-anchor">#</a>
+                                    php.ini Settings
+                                </h3>
+                                <p>php.ini settings are automatically applied to every website placed on the
+                                    application role. php.ini settings can be overridden on a per server (Apache,
+                                    LiteSpeed and
+                                    Nginx) and a per website basis. These settings are visible to website owners as
+                                    default
+                                    php.ini setting and can then be overridden by the website owner.</p>
+
+                                <p class="font-bold">To edit the global default php.ini configuration:</p>
+
+                                <ol class="list-outside list-decimal my-4">
+                                    <li>Open <strong>Settings</strong> in the left sidebar</li>
+                                    <li>Select <strong>Service</strong> settings</li>
+                                    <li>Scroll to the <strong>Application</strong> section</li>
+                                    <li>Locate <strong>php.ini</strong></li>
+                                    <li>Select <strong>Add directive</strong> to add a new directive</li>
+                                    <li>Click <strong>Save</strong> to finsh</li>
+                                </ol>
+
+                            </div>
+                        </article>
+
+                        <dl class="flex pt-6 mt-6 border-t border-slate-200">
+                            <div class="mr-auto text-left">
+                                <dt class="text-sm font-normal dark:text-slate-400 tracking-tight text-slate-600">
+                                    Previous
+                                </dt>
+
+                                <dd class="mt-1">
+                                    <a href="/switching-application-role.html"
+                                        class="text-base font-semibold dark:text-slate-400 text-slate-900 hover:underline">
+                                        Switching webserver kind </a>
+                                </dd>
+                            </div>
+
+                            <div class="ml-auto text-right">
+                                <dt class="text-sm font-normal tracking-tight dark:text-slate-400 text-slate-600">
+                                    Next
+                                </dt>
+
+                                <dd class="mt-1">
+                                    <a href="/general-per-server-settings.html"
+                                        class="text-base font-semibold dark:text-slate-400 text-slate-900 hover:underline">
+                                        General Per Server Application Settings
+                                    </a>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const htmlElement = document.documentElement;
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Sidebar Toggle for Mobile
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        menuToggle.addEventListener('click', () => {
+            if (sidebar.classList.contains('visible-sidebar')) {
+                sidebar.classList.remove('visible-sidebar');
+                sidebar.classList.add('hidden-sidebar');
+            } else {
+                sidebar.classList.remove('hidden-sidebar');
+                sidebar.classList.add('visible-sidebar');
+            }
+        });
+
+        // Theme Persistence
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('doc-sidebar');
+            if (sidebar.classList.contains('-translate-x-full')) {
+                sidebar.classList.remove('-translate-x-full');
+            } else {
+                sidebar.classList.add('-translate-x-full');
+            }
+        }
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('doc-sidebar');
+            sidebar.classList.toggle('open'); /* Add or remove the 'open' class to show or hide the menu */
+        }
+
+
+        // THeme Toggle System
+        // Function to switch the theme
+        function switchTheme() {
+            const body = document.body;
+
+            // Check the current theme and toggle it
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light'); // Save preference in localStorage
+            } else {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark'); // Save preference in localStorage
+            }
+        }
+
+
+    </script>
+
+    <!-- JavaScript for Dropdown Functionality -->
+    <!-- JavaScript for Dropdown and Icon Toggle -->
+    <script>
+        function toggleDropdown(dropdownId, iconId) {
+            const dropdown = document.getElementById(dropdownId);
+            const icon = document.getElementById(iconId);
+
+            dropdown.classList.toggle('hidden'); // Show/hide the submenu
+
+            // Toggle between right and down arrows
+            if (icon.classList.contains('fa-chevron-right')) {
+                icon.classList.remove('fa-chevron-right');
+                icon.classList.add('fa-chevron-down');
+            } else {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-right');
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

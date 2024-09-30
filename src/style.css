@@ -5,6 +5,14 @@ body {
 
 }
 
+/* Docs Background */
+.docs-body {
+    background-color: #030712;
+    background-image: linear-gradient(327.21deg, rgba(12, 12, 12, 0.24) 3.65%, rgba(20, 0, 46, 0) 40.32%), linear-gradient(245.93deg, rgba(76, 3, 124, 0.16) 0%, rgba(24, 15, 31, 0) 36.63%), linear-gradient(147.6deg, rgba(13, 11, 20, 0) 29.79%, rgba(31, 13, 53, 0) 36.63%);
+}
+
+
+
 .main-menu {
     padding-top: 4px;
     padding-bottom: 4px;
@@ -19,8 +27,6 @@ body {
     background-image: linear-gradient(to right, rgb(60, 60, 255), rgb(158, 53, 158));
     transition-duration: 300ms;
 }
-
-
 
 .safe-space {
     margin-top: 200px;
@@ -516,11 +522,11 @@ body {
 #dashboard-bg {
     background-color: #ffffff;
     color: #0B1120;
-    background-image: linear-gradient(327.21deg, rgba(141, 167, 255, 0.24) 3.65%, rgba(80, 104, 223, 0) 40.32%), linear-gradient(245.93deg, rgba(0, 38, 165, 0.16) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgba(0, 62, 185, 0) 29.79%, rgba(0, 68, 255, 0) 36.63%);
+    background-image: linear-gradient (327.21deg, rgba(141, 167, 255, 0.24) 3.65%, rgba(80, 104, 223, 0) 40.32%), linear-gradient(245.93deg, rgba(0, 38, 165, 0.16) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgba(0, 62, 185, 0) 29.79%, rgba(0, 68, 255, 0) 36.63%);
 }
 
 #dashboard-main {
-    background: #13111C;
+    background-color: #13111C;
 }
 
 /* Account Image */
@@ -575,9 +581,150 @@ body {
     border-radius: 10px;
 }
 
-#dashborad-item:hover{
+#dashborad-item:hover {
     background-color: #1a1825;
 }
+
+/* Popup styles */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+#popup-box {
+    background-color: #13111C;
+    border: 1px solid #374151;
+    text-align: center;
+    min-width: 100px;
+    /* Adjust the width of the popup */
+    left: -50%;
+    /* Center the popup relative to the button horizontally */
+    bottom: 10%;
+    /* Push the popup above the button */
+    z-index: 50;
+    /* High z-index to appear in front of the table */
+    position: absolute;
+    /* Absolutely positioned relative to the table cell */
+    transition: opacity 0.3s ease;
+    /* Smooth transition effect */
+}
+
+#dash-plan-box {
+    background: radial-gradient(75.77% 103.33% at 50% 74.41%, rgba(255, 255, 255, 0.03) 47.71%, rgba(15, 119, 76, 0.03) 77.63%, rgba(255, 255, 255, 0.03) 96.88%), linear-gradient(188.76deg, rgba(11, 22, 179, 0.4) -13.88%, rgba(19, 17, 28, 0.4) 67.85%);
+}
+
+
+/* Console Custom CSS */
+
+#console-body {
+    background-color: #f3f4f6;
+}
+
+
+
+/* Docs Sections Custom CSS */
+#doc-sidebar {
+    background-color: #030712;
+    border-right: 1px solid #1d1e22;
+}
+
+.docs-active-menu {
+    color: white;
+    background-color: #581c87;
+    border-right: 3px solid rgb(183, 0, 255);
+}
+
+.docs-active-menu a {
+    color: white;
+}
+
+.docs-box-title {
+    color: white;
+}
+
+.docs-box-para {
+    color: #b8c1cf;
+}
+
+.docs-pre-next-btn {
+    color: white;
+}
+
+.docs-pre-next-btn:hover {
+    color: #c084fc;
+}
+
+.docs-number-heading {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.docs-list-sec {
+    margin-left: 32px;
+}
+
+
+/* Ensure the sidebar covers the full screen on mobile */
+#doc-sidebar {
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Sidebar visible */
+#doc-sidebar.open {
+    min-height: 100%;
+    transform: translateX(0);
+    /* Slide in when the menu is opened */
+}
+
+/* Hide the hamburger icon on desktop */
+@media (min-width: 1024px) {
+    #doc-sidebar {
+        width: 300px;
+    }
+}
+
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 4px;
+    /* width of the scrollbar */
+}
+
+/* Track of the scrollbar */
+::-webkit-scrollbar-track {
+
+    /* background of the scrollbar track */
+    border-radius: 10px;
+    /* optional: rounded corners for the track */
+}
+
+/* Handle of the scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #4f525e;
+    /* color of the scrollbar handle */
+    border-radius: 10px;
+    /* optional: rounded corners for the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #4c246b;
+    /* color of the scrollbar handle when hovered */
+}
+
+/* Custom scrollbar for Mozilla (Firefox) */
+scrollbar-width: thin;
+/* makes the scrollbar thinner in Firefox */
+scrollbar-color: #888 #2c2f33;
+/* thumb and track color for Firefox */
 
 
 
@@ -591,6 +738,28 @@ body.light-mode {
     color: #0B1120;
     background-image: linear-gradient(327.21deg, rgba(141, 167, 255, 0.24) 3.65%, rgba(80, 104, 223, 0) 40.32%), linear-gradient(245.93deg, rgba(0, 38, 165, 0.16) 0%, rgba(209, 25, 80, 0) 36.63%), linear-gradient(147.6deg, rgba(0, 62, 185, 0) 29.79%, rgba(0, 68, 255, 0) 36.63%);
 }
+
+body.light-mode #console-body {
+    background-color: #f3f4f6;
+}
+
+
+
+body.light-mode #dashboard-main {
+    background-color: white;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #ffffff;
+    color: #0B1120;
+}
+
+
+
+
+
+
 
 
 /* Light Mode for Specific Elements */
@@ -1512,10 +1681,358 @@ body.light-mode .pricing-faq {
     background: none;
 }
 
+/* Dashboard Light Mode Theme */
+body.light-mode .dashborad-body {
+    background: white;
+}
+
+body.light-mode #dash-body {
+    background: white;
+}
+
+body.light-mode #dash-nav {
+    background: white;
+}
+
+body.light-mode #dash-switch-btn {
+    background-color: white;
+    color: #13111C;
+}
+
+body.light-mode #dash-switch-btn:hover {
+    background-color: rgb(228, 228, 228);
+    color: #13111C;
+}
+
+body.light-mode .icon-container {
+    background: white;
+    color: #13111C;
+}
+
+
+body.light-mode .dash-switch-text {
+    color: #13111C;
+}
+
+body.dark-mode #dash-switch-btn {
+    background-color: #13111C;
+    color: white;
+}
+
+body.light-mode #dash-drop-top {
+    background-color: #eee9ff;
+}
+
+body.light-mode #dash-menu {
+    background: white;
+    border-bottom: 1px solid #eee9ff;
+}
+
+body.light-mode #dash-menu-trial {
+    background: #66f5ad;
+    color: #13111C;
+}
+
+body.light-mode .dash-trial {
+    background: #66f5ad;
+    color: #13111C;
+}
+
+body.light-mode #dash-footer {
+    border-top: 1px solid #eee9ff;
+}
+
+body.light-mode #mobile-menu {
+    background-color: white;
+    border: 1px solid #eee9ff;
+}
+
+body.light-mode #mobile-menu-item:hover {
+    background-color: #eee9ff;
+}
+
+body.light-mode .icon-container {
+    background-color: transparent;
+    color: #13111C;
+}
+
+body.light-mode .logout-icon {
+    fill: none;
+    color: red;
+}
+
+body.light-mode .help-center-icon {
+    fill: #13111C;
+}
+
+body.light-mode #dasDropdownMenu {
+    background: white;
+}
+
+body.light-mode .dash-sidebar {
+    background-color: #f6f4ff;
+    border: none;
+}
+
+body.light-mode .dash-sidebar {
+    background-color: #f6f4ff;
+    border: 1px solid #f3f4f6;
+}
+
+body.light-mode .dash-sidebar:hover {
+    border: 1px solid #f1eeff;
+}
+
+body.light-mode .dash-nav-item {
+    background-color: white;
+}
+
+body.light-mode .dash-nav-item:hover {
+    background-color: #f6f4ff;
+}
+
+body.light-mode .active-dash-nav-item {
+    background: #f6f4ff;
+}
+
+body.light-mode #dash-divider {
+    background-color: #eee9ff;
+}
+
+body.light-mode .mobile-nav:hover {
+    color: #4375ff;
+}
+
+body.light-mode .templates-icon svg {
+    fill: none;
+    color: #13111C;
+}
+
+body.light-mode #earning-text {
+    background-color: #f3f4f6;
+}
+
+body.light-mode #earning-text p {
+    color: #13111C;
+}
+
+body.light-mode .dash-input {
+    border: 1px solid #d7d7d8;
+}
+
+body.light-mode .dash-button-text {
+    color: white;
+}
+
+body.light-mode .editable-text {
+    background-color: #f3f4f6;
+}
+
+body.light-mode .dash-ref-link {
+    background-color: #f3f4f6;
+}
+
+body.light-mode .dash-shape {
+    background-color: #f3f4f6;
+    border: 1px solid #d7d7d8;
+}
+
+body.light-mode .dash-inside-shape {
+    background-color: white;
+    border: 1px solid #f8f8f8;
+}
+
+body.light-mode .dash-table {
+    border: 1px solid #d7d7d8;
+}
+
+body.light-mode .dash-table-thead {
+    border-bottom: 1px solid #d7d7d8;
+}
+
+body.light-mode #securities-auth-btn {
+    border: 1px solid #d7d7d8;
+}
+
+body.light-mode #securities-auth-btn:hover {
+    background-color: #9737e0;
+    border: 1px solid #9737e0;
+    color: white;
+}
+
+body.light-mode #popup-box {
+    background-color: #f3f4f6;
+    border: 1px solid #d6d6d6;
+}
+
+body.light-mode #popup-box span:hover {
+    background-color: #d7d7d8;
+    border-radius: 5px;
+    color: red;
+}
+
+body.light-mode .dash-text {
+    color: #13111C;
+}
+
+body.light-mode .dash-button {
+    color: white;
+}
+
+
+body.light-mode .dash-icon-color svg {
+    color: white;
+}
+
+body.light-mode .dash-inside-box {
+    background: white;
+}
+
+body.light-mode #dash-plan-box {
+    background: whitesmoke;
+    border: 1px solid #f6f4ff;
+}
+
+body.light-mode .dash-plan-pricing-box {
+    background: #fafafa;
+    border: 1px solid #f3f4f6;
+}
+
+body.light-mode .plans-icons {
+    background: white;
+    border: 1px solid #d7d7d8
+}
+
+body.light-mode .plans-icons svg {
+    color: #13111C;
+    fill: none;
+}
+
+body.light-mode .plans-image {
+    border: 8px solid #d4d5d6;
+}
+
+body.light-mode .danger-alert {
+    background: rgb(255, 188, 188);
+    color: #13111C;
+}
+
+body.light-mode .profile-visibility {
+    color: #13111C;
+}
+
+body.light-mode .dash-connect-btn {
+    background-color: white;
+    border: 1px solid #eee9ff;
+}
+
+body.light-mode .dash-connect-btn:hover {
+    background-color: #4879ff;
+    color: white;
+    border: 1px solid #eee9ff;
+}
+
+
+body.light-mode .dash-dlt-btn {
+    background-color: #f1eeff;
+    border: 1px solid #d4d5d6;
+    color: red;
+}
+
+body.light-mode .dash-dlt-btn:hover {
+    border: 1px solid red;
+}
+
+body.light-mode .docs-mobile-menu{
+    background-color: white;
+}
+
+body.light-mode .docs-mobile-menu-search input{
+    background-color: white;
+    border: 1px solid #cccccc;
+}
+
+body.light-mode .docs-mobile-menu-search svg{
+    color: #929292;
+    fill: none;
+}
+
+body.light-mode .docs-main-menu{
+    background-color: white;
+}
+
+body.light-mode #doc-sidebar{
+    background-color: white;
+    border-right: 1px solid #eee9ff;
+}
+
+
+body.light-mode .docs-side-header{
+    background-color: white;
+    border-bottom: 1px solid #eee9ff;
+}
+
+
+body.light-mode .docs-sidebar-search input{
+    background-color: white;
+    border: 1px solid #cccccc;
+}
+
+body.light-mode .docs-sidebar-search svg{
+    color: #929292;
+    fill: none;
+}
+
+body.light-mode ::-webkit-scrollbar-thumb {
+    background: #b8b8b8;
+
+}
+
 
 /* White Mode Theme End */
 
 
+
+/* Custom Responsive */
+
+@media (min-width: 375px) and (max-width: 460px) {
+    .mobile-nav {
+        display: none;
+    }
+
+    #dasDropdownMenu {
+        padding-top: 15px;
+        width: 460px;
+        box-shadow: none;
+        height: 800px;
+        background-color: #13111C;
+    }
+
+    #mobile-menu {
+        border: none;
+        width: 100%;
+        margin: auto;
+        padding-left: 150px;
+
+    }
+
+    #dashborad-footer {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    #securities-auth-btn {
+        height: 90px;
+        width: 150px;
+    }
+
+}
+
+@media (min-width: 461px) {
+    .hidden-nav {
+        display: none;
+    }
+}
 
 
 /* Responsive Start */
@@ -1967,6 +2484,70 @@ body.light-mode .pricing-faq {
     .contact-main {
         padding-bottom: 80px;
     }
+
+
+    /* Dashboard Responsive */
+
+    #main-content {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #sidebar {
+        padding-bottom: 40px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #plans-body {
+        padding: 20px;
+    }
+
+    #feature-flag-body {
+        padding: 0px;
+    }
+
+    #popup-box {
+        left: -85px;
+    }
+
+    #earning-text {
+        text-align: center;
+    }
+
+
+    #doc-sidebar {
+        padding-left: 20px;
+        padding-right: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 50;
+        transition: transform 0.3s ease-in-out;
+        margin-top: -50px;
+
+    }
+    .docs-main-content{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    .docs-hero{
+        margin-top: -20px;
+        display: flex;
+        height: 450px;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .docs-hero img{
+        display: flex;
+        margin-top: 170px;
+    }
+
 
 }
 

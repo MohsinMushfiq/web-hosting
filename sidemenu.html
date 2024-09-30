@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Navigation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Optional styling for arrow rotation */
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+    <!-- Side Navigation Container -->
+    <div class="w-64 h-screen bg-gray-800 px-4 py-6">
+        <h2 class="text-lg font-semibold mb-6">Guides</h2>
+        <ul class="space-y-4">
+            <!-- Foundations Menu Item -->
+            <li>
+                <button onclick="toggleDropdown('dropdown1', 'icon1')"
+                    class="w-full flex justify-between items-center px-4 py-2 bg-purple-700 hover:bg-purple-800 text-white rounded-md focus:outline-none">
+                    Foundations
+                    <i id="icon1" class="fas fa-chevron-right transition-transform"></i>
+                </button>
+                <ul id="dropdown1" class="hidden space-y-2 pl-6 mt-2">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md">Projects</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md">Staged Changes</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md">Services</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md">Variables</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md">Volumes</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md">Environments</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md">CLI</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md">Join Priority Boarding!</a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Account Menu Item (Added) -->
+            <li>
+                <button onclick="toggleDropdown('dropdown2', 'icon2')"
+                    class="w-full flex justify-between items-center px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-md focus:outline-none">
+                    Account
+                    <i id="icon2" class="fas fa-chevron-right transition-transform"></i>
+                </button>
+                <ul id="dropdown2" class="hidden space-y-2 pl-6 mt-2">
+                    <li><a href="users-and-roles.html"
+                            class="block px-4 py-2 text-gray-400 hover:text-purple-500 hover:bg-gray-700 rounded-md">Users
+                            and Roles</a></li>
+                    <li><a href="password-reset.html"
+                            class="block px-4 py-2 text-gray-400 hover:text-purple-500 hover:bg-gray-700 rounded-md">Password
+                            Reset</a></li>
+                    <li><a href="transfer-account-ownership.html"
+                            class="block px-4 py-2 text-gray-400 hover:text-purple-500 hover:bg-gray-700 rounded-md">Transfer
+                            Account Ownership</a></li>
+                    <li><a href="reissue-license.html"
+                            class="block px-4 py-2 text-gray-400 hover:text-purple-500 hover:bg-gray-700 rounded-md">Reissue
+                            Your LxRoot License</a></li>
+                </ul>
+            </li>
+
+            <!-- Languages & Frameworks Menu Item -->
+            <li>
+                <button onclick="toggleDropdown('dropdown3', 'icon3')"
+                    class="w-full flex justify-between items-center px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-md focus:outline-none">
+                    Languages & Frameworks
+                    <i id="icon3" class="fas fa-chevron-right transition-transform"></i>
+                </button>
+                <ul id="dropdown3" class="hidden space-y-2 pl-6 mt-2">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md">Languages</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md">Frameworks</a></li>
+                </ul>
+            </li>
+
+            <!-- Networking Menu Item -->
+            <li>
+                <button onclick="toggleDropdown('dropdown4', 'icon4')"
+                    class="w-full flex justify-between items-center px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-md focus:outline-none">
+                    Networking
+                    <i id="icon4" class="fas fa-chevron-right transition-transform"></i>
+                </button>
+                <ul id="dropdown4" class="hidden space-y-2 pl-6 mt-2">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md">Networking Basics</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md">Advanced Networking</a></li>
+                </ul>
+            </li>
+
+            <!-- Builds Menu Item -->
+            <li>
+                <button onclick="toggleDropdown('dropdown5', 'icon5')"
+                    class="w-full flex justify-between items-center px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-md focus:outline-none">
+                    Builds
+                    <i id="icon5" class="fas fa-chevron-right transition-transform"></i>
+                </button>
+                <ul id="dropdown5" class="hidden space-y-2 pl-6 mt-2">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md">Build 1</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-700 rounded-md">Build 2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- JavaScript for Dropdown and Icon Toggle -->
+    <script>
+        function toggleDropdown(dropdownId, iconId) {
+            const dropdown = document.getElementById(dropdownId);
+            const icon = document.getElementById(iconId);
+
+            dropdown.classList.toggle('hidden'); // Show/hide the submenu
+
+            // Toggle between right and down arrows
+            if (icon.classList.contains('fa-chevron-right')) {
+                icon.classList.remove('fa-chevron-right');
+                icon.classList.add('fa-chevron-down');
+            } else {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-right');
+            }
+        }
+    </script>
+</body>
+
+</html>

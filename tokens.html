@@ -18,13 +18,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body id="dashboard-main">
-
-    <div class="max-w-7xl mx-auto min-h-screen bg-[#13111C] text-gray-300 px-8">
+<body class="bg-[#13111C]">
+    
+    <div id="dashboard-main" class="w-full">
+    <div class="max-w-7xl mx-auto min-h-screen bg-[#13111C] text-gray-300 px-8" id="dash-body">
         <div
-            class="flex items-center justify-between mb-8 sticky top-0 bg-[#13111C] border-b border-gray-800 py-4 z-50">
+            class="max-w-7xl mx-auto flex items-center justify-between mb-8 sticky top-0 bg-[#13111C] border-b z-50 border-gray-800 py-4" id="dash-menu">
             <!-- Logo -->
-            <div class="w-12 h-12 rounded-full flex items-center justify-center">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center" id="dash-nav">
                 <!-- Logo image/icon here -->
                 <a href="">
                     <svg width="60" height="60" viewBox="0 0 100 100" fill="#fff" xmlns="http://www.w3.org/2000/svg">
@@ -52,24 +53,24 @@
 
             <!-- Right header -->
             <div class="flex items-center space-x-4">
-                <button class="text-gray-300 hover:text-gray-400">Help</button>
-                <button class="text-gray-300 hover:text-gray-400">Dashboard</button>
-                <div class="bg-green-950 text-green-600 font-normal py-1 px-3 rounded-md">
+                <button class="text-gray-300 hover:text-gray-400 mobile-nav">Help</button>
+                <button class="text-gray-300 hover:text-gray-400 mobile-nav">Dashboard</button>
+                <div class="bg-green-950 text-green-600 font-normal py-1 px-3 rounded-md" id="dash-menu-trial">
                     TRIAL $5.00
                 </div>
                 <div class="account">
                     <img src="https://avatars.githubusercontent.com/u/6620" alt="Account Image" id="accountImage">
                     <div class="dasDropdown" id="dasDropdownMenu">
                         <div data-side="bottom" data-align="end" role="menu" aria-orientation="vertical"
-                            data-state="open" data-radix-menu-content="" dir="ltr" id="radix-:r59:"
+                            data-state="open" data-radix-menu-content="" dir="ltr" id="mobile-menu"
                             aria-labelledby="radix-:r58:"
                             class="z-50 min-w-[130px] bg-[#13111C] rounded p-2 overflow-y-auto border border-gray-800 py-2 max-h-[calc(var(--radix-dropdown-menu-content-available-height)-1rem)] w-[280px]"
                             tabindex="-1" data-orientation="vertical">
                             <div class="flex flex-col space-y-1">
-                                <div
+                                <div id="dash-drop-top"
                                     class="flex flex-col space-y-3 items-center justify-center relative bg-[#1a1825] pt-7 pb-5 mb-2 rounded-md">
                                     <div
-                                        class="flex flex-col absolute py-1 px-3 rounded bg-[#13111C] top-0 left-0 mt-2 ml-2">
+                                        class="flex flex-col absolute py-1 px-3 rounded bg-[#13111C] top-0 left-0 mt-2 ml-2 dash-trial">
                                         <p class="uppercase text-[10px] font-medium text-green-600">Trial</p>
                                     </div>
                                     <div class="relative"><span class="inline-block rounded-full overflow-hidden"
@@ -87,8 +88,8 @@
                             </div>
                             <a class="focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 mt-2 mb-1"
                                 href="account.html">
-                                <div role="menuitem"
-                                    class="text-gray-300 group flex items-center text-sm px-3 h-9 cursor-pointer hover:bg-[#1a1825] focus:outline-none rounded"
+                                <div role="menuitem" 
+                                    class="text-gray-300 group flex items-center text-sm px-3 h-9 cursor-pointer hover:bg-[#1a1825] focus:outline-none rounded" id="mobile-menu-item"
                                     tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
                                     <div class="icon-container icon-sm text-lg mr-3 opacity-70 text-gray-300"
                                         aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -101,7 +102,7 @@
                             </a>
                             <a class="focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 mb-1"
                                 href="usage.html">
-                                <div role="menuitem"
+                                <div role="menuitem" id="mobile-menu-item"
                                     class="text-gray-300 group flex items-center text-sm px-3 h-9 cursor-pointer hover:bg-[#1a1825] focus:outline-none rounded"
                                     tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
                                     <div class="icon-container icon-sm text-lg mr-3 opacity-70 text-gray-300"
@@ -112,7 +113,8 @@
                                         </svg></div>Project Usage
                                 </div>
                             </a>
-                            <div role="menuitem"
+
+                            <div role="menuitem" id="mobile-menu-item"
                                 class="text-gray-300  group flex items-center text-sm px-3 h-9 cursor-pointer  focus:outline-none rounded hover:bg-[#1a1825]"
                                 tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
                                 <div class="icon-container icon-sm text-lg mr-3 opacity-70 group-hover:opacity-90 text-gray-300"
@@ -122,28 +124,82 @@
                                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                                     </svg></div>Support
                             </div>
+
+                            <div role="menuitem" id="mobile-menu-item"
+                                class="text-gray-300  group flex items-center text-sm px-3 h-9 cursor-pointer  focus:outline-none rounded hover:bg-[#1a1825] hidden-nav" 
+                                tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+                                <div class="icon-container icon-sm text-lg mr-3 opacity-70 group-hover:opacity-90 text-gray-300 help-center-icon"
+                                    aria-hidden="true"><svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M18 2H6C4.34 2 3 3.33 3 4.97V15.88C3 17.52 4.34 18.85 6 18.85H6.76C7.56 18.85 8.32 19.16 8.88 19.72L10.59 21.41C11.37 22.18 12.64 22.18 13.42 21.41L15.13 19.72C15.69 19.16 16.46 18.85 17.25 18.85H18C19.66 18.85 21 17.52 21 15.88V4.97C21 3.33 19.66 2 18 2ZM10.38 13.01C10.79 13.01 11.13 13.35 11.13 13.76C11.13 14.17 10.79 14.51 10.38 14.51H7.7C7.26 14.51 6.85 14.3 6.59 13.94C6.34 13.6 6.28 13.18 6.4 12.78C6.75 11.71 7.61 11.13 8.37 10.61C9.17 10.07 9.62 9.73 9.62 9.15C9.62 8.63 9.2 8.21 8.68 8.21C8.16 8.21 7.75 8.64 7.75 9.16C7.75 9.57 7.41 9.91 7 9.91C6.59 9.91 6.25 9.57 6.25 9.16C6.25 7.82 7.34 6.72 8.69 6.72C10.04 6.72 11.13 7.81 11.13 9.16C11.13 10.57 10.07 11.29 9.22 11.87C8.69 12.23 8.19 12.57 7.94 13.02H10.38V13.01ZM17 13.08H16.79V13.77C16.79 14.18 16.45 14.52 16.04 14.52C15.63 14.52 15.29 14.18 15.29 13.77V13.08H13.33C13.33 13.08 13.33 13.08 13.32 13.08C12.83 13.08 12.38 12.82 12.13 12.4C11.88 11.97 11.88 11.44 12.13 11.02C12.81 9.85 13.6 8.52 14.32 7.36C14.64 6.85 15.25 6.62 15.82 6.78C16.39 6.95 16.79 7.47 16.78 8.07V11.59H17C17.41 11.59 17.75 11.93 17.75 12.34C17.75 12.75 17.41 13.08 17 13.08Z"
+                                                fill="#d1d5db "></path>
+                                            <path
+                                                d="M15.2891 11.5806V8.64062C14.6991 9.60062 14.0891 10.6306 13.5391 11.5706H15.2891V11.5806Z"
+                                                fill="#d1d5db "></path>
+                                        </g>
+                                    </svg></div>Help Center
+                            </div>
+
+                            <div role="menuitem" id="mobile-menu-item"
+                                class="text-gray-300  group flex items-center text-sm px-3 h-9 cursor-pointer  focus:outline-none rounded hover:bg-[#1a1825] hidden-nav"
+                                tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+                                <div class="icon-container icon-sm text-lg mr-3 opacity-70 group-hover:opacity-90 text-gray-300"
+                                    aria-hidden="true"><svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <rect width="24" height="24" fill="none"></rect>
+                                            <path
+                                                d="M15.024 22C16.2771 22 17.3524 21.9342 18.2508 21.7345C19.1607 21.5323 19.9494 21.1798 20.5646 20.5646C21.1798 19.9494 21.5323 19.1607 21.7345 18.2508C21.9342 17.3524 22 16.2771 22 15.024V12C22 10.8954 21.1046 10 20 10H12C10.8954 10 10 10.8954 10 12V20C10 21.1046 10.8954 22 12 22H15.024Z"
+                                                fill="#d1d5db "></path>
+                                            <path
+                                                d="M2 15.024C2 16.2771 2.06584 17.3524 2.26552 18.2508C2.46772 19.1607 2.82021 19.9494 3.43543 20.5646C4.05065 21.1798 4.83933 21.5323 5.74915 21.7345C5.83628 21.7538 5.92385 21.772 6.01178 21.789C7.09629 21.9985 8 21.0806 8 19.976L8 12C8 10.8954 7.10457 10 6 10H4C2.89543 10 2 10.8954 2 12V15.024Z"
+                                                fill="#d1d5db "></path>
+                                            <path
+                                                d="M8.97597 2C7.72284 2 6.64759 2.06584 5.74912 2.26552C4.8393 2.46772 4.05062 2.82021 3.4354 3.43543C2.82018 4.05065 2.46769 4.83933 2.26549 5.74915C2.24889 5.82386 2.23327 5.89881 2.2186 5.97398C2.00422 7.07267 2.9389 8 4.0583 8H19.976C21.0806 8 21.9985 7.09629 21.789 6.01178C21.772 5.92385 21.7538 5.83628 21.7345 5.74915C21.5322 4.83933 21.1798 4.05065 20.5645 3.43543C19.9493 2.82021 19.1606 2.46772 18.2508 2.26552C17.3523 2.06584 16.2771 2 15.024 2H8.97597Z"
+                                                fill="#d1d5db  "></path>
+                                        </g>
+                                    </svg></div>Dashboard
+                            </div>
+
+
+
                             <div role="separator" aria-orientation="horizontal" class="bg-gray-800 w-full my-2"
-                                style="height: 1px;"></div>
+                                style="height: 1px;" id="dash-divider"></div>
+
+                                
                             <div class="flex justify-between items-center mt-4">
-                                <div role="menuitem"
+                                <div id="dash-switch-btn" role="menuitem"
                                     class="text-gray-200 hover:bg-[#1a1825] group flex items-center text-sm px-3 h-9 cursor-pointer focus:bg-gray-100 focus:outline-none rounded"
-                                    tabindex="-1" data-orientation="vertical" data-radix-collection-item="">
+                                    tabindex="-1" data-orientation="vertical" data-radix-collection-item=""
+                                    onclick="switchTheme()">
                                     <div class="icon-container icon-md text-2xl mr-3 opacity-70 group-hover:opacity-90 text-gray-200"
-                                        aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                        aria-hidden="true">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
                                             stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                             stroke-linejoin="round" class="feather feather-sun">
                                             <circle cx="12" cy="12" r="5"></circle>
                                             <path
                                                 d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
                                             </path>
-                                        </svg></div>Light Theme
-                                </div><button
-                                    class="group/button flex items-center justify-center border transform transition-transform duration-50 active:scale-95 focus:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-50 bg-transparent border-transparent text-red-500 hover:text-white dark:text-red-700 hover:bg-[#35121294] disabled:bg-transparent disabled:border-transparent focus-visible:ring-red-600  h-[34px] py-1.5 px-3 rounded-md text-sm leading-5 space-x-2"
+                                        </svg>
+                                    </div>
+                                   <span class="dash-switch-text">Light Theme</span> 
+                                </div>
+                                <button
+                                    class="group/button flex items-center justify-center border transform transition-transform duration-50 active:scale-95 focus:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-50 bg-transparent border-transparent text-red-500 hover:text-white dark:text-red-700 hover:bg-[#35121294] disabled:bg-transparent disabled:border-transparent focus-visible:ring-red-600  h-[34px] py-1.5 px-3 rounded-md text-sm leading-5 space-x-2" id="mobile-menu-item"
                                     type="button"><span class="inline-block text-red-400">Logout</span>
                                     <div class="icon-container icon-md text-2xl !w-4 !h-4 text-red-400"
                                         aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
                                             stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="feather feather-power">
+                                            stroke-linejoin="round" class="feather feather-power logout-icon">
                                             <path d="M18.36 6.64a9 9 0 1 1-12.73 0M12 2v10"></path>
                                         </svg></div>
                                 </button>
@@ -158,7 +214,7 @@
             <!-- Sidebar -->
             <div class="w-full md:w-1/4 lg:w-1/5 space-y-4 text-sm mt-6 mb-8 md:mb-0 pr-4" id="sidebar">
                 <a href="#"
-                    class="flex items-center space-x-2 border bg-[#1a1825] border-gray-900 hover:bg-[#171522] hover:border-gray-800 p-2 rounded-lg duration-300">
+                    class="flex items-center space-x-2 border bg-[#1a1825] border-gray-900 hover:bg-[#171522] hover:border-gray-800 p-2 rounded-lg duration-300 dash-sidebar">
                     <img class="w-10 h-10 rounded-full mr-2" src="https://avatars.githubusercontent.com/u/6620"
                         alt="User Avatar">
                     <div>
@@ -166,40 +222,39 @@
                         <div class="text-gray-400">Personal Account</div>
                     </div>
                 </a>
-                <nav class="space-y-2">
+                <nav class="space-y-2 dash-nav"> 
                     <a href="account.html"
-                        class="block py-2 px-3 rounded-md text-gray-400 hover:bg-[#1a1825] hover:text-white text-base"><i
+                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base dash-nav-item"><i
                             class="fa-solid fa-gear mr-2"></i> General</a>
                     <a href="plans.html"
-                        class="block py-2 px-3 rounded-md text-gray-400 hover:bg-[#1a1825] hover:text-white text-base"><i
+                        class="block py-2 px-3 rounded-md text-gray-400 hover:bg-[#1a1825] hover:text-white text-base dash-nav-item"><i
                             class="fa-solid fa-layer-group mr-2"></i>Plans</a>
                     <a href="usage.html"
-                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base"><i
+                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base dash-nav-item"><i
                             class="fa-solid fa-chart-pie mr-2"></i>Usage</a>
                     <a href="billing.html"
-                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base"><i
+                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base dash-nav-item"><i
                             class="fa-regular fa-credit-card mr-2"></i>Billing</a>
                     <a href="feature-flags.html"
-                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400  hover:text-white text-base"><i
+                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base dash-nav-item"><i
                             class="fa-solid fa-flag mr-2"></i>Feature Flags</a>
                     <a href="tokens.html"
-                        class="block py-2 px-3 rounded-md  hover:bg-[#1a1825] text-white bg-[#1a1825] text-base"><i
+                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-white bg-[#1a1825] text-base active-dash-nav-item"><i
                             class="fa-solid fa-ticket mr-2 text-blue-500"></i>Tokens</a>
                     <a href="securities.html"
-                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base"><i
+                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base dash-nav-item"><i
                             class="fa-solid fa-lock mr-2"></i>Security</a>
                     <a href="referrals.html"
-                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base"><i
+                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base dash-nav-item"><i
                             class="fa-solid fa-gift mr-2"></i>Referrals</a>
                     <a href="earnings.html"
-                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base"><i
+                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base dash-nav-item"><i
                             class="fa-solid fa-hand-holding-dollar mr-2"></i>Earnings</a>
                     <a href="templates.html"
-                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base"><i
+                        class="block py-2 px-3 rounded-md hover:bg-[#1a1825] text-gray-400 hover:text-white text-base dash-nav-item"><i
                             class="fa-solid fa-folder-tree mr-2"></i>Templates</a>
                 </nav>
             </div>
-
             <!-- Main Content -->
 
             <div class="w-full md:w-3/4 lg:w-4/5 rounded-md p-6 pl-10" id="main-content">
@@ -222,12 +277,12 @@
                                     </div>
                                     <div class="flex items-center relative w-full"><input
                                             id="input-name-0.030954863700801027" name="name" placeholder="API Token"
-                                            class="w-full min-w-0 rounded-md text-foreground bg-transparent border border-gray-800 placeholder-gray-500 focus:outline-none relative z-10 focus:border-purple-900 text-base leading-6 px-3 py-2">
+                                            class="dash-input w-full min-w-0 rounded-md text-foreground bg-transparent border border-gray-800 placeholder-gray-500 focus:outline-none relative z-10 focus:border-purple-900 text-base leading-6 px-3 py-2">
                                     </div>
                                 </div>
                             </div>
                             <a href=""><button
-                                    class="group/button flex items-center justify-center text-purple-400 font-normal border border-purple-950 hover:bg-purple-950 hover:text-white h-[42px] py-2 px-12 rounded-md text-base leading-6 space-x-3"
+                                    class="group/button flex items-center justify-center text-purple-400 font-normal border border-purple-950 hover:bg-purple-950 hover:text-white h-[42px] py-2 px-12 rounded-md text-base leading-6 space-x-3 dash-input"
                                     type="submit"><span class="inline-block">Create</span></button></a>
                         </div>
                     </form>
@@ -249,113 +304,18 @@
     </div>
 
 
-    <footer class="max-w-7xl mx-auto text-gray-400 py-8 px-4 md:px-16 pt-24" id="dashborad-footer">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-start">
-            <!-- Left section: Logo and status -->
-            <div class="mb-8 md:mb-0 md:w-1/3" id="footer-left">
-                <div class="flex items-center mb-4">
-                    <!-- Logo -->
-                    <svg width="50" height="50" viewBox="0 0 100 100" fill="#ffff" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.11206 59V42.2H13.1921V55.4H20.6801V59H9.11206Z"></path>
-                        <path
-                            d="M31.1771 59L28.4651 54.896L27.2171 53.144L22.1771 46.256H26.7851L29.4011 50.168L30.7691 52.04L35.7371 59H31.1771ZM22.0571 59L27.1931 51.848L29.2571 54.32L26.5931 59H22.0571ZM30.4811 53.456L28.4411 51.008L30.9611 46.256H35.4971L30.4811 53.456Z">
-                        </path>
-                        <path
-                            d="M38.2917 59V42.2H45.8517C46.9237 42.2 47.8917 42.432 48.7557 42.896C49.6357 43.36 50.3237 44 50.8197 44.816C51.3157 45.616 51.5637 46.528 51.5637 47.552C51.5637 48.608 51.3157 49.56 50.8197 50.408C50.3237 51.24 49.6437 51.896 48.7797 52.376C47.9157 52.856 46.9397 53.096 45.8517 53.096H42.1797V59H38.2917ZM47.6037 59L43.3317 51.416L47.5077 50.816L52.2597 59H47.6037ZM42.1797 49.976H45.4917C45.9077 49.976 46.2677 49.888 46.5717 49.712C46.8917 49.52 47.1317 49.256 47.2917 48.92C47.4677 48.584 47.5557 48.2 47.5557 47.768C47.5557 47.336 47.4598 46.96 47.2677 46.64C47.0757 46.304 46.7957 46.048 46.4277 45.872C46.0757 45.696 45.6437 45.608 45.1317 45.608H42.1797V49.976Z">
-                        </path>
-                        <path
-                            d="M60.2666 59.24C58.9386 59.24 57.7546 58.952 56.7146 58.376C55.6906 57.8 54.8746 57.016 54.2666 56.024C53.6746 55.032 53.3786 53.896 53.3786 52.616C53.3786 51.336 53.6746 50.2 54.2666 49.208C54.8746 48.216 55.6906 47.432 56.7146 46.856C57.7546 46.28 58.9386 45.992 60.2666 45.992C61.5946 45.992 62.7706 46.28 63.7946 46.856C64.8346 47.432 65.6506 48.216 66.2426 49.208C66.8346 50.2 67.1306 51.336 67.1306 52.616C67.1306 53.896 66.8346 55.032 66.2426 56.024C65.6506 57.016 64.8346 57.8 63.7946 58.376C62.7706 58.952 61.5946 59.24 60.2666 59.24ZM60.2666 55.928C60.8426 55.928 61.3546 55.784 61.8026 55.496C62.2506 55.208 62.6026 54.816 62.8586 54.32C63.1146 53.824 63.2346 53.256 63.2186 52.616C63.2346 51.976 63.1146 51.408 62.8586 50.912C62.6026 50.4 62.2506 50 61.8026 49.712C61.3546 49.424 60.8426 49.28 60.2666 49.28C59.6906 49.28 59.1706 49.424 58.7066 49.712C58.2586 50 57.9066 50.4 57.6506 50.912C57.3946 51.408 57.2746 51.976 57.2906 52.616C57.2746 53.256 57.3946 53.824 57.6506 54.32C57.9066 54.816 58.2586 55.208 58.7066 55.496C59.1706 55.784 59.6906 55.928 60.2666 55.928Z">
-                        </path>
-                        <path
-                            d="M75.6416 59.24C74.3136 59.24 73.1296 58.952 72.0896 58.376C71.0656 57.8 70.2496 57.016 69.6416 56.024C69.0496 55.032 68.7536 53.896 68.7536 52.616C68.7536 51.336 69.0496 50.2 69.6416 49.208C70.2496 48.216 71.0656 47.432 72.0896 46.856C73.1296 46.28 74.3136 45.992 75.6416 45.992C76.9696 45.992 78.1456 46.28 79.1696 46.856C80.2096 47.432 81.0256 48.216 81.6176 49.208C82.2096 50.2 82.5056 51.336 82.5056 52.616C82.5056 53.896 82.2096 55.032 81.6176 56.024C81.0256 57.016 80.2096 57.8 79.1696 58.376C78.1456 58.952 76.9696 59.24 75.6416 59.24ZM75.6416 55.928C76.2176 55.928 76.7296 55.784 77.1776 55.496C77.6256 55.208 77.9776 54.816 78.2336 54.32C78.4896 53.824 78.6096 53.256 78.5936 52.616C78.6096 51.976 78.4896 51.408 78.2336 50.912C77.9776 50.4 77.6256 50 77.1776 49.712C76.7296 49.424 76.2176 49.28 75.6416 49.28C75.0656 49.28 74.5456 49.424 74.0816 49.712C73.6336 50 73.2816 50.4 73.0256 50.912C72.7696 51.408 72.6496 51.976 72.6656 52.616C72.6496 53.256 72.7696 53.824 73.0256 54.32C73.2816 54.816 73.6336 55.208 74.0816 55.496C74.5456 55.784 75.0656 55.928 75.6416 55.928Z">
-                        </path>
-                        <path d="M86.0726 59V43.04H89.9126V59H86.0726ZM83.8166 49.616V46.256H92.3846V49.616H83.8166Z">
-                        </path>
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M76.5399 64C71.5099 73.5156 61.5123 80 50.0001 80C38.4879 80 28.4902 73.5156 23.4603 64H12.5185C18.1935 79.1867 32.834 90 50.0001 90C67.1662 90 81.8067 79.1867 87.4817 64H76.5399ZM22.4964 38C27.1257 27.4046 37.6982 20 50.0001 20C62.302 20 72.8745 27.4046 77.5038 38H88.1689C83.0718 21.7716 67.9107 10 50.0001 10C32.0895 10 16.9284 21.7716 11.8313 38H22.4964Z">
-                        </path>
-                    </svg>
+    <footer class="max-w-7xl mx-auto text-gray-400 px-4 md:px-16 pt-24" id="dashborad-footer">
+        <div class="max-w-7xl mx-auto container border-t border-gray-700 py-5 footer-bottom" id="dash-footer">
+            <div class="flex justify-between items-center about-footer-bottom">
+                <div class="text-base text-left">
+                    Copyright &copy; 2024 | <a href="index.html"
+                        class="text-gray-400 hover:text-white duration-300 footer-text">LxRoot LLC </a>
                 </div>
-                <!-- Status -->
-                <p class="text-green-400 mb-4 text-sm">All systems operational</p>
-                <div class="border-b border-gray-800 mb-4 mt-4 w-56"></div>
-                <!-- Copyright -->
-                <p class="text-gray-500 text-sm">Copyright &copy; 2024 LxRoot LLC. <br> All rights reserved.</p>
-                <!-- Compliance logos -->
-                <div class="flex justify-center lg:justify-start mt-4 space-x-4 social-icon">
-                    <a href="https://m.facebook.com/LxRootLLC" target="_blank"
-                        class="text-gray-500 hover:text-blue-600">
-                        <i class="fab fa-facebook-f fa-sm"></i>
-                    </a>
-                    <a href="https://x.com/lxrootllc" target="_blank" class="text-gray-500 hover:text-blue-400">
-                        <i class="fab fa-twitter fa-sm"></i>
-                    </a>
-                    <a href="https://www.instagram.com/lxrootllc" target="_blank"
-                        class="text-gray-500 hover:text-pink-500">
-                        <i class="fab fa-instagram fa-sm"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/lxroot" target="_blank"
-                        class="text-gray-500 hover:text-blue-700">
-                        <i class="fab fa-linkedin-in fa-sm"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@lxrootllc" target="_blank"
-                        class="text-gray-500 hover:text-red-700">
-                        <i class="fab fa-youtube fa-sm"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Right section: Links -->
-            <div class="flex flex-wrap justify-between md:space-x-16 space-y-8 md:space-y-0 w-full md:w-2/3" id="footer-right">
-                <!-- Product -->
-                <div>
-                    <h4 class="font-bold mb-4">Product</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white">Features</a></li>
-                        <li><a href="#" class="hover:text-white">Docs</a></li>
-                        <li><a href="#" class="hover:text-white">Changelog</a></li>
-                        <li><a href="#" class="hover:text-white">Pricing</a></li>
-                        <li><a href="#" class="hover:text-white">Templates</a></li>
-                        <li><a href="#" class="hover:text-white">OSS Kickback</a></li>
-                        <li><a href="#" class="hover:text-white">Migrate from Heroku</a></li>
-                    </ul>
-                </div>
-
-                <!-- Company -->
-                <div>
-                    <h4 class="font-bold mb-4">Company</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white">About</a></li>
-                        <li><a href="#" class="hover:text-white">Careers</a></li>
-                        <li><a href="#" class="hover:text-white">Blog</a></li>
-                        <li><a href="#" class="hover:text-white">Shop</a></li>
-                        <li><a href="#" class="hover:text-white">Trust</a></li>
-                        <li><a href="#" class="hover:text-white">Startup Program</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact -->
-                <div>
-                    <h4 class="font-bold mb-4">Contact</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white">Support</a></li>
-                        <li><a href="#" class="hover:text-white">Discord</a></li>
-                        <li><a href="#" class="hover:text-white">Twitter</a></li>
-                        <li><a href="#" class="hover:text-white">GitHub</a></li>
-                        <li><a href="#" class="hover:text-white">Email</a></li>
-                        <li><a href="#" class="hover:text-white">Enterprise</a></li>
-                    </ul>
-                </div>
-
-                <!-- Legal -->
-                <div>
-                    <h4 class="font-bold mb-4">Legal</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white">Fair Use</a></li>
-                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
-                        <li><a href="#" class="hover:text-white">Bug Bounty Program</a></li>
-                    </ul>
+                <div class="text-base text-right space-x-4">
+                    <a href="privacy.html" class="footer-text text-gray-400 hover:text-white duration-300">Privacy
+                        Policy</a>
+                    <a href="terms.html" class="footer-text text-gray-400 hover:text-white  duration-300">Terms &
+                        Conditions</a>
                 </div>
             </div>
         </div>
@@ -379,6 +339,40 @@
         });
     </script>
 
+
+    <script>
+// Function to switch the theme
+function switchTheme() {
+    const body = document.body;
+
+    // Check the current theme and toggle it
+    if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        localStorage.setItem('theme', 'light'); // Save preference in localStorage
+    } else {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark'); // Save preference in localStorage
+    }
+}
+
+// On page load, apply the saved theme
+window.onload = function() {
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme) {
+        document.body.classList.add(savedTheme);
+    } else {
+        // If no preference is saved, default to dark mode
+        document.body.classList.add('dark-mode');
+    }
+};
+</script>
+
+
+
+</div>
 </body>
 
-</html>
+</html>v

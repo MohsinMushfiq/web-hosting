@@ -1,3 +1,6 @@
+<h4>Release: 1 October, 2024</h4> </br>
+<h4>Last Updates: 8 November, 2024</h4>
+
 <h2>Linux Hosting Frontend Development</h2>
 
 <h3>About</h3>
@@ -24,6 +27,7 @@
 
 </br>
 </br>
+
 Thanks & Regards
 
 

@@ -1,7 +1,7 @@
-<h2>LxRoot Frontend Development</h2>
+<h2>Linux Hosting Frontend Development</h2>
 
 <h3>About</h3>
-<b>LxRoot Web Design</b> is a modern, responsive website focused on providing sleek, user-friendly interfaces with intuitive navigation. Designed to meet the needs of diverse users, this site showcases best practices in web design, emphasizing aesthetics and functionality.
+<b>Linux Hosting Web Design</b> is a modern, responsive website focused on providing sleek, user-friendly interfaces with intuitive navigation. Designed to meet the needs of diverse users, this site showcases best practices in web design, emphasizing aesthetics and functionality.
 
 <h3>Technology</h3>
 <b>HTML5 & CSS3:</b> Structuring and styling the site with modern standards. </br>
@@ -28,5 +28,6 @@ Thanks & Regards
 
 
 <h4>Author</h4>
-<b>Company:</b> LxRoot LLC </br>
+<b>Company:</b> Prosolver HQ </br>
 <b>Developer:</b> Mohsin Islam
+
